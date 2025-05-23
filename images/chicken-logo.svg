@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 円形の背景 -->
+  <circle cx="256" cy="256" r="240" fill="#FFF2E5"/>
+  
+  <!-- 鶏の体 -->
+  <ellipse cx="256" cy="280" rx="130" ry="140" fill="#F5762E"/>
+  
+  <!-- 鶏の頭 -->
+  <circle cx="256" cy="150" r="70" fill="#F5762E"/>
+  
+  <!-- 鶏の目 - 左 -->
+  <circle cx="236" cy="140" r="15" fill="white"/>
+  <circle cx="236" cy="140" r="8" fill="black"/>
+  <circle cx="232" cy="136" r="3" fill="white"/>
+  
+  <!-- 鶏の目 - 右 -->
+  <circle cx="276" cy="140" r="15" fill="white"/>
+  <circle cx="276" cy="140" r="8" fill="black"/>
+  <circle cx="272" cy="136" r="3" fill="white"/>
+  
+  <!-- 鶏のくちばし -->
+  <path d="M256 160 L276 180 L236 180 Z" fill="#FFB800"/>
+  
+  <!-- 鶏のとさか -->
+  <path d="M236 90 L256 120 L276 90 L256 100 Z" fill="#FF4C4C"/>
+  <path d="M216 100 L246 110 L236 80 L240 95 Z" fill="#FF4C4C"/>
+  <path d="M296 100 L266 110 L276 80 L272 95 Z" fill="#FF4C4C"/>
+  
+  <!-- 鶏の羽 - 左 -->
+  <path d="M150 280 C170 220 200 240 180 300 Z" fill="#F7945F"/>
+  
+  <!-- 鶏の羽 - 右 -->
+  <path d="M362 280 C342 220 312 240 332 300 Z" fill="#F7945F"/>
+  
+  <!-- 鶏の足 - 左 -->
+  <rect x="226" y="400" width="10" height="40" fill="#FFB800"/>
+  <path d="M226 440 L216 460 L226 460 L236 440 Z" fill="#FFB800"/>
+  <path d="M226 440 L226 460 L236 460 L246 440 Z" fill="#FFB800"/>
+  <path d="M226 440 L236 460 L246 460 L256 440 Z" fill="#FFB800"/>
+  
+  <!-- 鶏の足 - 右 -->
+  <rect x="276" y="400" width="10" height="40" fill="#FFB800"/>
+  <path d="M276 440 L266 460 L276 460 L286 440 Z" fill="#FFB800"/>
+  <path d="M276 440 L276 460 L286 460 L296 440 Z" fill="#FFB800"/>
+  <path d="M276 440 L286 460 L296 460 L306 440 Z" fill="#FFB800"/>
+  
+  <!-- 鶏のおなか部分に模様 -->
+  <ellipse cx="256" cy="320" rx="60" ry="70" fill="#F7945F"/>
+</svg>

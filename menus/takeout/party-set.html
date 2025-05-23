@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パーティーセット - チキンハウス</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .dish-details {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .dish-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .dish-title {
+            flex: 1;
+        }
+        
+        .dish-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e67e22;
+            margin-left: 20px;
+        }
+        
+        .dish-main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .dish-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .dish-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dish-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .dish-description {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .dish-ingredients {
+            margin-bottom: 20px;
+        }
+        
+        .dish-ingredients h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .dish-ingredients ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        
+        .dish-ingredients li {
+            margin-bottom: 5px;
+        }
+        
+        .dish-nutrition {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .dish-nutrition h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .dish-nutrition table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .dish-nutrition th,
+        .dish-nutrition td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .dish-nutrition th {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .back-to-menu {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #e67e22;
+            color: #fff;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .back-to-menu:hover {
+            background-color: #d35400;
+        }
+        
+        .other-dishes {
+            margin-top: 60px;
+        }
+        
+        .other-dishes h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .other-dishes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .other-dish-item {
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .other-dish-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .other-dish-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .other-dish-item h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        .other-dish-item .price {
+            color: #e67e22;
+            font-weight: bold;
+        }
+        
+        .takeout-note {
+            background-color: #f8f4e6;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #e67e22;
+        }
+        
+        .takeout-note h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .takeout-note h3 i {
+            color: #e67e22;
+            margin-right: 8px;
+        }
+        
+        .party-tips {
+            margin-top: 40px;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .party-tips h3 {
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 18px;
+        }
+        
+        .party-tips ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .party-tips li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .party-tips li:before {
+            content: "\f058";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <img src="../../images/chicken-logo.png" alt="チキンハウスロゴ">
+                <h1>チキンハウス</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../../index.html#seasonal">季節のメニュー</a></li>
+                    <li><a href="../../index.html#dessert">デザート</a></li>
+                    <li><a href="../../index.html#drink">ドリンクバー</a></li>
+                    <li><a href="../../index.html#regular">定番メニュー</a></li>
+                    <li><a href="../../index.html#takeout">テイクアウト</a></li>
+                    <li><a href="../../index.html#access">アクセス</a></li>
+                    <li><a href="../../index.html#reservation" class="reservation-btn">ご予約</a></li>
+                    <li><a href="../../company.html" class="company-info"><i class="fas fa-building"></i> <span>会社情報</span></a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1>テイクアウト</h1>
+            <p>ご自宅でもチキンハウスの味をお楽しみください</p>
+        </div>
+    </section>
+
+    <section class="dish-details">
+        <div class="dish-header">
+            <div class="dish-title">
+                <h2>パーティーセット</h2>
+            </div>
+            <div class="dish-price">¥3,980</div>
+        </div>
+
+        <div class="dish-main">
+            <div class="dish-image">
+                <img src="../../images/takeout-3.jpg" alt="パーティーセット">
+            </div>
+            <div class="dish-info">
+                <div class="dish-description">
+                    <p>フライドチキン、サラダ、ポテト、ドリンクのパーティーセット(4名様分)。ホームパーティーや集まりに最適な豪華セットです。</p>
+                    <p>チキンハウスの看板メニューを中心に、パーティーシーンで楽しめる豊富な品揃えのセットです。大人数でのお食事や、特別な日のお祝いにぴったり。専用の保温バッグでお渡ししますので、温かいままお召し上がりいただけます。</p>
+                </div>
+
+                <div class="dish-ingredients">
+                    <h3>内容物（4名様分）</h3>
+                    <ul>
+                        <li>フライドチキン （チキンウィング 8ピース、チキンドラム 4ピース）</li>
+                        <li>チキンナゲット（12個）</li>
+                        <li>特製チキンサラダ（大）</li>
+                        <li>フライドポテト（大）</li>
+                        <li>コールスロー（大）</li>
+                        <li>オニオンリング（8個）</li>
+                        <li>ガーリックトースト（4枚）</li>
+                        <li>特製ディップソース4種（ハニーマスタード、バーベキュー、スイートチリ、タルタル）</li>
+                        <li>ソフトドリンク（1ℓ）</li>
+                    </ul>
+                </div>
+
+                <div class="dish-nutrition">
+                    <h3>栄養成分（1人前あたりの目安）</h3>
+                    <table>
+                        <tr>
+                            <th>カロリー</th>
+                            <td>850kcal</td>
+                        </tr>
+                        <tr>
+                            <th>タンパク質</th>
+                            <td>38g</td>
+                        </tr>
+                        <tr>
+                            <th>脂質</th>
+                            <td>42g</td>
+                        </tr>
+                        <tr>
+                            <th>炭水化物</th>
+                            <td>80g</td>
+                        </tr>
+                        <tr>
+                            <th>食物繊維</th>
+                            <td>5g</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="party-tips">
+                    <h3>パーティーを盛り上げるコツ</h3>
+                    <ul>
+                        <li>提供前に電子レンジで温めなおすと、よりおいしくお召し上がりいただけます。</li>
+                        <li>彩り豊かな盛り付けで、テーブルを華やかに演出してみましょう。</li>
+                        <li>追加のディップソースをご用意すると、お好みの味わいをより楽しめます。</li>
+                        <li>デザートにチキンハウスの人気スイーツを合わせると、パーティーが更に盛り上がります。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="takeout-note">
+            <h3><i class="fas fa-info-circle"></i> テイクアウト情報</h3>
+            <p>パーティーセットは前日までのご予約をおすすめします。当日注文の場合は、お渡しまで60分程度お時間をいただく場合がございます。</p>
+            <p>保温・保冷専用バッグでお渡しいたしますので、温かい料理は温かく、冷たい料理は冷たいままお召し上がりいただけます。</p>
+            <p>お持ち帰り後は、なるべく早くお召し上がりください。再加熱する場合はフライドチキン、ポテト、ナゲットなどは電子レンジ（500W）で1〜2分、オーブントースターで3〜4分温めることをおすすめします。</p>
+        </div>
+
+        <a href="../../index.html#takeout" class="back-to-menu"><i class="fas fa-arrow-left"></i> テイクアウトメニューに戻る</a>
+
+        <div class="other-dishes">
+            <h2>その他のテイクアウトメニュー</h2>
+            <div class="other-dishes-grid">
+                <a href="fried-chicken-bucket.html" class="other-dish-item">
+                    <img src="../../images/takeout-1.jpg" alt="フライドチキンバケット">
+                    <h3>フライドチキンバケット</h3>
+                    <span class="price">¥1,980</span>
+                </a>
+                <a href="chicken-bento.html" class="other-dish-item">
+                    <img src="../../images/takeout-2.jpg" alt="チキン弁当">
+                    <h3>チキン弁当</h3>
+                    <span class="price">¥980</span>
+                </a>
+                <a href="chicken-sandwich.html" class="other-dish-item">
+                    <img src="../../images/takeout-4.jpg" alt="チキンサンドウィッチ">
+                    <h3>チキンサンドウィッチ</h3>
+                    <span class="price">¥780</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="../../images/chicken-logo.png" alt="チキンハウスロゴ">
+                    <h2>チキンハウス</h2>
+                </div>
+                <p>鶏肉料理を専門とした、日本全国に展開するファミリーレストランです。</p>
+            </div>
+            <div class="footer-nav-container">
+                <div class="footer-nav">
+                    <h3>メニュー</h3>
+                    <ul>
+                        <li><a href="../../index.html#seasonal">季節のメニュー</a></li>
+                        <li><a href="../../index.html#dessert">デザート</a></li>
+                        <li><a href="../../index.html#drink">ドリンクバー</a></li>
+                        <li><a href="../../index.html#regular">定番メニュー</a></li>
+                        <li><a href="../../index.html#takeout">テイクアウト</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h3>店舗情報</h3>
+                    <ul>
+                        <li><a href="../../index.html#access">アクセス</a></li>
+                        <li><a href="../../index.html#reservation">ご予約</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="../../company.html"><i class="fas fa-building"></i> 会社情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h3>SNS</h3>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 チキンハウス All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

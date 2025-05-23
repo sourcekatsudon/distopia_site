@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="512" cy="512" r="512" fill="#FFDA82"/>
+  <circle cx="512" cy="512" r="480" fill="#FFEC8B"/>
+  
+  <!-- 太陽の模様 - 黄色と赤のグラデーション -->
+  <circle cx="312" cy="412" r="120" fill="#FFFF00" fill-opacity="0.5"/>
+  <circle cx="712" cy="512" r="150" fill="#FFFF00" fill-opacity="0.5"/>
+  <circle cx="512" cy="712" r="100" fill="#FFFF00" fill-opacity="0.5"/>
+  <circle cx="412" cy="212" r="80" fill="#FFFF00" fill-opacity="0.5"/>
+  
+  <!-- 太陽の表面のフレア -->
+  <path d="M250 150 L350 220 L300 100 Z" fill="#FFA500" fill-opacity="0.8"/>
+  <path d="M750 250 L900 300 L850 150 Z" fill="#FFA500" fill-opacity="0.8"/>
+  <path d="M150 650 L250 750 L100 700 Z" fill="#FFA500" fill-opacity="0.8"/>
+  <path d="M650 800 L750 900 L600 850 Z" fill="#FFA500" fill-opacity="0.8"/>
+  
+  <!-- 太陽コロナの表現 -->
+  <circle cx="512" cy="512" r="500" stroke="#FFFF00" stroke-width="5" stroke-opacity="0.3" fill="none"/>
+  <circle cx="512" cy="512" r="520" stroke="#FFFF00" stroke-width="3" stroke-opacity="0.2" fill="none"/>
+  <circle cx="512" cy="512" r="540" stroke="#FFFF00" stroke-width="2" stroke-opacity="0.1" fill="none"/>
+</svg>

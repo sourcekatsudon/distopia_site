@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 地球の基本色 -->
+  <circle cx="512" cy="512" r="512" fill="#1E90FF"/>
+  
+  <!-- 海 -->
+  <circle cx="512" cy="512" r="480" fill="#0070BB"/>
+  
+  <!-- 大陸 -->
+  <path d="M200 300 Q350 200 450 300 Q550 400 650 350 Q750 300 850 400 L900 600 Q800 700 650 750 Q500 800 350 700 Q250 650 150 550 Z" fill="#32CD32" fill-opacity="0.9"/>
+  <path d="M400 700 Q500 650 600 700 Q700 750 800 700 L850 800 Q750 850 650 850 Q550 850 450 800 Q400 750 350 750 Z" fill="#32CD32" fill-opacity="0.9"/>
+  
+  <!-- 小さな島々 -->
+  <circle cx="250" cy="250" r="30" fill="#32CD32" fill-opacity="0.9"/>
+  <circle cx="750" cy="200" r="40" fill="#32CD32" fill-opacity="0.9"/>
+  <circle cx="650" cy="600" r="25" fill="#32CD32" fill-opacity="0.9"/>
+  
+  <!-- 雲 -->
+  <ellipse cx="300" cy="300" rx="80" ry="50" fill="white" fill-opacity="0.5" transform="rotate(10 300 300)"/>
+  <ellipse cx="700" cy="400" rx="100" ry="60" fill="white" fill-opacity="0.5" transform="rotate(-15 700 400)"/>
+  <ellipse cx="400" cy="600" rx="70" ry="40" fill="white" fill-opacity="0.5" transform="rotate(5 400 600)"/>
+  <ellipse cx="600" cy="700" rx="90" ry="50" fill="white" fill-opacity="0.5" transform="rotate(-10 600 700)"/>
+  
+  <!-- 極地の氷 -->
+  <circle cx="512" cy="150" r="100" fill="white" fill-opacity="0.8"/>
+  <circle cx="512" cy="874" r="100" fill="white" fill-opacity="0.8"/>
+</svg>

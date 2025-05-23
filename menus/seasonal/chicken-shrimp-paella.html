@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鶏肉と海老の贅沢パエリア - チキンハウス</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .dish-details {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .dish-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .dish-title {
+            flex: 1;
+        }
+        
+        .dish-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e67e22;
+            margin-left: 20px;
+        }
+        
+        .dish-main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .dish-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .dish-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dish-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .dish-description {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .dish-ingredients {
+            margin-bottom: 20px;
+        }
+        
+        .dish-ingredients h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .dish-ingredients ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        
+        .dish-ingredients li {
+            margin-bottom: 5px;
+        }
+        
+        .dish-nutrition {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .dish-nutrition h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .dish-nutrition table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .dish-nutrition th,
+        .dish-nutrition td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .dish-nutrition th {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .back-to-menu {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #e67e22;
+            color: #fff;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .back-to-menu:hover {
+            background-color: #d35400;
+        }
+        
+        .other-dishes {
+            margin-top: 60px;
+        }
+        
+        .other-dishes h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .other-dishes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .other-dish-item {
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .other-dish-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .other-dish-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .other-dish-item h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        .other-dish-item .price {
+            color: #e67e22;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <img src="../../images/chicken-logo.png" alt="チキンハウスロゴ">
+                <h1>チキンハウス</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../../index.html#seasonal">季節のメニュー</a></li>
+                    <li><a href="../../index.html#dessert">デザート</a></li>
+                    <li><a href="../../index.html#drink">ドリンクバー</a></li>
+                    <li><a href="../../index.html#regular">定番メニュー</a></li>
+                    <li><a href="../../index.html#takeout">テイクアウト</a></li>
+                    <li><a href="../../index.html#access">アクセス</a></li>
+                    <li><a href="../../index.html#reservation" class="reservation-btn">ご予約</a></li>
+                    <li><a href="../../company.html" class="company-info"><i class="fas fa-building"></i> <span>会社情報</span></a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1>季節のメニュー</h1>
+            <p>季節の食材と宇宙肉の絶妙なハーモニー</p>
+        </div>
+    </section>
+
+    <section class="dish-details">
+        <div class="dish-header">
+            <div class="dish-title">
+                <h2>鶏肉と海老の贅沢パエリア</h2>
+            </div>
+            <div class="dish-price">¥1,680</div>
+        </div>
+
+        <div class="dish-main">
+            <div class="dish-image">
+                <img src="../../images/seasonal-4.jpg" alt="鶏肉と海老の贅沢パエリア">
+            </div>
+            <div class="dish-info">
+                <div class="dish-description">
+                    <p>ジューシーな鶏肉と新鮮な海老を使った特製パエリア。本場スペインの伝統的な調理法で、サフランの香りと共にお楽しみください。</p>
+                    <p>特別に輸入したスペイン産のお米を使用し、鶏のだしでじっくり炊き上げることで、素材の旨味を最大限に引き出しています。色鮮やかな野菜と海の幸のハーモニーをお楽しみください。</p>
+                </div>
+
+                <div class="dish-ingredients">
+                    <h3>使用食材</h3>
+                    <ul>
+                        <li>国産鶏もも肉</li>
+                        <li>特大海老</li>
+                        <li>スペイン産ボンバ米</li>
+                        <li>高級サフラン</li>
+                        <li>季節の野菜（パプリカ、グリーンピース）</li>
+                        <li>自家製チキンブイヨン</li>
+                    </ul>
+                </div>
+
+                <div class="dish-nutrition">
+                    <h3>栄養成分</h3>
+                    <table>
+                        <tr>
+                            <th>カロリー</th>
+                            <td>680kcal</td>
+                        </tr>
+                        <tr>
+                            <th>タンパク質</th>
+                            <td>32g</td>
+                        </tr>
+                        <tr>
+                            <th>脂質</th>
+                            <td>18g</td>
+                        </tr>
+                        <tr>
+                            <th>炭水化物</th>
+                            <td>40g</td>
+                        </tr>
+                        <tr>
+                            <th>食物繊維</th>
+                            <td>3g</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <a href="../../index.html#seasonal" class="back-to-menu"><i class="fas fa-arrow-left"></i> 季節のメニューに戻る</a>
+
+        <div class="other-dishes">
+            <h2>その他の季節のメニュー</h2>
+            <div class="other-dishes-grid">
+                <a href="spring-vegetable-grill.html" class="other-dish-item">
+                    <img src="../../images/seasonal-1.jpg" alt="春野菜と宇宙肉の特製グリル">
+                    <h3>春野菜と宇宙肉の特製グリル</h3>
+                    <span class="price">¥1,580</span>
+                </a>
+                <a href="young-chicken-herb.html" class="other-dish-item">
+                    <img src="../../images/seasonal-2.jpg" alt="若鶏の香草パン粉焼き">
+                    <h3>若鶏の香草パン粉焼き</h3>
+                    <span class="price">¥1,480</span>
+                </a>
+                <a href="fruit-curry.html" class="other-dish-item">
+                    <img src="../../images/seasonal-3.jpg" alt="チキンと季節のフルーツカレー">
+                    <h3>チキンと季節のフルーツカレー</h3>
+                    <span class="price">¥1,380</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="../../images/chicken-logo.png" alt="チキンハウスロゴ">
+                    <h2>チキンハウス</h2>
+                </div>
+                <p>鶏肉料理を専門とした、日本全国に展開するファミリーレストランです。</p>
+            </div>
+            <div class="footer-nav-container">
+                <div class="footer-nav">
+                    <h3>メニュー</h3>
+                    <ul>
+                        <li><a href="../../index.html#seasonal">季節のメニュー</a></li>
+                        <li><a href="../../index.html#dessert">デザート</a></li>
+                        <li><a href="../../index.html#drink">ドリンクバー</a></li>
+                        <li><a href="../../index.html#regular">定番メニュー</a></li>
+                        <li><a href="../../index.html#takeout">テイクアウト</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h3>店舗情報</h3>
+                    <ul>
+                        <li><a href="../../index.html#access">アクセス</a></li>
+                        <li><a href="../../index.html#reservation">ご予約</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="../../company.html"><i class="fas fa-building"></i> 会社情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h3>SNS</h3>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 チキンハウス All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

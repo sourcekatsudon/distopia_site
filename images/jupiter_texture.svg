@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="256" cy="256" r="256" fill="#F4A460"/>
+  <ellipse cx="196" cy="186" rx="80" ry="50" fill="#D2691E" fill-opacity="0.7"/>
+  <ellipse cx="316" cy="296" rx="100" ry="70" fill="#D2691E" fill-opacity="0.7"/>
+  <ellipse cx="156" cy="306" rx="60" ry="40" fill="#D2691E" fill-opacity="0.7"/>
+  <ellipse cx="256" cy="126" rx="40" ry="30" fill="#D2691E" fill-opacity="0.7"/>
+  <ellipse cx="366" cy="186" rx="70" ry="45" fill="#D2691E" fill-opacity="0.7"/>
+  <path d="M120 120 L400 120 L400 140 L120 140 Z" fill="#CD853F" fill-opacity="0.8" transform="rotate(15 256 256)"/>
+  <path d="M120 170 L400 170 L400 185 L120 185 Z" fill="#CD853F" fill-opacity="0.8" transform="rotate(15 256 256)"/>
+  <path d="M120 220 L400 220 L400 235 L120 235 Z" fill="#CD853F" fill-opacity="0.8" transform="rotate(15 256 256)"/>
+  <path d="M120 270 L400 270 L400 285 L120 285 Z" fill="#CD853F" fill-opacity="0.8" transform="rotate(15 256 256)"/>
+  <path d="M120 320 L400 320 L400 335 L120 335 Z" fill="#CD853F" fill-opacity="0.8" transform="rotate(15 256 256)"/>
+  <path d="M120 370 L400 370 L400 385 L120 385 Z" fill="#CD853F" fill-opacity="0.8" transform="rotate(15 256 256)"/>
+</svg>

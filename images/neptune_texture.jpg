@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 海王星の基本色 - 鮮やかな青 -->
+  <circle cx="512" cy="512" r="512" fill="#4169E1"/>
+  
+  <!-- より濃い青の領域 -->
+  <circle cx="512" cy="512" r="480" fill="#1E4FFF"/>
+  
+  <!-- 大気の渦巻き模様 - 海王星の特徴的な大きな暗い斑点「大黒斑」とその周辺 -->
+  <ellipse cx="400" cy="350" rx="150" ry="120" fill="#0000CD" fill-opacity="0.7" transform="rotate(15 400 350)"/>
+  <ellipse cx="600" cy="700" rx="180" ry="140" fill="#0000CD" fill-opacity="0.7" transform="rotate(-20 600 700)"/>
+  
+  <!-- 雲の筋 - 海王星の大気の特徴 -->
+  <path d="M150 300 Q300 330 450 300 Q600 270 750 300 Q900 330 1000 300" stroke="#6495ED" stroke-width="30" fill="none" stroke-opacity="0.6"/>
+  <path d="M100 400 Q250 430 400 400 Q550 370 700 400 Q850 430 950 400" stroke="#6495ED" stroke-width="25" fill="none" stroke-opacity="0.6"/>
+  <path d="M150 500 Q300 530 450 500 Q600 470 750 500 Q900 530 1000 500" stroke="#6495ED" stroke-width="30" fill="none" stroke-opacity="0.6"/>
+  <path d="M100 600 Q250 630 400 600 Q550 570 700 600 Q850 630 950 600" stroke="#6495ED" stroke-width="25" fill="none" stroke-opacity="0.6"/>
+  <path d="M150 700 Q300 730 450 700 Q600 670 750 700 Q900 730 1000 700" stroke="#6495ED" stroke-width="30" fill="none" stroke-opacity="0.6"/>
+  
+  <!-- 白い雲のハイライト -->
+  <ellipse cx="300" cy="250" rx="70" ry="30" fill="white" fill-opacity="0.3" transform="rotate(10 300 250)"/>
+  <ellipse cx="700" cy="350" rx="80" ry="40" fill="white" fill-opacity="0.3" transform="rotate(-15 700 350)"/>
+  <ellipse cx="500" cy="650" rx="60" ry="30" fill="white" fill-opacity="0.3" transform="rotate(5 500 650)"/>
+  <ellipse cx="800" cy="750" rx="70" ry="35" fill="white" fill-opacity="0.3" transform="rotate(-10 800 750)"/>
+  
+  <!-- 海王星の輝く環 - 非常に薄いため控えめに表現 -->
+  <ellipse cx="512" cy="512" rx="560" ry="550" stroke="white" stroke-width="2" fill="none" stroke-opacity="0.2"/>
+  <ellipse cx="512" cy="512" rx="570" ry="560" stroke="white" stroke-width="1" fill="none" stroke-opacity="0.1"/>
+</svg>

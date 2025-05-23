@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チキンハウス - 合成鶏肉料理専門のファミリーレストラン</title>    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">    <!-- Three.js ライブラリ (最新バージョン) -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.min.js"></script>
+    <!-- OrbitControls for Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.159.0/examples/jsm/controls/OrbitControls.js"></script>
+    <!-- Tween.js ライブラリ (アニメーション用) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/20.0.0/tween.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <img src="images/chicken-logo.png" alt="チキンハウスロゴ">
+                <h1>チキンハウス</h1>
+            </div>            <nav class="main-nav">
+                <ul>
+                    <li><a href="#seasonal">季節のメニュー</a></li>
+                    <li><a href="#dessert">デザート</a></li>
+                    <li><a href="#drink">ドリンクバー</a></li>
+                    <li><a href="#regular">定番メニュー</a></li>
+                    <li><a href="#takeout">テイクアウト</a></li>
+                    <li><a href="#access">アクセス</a></li>
+                    <li><a href="#reservation" class="reservation-btn">ご予約</a></li>
+                    <li><a href="company.html" class="company-info"><i class="fas fa-building"></i> <span>会社情報</span></a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>    <section class="hero">
+        <div class="hero-slideshow">
+            <!-- スライド画像はJSで動的に挿入されます -->
+        </div>
+        <div class="hero-content">
+            <h2>鶏肉料理を<span>もっと</span>おいしく</h2>
+            <p>厳選された国産鶏肉を使用した絶品料理の数々</p>
+            <a href="#reservation" class="cta-button">今すぐ予約する</a>
+        </div>
+    </section>
+
+    <section id="seasonal" class="menu-section seasonal-menu">
+        <div class="section-header">
+            <h2>季節のメニュー</h2>
+            <p>季節の食材と宇宙肉の絶妙なハーモニーをお楽しみください</p>
+        </div>
+        <div class="menu-container">            <div class="menu-item">
+                <a href="menus/seasonal/spring-vegetable-grill.html">
+                <div class="menu-img">
+                    <img src="images/seasonal-1.jpg" alt="春野菜と宇宙肉の特製グリル">
+                </div>
+                <div class="menu-details">
+                    <h3>春野菜と宇宙肉の特製グリル</h3>
+                    <p>新鮮な春野菜と国産宇宙肉を特製ハーブで味付けしたグリル料理</p>
+                    <span class="price">¥1,580</span>
+                </div>
+                </a>
+            </div>            <div class="menu-item">
+                <a href="menus/seasonal/young-chicken-herb.html">
+                <div class="menu-img">
+                    <img src="images/seasonal-2.jpg" alt="若鶏の香草パン粉焼き">
+                </div>
+                <div class="menu-details">
+                    <h3>若鶏の香草パン粉焼き</h3>
+                    <p>柔らかな若合成鶏に香り高いハーブとパン粉をまとわせた当店自慢の一品</p>
+                    <span class="price">¥1,480</span>
+                </div>
+                </a>
+            </div>            <div class="menu-item">
+                <a href="menus/seasonal/fruit-curry.html">
+                <div class="menu-img">
+                    <img src="images/seasonal-3.jpg" alt="チキンと季節のフルーツカレー">
+                </div>
+                <div class="menu-details">
+                    <h3>チキンと季節のフルーツカレー</h3>
+                    <p>トロトロに煮込んだチキンと旬のフルーツを使った特製カレー</p>
+                    <span class="price">¥1,380</span>
+                </div>
+                </a>
+            </div>            <div class="menu-item">
+                <a href="menus/seasonal/chicken-shrimp-paella.html">
+                <div class="menu-img">
+                    <img src="images/seasonal-4.jpg" alt="鶏肉と海老の贅沢パエリア">
+                </div>
+                <div class="menu-details">
+                    <h3>鶏肉と海老の贅沢パエリア</h3>
+                    <p>ジューシーな鶏肉と新鮮な海老を使った特製パエリア</p>
+                    <span class="price">¥1,680</span>
+                </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="dessert" class="menu-section dessert-menu">
+        <div class="section-header">
+            <h2>デザート</h2>
+            <p>お食事の後はぜひ自慢のデザートを</p>
+        </div>
+        <div class="menu-container">
+            <div class="menu-item">
+                <div class="menu-img">
+                    <img src="images/dessert-1.jpg" alt="濃厚チーズケーキ">
+                </div>
+                <div class="menu-details">
+                    <h3>濃厚合成チーズケーキ</h3>
+                    <p>北海道産クリームチーズを使用した濃厚な味わいのチーズケーキ</p>
+                    <span class="price">¥580</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-img">
+                    <img src="images/dessert-2.jpg" alt="自家製ティラミス">
+                </div>
+                <div class="menu-details">
+                    <h3>自家製ティラミス</h3>
+                    <p>イタリア産マスカルポーネを使用した本格ティラミス</p>
+                    <span class="price">¥620</span>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-img">
+                    <img src="images/dessert-3.jpg" alt="季節のフルーツパフェ">
+                </div>
+                <div class="menu-details">
+                    <h3>季節のフルーツパフェ</h3>
+                    <p>旬のフルーツをふんだんに使用した贅沢パフェ</p>
+                    <span class="price">¥780</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="drink" class="drink-bar">
+        <div class="section-header">
+            <h2>ドリンクバー</h2>
+            <p>40種類以上のドリンクが飲み放題！</p>
+        </div>
+        <div class="drink-container">
+            <div class="drink-features">
+                <div class="drink-feature">
+                    <i class="fas fa-coffee"></i>
+                    <h3>本格コーヒー</h3>
+                    <p>挽きたての豆から抽出する香り高いコーヒー</p>
+                </div>
+                <div class="drink-feature">
+                    <i class="fas fa-leaf"></i>
+                    <h3>こだわりの茶葉</h3>
+                    <p>世界各国から集めた厳選茶葉のお茶</p>
+                </div>
+                <div class="drink-feature">
+                    <i class="fas fa-blender"></i>
+                    <h3>フレッシュジュース</h3>
+                    <p>季節の果物を使ったフレッシュジュース</p>
+                </div>
+                <div class="drink-feature">
+                    <i class="fas fa-ice-cream"></i>
+                    <h3>ソフトドリンク</h3>
+                    <p>オリジナルブレンドのソーダやコーラなど</p>
+                </div>
+            </div>
+            <div class="drink-price">
+                <p>ランチタイム <span>¥330 (税込)</span></p>
+                <p>ディナータイム <span>¥430 (税込)</span></p>
+                <p>お子様 <span>¥220 (税込)</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="regular" class="menu-section regular-menu">
+        <div class="section-header">
+            <h2>定番メニュー</h2>
+            <p>いつでも楽しめる定番の鶏肉料理</p>
+        </div>
+        <div class="menu-container">            <div class="menu-item">
+                <a href="menus/regular/special-nanban-chicken.html">
+                <div class="menu-img">
+                    <img src="images/regular-1.jpg" alt="特製チキン南蛮">
+                </div>
+                <div class="menu-details">
+                    <h3>特製チキン南蛮</h3>
+                    <p>サクサク衣の鶏肉とタルタルソースが絶妙にマッチ</p>
+                    <span class="price">¥1,280</span>
+                </div>
+                </a>
+            </div>            <div class="menu-item">
+                <a href="menus/regular/juicy-karaage-set.html">
+                <div class="menu-img">
+                    <img src="images/regular-2.jpg" alt="ジューシーから揚げ定食">
+                </div>
+                <div class="menu-details">
+                    <h3>ジューシーから揚げ定食</h3>
+                    <p>秘伝のタレに漬け込んだ鶏もも肉のから揚げ</p>
+                    <span class="price">¥1,180</span>
+                </div>
+                </a>
+            </div>            <div class="menu-item">
+                <a href="menus/regular/chicken-steak.html">
+                <div class="menu-img">
+                    <img src="images/regular-3.jpg" alt="チキンステーキ">
+                </div>
+                <div class="menu-details">
+                    <h3>チキンステーキ</h3>
+                    <p>ジューシーな鶏もも肉を香ばしく焼き上げたステーキ</p>
+                    <span class="price">¥1,480</span>
+                </div>
+                </a>
+            </div>            <div class="menu-item">
+                <a href="menus/regular/chicken-avocado-salad.html">
+                <div class="menu-img">
+                    <img src="images/regular-4.jpg" alt="チキンとアボカドのサラダ">
+                </div>
+                <div class="menu-details">
+                    <h3>チキンとアボカドのサラダ</h3>
+                    <p>グリルチキンと新鮮野菜、アボカドのヘルシーサラダ</p>
+                    <span class="price">¥980</span>
+                </div>
+                </a>
+            </div>            <div class="menu-item">
+                <a href="menus/regular/chicken-curry.html">
+                <div class="menu-img">
+                    <img src="images/regular-5.jpg" alt="チキンカレー">
+                </div>
+                <div class="menu-details">
+                    <h3>チキンカレー</h3>
+                    <p>じっくり煮込んだスパイシーなチキンカレー</p>
+                    <span class="price">¥1,080</span>
+                </div>
+                </a>
+            </div>            <div class="menu-item">
+                <a href="menus/regular/chicken-doria.html">
+                <div class="menu-img">
+                    <img src="images/regular-6.jpg" alt="チキンドリア">
+                </div>
+                <div class="menu-details">
+                    <h3>チキンドリア</h3>
+                    <p>とろけるチーズと鶏肉の旨味が詰まったドリア</p>
+                    <span class="price">¥1,180</span>
+                </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="takeout" class="menu-section takeout-menu">
+        <div class="section-header">
+            <h2>テイクアウト</h2>
+            <p>ご自宅でもチキンハウスの味をお楽しみください</p>
+        </div>
+        <div class="menu-container">            <div class="menu-item">
+                <a href="menus/takeout/fried-chicken-bucket.html">
+                <div class="menu-img">
+                    <img src="images/takeout-1.jpg" alt="フライドチキンバケット">
+                </div>
+                <div class="menu-details">
+                    <h3>フライドチキンバケット</h3>
+                    <p>特製スパイスで味付けした8ピースのフライドチキン詰め合わせ</p>
+                    <span class="price">¥1,980</span>
+                </div>
+                </a>
+            </div>            <div class="menu-item">
+                <a href="menus/takeout/chicken-bento.html">
+                <div class="menu-img">
+                    <img src="images/takeout-2.jpg" alt="チキン弁当">
+                </div>
+                <div class="menu-details">
+                    <h3>チキン弁当</h3>
+                    <p>人気のチキン料理と季節の副菜を詰め合わせたお弁当</p>
+                    <span class="price">¥980</span>
+                </div>
+                </a>
+            </div>            <div class="menu-item">
+                <a href="menus/takeout/party-set.html">
+                <div class="menu-img">
+                    <img src="images/takeout-3.jpg" alt="パーティーセット">
+                </div>
+                <div class="menu-details">
+                    <h3>パーティーセット</h3>
+                    <p>フライドチキン、サラダ、ポテト、ドリンクのパーティーセット(4名様分)</p>
+                    <span class="price">¥3,980</span>
+                </div>
+                </a>
+            </div>            <div class="menu-item">
+                <a href="menus/takeout/chicken-sandwich.html">
+                <div class="menu-img">
+                    <img src="images/takeout-4.jpg" alt="チキンサンドウィッチ">
+                </div>
+                <div class="menu-details">
+                    <h3>チキンサンドウィッチ</h3>
+                    <p>自家製パンにジューシーなチキンと野菜を挟んだサンドウィッチ</p>
+                    <span class="price">¥780</span>
+                </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="access" class="access-section">
+        <div class="section-header">
+            <h2>アクセス</h2>
+            <p>宇宙規模で広がるチキンハウスの店舗網</p>
+        </div>
+        <div class="solar-system-container">
+            <div id="solar-system"></div>
+            <div id="planet-popup" class="planet-info">
+                <h3 id="branch-name">チキンハウス 太陽本店</h3>
+                <div class="info-details">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>住所</h4>
+                            <p id="branch-address">東京都千代田区千代田1-1</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-train"></i>
+                        <div>
+                            <h4>交通アクセス</h4>
+                            <p id="branch-access">東京駅から徒歩5分</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>営業時間</h4>
+                            <p id="branch-hours">ランチ 11:00-15:00 / ディナー 17:00-22:00</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>お電話</h4>
+                            <p id="branch-tel">03-1234-5678</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="solar-instructions">
+                <p><i class="fas fa-info-circle"></i> 惑星にマウスを合わせると、各店舗情報が表示されます</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation" class="reservation-section">
+        <div class="section-header">
+            <h2>ご予約</h2>
+            <p>ご予約はお電話またはオンラインで</p>
+        </div>
+        <div class="reservation-container">
+            <form class="reservation-form">
+                <div class="form-group">
+                    <label for="name">お名前</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">電話番号</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">ご来店日</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">ご来店時間</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="people">人数</label>
+                    <input type="number" id="people" name="people" min="1" max="20" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">ご要望など</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">予約する</button>            </form>
+        </div>    </section>    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/chicken-logo.png" alt="チキンハウスロゴ">
+                <h2>チキンハウス</h2>
+            </div>
+            <div class="footer-links"><div class="footer-nav">
+                    <h3>メニュー</h3>
+                    <ul>
+                        <li><a href="#seasonal">季節のメニュー</a></li>
+                        <li><a href="#dessert">デザート</a></li>
+                        <li><a href="#drink">ドリンクバー</a></li>
+                        <li><a href="#regular">定番メニュー</a></li>
+                        <li><a href="#takeout">テイクアウト</a></li>
+                    </ul>
+                </div>                <div class="footer-nav">
+                    <h3>店舗情報</h3>
+                    <ul>
+                        <li><a href="#access">アクセス</a></li>
+                        <li><a href="#reservation">ご予約</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="company.html"><i class="fas fa-building"></i> 会社情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-nav">
+                    <h3>SNS</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2718 チキンハウス All Rights Reserved.</p>
+        </div>
+    </footer>    <script src="js/script.js"></script>
+    <script src="js/solar-system.js"></script>
+</body>
+</html>
