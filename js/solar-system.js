@@ -30,8 +30,9 @@ function displayFallback(root){
 function initialize(root){
  const width=Math.max(root.clientWidth,300),height=Math.max(root.clientHeight,300);
  const scene=new THREE.Scene();scene.background=new THREE.Color("#0b1222");
- const camera=new THREE.PerspectiveCamera(43,width/height,.1,1000);
- camera.position.set(0,53,103);
+ // Wider view keeps the outer planets visible on phones.
+ const camera=new THREE.PerspectiveCamera(50,width/height,.1,1000);
+ camera.position.set(0,115,165);
  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:"low-power"});
  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));renderer.setSize(width,height);
  renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;
@@ -39,53 +40,91 @@ function initialize(root){
  root.querySelector(".solar-fallback")?.remove();
  root.insertBefore(renderer.domElement,root.firstChild);
  const controls=new OrbitControls(camera,renderer.domElement);
- controls.enableDamping=true;controls.dampingFactor=.06;controls.minDistance=35;controls.maxDistance=220;
+ controls.enableDamping=true;controls.dampingFactor=.06;controls.minDistance=45;controls.maxDistance=270;
  controls.maxPolarAngle=Math.PI*.87;controls.target.set(0,0,0);
  scene.add(new THREE.AmbientLight(0xb3c7e8,1.1));
  const sunlight=new THREE.PointLight(0xfff1d4,1650,250,1.4);sunlight.position.set(0,0,0);scene.add(sunlight);
  const geometry=new THREE.SphereGeometry(1,48,32);
  const bodies=[];
+ const byId=new Map(), motions=[];
+ // Artistic radians per second: deliberately faster than true orbital periods.
  const planetData=[
-  {id:"sun",size:5.1,orbit:0,angle:0,type:"sun",rotation:0},
-  {id:"mercury",size:.75,orbit:11,angle:2.55,type:"rock",rotation:.1},
-  {id:"venus",size:1.3,orbit:17,angle:-2.1,type:"venus",rotation:.1},
-  {id:"earth",size:1.8,orbit:24,angle:.9,type:"earth",rotation:.35},
-  {id:"mars",size:1.45,orbit:31,angle:-.55,type:"mars",rotation:.15},
-  {id:"jupiter",size:4.15,orbit:42,angle:2.5,type:"jupiter",rotation:.2},
-  {id:"callisto",size:.9,orbit:47,angle:2.63,type:"rock",rotation:.12},
-  {id:"saturn",size:3.45,orbit:56,angle:-2.3,type:"saturn",rotation:0},
-  {id:"uranus",size:2.3,orbit:67,angle:.65,type:"uranus",rotation:0},
-  {id:"neptune",size:2.25,orbit:78,angle:-.9,type:"neptune",rotation:0}
+  {id:"sun",size:5.1,orbit:0,angle:0,orbitSpeed:0,spinSpeed:.12,type:"sun",rotation:0},
+  {id:"mercury",size:.75,orbit:11,angle:2.55,orbitSpeed:.38,spinSpeed:.35,type:"rock",rotation:.1},
+  {id:"venus",size:1.3,orbit:17,angle:-2.1,orbitSpeed:.30,spinSpeed:.24,type:"venus",rotation:.1},
+  {id:"earth",size:1.8,orbit:24,angle:.9,orbitSpeed:.22,spinSpeed:1.20,type:"earth",rotation:.35},
+  {id:"mars",size:1.45,orbit:31,angle:-.55,orbitSpeed:.19,spinSpeed:.95,type:"mars",rotation:.15},
+  {id:"jupiter",size:4.15,orbit:42,angle:2.5,orbitSpeed:.14,spinSpeed:1.35,type:"jupiter",rotation:.2},
+  {id:"callisto",size:.9,orbit:7.8,angle:1.7,orbitSpeed:.85,spinSpeed:.48,parent:"jupiter",type:"rock",rotation:.12},
+  {id:"saturn",size:3.45,orbit:56,angle:-2.3,orbitSpeed:.11,spinSpeed:1.05,type:"saturn",rotation:0},
+  {id:"uranus",size:2.3,orbit:67,angle:.65,orbitSpeed:.09,spinSpeed:.65,type:"uranus",rotation:0},
+  {id:"neptune",size:2.25,orbit:78,angle:-.9,orbitSpeed:.075,spinSpeed:.78,type:"neptune",rotation:0}
  ];
  const source=new THREE.Vector3(0,0,0);
  for(const p of planetData){
   const texture=createTexture(p.type);
   const mat=p.id==="sun"?new THREE.MeshBasicMaterial({map:texture,color:0xffffff}):new THREE.MeshStandardMaterial({map:texture,roughness:1,metalness:0});
   const mesh=new THREE.Mesh(geometry,mat);
-  mesh.scale.setScalar(p.size);mesh.position.set(Math.cos(p.angle)*p.orbit,0,Math.sin(p.angle)*p.orbit);mesh.rotation.y=p.rotation;mesh.userData.planet=p.id;
-  scene.add(mesh);bodies.push(mesh);
+  const origin=p.parent?byId.get(p.parent).position:source;
+  mesh.scale.setScalar(p.size);
+  mesh.position.set(origin.x+Math.cos(p.angle)*p.orbit,0,origin.z+Math.sin(p.angle)*p.orbit);
+  mesh.rotation.y=p.rotation;mesh.userData.planet=p.id;
+  scene.add(mesh);bodies.push(mesh);byId.set(p.id,mesh);
   if(p.id==="saturn"||p.id==="uranus"){
    const ring=new THREE.Mesh(new THREE.RingGeometry(p.size*1.35,p.size*(p.id==="saturn"?2.14:1.63),128),new THREE.MeshBasicMaterial({color:p.id==="saturn"?0xbba27b:0xb3d6d7,side:THREE.DoubleSide,transparent:true,opacity:.74,depthWrite:false}));
    ring.rotation.x=-Math.PI/2.4;ring.rotation.y=.16;mesh.add(ring);ring.scale.setScalar(1/p.size);
   }
+  let orbitLine=null;
   if(p.orbit){
    const pts=[];for(let i=0;i<=192;i++){const a=i/192*Math.PI*2;pts.push(new THREE.Vector3(Math.cos(a)*p.orbit,0,Math.sin(a)*p.orbit));}
-   const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:0x53617a,transparent:true,opacity:.3}));scene.add(line);
+   orbitLine=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:p.parent?0x8e9ec0:0x53617a,transparent:true,opacity:p.parent?.65:.4}));
+   if(p.parent)orbitLine.position.copy(origin);
+   scene.add(orbitLine);
   }
+  motions.push({mesh,data:p,angle:p.angle,orbitLine});
  }
  const glow=new THREE.Sprite(new THREE.SpriteMaterial({map:makeGlow(),color:0xffa44b,transparent:true,opacity:.42,depthWrite:false,blending:THREE.AdditiveBlending}));
  glow.scale.set(23,23,1);scene.add(glow);
  const points=new Float32Array(1700*3);for(let i=0;i<1700;i++){const a=Math.random()*Math.PI*2,z=Math.random()*2-1,r=Math.sqrt(1-z*z),d=180+Math.random()*140;points[i*3]=r*Math.cos(a)*d;points[i*3+1]=z*d;points[i*3+2]=r*Math.sin(a)*d;}
  const stars=new THREE.BufferGeometry();stars.setAttribute("position",new THREE.BufferAttribute(points,3));
  scene.add(new THREE.Points(stars,new THREE.PointsMaterial({color:0xcbdcfb,size:.7,sizeAttenuation:false,transparent:true,opacity:.9})));
- const raycaster=new THREE.Raycaster();const mouse=new THREE.Vector2();const cursorPoint=new THREE.Vector2();
+ const raycaster=new THREE.Raycaster();const mouse=new THREE.Vector2();
  function pick(ev){const rect=renderer.domElement.getBoundingClientRect();mouse.set(((ev.clientX-rect.left)/rect.width)*2-1,-((ev.clientY-rect.top)/rect.height)*2+1);raycaster.setFromCamera(mouse,camera);const hits=raycaster.intersectObjects(bodies);return hits.length?hits[0].object.userData.planet:null;}
  renderer.domElement.addEventListener("click",ev=>{const id=pick(ev);if(branches[id])selectBranch(id);});
  renderer.domElement.addEventListener("pointermove",ev=>{const id=pick(ev);renderer.domElement.style.cursor=branches[id]?"pointer":"grab";});
  const obs=new ResizeObserver(entries=>{const rect=entries[0].contentRect;if(rect.width<1||rect.height<1)return;camera.aspect=rect.width/rect.height;camera.updateProjectionMatrix();renderer.setSize(rect.width,rect.height);});obs.observe(root);
- let visible=true;const viewObserver=new IntersectionObserver(entries=>{visible=entries[0]?.isIntersecting??true;});viewObserver.observe(root);
+ let visible=true;
+ const viewObserver=new IntersectionObserver(entries=>{visible=entries[0]?.isIntersecting??true;});viewObserver.observe(root);
+ const button=document.getElementById("motion-toggle");
+ // Honor the operating system preference but offer an explicit override.
+ let playing=!window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+ function updateButton(){
+  if(!button)return;
+  button.textContent=playing?"⏸ 動きを止める":"▶ 動きを再開";
+  button.setAttribute("aria-pressed",String(!playing));
+ }
+ button?.addEventListener("click",()=>{playing=!playing;updateButton();});
+ updateButton();
  let last=0;
- function render(t){requestAnimationFrame(render);if(!visible||document.hidden)return;const dt=Math.min((t-last)/1000,.05)||.016;last=t;for(const mesh of bodies){if(mesh.userData.planet!=="sun")mesh.rotation.y+=dt*.033;}controls.update();renderer.render(scene,camera);}
+ function render(now){
+  requestAnimationFrame(render);
+  if(!visible||document.hidden){last=now;return;}
+  const dt=last?Math.min((now-last)/1000,.05):0;
+  last=now;
+  if(playing){
+   // Jupiter is updated before Callisto, keeping its orbit around its parent.
+   for(const body of motions){
+    const {mesh,data}=body;
+    body.angle+=dt*data.orbitSpeed;
+    const origin=data.parent?byId.get(data.parent).position:source;
+    mesh.position.set(origin.x+Math.cos(body.angle)*data.orbit,0,origin.z+Math.sin(body.angle)*data.orbit);
+    mesh.rotation.y+=dt*data.spinSpeed;
+    if(data.parent&&body.orbitLine)body.orbitLine.position.copy(origin);
+   }
+  }
+  controls.update();
+  renderer.render(scene,camera);
+ }
  requestAnimationFrame(render);
 }
 function makeGlow(){const c=document.createElement("canvas");c.width=c.height=128;const x=c.getContext("2d"),g=x.createRadialGradient(64,64,4,64,64,64);g.addColorStop(0,"rgba(255,210,110,.95)");g.addColorStop(.3,"rgba(255,150,55,.44)");g.addColorStop(1,"rgba(255,120,20,0)");x.fillStyle=g;x.fillRect(0,0,128,128);return new THREE.CanvasTexture(c);}

@@ -29,3 +29,12 @@ for (const category of ['regular','seasonal','takeout']) {
 assert.match(read('company.html'),/id="planet-selector"/);
 assert.match(read('js/solar-system.js'),/new THREE\.CanvasTexture/);
 console.log('Smoke tests passed: 6 mapped dishes, all assets, 14 redirects, site pages, planet textures.');
+
+const solar=read('js/solar-system.js'), company=read('company.html');
+for(const id of ['mercury','venus','earth','mars','jupiter','saturn','uranus','neptune']){
+ assert.match(solar,new RegExp('id:"'+id+'"[^\\n]*orbitSpeed:[.0-9]+[^\\n]*spinSpeed:[.0-9]+'),id+' needs orbit and spin rates');
+}
+assert.match(solar,/id:"callisto"[^\n]*parent:"jupiter"/,'Callisto must orbit Jupiter');
+assert.match(solar,/body\.angle\s*\+=\s*dt\s*\*\s*data\.orbitSpeed/,'Orbit must advance');
+assert.match(solar,/mesh\.rotation\.y\s*\+=\s*dt\s*\*\s*data\.spinSpeed/,'Spin must advance');
+assert.match(company,/id="motion-toggle"/,'Motion control must exist');
