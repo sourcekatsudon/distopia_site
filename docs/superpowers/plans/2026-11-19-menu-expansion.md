@@ -11,7 +11,7 @@ Constraints: No solar-system.js/company.html/deployment-setting changes; no prod
 - [x] 3. Sonnet proposes bounded UI changes; integrate category/search/count/load more, gallery and related items. Verify zero matches, invalid ID, legacy main filter, URL state and mobile.
 - [x] 4. Update selected homepage feature photos from centralized data; preserve overall design.
 - [x] 5. Run syntax/smoke/browser checks, inspect desktop/mobile screenshots and solar behavior; obtain independent Opus review, fix verified findings.
-- [ ] 6. Commit/push same feature branch, update PR #1, deploy Vercel Preview and verify URL/access limits.
+- [x] 6. Commit/push same feature branch, update PR #1, deploy Vercel Preview and verify URL/access limits.
 
 Review focus: empty search; unknown category/ID; history restoration; gallery selection; mobile overflow and map regression.
 Execution: Codex owns integration and tests; user explicitly delegates routine decisions and requests Antigravity workers.

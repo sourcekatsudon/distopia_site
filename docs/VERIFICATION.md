@@ -25,3 +25,7 @@
 静的チェックは既存GitHub Actionsでも実行。ローカルは `python -m http.server 8765` 後、Playwrightを利用できる環境なら `node tests/browser.cjs`。このファイルは `run(page)` をexportしているため、既存のPlaywrightセッションにも渡せる。BASE_URLで対象を変更可能。
 
 今回の実表示検証はChromium。Safari/Firefoxおよび実機タッチ操作の確認は未実施。ネイティブIME実機入力は未確認だが、入力とカテゴリclickを同一ターンに発火させる回帰テストを実施。外部CDNのThree.js・Google Fontsには既存のまま依存する。
+
+## 公開確認
+
+既存featureブランチへのpushでVercel PreviewがREADYになることを確認。本番mainへのマージ・本番設定変更なし。プレビューは既存Vercel Authentication保護の対象で、閲覧には認証が必要。最終URL・SHAはPR #1に記録する。
