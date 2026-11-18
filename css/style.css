@@ -55,3 +55,5 @@
 .feature-photo img,.dessert-layout img,.hero-visual img{object-fit:contain}.hero-visual{background:#f7e8bc}.menu-count{overflow-wrap:anywhere}
 
 @media(min-width:721px){.hero-visual{height:560px;min-height:0}.hero-visual img{height:100%}}
+
+.detail-meta{flex-wrap:wrap;align-items:flex-start}.detail-meta .card-price{white-space:nowrap}.detail-meta .small-note{flex:1 1 130px}
