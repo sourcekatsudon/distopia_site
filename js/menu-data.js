@@ -17,28 +17,6 @@ window.CHICKEN_MENU = Object.freeze([
     "recommended": false
   },
   {
-    "id": "seasonal-hamburg",
-    "category": "main",
-    "takeout": false,
-    "name": "季節の贅沢合成ハンバーグ",
-    "price": 2400,
-    "image": "images/menu/grill/seasonal-hamburg.webp",
-    "imageAlt": "褐色ソースに浸した角切りの合成ハンバーグと黄・緑・白色のキューブのプレート",
-    "badge": "季節限定",
-    "short": "角切りハンバーグに濃厚ブラウンソースと彩りキューブを添えて。",
-    "description": "褐色ソースで仕上げた合成ハンバーグを、食べやすいキューブ状に成形。黄・緑・乳白色の付け合わせを彩りよく盛り付けました。写真のフォークで持ち上げた一切れまで、すべて同じ培養素材です。",
-    "detail": "合成ハンバーグ／ブラウンソース／三色栄養キューブ",
-    "note": "季節限定・店内提供",
-    "subcategory": "grill",
-    "recommended": true,
-    "gallery": [
-      {
-        "image": "images/menu/grill/seasonal-hamburg-1.webp",
-        "imageAlt": "角切り合成ハンバーグの別の盛り付け。写真内の価格は税込2400。"
-      }
-    ]
-  },
-  {
     "id": "protein-pie",
     "category": "main",
     "takeout": true,

@@ -1,7 +1,7 @@
 ﻿No,元画像,採否,商品ID,視覚グループ,公開画像,重複元,判定理由
 1,022589d8-f1d8-4f3b-8605-3ea5fcfd3c80.png,non-menu,,non-menu,,,ロゴ素材。既存ブランドを維持。
-2,03f8ac25-00b2-46d1-b86e-ece51acc3716.png,gallery,seasonal-hamburg,seasonal-hamburg,images/menu/grill/seasonal-hamburg-1.webp,,商品写真として採用。
-3,0a058282-995e-4121-a0b2-efdc548d6044.png,primary,seasonal-hamburg,seasonal-hamburg,images/menu/grill/seasonal-hamburg.webp,,商品写真として採用。
+2,03f8ac25-00b2-46d1-b86e-ece51acc3716.png,withdrawn,,seasonal-hamburg,,,ユーザーの指定により商品と写真を掲載終了。トップ等にも使用しない。
+3,0a058282-995e-4121-a0b2-efdc548d6044.png,withdrawn,,seasonal-hamburg,,,ユーザーの指定により商品と写真を掲載終了。トップ等にも使用しない。
 4,1240115b-52be-4249-93cd-060e0cdb8942.png,primary,cube-parfait,cube-parfait,images/menu/dessert/cube-parfait.webp,,商品写真として採用。
 5,156070ac-362b-4d06-b7ed-06ae09f9e891.png,primary,vegetable-cocotte,vegetable-cocotte,images/menu/side/vegetable-cocotte.webp,,商品写真として採用。
 6,187d6c22-519d-4e46-8098-bd3f47e5c554.png,primary,afternoon-tea,afternoon-tea,images/menu/dessert/afternoon-tea.webp,,商品写真として採用。

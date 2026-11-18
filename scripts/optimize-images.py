@@ -19,4 +19,4 @@ for row in manifest["images"]:
         photo = ImageOps.exif_transpose(original).convert("RGB")
         photo.thumbnail((1100, 1100))
         photo.save(target, "WEBP", quality=84, method=6)
-print("Rebuilt 39 adopted WebP images.")
+print("Rebuilt adopted WebP images.")

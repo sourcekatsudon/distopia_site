@@ -5,15 +5,15 @@
 ## 集計
 
 - 元画像80枚／SHA-256で64種類（完全重複16枚）。
-- 主画像33枚＋ギャラリー6枚＝公開用39枚。
-- 未採用41枚＝完全重複16枚＋同一料理の別構成・広告等16枚＋料理以外・配給食資料等9枚。
-- 既存6品を維持、新規27品、合計33品。
-- おすすめ7品、お持ち帰り対応12品は重複するフィルター。
-- WebP、長辺最大1100px、品質84。公開用39枚の合計2,961,998 bytes（約2.96 MB）。
+- 主画像32枚＋ギャラリー5枚＝公開用37枚。
+- 未採用43枚＝完全重複16枚＋同一料理の別構成・広告等16枚＋料理以外・配給食資料等9枚＋掲載終了2枚。
+- 既存5品を維持、新規27品、合計32品（季節の贅沢合成ハンバーグはユーザー指定で削除）。
+- おすすめ6品、お持ち帰り対応12品は重複するフィルター。
+- WebP、長辺最大1100px、品質84。公開用37枚の合計2,764,298 bytes。
 
 |分類|商品数|
 |---|---:|
-|ハンバーグ・グリル（サンド・プレートを含む）|10|
+|ハンバーグ・グリル（サンド・プレートを含む）|9|
 |デザート|6|
 |スープ・サイド|5|
 |パスタ・グラタン|4|
@@ -28,7 +28,6 @@
 |商品ID|商品名|税込価格|元画像|公開画像|
 |---|---|---:|---|---|
 |layered-sandwich|多層合成チキンサンド|¥1,480|IMG_6192.jpg|[layered-sandwich](../images/menu/grill/layered-sandwich.webp)|
-|seasonal-hamburg|季節の贅沢合成ハンバーグ|¥2,400|0a058282-995e-4121-a0b2-efdc548d6044.png|[seasonal-hamburg](../images/menu/grill/seasonal-hamburg.webp)|
 |protein-pie|タンパク質キューブのパイ包み|¥1,680|b566aca2-9bd1-4da1-84f5-0c4b53c3c857.png|[protein-pie](../images/menu/grill/protein-pie.webp)|
 |standard-plate|標準栄養プレート|¥980|ChatGPT Image 2025年5月23日 22_26_21.png|[standard-plate](../images/menu/grill/standard-plate.webp)|
 |cube-parfait|カラーキューブ・パフェ|¥1,080|1240115b-52be-4249-93cd-060e0cdb8942.png|[cube-parfait](../images/menu/dessert/cube-parfait.webp)|
@@ -65,7 +64,6 @@
 
 |商品ID|元画像|公開画像|
 |---|---|---|
-|seasonal-hamburg|03f8ac25-00b2-46d1-b86e-ece51acc3716.png|[seasonal-hamburg](../images/menu/grill/seasonal-hamburg-1.webp)|
 |cube-parfait|b7a6dbab-553f-4866-a87c-53370d8b9022.png|[cube-parfait](../images/menu/dessert/cube-parfait-1.webp)|
 |cube-parfait|ChatGPT Image 2025年5月23日 22_54_28.png|[cube-parfait](../images/menu/dessert/cube-parfait-2.webp)|
 |cube-parfait|ChatGPT Image 2025年5月23日 23_05_43.png|[cube-parfait](../images/menu/dessert/cube-parfait-3.webp)|
@@ -80,8 +78,6 @@
 
 ## 採用時の判断
 
-- 価格¥3,680・ドリンクバー付きの暗い広告は不採用。季節のハンバーグは既存税込¥2,400を維持し、写真内表記も一致する2枚を採用。
-- ハンバーグの文字なし素材は確認できなかったため、価格が一致する広告写真を使用。その他の商品カードは文字なし写真を優先。
 - スターゲイジーパイとアフタヌーンティーを分離。魚の頭がある写真は前者、三段スタンドは後者として採用。
 - 揚げ衣のカツ丼と照り焼き風・旨だれ風の丼は、見た目の構造が明確に違うため別商品とした。
 - 寿司、カレー、モンブラン、ステーキ等の構図・構造違いは商品数を増やすために使用しない。
@@ -90,4 +86,8 @@
 
 ## 再最適化
 
-元画像はリポジトリに含めない。`python scripts/optimize-images.py <展開フォルダー>` でハッシュを照合し、採用39枚だけ再生成できる。Pillowが必要。
+元画像はリポジトリに含めない。`python scripts/optimize-images.py <展開フォルダー>` でハッシュを照合し、採用37枚だけ再生成できる。Pillowが必要。
+
+## 掲載終了とトップ写真の変更
+
+ユーザー指定により季節の贅沢合成ハンバーグの商品、公開写真2枚と旧トップ画像を削除。旧商品URLは商品未掲載の案内を表示し、旧HTMLの誘導先は合成ステーキへ変更。トップは合成ステーキ、クリームパスタ、グラタン、キューブパフェ、アフタヌーンティーの5品を約2秒間隔で表示。商品情報はmenu-data.jsから参照する。

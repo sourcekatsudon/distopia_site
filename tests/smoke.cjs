@@ -42,3 +42,5 @@ assert.match(company,/id="motion-toggle"/,'Motion control must exist');
 
 require("./catalog.cjs");
 require("./filters.cjs");
+
+require("./hero.cjs");

@@ -16,9 +16,9 @@ async function run(page) {
  await page.locator('#menu-more').click();check(await page.locator('#menu-grid .menu-card').count()===24,'load24');
  await page.locator('#menu-search').dispatchEvent('input');await page.waitForTimeout(220);check(await page.locator('#menu-grid .menu-card').count()===24,'unchanged query preserves expanded list');
  await page.evaluate(()=>dispatchEvent(new PopStateEvent('popstate')));check(await page.locator('#menu-grid .menu-card').count()===24,'same-state history preserves expanded list');
- await page.locator('#menu-more').click();check(await page.locator('#menu-grid .menu-card').count()===33,'load33');
+ await page.locator('#menu-more').click();check(await page.locator('#menu-grid .menu-card').count()===32,'load32');
  check(await page.locator('#menu-more').isHidden(),'hide exhausted more');
- for(const [c,n] of Object.entries({recommended:7,grill:10,pasta:4,rice:5,side:5,japanese:2,dessert:6,takeout:12})){
+ for(const [c,n] of Object.entries({recommended:6,grill:9,pasta:4,rice:5,side:5,japanese:2,dessert:6,takeout:12})){
   await page.locator('[data-category='+c+']').click();check(await page.locator('#menu-grid .menu-card').count()===n,'category '+c);
  }
  await page.locator('[data-category=all]').click();await page.locator('#menu-search').fill('結果なしXYZ');await page.waitForTimeout(220);

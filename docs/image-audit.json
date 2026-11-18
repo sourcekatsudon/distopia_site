@@ -4,15 +4,16 @@
     "uniqueHashes": 64,
     "dispositions": {
       "non-menu": 9,
-      "gallery": 6,
-      "primary": 33,
+      "withdrawn": 2,
+      "primary": 32,
       "unused-variant": 16,
+      "gallery": 5,
       "exact-duplicate": 16
     },
-    "products": 33,
+    "products": 32,
     "addedProducts": 27,
     "subcategories": {
-      "grill": 10,
+      "grill": 9,
       "dessert": 6,
       "side": 5,
       "pasta": 4,
@@ -20,7 +21,9 @@
       "japanese": 2,
       "takeout": 1
     },
-    "takeoutEligible": 12
+    "takeoutEligible": 12,
+    "removedProducts": 1,
+    "retainedLegacyProducts": 5
   },
   "images": [
     {
@@ -42,12 +45,11 @@
       "width": 1024,
       "height": 1024,
       "visuallyReviewed": true,
-      "usage": "gallery",
-      "productId": "seasonal-hamburg",
-      "optimized": "images/menu/grill/seasonal-hamburg-1.webp",
-      "note": "商品写真として採用。",
+      "usage": "withdrawn",
+      "note": "ユーザーの指定により商品と写真を掲載終了。トップ等にも使用しない。",
       "visualGroup": "seasonal-hamburg",
-      "observation": "商品写真として採用。"
+      "observation": "商品写真として採用。",
+      "withdrawnProductId": "seasonal-hamburg"
     },
     {
       "index": 3,
@@ -56,12 +58,11 @@
       "width": 1024,
       "height": 1024,
       "visuallyReviewed": true,
-      "usage": "primary",
-      "productId": "seasonal-hamburg",
-      "optimized": "images/menu/grill/seasonal-hamburg.webp",
-      "note": "商品写真として採用。",
+      "usage": "withdrawn",
+      "note": "ユーザーの指定により商品と写真を掲載終了。トップ等にも使用しない。",
       "visualGroup": "seasonal-hamburg",
-      "observation": "褐色ソースに浸した角切りの合成ハンバーグと黄・緑・白色のキューブのプレート"
+      "observation": "褐色ソースに浸した角切りの合成ハンバーグと黄・緑・白色のキューブのプレート",
+      "withdrawnProductId": "seasonal-hamburg"
     },
     {
       "index": 4,

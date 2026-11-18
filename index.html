@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#af252c"><meta name="description" content="チキンハウス｜太陽系のファミリーレストラン。季節の合成ハンバーグ、定番の培養チキン、デザートや店舗情報をご案内します。">
+<meta name="theme-color" content="#af252c"><meta name="description" content="チキンハウス｜太陽系のファミリーレストラン。合成ステーキ、パスタ、定番の培養チキン、デザートや店舗情報をご案内します。">
 <title>チキンハウス｜太陽系のファミリーレストラン</title>
 <link rel="icon" href="images/chicken-logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
@@ -19,10 +19,11 @@
   </div>
 </header>
 <main id="main">
-  <section class="hero" aria-labelledby="hero-title" data-feature-id="seasonal-hamburg">
-    <div class="hero-visual"><img data-feature-image src="images/hero-slides/slide-2.jpg" alt="季節の贅沢合成ハンバーグのプレート" fetchpriority="high"></div>
-    <div class="hero-panel"><p class="eyebrow">SEASONAL SPECIAL</p><p class="hero-kicker">期間限定メニュー</p><h1 id="hero-title" data-feature-name>季節の贅沢<br>合成ハンバーグ</h1><p>彩り豊かな栄養キューブと、濃厚なブラウンソース。<br>今季のおすすめをお楽しみください。</p><p class="hero-price" data-feature-price hidden></p><a class="btn btn-light" href="#menu" data-feature-link>商品を見る <span aria-hidden="true">→</span></a></div>
-    <div class="hero-index">CHICKEN HOUSE <span>FOOD &amp; DESSERT</span></div>
+  <section class="hero hero-carousel" aria-labelledby="hero-title" aria-roledescription="カルーセル" data-feature-id="synthetic-steak" data-carousel-ids="synthetic-steak,color-cream-pasta,cube-gratin,cube-parfait,afternoon-tea">
+    <div class="hero-visual"><img class="is-active" data-feature-image src="images/menu/grill/synthetic-steak.webp" alt="合成ビーフの厚切りステーキ" fetchpriority="high"><img data-feature-image src="images/menu/grill/synthetic-steak.webp" alt="" aria-hidden="true"></div>
+    <div class="hero-panel"><p class="eyebrow">CHICKEN HOUSE MENU</p><p class="hero-kicker">おすすめメニュー</p><h1 id="hero-title" data-feature-name>合成ビーフの厚切りステーキ</h1><p data-feature-short></p><p class="hero-price" data-feature-price hidden></p><a class="btn btn-light" href="menu.html?id=synthetic-steak" data-feature-link>商品を見る</a>
+      <div class="hero-controls" role="group" aria-label="おすすめ料理の写真切り替え" hidden><button type="button" data-carousel-prev aria-label="前の料理を表示">前へ</button><span class="hero-position" aria-live="off">1 / 5</span><button type="button" data-carousel-next aria-label="次の料理を表示">次へ</button><button type="button" data-carousel-toggle aria-pressed="false">自動切替を停止</button></div>
+    </div>
   </section>
   <div class="quick-links wrap"><a href="#menu"><span class="quick-icon">01</span><span>メニューを見る<small>FOOD &amp; DESSERT</small></span><span aria-hidden="true">↗</span></a><a href="#takeout"><span class="quick-icon">02</span><span>お持ち帰り<small>TAKE OUT</small></span><span aria-hidden="true">↗</span></a><a href="company.html#stores"><span class="quick-icon">03</span><span>店舗を探す<small>STORE LOCATOR</small></span><span aria-hidden="true">↗</span></a></div>
   <section class="section seasonal-feature" id="seasonal" data-feature-id="stargazy-pie"><div class="wrap feature-layout"><div class="feature-photo"><img data-feature-image alt="" loading="lazy" hidden></div><div class="feature-copy"><p class="eyebrow">RECOMMENDED</p><h2>おすすめメニュー</h2><p class="feature-heading" data-feature-name hidden></p><p data-feature-short hidden></p><p class="price-large" data-feature-price hidden></p><a class="text-link" href="#menu" data-feature-link>メニュー詳細を見る →</a></div></div></section>
@@ -38,7 +39,7 @@
 <p class="menu-disclaimer">※ 写真はイメージです。価格は税込・地球標準クレジット換算です。提供内容は拠点により異なる場合があります。</p></div></section>
   <section class="section dessert-feature" data-feature-id="afternoon-tea"><div class="wrap dessert-layout"><div><p class="eyebrow">SWEETS &amp; DESSERTS</p><h2>食後の楽しみも、<br>チキンハウスで。</h2><p class="dessert-name" data-feature-name hidden></p><p data-feature-short hidden></p><p class="price-large" data-feature-price hidden></p><a class="btn btn-red" href="#menu" data-feature-link>デザートを見る →</a></div><div class="dessert-media"><img data-feature-image alt="" loading="lazy" hidden></div></div></section>
   <section class="section takeout-feature" id="takeout" data-feature-id="cube-bento"><div class="wrap feature-layout feature-reverse"><div class="feature-photo"><img data-feature-image alt="" loading="lazy" hidden></div><div class="feature-copy"><p class="eyebrow">TAKE OUT</p><h2>お持ち帰り</h2><p class="feature-heading">おいしさを、<br>居住区でも。</p><p>一部メニューは居住区へのお持ち帰りにも対応しています。</p><p class="feature-heading feature-heading-sm" data-feature-name hidden></p><p data-feature-short hidden></p><p class="price-large" data-feature-price hidden></p><div class="feature-links"><a class="text-link" href="#menu" data-filter-link="takeout">対象メニューを見る →</a><a class="text-link" href="#menu" data-feature-link hidden>ご紹介メニューの詳細を見る →</a></div></div></div></section>
-  <section class="section news-section" id="news"><div class="wrap"><p class="eyebrow">INFORMATION</p><h2>お知らせ</h2><div class="news-list"><article><time datetime="3742-01-01">新歴3742年</time><span class="news-tag">メニュー</span><p>季節の贅沢合成ハンバーグが登場しました。</p></article><article><time datetime="3742-01-01">新歴3742年</time><span class="news-tag">店舗情報</span><p>太陽系各拠点の店舗情報を公開しました。</p></article></div></div></section>
+  <section class="section news-section" id="news"><div class="wrap"><p class="eyebrow">INFORMATION</p><h2>お知らせ</h2><div class="news-list"><article><time datetime="3742-01-01">新歴3742年</time><span class="news-tag">メニュー</span><p>お食事からデザートまで、彩り豊かなメニューをご用意しました。</p></article><article><time datetime="3742-01-01">新歴3742年</time><span class="news-tag">店舗情報</span><p>太陽系各拠点の店舗情報を公開しました。</p></article></div></div></section>
   <section class="store-band"><div class="wrap"><div><p class="eyebrow">STORE INFORMATION</p><h2>お近くのチキンハウスを探す</h2><p>地球・火星・木星圏から外惑星まで、太陽系の店舗をご案内します。</p></div><a href="company.html#stores" class="btn btn-light">店舗一覧・太陽系マップ →</a></div></section>
 </main>
 <footer class="site-footer"><div class="wrap footer-main"><div><a class="brand brand-footer" href="index.html"><img src="images/chicken-logo.png" alt="" width="52" height="52"><span><strong>チキンハウス</strong><small>CHICKEN HOUSE</small></span></a><p>太陽系のファミリーレストラン</p></div><div class="footer-links"><a href="#menu">メニュー</a><a href="#takeout">お持ち帰り</a><a href="company.html#stores">店舗情報</a><a href="company.html">会社概要</a></div></div><div class="wrap footer-bottom"><span>© CHICKEN HOUSE. All rights reserved.</span><span>このサイトは架空のレストランを題材にしたフィクションです。</span></div></footer>

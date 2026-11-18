@@ -57,3 +57,19 @@
 @media(min-width:721px){.hero-visual{height:560px;min-height:0}.hero-visual img{height:100%}}
 
 .detail-meta{flex-wrap:wrap;align-items:flex-start}.detail-meta .card-price{white-space:nowrap}.detail-meta .small-note{flex:1 1 130px}
+
+/* Two photo layers crossfade without changing hero geometry. */
+.hero-carousel .hero-visual{position:relative;background:#f3e9da}
+.hero-carousel .hero-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .45s ease}
+.hero-carousel .hero-visual img.is-active{opacity:1}
+.hero-carousel .hero-panel{min-width:0}
+.hero-controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:24px}
+.hero-controls button{min-height:44px;padding:7px 12px;border:1px solid #b6a290;border-radius:24px;background:#fff;color:var(--red-dark);font-size:14px;font-weight:700}
+.hero-controls button:hover{background:#f8f1e9}
+.hero-position{min-width:42px;text-align:center;font-size:14px;font-variant-numeric:tabular-nums}
+@media(max-width:720px){.hero-carousel .hero-visual{height:340px;min-height:340px}.hero-carousel h1{font-size:32px}}
+
+@media(min-width:721px){.hero-carousel .hero-visual{height:auto;min-height:560px}.hero-carousel .hero-panel{padding:40px clamp(28px,4vw,64px)}}
+
+.hero-carousel h1{font-size:clamp(30px,3vw,43px);min-height:4.05em}.hero-carousel .hero-panel>[data-feature-short]{min-height:3.6em}
+@media(max-width:720px){.hero-carousel h1{font-size:32px;min-height:2.7em}}
