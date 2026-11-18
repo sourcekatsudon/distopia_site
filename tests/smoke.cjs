@@ -3,12 +3,13 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const root = path.resolve(__dirname, '..');
 const read = p => fs.readFileSync(path.join(root, p), 'utf8');
-const data = read('js/menu-data.js');
-const ids = [...data.matchAll(/\bid:\s*"([^"]+)"/g)].map(m => m[1]);
-const images = [...data.matchAll(/\bimage:\s*"([^"]+)"/g)].map(m => m[1]);
-assert.equal(ids.length, 6, 'Six image-verified dishes should be present');
+const vm = require('node:vm');
+const context = {window:{}};
+vm.runInNewContext(read('js/menu-data.js'),context);
+const menu = context.window.CHICKEN_MENU;
+const ids = menu.map(m=>m.id), images=menu.map(m=>m.image);
+assert.ok(ids.length >= 30, 'Expanded image-verified catalog should be present');
 assert.equal(new Set(ids).size, ids.length, 'Product ids must be unique');
-assert.equal(images.length, ids.length, 'Every dish needs a menu image');
 for (const image of images) assert.ok(fs.existsSync(path.join(root, image)), 'Missing image: ' + image);
 for (const file of ['index.html','company.html','menu.html']) {
  const html = read(file);
@@ -28,7 +29,7 @@ for (const category of ['regular','seasonal','takeout']) {
 }
 assert.match(read('company.html'),/id="planet-selector"/);
 assert.match(read('js/solar-system.js'),/new THREE\.CanvasTexture/);
-console.log('Smoke tests passed: 6 mapped dishes, all assets, 14 redirects, site pages, planet textures.');
+console.log('Smoke tests passed: expanded mapped dishes, all assets, 14 redirects, site pages, planet textures.');
 
 const solar=read('js/solar-system.js'), company=read('company.html');
 for(const id of ['mercury','venus','earth','mars','jupiter','saturn','uranus','neptune']){
@@ -38,3 +39,6 @@ assert.match(solar,/id:"callisto"[^\n]*parent:"jupiter"/,'Callisto must orbit Ju
 assert.match(solar,/body\.angle\s*\+=\s*dt\s*\*\s*data\.orbitSpeed/,'Orbit must advance');
 assert.match(solar,/mesh\.rotation\.y\s*\+=\s*dt\s*\*\s*data\.spinSpeed/,'Spin must advance');
 assert.match(company,/id="motion-toggle"/,'Motion control must exist');
+
+require("./catalog.cjs");
+require("./filters.cjs");

@@ -1,0 +1,81 @@
+﻿No,元画像,採否,商品ID,視覚グループ,公開画像,重複元,判定理由
+1,022589d8-f1d8-4f3b-8605-3ea5fcfd3c80.png,non-menu,,non-menu,,,ロゴ素材。既存ブランドを維持。
+2,03f8ac25-00b2-46d1-b86e-ece51acc3716.png,gallery,seasonal-hamburg,seasonal-hamburg,images/menu/grill/seasonal-hamburg-1.webp,,商品写真として採用。
+3,0a058282-995e-4121-a0b2-efdc548d6044.png,primary,seasonal-hamburg,seasonal-hamburg,images/menu/grill/seasonal-hamburg.webp,,商品写真として採用。
+4,1240115b-52be-4249-93cd-060e0cdb8942.png,primary,cube-parfait,cube-parfait,images/menu/dessert/cube-parfait.webp,,商品写真として採用。
+5,156070ac-362b-4d06-b7ed-06ae09f9e891.png,primary,vegetable-cocotte,vegetable-cocotte,images/menu/side/vegetable-cocotte.webp,,商品写真として採用。
+6,187d6c22-519d-4e46-8098-bd3f47e5c554.png,primary,afternoon-tea,afternoon-tea,images/menu/dessert/afternoon-tea.webp,,商品写真として採用。
+7,2025年5月23日 22_01_57.png,unused-variant,,seasonal-hamburg,,,価格3680（ドリンクバー付き）の広告。現行2400円の商品と混同しないため不採用。
+8,2025年5月23日 22_01_58.png,unused-variant,,seasonal-hamburg,,,暗い広告画像。明るい同商品写真を優先。
+9,3c9e16e2-2fbb-4a5f-b8a7-48fa480bbac7.png,primary,cube-salad,cube-salad,images/menu/side/cube-salad.webp,,商品写真として採用。
+10,3f3d1ccd-4c52-45cb-a574-4ffd8412c4c4.png,primary,tomato-short-pasta,tomato-short-pasta,images/menu/pasta/tomato-short-pasta.webp,,商品写真として採用。
+11,46f4c961-8960-4410-ad11-97c71f6d68ee.png,unused-variant,,synthetic-montblanc,,,モンブランの構造違い。円錐型の採用写真に統一。
+12,58ea0069-a855-44d6-b96a-81d0509eb93b.png,non-menu,,non-menu,,,店舗スタッフの集合写真。商品化しない。
+13,61e4beac-cb91-448c-b1d5-e8e96822a8bf.png,primary,synthetic-montblanc,synthetic-montblanc,images/menu/dessert/synthetic-montblanc.webp,,円錐型のモンブランとして採用。
+14,709688d6-bb0c-49d4-ba13-8982ea16fba5.png,primary,cube-tiramisu,cube-tiramisu,images/menu/dessert/cube-tiramisu.webp,,商品写真として採用。
+15,81373d4f-8b3b-446e-bc22-38b843b34cb1.png,primary,stargazy-pie,stargazy-pie,images/menu/grill/stargazy-pie.webp,,商品写真として採用。
+16,8aec2055-0212-4e95-9d70-31e95b6b2e55.png,primary,iron-cube-rice,iron-cube-rice,images/menu/rice/iron-cube-rice.webp,,商品写真として採用。
+17,92b175dd-5821-4a59-9ac6-67809a2e40f4.png,unused-variant,,buffet,,,複数料理のビュッフェ全景。単品商品にはしない。
+18,9725fdef-0a9f-4496-8d42-a2972fb83aff.png,primary,salmon-style-set,salmon-style-set,images/menu/japanese/salmon-style-set.webp,,商品写真として採用。
+19,ae842149-fe7b-40e2-bcc1-ef38ecd326d8.png,unused-variant,,synthetic-montblanc,,,モンブランの飾りなし別構成。採用写真に統一。
+20,b0724171-48e1-46fa-b830-4332d60b0f3c.png,primary,gear-cream-pasta,gear-cream-pasta,images/menu/pasta/gear-cream-pasta.webp,,商品写真として採用。
+21,b566aca2-9bd1-4da1-84f5-0c4b53c3c857.png,primary,protein-pie,protein-pie,images/menu/grill/protein-pie.webp,,商品写真として採用。
+22,b596bd65-6db2-49c6-a512-50375373be89.png,primary,cheese-style-bites,cheese-style-bites,images/menu/side/cheese-style-bites.webp,,商品写真として採用。
+23,b7a6dbab-553f-4866-a87c-53370d8b9022.png,gallery,cube-parfait,cube-parfait,images/menu/dessert/cube-parfait-1.webp,,商品写真として採用。
+24,bec0bdd5-17e6-49f7-8f75-69bd57507250.png,primary,rainbow-layer-cake,rainbow-layer-cake,images/menu/dessert/rainbow-layer-cake.webp,,商品写真として採用。
+25,cb6af95d-0b7f-465a-b0b8-f1dfee5dfc83.png,primary,cube-sandwich,cube-sandwich,images/menu/grill/cube-sandwich.webp,,商品写真として採用。
+26,ce55b40b-9561-4f38-bc81-393d445f4857.png,primary,synthetic-curry,synthetic-curry,images/menu/rice/synthetic-curry.webp,,商品写真として採用。
+27,ChatGPT Image 2025年5月23日 22_26_21.png,primary,standard-plate,standard-plate,images/menu/grill/standard-plate.webp,,商品写真として採用。
+28,ChatGPT Image 2025年5月23日 22_35_53.png,exact-duplicate,,buffet,,92b175dd-5821-4a59-9ac6-67809a2e40f4.png,SHA-256完全一致。重複公開しない。
+29,ChatGPT Image 2025年5月23日 22_43_23.png,unused-variant,,buffet,,,ビュッフェの全景。単品商品にはしない。
+30,ChatGPT Image 2025年5月23日 22_54_28.png,gallery,cube-parfait,cube-parfait,images/menu/dessert/cube-parfait-2.webp,,商品写真として採用。
+31,ChatGPT Image 2025年5月23日 23_05_43.png,gallery,cube-parfait,cube-parfait,images/menu/dessert/cube-parfait-3.webp,,商品写真として採用。
+32,ChatGPT Image 2025年5月23日 23_15_26.png,exact-duplicate,,stargazy-pie,,81373d4f-8b3b-446e-bc22-38b843b34cb1.png,SHA-256完全一致。重複公開しない。
+33,ChatGPT Image 2025年5月23日 23_15_50.png,exact-duplicate,,protein-pie,,b566aca2-9bd1-4da1-84f5-0c4b53c3c857.png,SHA-256完全一致。重複公開しない。
+34,ChatGPT Image 2025年5月23日 23_19_41.png,unused-variant,,tomato-short-pasta,,,赤いショートパスタの具材・構図違い。主画像10に統一。
+35,ChatGPT Image 2025年5月23日 23_21_08.png,exact-duplicate,,tomato-short-pasta,,3f3d1ccd-4c52-45cb-a574-4ffd8412c4c4.png,SHA-256完全一致。重複公開しない。
+36,ChatGPT Image 2025年5月23日 23_25_04.png,exact-duplicate,,synthetic-montblanc,,46f4c961-8960-4410-ad11-97c71f6d68ee.png,SHA-256完全一致。重複公開しない。
+37,ChatGPT Image 2025年5月23日 23_34_38.png,exact-duplicate,,protein-pie,,b566aca2-9bd1-4da1-84f5-0c4b53c3c857.png,SHA-256完全一致。重複公開しない。
+38,ChatGPT Image 2025年5月24日 00_12_52.png,exact-duplicate,,non-menu,,58ea0069-a855-44d6-b96a-81d0509eb93b.png,SHA-256完全一致。重複公開しない。
+39,ChatGPT Image 2025年5月26日 22_43_08.png,primary,color-cream-pasta,color-cream-pasta,images/menu/pasta/color-cream-pasta.webp,,商品写真として採用。
+40,ChatGPT Image 2025年5月26日 22_43_10.png,gallery,color-cream-pasta,color-cream-pasta,images/menu/pasta/color-cream-pasta-1.webp,,商品写真として採用。
+41,ChatGPT Image 2025年5月26日 22_43_12.png,primary,corn-cube-soup,corn-cube-soup,images/menu/side/corn-cube-soup.webp,,商品写真として採用。
+42,ChatGPT Image 2025年5月26日 22_43_14.png,unused-variant,,corn-cube-soup,,,コーン風スープのカップ・具材違い。主画像41に統一。
+43,ChatGPT Image 2025年5月26日 22_43_15.png,primary,cream-cube-stew,cream-cube-stew,images/menu/grill/cream-cube-stew.webp,,商品写真として採用。
+44,ChatGPT Image 2025年5月26日 22_43_17.png,primary,teriyaki-chicken-bowl,teriyaki-chicken-bowl,images/menu/rice/teriyaki-chicken-bowl.webp,,商品写真として採用。
+45,ChatGPT Image 2025年5月26日 22_43_26.png,primary,savory-cube-bowl,savory-cube-bowl,images/menu/rice/savory-cube-bowl.webp,,商品写真として採用。
+46,ChatGPT Image 2025年5月26日 22_43_27.png,primary,synthetic-katsudon,synthetic-katsudon,images/menu/rice/synthetic-katsudon.webp,,商品写真として採用。
+47,ChatGPT Image 2025年5月26日 22_43_31.png,primary,brown-sauce-grill,brown-sauce-grill,images/menu/grill/brown-sauce-grill.webp,,商品写真として採用。
+48,ChatGPT Image 2025年5月26日 22_43_32.png,gallery,brown-sauce-grill,brown-sauce-grill,images/menu/grill/brown-sauce-grill-1.webp,,商品写真として採用。
+49,ChatGPT Image 2025年5月26日 22_43_38.png,unused-variant,,synthetic-curry,,,カレーの彩り・構図違い。主画像26に統一。
+50,ChatGPT Image 2025年5月26日 22_43_39.png,primary,synthetic-beef-stew,synthetic-beef-stew,images/menu/grill/synthetic-beef-stew.webp,,商品写真として採用。
+51,ChatGPT Image 2025年5月26日 22_43_42.png,primary,synthetic-sushi,synthetic-sushi,images/menu/japanese/synthetic-sushi.webp,,商品写真として採用。
+52,ChatGPT Image 2025年5月26日 22_43_43.png,unused-variant,,salmon-style-set,,,和風御膳の構図違い。主画像18に統一。
+53,ChatGPT Image 2025年5月26日 22_43_45.png,unused-variant,,synthetic-sushi,,,合成寿司の盛り付け違い。主画像51に統一。
+54,ChatGPT Image 2025年5月26日 22_43_46.png,unused-variant,,synthetic-sushi,,,合成寿司の具材違い。商品数を水増しせず主画像51に統一。
+55,ChatGPT Image 2025年5月26日 22_43_48.png,unused-variant,,synthetic-sushi,,,合成寿司の具材違い。主画像51に統一。
+56,ChatGPT Image 2025年5月26日 22_43_51.png,unused-variant,,synthetic-steak,,,合成ステーキの切り分け・付け合わせ違い。主画像57に統一。
+57,ChatGPT Image 2025年5月26日 22_43_53.png,primary,synthetic-steak,synthetic-steak,images/menu/grill/synthetic-steak.webp,,商品写真として採用。
+58,ChatGPT Image 2025年5月26日 22_43_56.png,primary,cube-gratin,cube-gratin,images/menu/pasta/cube-gratin.webp,,商品写真として採用。
+59,ChatGPT Image 2025年5月26日 22_44_02.png,exact-duplicate,,vegetable-cocotte,,156070ac-362b-4d06-b7ed-06ae09f9e891.png,SHA-256完全一致。重複公開しない。
+60,ChatGPT Image 2025年5月26日 22_44_04.png,primary,broth-cocotte,broth-cocotte,images/menu/side/broth-cocotte.webp,,商品写真として採用。
+61,ChatGPT Image 2025年5月26日 22_44_06.png,exact-duplicate,,afternoon-tea,,187d6c22-519d-4e46-8098-bd3f47e5c554.png,SHA-256完全一致。重複公開しない。
+62,ChatGPT Image 2025年5月26日 22_44_09.png,exact-duplicate,,cube-tiramisu,,709688d6-bb0c-49d4-ba13-8982ea16fba5.png,SHA-256完全一致。重複公開しない。
+63,ChatGPT Image 2025年5月26日 22_44_11.png,unused-variant,,cube-tiramisu,,,ティラミスの層の質感違い。キューブ型14に統一。
+64,ChatGPT Image 2025年5月26日 22_44_13.png,exact-duplicate,,gear-cream-pasta,,b0724171-48e1-46fa-b830-4332d60b0f3c.png,SHA-256完全一致。重複公開しない。
+65,ChatGPT Image 2025年5月26日 22_44_15.png,exact-duplicate,,cube-salad,,3c9e16e2-2fbb-4a5f-b8a7-48fa480bbac7.png,SHA-256完全一致。重複公開しない。
+66,d760c05a-46fd-44d2-ac31-c5c431c192bd.png,exact-duplicate,,cube-parfait,,ChatGPT Image 2025年5月23日 23_05_43.png,SHA-256完全一致。重複公開しない。
+67,e1900d5d-0a87-48ce-9328-d9a6e9a4e4ae.png,unused-variant,,seasonal-hamburg,,,英語の販促文入り。文字なし商品写真を優先。
+68,e2e55187-8029-422b-8927-2210a079f251.png,exact-duplicate,,buffet,,ChatGPT Image 2025年5月23日 22_43_23.png,SHA-256完全一致。重複公開しない。
+69,e5f0e32d-fc09-4874-92fe-cbbb9c5c3220.png,exact-duplicate,,cube-parfait,,ChatGPT Image 2025年5月23日 22_54_28.png,SHA-256完全一致。重複公開しない。
+70,e729b37b-a1d8-414f-8c4b-0d872635ef4b.png,primary,custard-tower,custard-tower,images/menu/dessert/custard-tower.webp,,商品写真として採用。
+71,ea75d75d-1339-4011-b783-99777dbc9d4f.png,primary,cube-bento,cube-bento,images/menu/takeout/cube-bento.webp,,商品写真として採用。
+72,ecec1340-4a36-40bb-a921-4fb90e02436d.png,exact-duplicate,,standard-plate,,ChatGPT Image 2025年5月23日 22_26_21.png,SHA-256完全一致。重複公開しない。
+73,IMG_5959.jpg,non-menu,,non-menu,,,路地を背景にした配給食風の写真。商品撮影として不採用。
+74,IMG_5975.jpg,non-menu,,non-menu,,,配給食・研究食の資料。
+75,IMG_5980.jpg,non-menu,,non-menu,,,白色の配給食・研究食の資料。
+76,IMG_5981.jpg,non-menu,,non-menu,,,トレーに整列した配給食の資料。
+77,IMG_5982.jpg,non-menu,,non-menu,,,配給食のトレーと小鉢の資料。
+78,IMG_5984.jpg,non-menu,,non-menu,,,複数の配給食の構成見本。
+79,IMG_6192.jpg,primary,layered-sandwich,layered-sandwich,images/menu/grill/layered-sandwich.webp,,商品写真として採用。
+80,IMG_6352.jpg,non-menu,,non-menu,,,屋外に置いた配給食風の写真。
