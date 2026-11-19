@@ -1,0 +1,221 @@
+{
+  "conditions": "Chrome157 / GTX1080Ti / Windows /1440x1000 DPR1; each 15s realtime reactor battle after3.5s warmup, accelerated setup, automatic scripted aim/fire/strafe and periodic restore. Low is PC low-quality, NOT real-phone measurement. Samples vary with AI/frustum/timing and cache; no claim of performance improvement.",
+  "increment": {
+    "logicalDrawables": 11,
+    "ownedGeometry": 10,
+    "materials": 7,
+    "generatedTextures": 1,
+    "lights": 0,
+    "fullScreenPasses": 0
+  },
+  "beforeHigh": {
+    "readyMS": 5475,
+    "frames": 885,
+    "averageFPS": 58.96226415084974,
+    "p95": 16.900000000001455,
+    "p99": 33.19999999999891,
+    "gpu": {
+      "cpuRenderP95": 18.800000071525574,
+      "gpuMedian": 3.732448,
+      "gpuP95": 13.315072,
+      "gpuSamples": 59,
+      "gpuSupported": true
+    },
+    "memory": {
+      "geometries": 200,
+      "textures": 25
+    },
+    "calls": [
+      217,
+      203,
+      203,
+      353,
+      350,
+      358,
+      267,
+      255,
+      222,
+      276,
+      280,
+      231,
+      262,
+      260,
+      287
+    ],
+    "triangles": 142864,
+    "enemies": [
+      1,
+      1,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      3,
+      3,
+      3,
+      2,
+      2,
+      2,
+      4
+    ]
+  },
+  "beforeLow": {
+    "readyMS": 3507,
+    "frames": 899,
+    "averageFPS": 59.928539050304565,
+    "p95": 16.899999999999636,
+    "p99": 17,
+    "gpu": {
+      "cpuRenderP95": 17.600000023841858,
+      "gpuMedian": 4.20352,
+      "gpuP95": 10.106848,
+      "gpuSamples": 60,
+      "gpuSupported": true
+    },
+    "memory": {
+      "geometries": 160,
+      "textures": 19
+    },
+    "calls": [
+      179,
+      175,
+      174,
+      240,
+      238,
+      250,
+      200,
+      192,
+      172,
+      220,
+      226,
+      185,
+      214,
+      205
+    ],
+    "triangles": 63102,
+    "enemies": [
+      1,
+      1,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1
+    ]
+  },
+  "afterHigh": {
+    "readyMS": 2544,
+    "frames": 896,
+    "averageFPS": 59.719796846048226,
+    "p95": 16.899999999999636,
+    "p99": 17,
+    "gpu": {
+      "cpuRenderP95": 8.899999976158142,
+      "gpuMedian": 4.89472,
+      "gpuP95": 11.38688,
+      "gpuSamples": 60,
+      "gpuSupported": true
+    },
+    "memory": {
+      "geometries": 210,
+      "textures": 26
+    },
+    "calls": [
+      227,
+      214,
+      215,
+      364,
+      361,
+      369,
+      277,
+      266,
+      233,
+      287,
+      291,
+      242,
+      273,
+      271,
+      298
+    ],
+    "triangles": 145190,
+    "enemies": [
+      1,
+      1,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      3,
+      3,
+      3,
+      2,
+      2,
+      2,
+      4
+    ]
+  },
+  "afterLow": {
+    "readyMS": 1686,
+    "frames": 900,
+    "averageFPS": 59.95243773273203,
+    "p95": 16.899999999999636,
+    "p99": 17,
+    "gpu": {
+      "cpuRenderP95": 13.899999976158142,
+      "gpuMedian": 3.336192,
+      "gpuP95": 8.080384,
+      "gpuSamples": 60,
+      "gpuSupported": true
+    },
+    "memory": {
+      "geometries": 170,
+      "textures": 20
+    },
+    "calls": [
+      190,
+      187,
+      185,
+      251,
+      249,
+      258,
+      214,
+      203,
+      183,
+      232,
+      238,
+      196,
+      225,
+      216,
+      211
+    ],
+    "triangles": 64368,
+    "enemies": [
+      1,
+      1,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1,
+      3
+    ]
+  }
+}

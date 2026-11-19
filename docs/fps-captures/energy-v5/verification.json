@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-19",
+  "nodeSuites": [
+    "smoke",
+    "fps",
+    "fps-lifecycle",
+    "weapon-state",
+    "facility",
+    "glitch-sequence",
+    "device-profile",
+    "touch",
+    "targeting"
+  ],
+  "browser": {
+    "mobile": 33,
+    "energy": 18,
+    "weapon": 15,
+    "fps": 25,
+    "lifecycle": 16
+  },
+  "restartResources": [
+    {
+      "geometries": 144,
+      "textures": 25
+    },
+    {
+      "geometries": 144,
+      "textures": 25
+    },
+    {
+      "geometries": 144,
+      "textures": 25
+    }
+  ],
+  "captures": {
+    "fixedWeapons": 8,
+    "mobile": 2,
+    "sequence": 24,
+    "videoSeconds": 14.24
+  },
+  "critics": {
+    "first": "HOLD: reactor fills its opening; mobile hint overlaps buttons",
+    "fixed": "PASS: separated nucleus/ring gaps, limited halo, top notification; still and sequence no Major",
+    "remaining": "Minor/Moderate: uniform nucleus color; precise flow speed/audio not rated from sparse frames"
+  },
+  "reviews": {
+    "sonnet": "claude-sonnet-5-5-medium via Antigravity1.5.12 SUCCESS; off-target windup fixed and tested",
+    "independent": "P2 charge/reload overlap fixed, real browser regressions failed then passed; targeted re-review no remaining P1/P2"
+  },
+  "limitations": [
+    "Physical phone FPS/heat/battery/memory not measured",
+    "15s comparison on PC, Low is desktop low-quality",
+    "Video muted; initial enemy/view framing uses debug"
+  ]
+}

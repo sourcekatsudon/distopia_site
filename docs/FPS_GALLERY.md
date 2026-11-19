@@ -1,4 +1,10 @@
-# Cinematic v4（最新）
+# ZIP追加・左右スティック v5（最新）
+
+[新しいリアクター・左右スティック・自動射撃の実画面と録画](fps-captures/energy-v5/index.html)。[実装と検証報告](FPS_ENERGY_DUAL_STICK.md)。既存の機構は保持し、ZIPの不足分だけ追加しました。
+
+---
+
+# Cinematic v4（前版記録）
 
 [比較画像・連番・18.8秒の実プレイ録画](fps-captures/cinematic-v4/index.html)。[改修内容と検証報告](FPS_CINEMATIC_V4.md)。PC高品質・スマホ向け軽量FPS、5倍の呼吸、敵弾と六角シールドを追加。
 

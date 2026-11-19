@@ -29,3 +29,4 @@ jobs:
           node tests/glitch-sequence.cjs
           node tests/device-profile.cjs
           node tests/touch.cjs
+          node tests/targeting.cjs

@@ -1,5 +1,6 @@
 import * as THREE from '../../vendor/three.module.js';
 import {createSurfaceKit} from './material-kit.js';
+import {createRailgunEnergyFX} from './railgun-energy-fx.js';
 
 // +Z breech, -Z muzzle. Named groups are independent mechanical assemblies.
 export function createRailgun({quality='high'}={}) {
@@ -125,9 +126,10 @@ export function createRailgun({quality='high'}={}) {
  function batch(parent){for(const c of [...parent.children])if(c.isGroup)batch(c);const bins=new Map();for(const o of parent.children)if(o.isMesh){const list=bins.get(o.material)||[];list.push(o);bins.set(o.material,list);}for(const [m,list]of bins){if(list.length<2)continue;const arrays={position:[],normal:[],uv:[]};for(const o of list){o.updateMatrix();const g=o.geometry.index?o.geometry.toNonIndexed():o.geometry.clone();g.applyMatrix4(o.matrix);for(const key of Object.keys(arrays))arrays[key].push(...g.getAttribute(key).array);g.dispose();}const g=geo(new THREE.BufferGeometry());for(const key of Object.keys(arrays))g.setAttribute(key,new THREE.Float32BufferAttribute(arrays[key],key==='uv'?2:3));mesh(g,m,parent).name='batched '+parent.name;list.forEach(o=>parent.remove(o));}}
  for(const c of collars)for(const seg of [...c.children]){seg.updateMatrix();for(const o of [...seg.children]){o.updateMatrix();o.applyMatrix4(seg.matrix);c.add(o);}c.remove(seg);}
  batch(rig);
+ const energyFX=createRailgunEnergyFX({rig,receiver,rails,quality}),energyState={time:0,charge:0,flash:0,energy:100,reload:-1,reducedMotion:false};
  const wrist=new THREE.Vector3(),elbow=new THREE.Vector3(),wristOffset=new THREE.Vector3(-.015,-.09,.04),forearmAxis=new THREE.Vector3(0,0,1);
  let recoil=0,heat=0,flash=0,power=1,spin=0,focus=0,drive=0,mechanicalState='IDLE',disposed=false;
- function fire(p=1){power=Math.min(4,Math.max(1,p));recoil=1;heat=Math.min(1,heat+.40+power*.12);flash=1;}
+ function fire(p=1){power=Math.min(4,Math.max(1,p));recoil=1;heat=Math.min(1,heat+.40+power*.12);flash=1;energyFX.fire(power);}
  function update(dt,s={}){const t=s.time||0,ch=Math.max(s.charge||0,focus>0?.4:0),dep=s.deploy??1;focus=Math.max(0,focus-dt);recoil*=Math.exp(-dt*12);heat*=Math.exp(-dt*1.65);flash*=Math.exp(-dt*24);spin+=dt*(.12+ch*2.8+flash*4);drive+=(ch-drive)*(1-Math.exp(-dt*9));mechanicalState=flash>.25?'FIRING':recoil>.08?'RECOIL':heat>.22?'COOLING':focus>0?'PRECHARGE':ch>.98?'FULLY_CHARGED':ch>.01?'CHARGING':heat>.02?'RECOVERY':'IDLE';glyphMaterial.emissiveIntensity=.42+ch*.23;
   blue.emissiveIntensity=1.15+Math.sin(t*3)*.12+ch*1.7+flash*2;core.emissiveIntensity=1.05+ch*1.2+flash*2.3;fieldMat.uniforms.time.value=t;fieldMat.uniforms.charge.value=ch;fieldMat.uniforms.flash.value=flash;
   collars.forEach((g,i)=>{g.rotation.z=(i%2?-1:1)*spin*.20;g.position.z=-.58-i*.48-drive*(.025+i*.018)+recoil*.035*(3-i);});carriers.forEach(([g,sx])=>{g.position.x=sx*(.116+drive*.016+recoil*.015);g.rotation.z=sx*(ch*.018+Math.sin(t*1.7)*.002);});leaves.forEach(([g,sx],i)=>g.rotation.z=sx*(heat*(.56+(i%5)*.045)+drive*.15+Math.sin(t*2+i)*.008));rails.position.z=-drive*.11+recoil*.018;slide.position.z=recoil*.13-ch*.035;cell.rotation.z=Math.sin(t*1.4)*.006;
@@ -143,8 +145,9 @@ export function createRailgun({quality='high'}={}) {
   wrist.copy(support.position).add(wristOffset);elbow.set(-.52,-.67,.72);const armLength=wrist.distanceTo(elbow);supportArm.position.copy(wrist);supportArm.quaternion.setFromUnitVectors(forearmAxis,elbow.sub(wrist).normalize());supportArm.scale.z=armLength;
   const breath=s.reducedMotion?0:Math.sin(t*(s.sprinting?2.5:1.65)),breathSide=s.reducedMotion?0:Math.sin(t*.825);
   const movement=Math.min((s.speed||0)/6,1)*(s.grounded===false?.15:1),bob=Math.sin(t*8)*movement;rig.position.set(bob*.009+breathSide*.015,-(1-dep)*.8-Math.abs(bob)*.009+breath*.030-hold*.08,recoil*.11+hold*.09);rig.rotation.set(recoil*.055+(1-dep)*.55+(s.sprinting?.12:0)+hold*.10+breath*.015,bob*.01-hold*.10,bob*.012-recoil*.012+hold*.24+breathSide*.010);
+  energyState.time=t;energyState.charge=ch;energyState.flash=flash;energyState.energy=visibleEnergy;energyState.reload=rp;energyState.reducedMotion=Boolean(s.reducedMotion);energyFX.update(dt,energyState);
   haloMat.opacity=.20+ch*.23+flash*.25;halo.scale.setScalar(.55+ch*.22+flash*.25);flashMat.opacity=flash*.60;flashSprite.scale.setScalar((.65+power*.23)*Math.sqrt(flash));flashCoreMat.opacity=flash*.85;flashCore.scale.set(1+power*.15,1+power*.20,1+power*.15);light.intensity=ch*.45+flash*3.5;
  }
- function dispose(){if(disposed)return;disposed=true;root.removeFromParent();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());surfaces.dispose();root.clear();}
- return {root,muzzle,update,fire,inspect:()=>({state:mechanicalState,glyphs:glyphs.filter(g=>g.visible).length,cellVisible:cell.visible,cellOffset:cell.position.toArray(),breathPosition:rig.position.toArray(),supportHand:support.position.toArray(),flash}),prepare:()=>{focus=.095;},dispose};
+ function dispose(){if(disposed)return;disposed=true;root.removeFromParent();energyFX.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());surfaces.dispose();root.clear();}
+ return {root,muzzle,update,fire,inspect:()=>({state:mechanicalState,glyphs:glyphs.filter(g=>g.visible).length,cellVisible:cell.visible,cellOffset:cell.position.toArray(),breathPosition:rig.position.toArray(),supportHand:support.position.toArray(),flash,energyFX:energyFX.stats()}),prepare:()=>{focus=.095;},dispose};
 }
