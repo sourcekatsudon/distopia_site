@@ -43,3 +43,4 @@ jobs:
           node tests/cursor-input.cjs
           node tests/flight-aim.cjs
           node tests/protocol-timing.cjs
+          node tests/social-cards.cjs
