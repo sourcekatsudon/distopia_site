@@ -1,7 +1,7 @@
 import * as THREE from '../../vendor/three.module.js';
 import {createMaterials} from './materials.js';
 import {circleBlocked} from './simulation.js';
-import {SEGMENTS,SPAWN,HANGAR_Z,SEGMENT_COUNT,segmentAt,segmentLayout} from './campaign-layout.js';
+import {SEGMENTS,SPAWN,HANGAR_Z,ENTRY_TERMINAL,SEGMENT_COUNT,segmentAt,segmentLayout} from './campaign-layout.js';
 
 // Bounded, deterministic near-field stream. The far facility is never resident.
 export function createCampaignWorld({scene,quality='high',seed=731}={}){
@@ -36,7 +36,7 @@ export function createCampaignWorld({scene,quality='high',seed=731}={}){
    if(b.tag.startsWith('outer')){for(let zz=s.startZ-2;zz>s.endZ;zz-=4){const side=x<0?-1:1;add(panel,M.metal,side*(hw-.008),Math.min(H*.43,3.1),zz,3.75,Math.min(H*.70,5.5),.065,0,side*Math.PI/2);add(box,M.edge,side*(hw-.12),H-.8,zz,.15,.15,3.70);add(box,M.red,side*(hw-.06),.85,zz,.04,.05,.8);}}
    else if(b.tag.includes('baffle')){for(const sign of[-1,1]){add(box,M.metal,x,y,z+sign*(d/2+.025),Math.max(.1,w-.12),Math.max(.1,h-.13),.05);for(let u=-w/2+.22;u<w/2;u+=.75)add(box,M.edge,x+u,y,z+sign*(d/2+.065),.04,h-.25,.055);add(box,M.hazard,x,.30,z+sign*(d/2+.075),w,.32,.035);add(box,M.red,x,Math.min(h-.3,3.7),z+sign*(d/2+.08),Math.min(w,1.5),.055,.035);}}
    else if(b.tag.startsWith('transfer')){add(box,M.edge,x,b.minY+.12,z+.56,w,.24,.10);if(b.minY===0){add(box,M.red,x-w/2+.10,2.1,z+.56,.06,4,.07);add(box,M.red,x+w/2-.10,2.1,z+.56,.06,4,.07);}}
-   else if(b.tag.startsWith('terminal-kiosk')){add(box,M.screen,x,1.52,z+.615,.99,.70,.035);add(box,M.cyan,x,.94,z+.63,1.0,.04,.04);add(box,M.edge,x,2.12,z,1.30,.09,1.25);}
+   else if(b.tag==='homepage-terminal-desk'){add(box,M.edge,x,.97,z+.03,3.2,.07,1.38);add(box,M.cyan,x,1.015,z+.72,2.8,.025,.035);add(box,M.dark,x,1.03,z+.35,1,.025,.35);for(const side of[-1,1])add(box,M.edge,x+side*1.35,.44,z,.09,.86,.9);add(cylinder,M.edge,x,1.10,z-.25,.07,.30,.07);}else if(b.tag==='homepage-terminal-monitor'){add(box,M.screen,x,ENTRY_TERMINAL.screenY,ENTRY_TERMINAL.screenZ,1.55,.85,.02);add(box,M.cyan,x,1.14,z+.09,1.48,.025,.025);}else if(b.tag.startsWith('terminal-kiosk')){add(box,M.screen,x,1.52,z+.615,.99,.70,.035);add(box,M.cyan,x,.94,z+.63,1.0,.04,.04);add(box,M.edge,x,2.12,z,1.30,.09,1.25);}
   }
   for(const side of[-1,1]){
    // Long trunks, radiator flanges, exposed cable trays and duct throats.
@@ -101,5 +101,5 @@ export function createCampaignWorld({scene,quality='high',seed=731}={}){
  function update(dt,time){if(dead)return;M.update?.(time);windowMaterial.uniforms.time.value=time;dustMaterial.uniforms.time.value=time;for(const chunk of loaded.values())chunk.update(dt,time);practicals[0].position.set(-3,4.8,playerZ-16);if(practicals[1])practicals[1].position.set(3,3.8,playerZ+3);}
  function dispose(){if(dead)return;dead=true;for(const c of loaded.values())c.dispose();loaded.clear();colliders.length=navNodes.length=destructibles.length=entries.length=0;root.removeFromParent();geometries.forEach(g=>g.dispose());textures.forEach(t=>t.dispose());ownedMaterials.forEach(m=>m.dispose());M.dispose();root.clear();layouts.clear();}
  ensureAt(SPAWN.z);
- return{root,spawn:new THREE.Vector3(SPAWN.x,SPAWN.y,SPAWN.z),exit:new THREE.Vector3(0,1.7,HANGAR_Z),colliders,navNodes,destructibles,entries,segments,ensureAt,refreshNavigation,signalEntry,update,dispose,heightAt:()=>0,stats:()=>({current,loadedSegments:[...loaded.keys()].sort((a,b)=>a-b),segmentCount:loaded.size,builds,unloads,navVersion,nodes:navNodes.length,colliders:colliders.length,destructibles:destructibles.length,instancedMeshes:[...loaded.values()].reduce((n,c)=>n+c.instances.length,0),quality})};
+ return{root,spawn:new THREE.Vector3(SPAWN.x,SPAWN.y,SPAWN.z),exit:new THREE.Vector3(0,1.7,HANGAR_Z),colliders,navNodes,destructibles,entries,segments,ensureAt,refreshNavigation,signalEntry,update,dispose,heightAt:()=>0,stats:()=>({current,loadedSegments:[...loaded.keys()].sort((a,b)=>a-b),segmentCount:loaded.size,builds,unloads,navVersion,nodes:navNodes.length,colliders:colliders.length,destructibles:destructibles.length,instancedMeshes:[...loaded.values()].reduce((n,c)=>n+c.instances.length,0),quality,terminal:!!loaded.get(0)})};
 }

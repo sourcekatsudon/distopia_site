@@ -1,4 +1,10 @@
-# ASCENSION v7：短縮コース・密集戦闘・確定ドロップ（最新）
+# ASCENSION v8：全導入の復元・時間差3連射（最新）
+
+[導入・敵射撃の実画面と録画](fps-captures/ascension-v8/index.html)。[変更と検証結果](FPS_ASCENSION_V8.md)。
+
+---
+
+# ASCENSION v7：短縮コース・密集戦闘・確定ドロップ（前版記録）
 
 [新しい戦闘・取得発光・警報の画像と録画](fps-captures/ascension-v7/index.html)。[変更と実測結果](FPS_ASCENSION_V7.md)。
 

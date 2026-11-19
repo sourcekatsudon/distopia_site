@@ -1,6 +1,6 @@
 // Browser game-time fixed-input test. No health restoration and no forced deaths.
 async function run(page,{base='http://127.0.0.1:8765',policies=['A','B','C','D'],seeds=[731],limit=150}={}){
- await page.setViewportSize({width:1280,height:720});await page.bringToFront();await page.goto(base+'/?protocol=play&fpsdebug=1');await page.waitForFunction(()=>window.CHICKEN_FPS?.newRun,null,{timeout:30000});await page.locator('.gp-mute').check();
+ await page.setViewportSize({width:1280,height:720});await page.bringToFront();await page.goto(base+'/?protocol=quick&fpsdebug=1');await page.waitForFunction(()=>window.CHICKEN_FPS?.newRun,null,{timeout:30000});await page.locator('.gp-mute').check();
  const results=[];for(const policy of policies)for(const seed of seeds){const row=await page.evaluate(async({policy,seed,limit})=>{const a=CHICKEN_FPS;a.newRun();a.seed(seed);if(policy==='D')a.setLevel(3);a.moveTo(0,-6);await a.resume();const keys=new Set();let nextShot=0,charging=false,chargeStart=0,started=0;
  const key=(code,on)=>{if(on&&!keys.has(code)){keys.add(code);document.dispatchEvent(new KeyboardEvent('keydown',{code}));}if(!on&&keys.has(code)){keys.delete(code);document.dispatchEvent(new KeyboardEvent('keyup',{code}));}};
  function steer(vx,vz,p,target){const yaw=Math.atan2(-(target.x-p.x),-(target.z-p.z)),forward=-Math.sin(yaw)*vx-Math.cos(yaw)*vz,side=Math.cos(yaw)*vx-Math.sin(yaw)*vz;key('KeyW',forward>.25);key('KeyS',forward<-.25);key('KeyD',side>.25);key('KeyA',side<-.25);}

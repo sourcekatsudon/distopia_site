@@ -1,6 +1,7 @@
 export const SEGMENT_LENGTH=80;
 export const SEGMENT_COUNT=16;
 export const SPAWN={x:0,y:1.7,z:8};
+export const ENTRY_TERMINAL=Object.freeze({x:-3,z:3,screenY:1.65,screenZ:2.835});
 export const HANGAR_Z=SPAWN.z-SEGMENT_COUNT*SEGMENT_LENGTH+14;
 const THEMES=[['terminal','CITIZEN TERMINAL',7,6],['corridor','TRANSFER CONDUIT',7,6],['warehouse','FREIGHT PROCESSING',12,10],['machine','THERMAL EXCHANGE',10,8],['security','SECURITY NEXUS',8,7],['reactor','REACTOR SPINE',14,13]];
 export const SEGMENTS=Array.from({length:SEGMENT_COUNT},(_,index)=>{const t=index===SEGMENT_COUNT-1?['hangar','ASCENSION HANGAR',20,16]:THEMES[index%THEMES.length];return{id:'sector-'+String(index+1).padStart(2,'0'),index,startZ:SPAWN.z-index*SEGMENT_LENGTH,endZ:SPAWN.z-(index+1)*SEGMENT_LENGTH,name:t[1],halfWidth:t[2],height:t[3],kind:t[0]};});
@@ -15,7 +16,7 @@ export function segmentLayout(index){
  const box=(id,x,z,w,d,h=H,minY=0)=>{const b={id:s.id+'-'+id,tag:id,segment:s.index,minX:x-w/2,maxX:x+w/2,minZ:z-d/2,maxZ:z+d/2,minY,maxY:minY+h,height:h,enabled:true,protected:true};staticBoxes.push(b);return b;};
  const prop=(type,k,x,z,w,d,h)=>{const id='env-'+s.index+'-'+type+'-'+k,c={id,tag:type,segment:s.index,destructibleId:id,minX:x-w/2,maxX:x+w/2,minZ:z-d/2,maxZ:z+d/2,minY:0,maxY:h,height:h,enabled:true};destructibles.push({id,type,segment:s.index,position:{x,y:h/2,z},size:{x:w,y:h,z:d},collider:c});};
  box('outer-left',-hw-.35,(s.startZ+s.endZ)/2,.7,80,H);box('outer-right',hw+.35,(s.startZ+s.endZ)/2,.7,80,H);
- if(s.index===0){box('start-bulkhead',0,s.startZ+6,hw*2+1,1,H);for(const side of[-1,1])box('start-vestibule-'+side,side*(hw+.35),s.startZ+3,.7,6,H);for(const side of[-1,1])box('terminal-kiosk-'+side,side*5.9,s.startZ-5,1.2,1.2,2.1);}
+ if(s.index===0){box('homepage-terminal-desk',ENTRY_TERMINAL.x,ENTRY_TERMINAL.z,3.1,1.3,.96);box('homepage-terminal-monitor',ENTRY_TERMINAL.x,2.75,1.7,.14,1,1.15);box('start-bulkhead',0,s.startZ+6,hw*2+1,1,H);for(const side of[-1,1])box('start-vestibule-'+side,side*(hw+.35),s.startZ+3,.7,6,H);for(const side of[-1,1])box('terminal-kiosk-'+side,side*5.9,s.startZ-5,1.2,1.2,2.1);}
  else{const extent=Math.max(hw,SEGMENTS[s.index-1].halfWidth),gap=s.kind==='hangar'?8:5.5;for(const side of[-1,1])box('transfer-wing-'+side,side*(gap+(extent-gap)/2),s.startZ,extent-gap,1,Math.max(H,SEGMENTS[s.index-1].height));box('transfer-lintel',0,s.startZ,gap*2,1,Math.max(H,SEGMENTS[s.index-1].height)-4.8,4.8);}
  if(s.kind!=='hangar'){
   const z=s.startZ-26;

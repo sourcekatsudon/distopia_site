@@ -8,7 +8,7 @@ async function run(page,{base='http://127.0.0.1:8765',captureDir=''}={}){
  const shot=async name=>{if(captureDir)await page.screenshot({path:captureDir+'/'+name+'.png'});};
  await page.goto(base+'/?protocol=off');await page.waitForTimeout(300);check(await page.locator('main').isVisible(),'ordinary restaurant remains visible');
  check(!await page.evaluate(()=>performance.getEntriesByType('resource').some(r=>r.name.includes('/js/fps/')||r.name.includes('/vendor/three'))),'ordinary restaurant never imports FPS');
- await page.goto(base+'/?protocol=play&fpsdebug=1');await page.waitForFunction(()=>window.CHICKEN_FPS?.stats().mode==='briefing',null,{timeout:30000});
+ await page.goto(base+'/?protocol=quick&fpsdebug=1');await page.waitForFunction(()=>window.CHICKEN_FPS?.stats().mode==='briefing',null,{timeout:30000});
  if(await page.locator('.gp-mute').count())await page.locator('.gp-mute').check();
  const initial=await page.evaluate(()=>CHICKEN_FPS.stats());check(initial.progress.level===1&&initial.player.capacity===12&&initial.player.energy===12,'campaign starts with LV1 twelve-round service pistol');check(initial.player.hp===100&&initial.player.shield===75,'initial HP100 shield75');
  if(await page.locator('.gp-drag').isVisible())await page.locator('.gp-drag').click();else await page.locator('.gp-start').click();await page.waitForFunction(()=>!CHICKEN_FPS.stats().paused&&CHICKEN_FPS.stats().mode==='play');await shot('01-service-pistol-start');

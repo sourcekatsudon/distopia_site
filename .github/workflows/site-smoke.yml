@@ -35,5 +35,7 @@ jobs:
           node tests/pickup-feedback.cjs
           node tests/facility-alarm.cjs
           node tests/combat.cjs
+          node tests/enemy-burst.cjs
+          node tests/projectiles.cjs
           node tests/armory.cjs
           node tests/space-flight.cjs
