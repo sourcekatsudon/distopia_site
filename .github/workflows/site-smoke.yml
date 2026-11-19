@@ -24,4 +24,5 @@ jobs:
           node tests/smoke.cjs
           node tests/fps.cjs
           node tests/fps-lifecycle.cjs
+          node tests/weapon-state.cjs
           node tests/glitch-sequence.cjs

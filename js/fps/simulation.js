@@ -2,7 +2,7 @@ export const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 export function seededRandom(seed=731){let n=seed>>>0;return ()=>{n=(Math.imul(1664525,n)+1013904223)>>>0;return n/4294967296;};}
 export const ZONES=[{id:'terminal',name:'TERMINAL ROOM',edge:-11},{id:'corridor',name:'SECURITY CORRIDOR',edge:-33},{id:'reactor',name:'REACTOR HALL',edge:-64},{id:'lockdown',name:'LOCKDOWN',edge:-92},{id:'escape',name:'ESCAPE GATE',edge:-130}];
 export function zoneAt(z){for(let i=0;i<ZONES.length;i++)if(z>ZONES[i].edge)return i;return 4;}
-export function createPlayer(){return {x:0,y:1.7,z:8,vy:0,hp:100,shield:150,energy:100,charge:0,cooldown:0,hurtTime:0,kills:0,grounded:true};}
+export function createPlayer(){return {x:0,y:1.7,z:8,vy:0,hp:100,shield:150,energy:100,charge:0,reload:0,energyDelay:0,cooldown:0,hurtTime:0,kills:0,grounded:true};}
 export function applyDamage(player,damage){const absorbed=Math.min(player.shield,Math.max(0,damage));player.shield-=absorbed;player.hp=Math.max(0,player.hp-(damage-absorbed));player.hurtTime=5;}
 export function weaponShot(charge=0){const c=clamp(charge,0,1);return {damage:c>.15?110+310*c:55,cost:c>.15?14+22*c:5,cooldown:c>.15?.72:.23,pierce:c>.15,power:c>.15?1+c*2:1};}
 export function createProgress(){return {stage:0,escaped:false,gatePowered:false,elapsed:0,stages:[6,14,22,26,28].map(total=>({total,spawned:0,kills:0,timer:0,started:false,cleared:false}))};}
