@@ -1,0 +1,151 @@
+{
+  "passed": 57,
+  "checks": [
+    "ordinary restaurant remains visible",
+    "ordinary restaurant never imports FPS",
+    "campaign starts with LV1 twelve-round service pistol",
+    "initial HP100 shield75",
+    "LV1 normal shot costs one round",
+    "ammunition does not regenerate while idle",
+    "cell remains unfilled during exchange",
+    "no shot can be reserved during reload",
+    "LV1 cell locks at 1.5seconds",
+    "empty pistol requires automatic reload",
+    "automatic reload restores magazine only after lock",
+    "four collected modules unlock LV2",
+    "LV2 equips separate twenty-four-round laser magazine",
+    "duplicate reward ID does not increase modules at LV2",
+    "forward progress records a real checkpoint",
+    "retry preserves acquired weapon growth",
+    "retry resumes at checkpoint rather than terminal",
+    "retry resets health shield and correct magazine capacity",
+    "reward ledger survives checkpoint retry",
+    "four collected modules unlock LV3",
+    "LV3 equips existing hundred-unit railgun",
+    "duplicate reward ID does not increase modules at LV3",
+    "four collected modules unlock LV4",
+    "duplicate reward ID does not increase modules at LV4",
+    "four collected modules unlock LV5",
+    "duplicate reward ID does not increase modules at LV5",
+    "sixteen unique modules reach the final weapon",
+    "actual model lab selects LV1",
+    "actual model lab selects LV2",
+    "actual model lab selects LV3",
+    "actual model lab selects LV4",
+    "actual model lab selects LV5",
+    "all seven combat roles instantiate in the actual runtime",
+    "cargo has a persistent damaged stage",
+    "cargo has a critical stage before destruction",
+    "cargo transitions to destroyed",
+    "intact wall blocks actual player traversal",
+    "destroyed wall disables its shared collider",
+    "destroyed wall opens a real player path",
+    "destroyed cover refreshes enemy navigation",
+    "opened shortcut is represented in enemy navigation",
+    "authored running route is between2.4and2.8km",
+    "long traversal never retains the whole facility",
+    "forward traversal reaches the distant hangar without kill-count gate",
+    "actual hangar boarding starts rail flight",
+    "normal boarding uses the three-minute flight duration",
+    "actual keyboard steers the flight craft",
+    "actual mouse fire reaches spacecraft cannons",
+    "ship steering and bank respond to controls",
+    "flight pause freezes simulation",
+    "pursuit transitions into FTL warp without a boss",
+    "flight cannons shoot and destroy actual enemies",
+    "warp reaches escape completion",
+    "ending removes game renderer and input overlay",
+    "ending restores ordinary site input and scroll",
+    "no uncaught JavaScript errors",
+    "no application HTTP failures"
+  ],
+  "errors": [],
+  "failures": [],
+  "growth": [
+    {
+      "level": 2,
+      "modules": 4,
+      "capacity": 24
+    },
+    {
+      "level": 3,
+      "modules": 8,
+      "capacity": 100
+    },
+    {
+      "level": 4,
+      "modules": 12,
+      "capacity": 100
+    },
+    {
+      "level": 5,
+      "modules": 16,
+      "capacity": 120
+    }
+  ],
+  "traversal": {
+    "meters": 2657.5636850493447,
+    "points": 157,
+    "maxResident": 4,
+    "checkpoint": {
+      "index": 30,
+      "x": 0,
+      "z": -2390,
+      "level": 5,
+      "modules": 16
+    },
+    "end": {
+      "x": 1.0527903447998386e-29,
+      "y": 1.7,
+      "z": -2538.0000000000764,
+      "vy": 0,
+      "hp": 100,
+      "shield": 75,
+      "energy": 120,
+      "capacity": 120,
+      "reloadSeconds": 2,
+      "charge": 0,
+      "reload": 0,
+      "cooldown": 0.25,
+      "hurtTime": 0,
+      "kills": 0,
+      "grounded": true,
+      "lastSource": "",
+      "lastDamage": 0
+    }
+  },
+  "flight": {
+    "sawWarp": true,
+    "last": {
+      "phase": "warp",
+      "elapsed": 179.9833000000067,
+      "distance": 9626.936947826154,
+      "hp": 100,
+      "shield": 75,
+      "kills": 21,
+      "shots": 859,
+      "hits": 0,
+      "enemies": 0,
+      "spawned": 65,
+      "level": 5,
+      "x": 0.6862359485100507,
+      "y": -6.479441554478939,
+      "bank": -8.92220563935014e-25,
+      "speed": 389.8088613277066,
+      "duration": 180,
+      "resourceCounts": {
+        "geometries": 24,
+        "materials": 13,
+        "instanced": 9,
+        "enemyCapacity": 14,
+        "starSegments": 700
+      },
+      "hitFlash": 0
+    }
+  },
+  "limitations": [
+    "General regression uses fixed-step debug preparation and paused route traversal.",
+    "Root owns difficulty A/B/C/D and manual play review.",
+    "No physical-phone timing claim."
+  ]
+}

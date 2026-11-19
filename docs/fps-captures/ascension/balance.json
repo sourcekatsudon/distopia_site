@@ -1,0 +1,446 @@
+{
+  "results": [
+    {
+      "policy": "A",
+      "seed": 731,
+      "weapon": 1,
+      "chargedShots": 0,
+      "seconds": 55.10000000000051,
+      "dead": true,
+      "hp": 0,
+      "shield": 0,
+      "kills": 0,
+      "shots": 111,
+      "ammo": 111,
+      "reloads": 9,
+      "damage": 180.39999999999984,
+      "receivedHits": 29,
+      "received": [
+        {
+          "time": 55.04999999999901,
+          "distance": 14.000000000000004,
+          "source": "EXECUTION SOLDIER",
+          "reloading": false,
+          "level": 1
+        }
+      ],
+      "coverPlayer": 0,
+      "coverEnemy": 0,
+      "modules": 0,
+      "level": 1,
+      "enemyTTK": []
+    },
+    {
+      "policy": "A",
+      "seed": 997,
+      "weapon": 1,
+      "chargedShots": 0,
+      "seconds": 55.200000000000514,
+      "dead": true,
+      "hp": 0,
+      "shield": 0,
+      "kills": 0,
+      "shots": 111,
+      "ammo": 111,
+      "reloads": 9,
+      "damage": 181,
+      "receivedHits": 28,
+      "received": [
+        {
+          "time": 55.199999999999,
+          "distance": 14.000000000000004,
+          "source": "SCOUT DRONE",
+          "reloading": false,
+          "level": 1
+        }
+      ],
+      "coverPlayer": 0,
+      "coverEnemy": 0,
+      "modules": 0,
+      "level": 1,
+      "enemyTTK": []
+    },
+    {
+      "policy": "A",
+      "seed": 42,
+      "weapon": 1,
+      "chargedShots": 0,
+      "seconds": 92.799999999999,
+      "dead": true,
+      "hp": 0,
+      "shield": 0,
+      "kills": 0,
+      "shots": 187,
+      "ammo": 187,
+      "reloads": 15,
+      "damage": 247.79999999999967,
+      "receivedHits": 39,
+      "received": [
+        {
+          "time": 92.79999999999687,
+          "distance": 14.000000000000004,
+          "source": "EXECUTION SOLDIER",
+          "reloading": false,
+          "level": 1
+        }
+      ],
+      "coverPlayer": 0,
+      "coverEnemy": 0,
+      "modules": 0,
+      "level": 1,
+      "enemyTTK": []
+    },
+    {
+      "policy": "B",
+      "seed": 731,
+      "weapon": 1,
+      "chargedShots": 0,
+      "seconds": 120.09999999999745,
+      "dead": false,
+      "hp": 100,
+      "shield": 75,
+      "kills": 4,
+      "shots": 241,
+      "ammo": 241,
+      "reloads": 20,
+      "damage": 61,
+      "receivedHits": 9,
+      "received": [],
+      "coverPlayer": 1,
+      "coverEnemy": 0,
+      "modules": 0,
+      "level": 1,
+      "enemyTTK": [
+        {
+          "type": "drone",
+          "seconds": 1.200000000000017
+        },
+        {
+          "type": "soldier",
+          "seconds": 1.200000000000017
+        },
+        {
+          "type": "drone",
+          "seconds": 4.800000000000068
+        },
+        {
+          "type": "soldier",
+          "seconds": 6.399999999999661
+        }
+      ]
+    },
+    {
+      "policy": "B",
+      "seed": 997,
+      "weapon": 1,
+      "chargedShots": 0,
+      "seconds": 120.09999999999745,
+      "dead": false,
+      "hp": 87.79999999999988,
+      "shield": 75,
+      "kills": 4,
+      "shots": 241,
+      "ammo": 241,
+      "reloads": 20,
+      "damage": 95,
+      "receivedHits": 14,
+      "received": [],
+      "coverPlayer": 1,
+      "coverEnemy": 0,
+      "modules": 0,
+      "level": 1,
+      "enemyTTK": [
+        {
+          "type": "drone",
+          "seconds": 1.200000000000017
+        },
+        {
+          "type": "soldier",
+          "seconds": 1.200000000000017
+        },
+        {
+          "type": "drone",
+          "seconds": 4.800000000000068
+        },
+        {
+          "type": "soldier",
+          "seconds": 6.399999999999661
+        }
+      ]
+    },
+    {
+      "policy": "B",
+      "seed": 42,
+      "weapon": 1,
+      "chargedShots": 0,
+      "seconds": 120.09999999999745,
+      "dead": false,
+      "hp": 100,
+      "shield": 75,
+      "kills": 4,
+      "shots": 241,
+      "ammo": 241,
+      "reloads": 20,
+      "damage": 67,
+      "receivedHits": 10,
+      "received": [],
+      "coverPlayer": 1,
+      "coverEnemy": 0,
+      "modules": 0,
+      "level": 1,
+      "enemyTTK": [
+        {
+          "type": "drone",
+          "seconds": 1.200000000000017
+        },
+        {
+          "type": "soldier",
+          "seconds": 1.200000000000017
+        },
+        {
+          "type": "drone",
+          "seconds": 4.800000000000068
+        },
+        {
+          "type": "soldier",
+          "seconds": 6.399999999999661
+        }
+      ]
+    },
+    {
+      "policy": "C",
+      "seed": 731,
+      "weapon": 1,
+      "chargedShots": 0,
+      "seconds": 120.09999999999745,
+      "dead": false,
+      "hp": 100,
+      "shield": 75,
+      "kills": 4,
+      "shots": 220,
+      "ammo": 220,
+      "reloads": 27,
+      "damage": 7,
+      "receivedHits": 1,
+      "received": [],
+      "coverPlayer": 1,
+      "coverEnemy": 0,
+      "modules": 0,
+      "level": 1,
+      "enemyTTK": [
+        {
+          "type": "drone",
+          "seconds": 0.40000000000000036
+        },
+        {
+          "type": "soldier",
+          "seconds": 0.7999999999999972
+        },
+        {
+          "type": "soldier",
+          "seconds": 0.4000000000000057
+        },
+        {
+          "type": "drone",
+          "seconds": 0.4000000000000057
+        }
+      ]
+    },
+    {
+      "policy": "C",
+      "seed": 997,
+      "weapon": 1,
+      "chargedShots": 0,
+      "seconds": 120.09999999999745,
+      "dead": false,
+      "hp": 100,
+      "shield": 75,
+      "kills": 4,
+      "shots": 220,
+      "ammo": 220,
+      "reloads": 27,
+      "damage": 7,
+      "receivedHits": 1,
+      "received": [],
+      "coverPlayer": 1,
+      "coverEnemy": 0,
+      "modules": 0,
+      "level": 1,
+      "enemyTTK": [
+        {
+          "type": "drone",
+          "seconds": 0.40000000000000036
+        },
+        {
+          "type": "soldier",
+          "seconds": 0.7999999999999972
+        },
+        {
+          "type": "soldier",
+          "seconds": 0.4000000000000057
+        },
+        {
+          "type": "drone",
+          "seconds": 0.4000000000000057
+        }
+      ]
+    },
+    {
+      "policy": "C",
+      "seed": 42,
+      "weapon": 1,
+      "chargedShots": 0,
+      "seconds": 120.09999999999745,
+      "dead": false,
+      "hp": 100,
+      "shield": 75,
+      "kills": 4,
+      "shots": 220,
+      "ammo": 220,
+      "reloads": 27,
+      "damage": 0,
+      "receivedHits": 0,
+      "received": [],
+      "coverPlayer": 1,
+      "coverEnemy": 0,
+      "modules": 0,
+      "level": 1,
+      "enemyTTK": [
+        {
+          "type": "drone",
+          "seconds": 0.40000000000000036
+        },
+        {
+          "type": "soldier",
+          "seconds": 0.7999999999999972
+        },
+        {
+          "type": "soldier",
+          "seconds": 0.4000000000000057
+        },
+        {
+          "type": "drone",
+          "seconds": 0.4000000000000057
+        }
+      ]
+    },
+    {
+      "policy": "D",
+      "seed": 731,
+      "weapon": 3,
+      "chargedShots": 22,
+      "seconds": 120.09999999999745,
+      "dead": false,
+      "hp": 100,
+      "shield": 75,
+      "kills": 4,
+      "shots": 22,
+      "ammo": 770,
+      "reloads": 10,
+      "damage": 52,
+      "receivedHits": 8,
+      "received": [],
+      "coverPlayer": 2,
+      "coverEnemy": 0,
+      "modules": 8,
+      "level": 3,
+      "enemyTTK": [
+        {
+          "type": "drone",
+          "seconds": 0
+        },
+        {
+          "type": "soldier",
+          "seconds": 0
+        },
+        {
+          "type": "drone",
+          "seconds": 0
+        },
+        {
+          "type": "soldier",
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "policy": "D",
+      "seed": 997,
+      "weapon": 3,
+      "chargedShots": 22,
+      "seconds": 120.09999999999745,
+      "dead": false,
+      "hp": 100,
+      "shield": 75,
+      "kills": 4,
+      "shots": 22,
+      "ammo": 770,
+      "reloads": 10,
+      "damage": 65,
+      "receivedHits": 10,
+      "received": [],
+      "coverPlayer": 2,
+      "coverEnemy": 0,
+      "modules": 8,
+      "level": 3,
+      "enemyTTK": [
+        {
+          "type": "drone",
+          "seconds": 0
+        },
+        {
+          "type": "soldier",
+          "seconds": 0
+        },
+        {
+          "type": "drone",
+          "seconds": 0
+        },
+        {
+          "type": "soldier",
+          "seconds": 0
+        }
+      ]
+    },
+    {
+      "policy": "D",
+      "seed": 42,
+      "weapon": 3,
+      "chargedShots": 22,
+      "seconds": 120.09999999999745,
+      "dead": false,
+      "hp": 100,
+      "shield": 75,
+      "kills": 4,
+      "shots": 22,
+      "ammo": 770,
+      "reloads": 10,
+      "damage": 46,
+      "receivedHits": 7,
+      "received": [],
+      "coverPlayer": 2,
+      "coverEnemy": 0,
+      "modules": 8,
+      "level": 3,
+      "enemyTTK": [
+        {
+          "type": "drone",
+          "seconds": 0
+        },
+        {
+          "type": "soldier",
+          "seconds": 0
+        },
+        {
+          "type": "drone",
+          "seconds": 0
+        },
+        {
+          "type": "soldier",
+          "seconds": 0
+        }
+      ]
+    }
+  ],
+  "limitation": "Accelerated browser game-time, true AI/projectiles/collision; setup positions at first encounter, no healing. A fixed forwardfire, B lateral movement, C actual movement between cover/peek withmanualreload, D Lv3 weakpoint/charge+strafe extrafixture."
+}

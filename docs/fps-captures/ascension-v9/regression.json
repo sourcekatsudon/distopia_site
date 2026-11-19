@@ -1,0 +1,485 @@
+{
+  "nodeSuites": 21,
+  "proceduralSeeds": 100,
+  "independentNavigationSeeds": 20,
+  "desktop": {
+    "passed": 57,
+    "checks": [
+      "ordinary restaurant remains visible",
+      "ordinary restaurant never imports FPS",
+      "campaign starts with LV1 twelve-round service pistol",
+      "initial HP100 shield75",
+      "LV1 normal shot costs one round",
+      "ammunition does not regenerate while idle",
+      "cell remains unfilled during exchange",
+      "no shot can be reserved during reload",
+      "LV1 cell locks at 1.5seconds",
+      "empty pistol requires automatic reload",
+      "automatic reload restores magazine only after lock",
+      "retuned collected-module threshold unlocks LV2",
+      "LV2 equips separate twenty-four-round laser magazine",
+      "duplicate reward ID does not increase modules at LV2",
+      "forward progress records a real checkpoint",
+      "retry preserves acquired weapon growth",
+      "retry resumes at checkpoint rather than terminal",
+      "retry resets health shield and correct magazine capacity",
+      "reward ledger survives checkpoint retry",
+      "retuned collected-module threshold unlocks LV3",
+      "LV3 equips existing hundred-unit railgun",
+      "duplicate reward ID does not increase modules at LV3",
+      "retuned collected-module threshold unlocks LV4",
+      "duplicate reward ID does not increase modules at LV4",
+      "retuned collected-module threshold unlocks LV5",
+      "duplicate reward ID does not increase modules at LV5",
+      "enemy-count-based module thresholds reach the final weapon",
+      "actual model lab selects LV1",
+      "actual model lab selects LV2",
+      "actual model lab selects LV3",
+      "actual model lab selects LV4",
+      "actual model lab selects LV5",
+      "all seven combat roles instantiate in the actual runtime",
+      "cargo has a persistent damaged stage",
+      "cargo has a critical stage before destruction",
+      "cargo transitions to destroyed",
+      "intact wall blocks actual player traversal",
+      "destroyed wall disables its shared collider",
+      "destroyed wall opens a real player path",
+      "destroyed cover refreshes enemy navigation",
+      "opened shortcut is represented in enemy navigation",
+      "seeded A-D route is under400m",
+      "long traversal never retains the whole facility",
+      "forward traversal reaches the distant hangar without kill-count gate",
+      "actual hangar boarding starts rail flight",
+      "normal boarding uses thirty-second pursuit",
+      "actual keyboard steers the flight craft",
+      "actual mouse fire reaches spacecraft cannons",
+      "ship steering and bank respond to controls",
+      "flight pause freezes simulation",
+      "pursuit transitions into FTL warp without a boss",
+      "flight cannons shoot and destroy actual enemies",
+      "warp reaches escape completion",
+      "ending removes game renderer and input overlay",
+      "ending restores ordinary site input and scroll",
+      "no uncaught JavaScript errors",
+      "no application HTTP failures"
+    ],
+    "errors": [],
+    "failures": [],
+    "growth": [
+      {
+        "level": 2,
+        "modules": 4,
+        "capacity": 24
+      },
+      {
+        "level": 3,
+        "modules": 12,
+        "capacity": 100
+      },
+      {
+        "level": 4,
+        "modules": 24,
+        "capacity": 100
+      },
+      {
+        "level": 5,
+        "modules": 40,
+        "capacity": 120
+      }
+    ],
+    "traversal": {
+      "meters": 317.3744030691624,
+      "points": 78,
+      "maxResident": 4,
+      "checkpoint": {
+        "index": 3,
+        "x": 0,
+        "z": -234,
+        "level": 5,
+        "modules": 40
+      },
+      "end": {
+        "x": 0,
+        "y": 1.7,
+        "z": -298.00000000000006,
+        "vy": 0,
+        "hp": 100,
+        "shield": 75,
+        "energy": 120,
+        "capacity": 120,
+        "reloadSeconds": 2,
+        "charge": 0,
+        "reload": 0,
+        "cooldown": 0.25,
+        "hurtTime": 0,
+        "kills": 0,
+        "grounded": true,
+        "lastSource": "",
+        "lastDamage": 0
+      }
+    },
+    "flight": {
+      "sawWarp": true,
+      "last": {
+        "phase": "warp",
+        "elapsed": 33.80010000000022,
+        "distance": 1966.7338431948533,
+        "hp": 100,
+        "shield": 75,
+        "kills": 4,
+        "shots": 149,
+        "hits": 0,
+        "enemies": 0,
+        "spawned": 11,
+        "level": 5,
+        "x": -5.319944768391148,
+        "y": -4.544023989763052,
+        "bank": 2.0834944355033893e-12,
+        "speed": 327.8685507605536,
+        "duration": 30,
+        "warpSeconds": 4,
+        "totalDuration": 34,
+        "aim": {
+          "x": 0,
+          "y": 0,
+          "cursor": false,
+          "target": {
+            "x": -5.319944768391148,
+            "y": -4.544023989763052,
+            "z": -60
+          }
+        },
+        "resourceCounts": {
+          "geometries": 24,
+          "materials": 13,
+          "instanced": 9,
+          "enemyCapacity": 14,
+          "starSegments": 700
+        },
+        "hitFlash": 0
+      }
+    },
+    "limitations": [
+      "General regression uses fixed-step debug preparation and paused route traversal.",
+      "Root owns difficulty A/B/C/D and manual play review.",
+      "No physical-phone timing claim."
+    ]
+  },
+  "mobile": {
+    "passed": 58,
+    "checks": [
+      "ordinary mobile restaurant is visible",
+      "ordinary mobile page does not import FPS or Three.js",
+      "ordinary mobile page has no game overlays or canvas",
+      "mobile defaults to low quality and direct rendering",
+      "fresh mobile campaign starts at LV1 with twelve rounds",
+      "fresh mobile campaign has HP100 and shield75",
+      "LV1 shows BREAK instead of unavailable charge",
+      "mobile starts without pointer lock",
+      "both movement and aiming sticks are visible",
+      "mobile omits obsolete manual-fire and jump controls",
+      "portrait touch targets fit the viewport",
+      "real two-finger touch moves forward and turns the view together",
+      "releasing both touch owners stops movement",
+      "CDP touch cancellation clears both stick axes and knobs",
+      "LV1 crosshair on a real soldier automatically shoots",
+      "automatic shots resolve actual enemy damage",
+      "moving aim away stops automatic fire",
+      "authored wall prevents automatic fire at an occluded enemy",
+      "occluded enemy does not leave a target-lock highlight",
+      "LV1 BREAK never accumulates railgun charge",
+      "LV1 BREAK damages real environmental cover",
+      "held LV1 BREAK starts automatic reload at an empty magazine",
+      "automatic exchange does not refill ammunition early",
+      "automatic LV1 exchange restores twelve rounds after locking",
+      "released BREAK does not continue ordinary firing",
+      "explicit R reload remains available on mobile",
+      "R reload finishes with the LV1 magazine capacity",
+      "touch reload button enters the same exchange state",
+      "LV2 retains the environmental BREAK control",
+      "LV2 BREAK fires its laser at cargo without charge",
+      "LV3 auto fire reserves one ordinary-shot cost during windup",
+      "lost auto target cancels windup and refunds reserved energy",
+      "automatic test reacquires a fresh pending shot",
+      "touch charge preempts a pending automatic shot without phantom damage",
+      "automatic test reacquires a fresh pending shot",
+      "touch reload cancels the pending automatic shot before exchange",
+      "LV3 enables the dedicated charge control",
+      "LV3 touch hold builds charge",
+      "charge cancellation does not fire or consume ammunition",
+      "a second finger cannot release the charge owner",
+      "releasing the owning finger fires the actual charged shot",
+      "mobile does not jump",
+      "mobile does not sprint",
+      "rotation cancels held charge and axes without firing",
+      "landscape touch targets fit the viewport",
+      "mobile pause button pauses play",
+      "pause freezes position and ammunition",
+      "resuming leaves charge input released",
+      "mobile boarding uses thirty-second pursuit",
+      "both real mobile sticks steer the spacecraft",
+      "mobile flight automatically fires cannons without a fire button",
+      "flight hides ground-only charge and reload buttons",
+      "mobile flight pause freezes the pursuit",
+      "mobile resume preserves flight instead of returning to ground play",
+      "leaving flight removes both mobile controls and renderer",
+      "leaving restores normal website input and scrolling",
+      "no uncaught mobile JavaScript errors",
+      "no local application HTTP failures"
+    ],
+    "errors": [],
+    "failures": [],
+    "flight": {
+      "before": {
+        "phase": "flight",
+        "elapsed": 0,
+        "distance": 0,
+        "hp": 100,
+        "shield": 75,
+        "kills": 0,
+        "shots": 0,
+        "hits": 0,
+        "enemies": 0,
+        "spawned": 0,
+        "level": 3,
+        "x": 0,
+        "y": 0,
+        "bank": 0,
+        "speed": 44,
+        "duration": 30,
+        "warpSeconds": 4,
+        "totalDuration": 34,
+        "aim": {
+          "x": 0,
+          "y": 0,
+          "cursor": false,
+          "target": {
+            "x": 0,
+            "y": 0,
+            "z": -60
+          }
+        },
+        "resourceCounts": {
+          "geometries": 24,
+          "materials": 13,
+          "instanced": 9,
+          "enemyCapacity": 8,
+          "starSegments": 250
+        },
+        "hitFlash": 0
+      },
+      "after": {
+        "phase": "flight",
+        "elapsed": 0.5002999999999992,
+        "distance": 23.150588117521732,
+        "hp": 100,
+        "shield": 75,
+        "kills": 0,
+        "shots": 3,
+        "hits": 0,
+        "enemies": 0,
+        "spawned": 0,
+        "level": 3,
+        "x": 4.171035108700616,
+        "y": 2.8134849249236193,
+        "bank": -0.373466285029538,
+        "speed": 48.45879616532727,
+        "duration": 30,
+        "warpSeconds": 4,
+        "totalDuration": 34,
+        "aim": {
+          "x": 0,
+          "y": 0,
+          "cursor": false,
+          "target": {
+            "x": 4.171035108700616,
+            "y": 2.8134849249236193,
+            "z": -60
+          }
+        },
+        "resourceCounts": {
+          "geometries": 24,
+          "materials": 13,
+          "instanced": 9,
+          "enemyCapacity": 8,
+          "starSegments": 250
+        },
+        "hitFlash": 0
+      }
+    },
+    "limitations": [
+      "Chromium coarse-pointer/CDP emulation; physical-phone FPS and memory are unmeasured.",
+      "Debug labs prepare combat and flight; this is not an unassisted full campaign or difficulty test.",
+      "Fixed-step combat advances real gameplay and AI; no health or damage results are forged."
+    ]
+  },
+  "intro": {
+    "passed": 18,
+    "checks": [
+      "restaurant starts as an ordinary website",
+      "public play link includes hacking warning burst",
+      "hacking reveals ruler threats",
+      "full introduction was not bypassed",
+      "camera begins close to the physical homepage terminal",
+      "restored terminal is resident in the starting room",
+      "camera pulls away from the homepage into the dungeon",
+      "pullback ends at the actual player spawn",
+      "cinematic returns to gameplay field of view",
+      "homepage terminal has protected physical collisions",
+      "terminal leaves the authored route open",
+      "full intro and gameplay exit restore the website",
+      "skipping during pullback always restores the visible weapon",
+      "skipping during pullback restores gameplay camera and FOV",
+      "explicit quick mode alone bypasses the introduction",
+      "normal manual entry clearly starts with the full introduction",
+      "fast start is explicitly labelled separately",
+      "no introduction/runtime/shader errors"
+    ],
+    "errors": [],
+    "near": {
+      "skipped": false,
+      "phaseTime": 0,
+      "weaponVisible": false,
+      "camera": {
+        "x": -3,
+        "y": 1.65,
+        "z": 4.035613829356979,
+        "fov": 55
+      }
+    },
+    "pulling": {
+      "skipped": false,
+      "phaseTime": 1.6503000000000012,
+      "weaponVisible": true,
+      "camera": {
+        "x": -1.2753045090059985,
+        "y": 1.6787449248499,
+        "z": 6.314733480379311,
+        "fov": 68.22266543095401
+      }
+    },
+    "end": {
+      "skipped": false,
+      "phaseTime": 3.5001000000000038,
+      "weaponVisible": true,
+      "camera": {
+        "x": 0,
+        "y": 1.7,
+        "z": 8,
+        "fov": 78
+      }
+    }
+  },
+  "cursorAndEnding": {
+    "passed": 24,
+    "checks": [
+      "checkpoint retry preserves the generated layout",
+      "new seed changes the corridor bends",
+      "ground has four short A–D sectors",
+      "HUD identifies sector A",
+      "HUD identifies sector B",
+      "HUD identifies sector C",
+      "HUD identifies sector D",
+      "desktop ground controls acquire pointer lock",
+      "boarding releases pointer lock without pausing flight",
+      "unheld mouse cursor moves the real cannon aim",
+      "visible reticle follows the mouse cursor",
+      "cursor aiming alone does not steer the ship",
+      "WASD still steers independently of cursor aim",
+      "real mouse click fires aimed dual cannons",
+      "Escape pauses unlocked flight",
+      "paused flight cannot advance its thirty-second clock",
+      "flight resume keeps the visible cursor unlocked",
+      "first click after resume aims at its position without a mousemove",
+      "pursuit remains active before thirty seconds",
+      "warp starts at thirty combat seconds",
+      "ending announces escape success in Japanese",
+      "success automatically restores restaurant input, scroll and cursor",
+      "automatic return disposes game renderer and overlays",
+      "no uncaught runtime or WebGL errors"
+    ],
+    "errors": [],
+    "layout": {
+      "seed": 731,
+      "routeLength": 317.3744030691624
+    },
+    "timing": {
+      "before": {
+        "phase": "flight",
+        "elapsed": 29.88320000000029,
+        "distance": 1448.6782526057443,
+        "hp": 100,
+        "shield": 75,
+        "kills": 0,
+        "shots": 118,
+        "hits": 0,
+        "enemies": 1,
+        "spawned": 11,
+        "level": 1,
+        "x": -8.178973121497725,
+        "y": -5.475998607329667,
+        "bank": 0.23562620429567865,
+        "speed": 48.57915098778567,
+        "duration": 30,
+        "warpSeconds": 4,
+        "totalDuration": 34,
+        "aim": {
+          "x": 0,
+          "y": 0,
+          "cursor": false,
+          "target": {
+            "x": -8.178973121497725,
+            "y": -5.475998607329667,
+            "z": -60
+          }
+        },
+        "resourceCounts": {
+          "geometries": 24,
+          "materials": 15,
+          "instanced": 9,
+          "enemyCapacity": 14,
+          "starSegments": 700
+        },
+        "hitFlash": 0
+      },
+      "warp": {
+        "phase": "warp",
+        "elapsed": 30.083200000000293,
+        "distance": 1458.3310987493405,
+        "hp": 100,
+        "shield": 75,
+        "kills": 0,
+        "shots": 118,
+        "hits": 0,
+        "enemies": 0,
+        "spawned": 11,
+        "level": 1,
+        "x": -9.12453167479944,
+        "y": -4.337143224779736,
+        "bank": 0.16687149866389447,
+        "speed": 47.76347371190094,
+        "duration": 30,
+        "warpSeconds": 4,
+        "totalDuration": 34,
+        "aim": {
+          "x": 0,
+          "y": 0,
+          "cursor": false,
+          "target": {
+            "x": -9.12453167479944,
+            "y": -4.337143224779736,
+            "z": -60
+          }
+        },
+        "resourceCounts": {
+          "geometries": 24,
+          "materials": 15,
+          "instanced": 9,
+          "enemyCapacity": 14,
+          "starSegments": 700
+        },
+        "hitFlash": 0
+      }
+    }
+  }
+}

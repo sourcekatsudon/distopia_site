@@ -1,0 +1,896 @@
+{
+  "ground": {
+    "groundComplete": true,
+    "groundTime": 887.8999999997402,
+    "progress": {
+      "level": 5,
+      "modules": 16,
+      "distance": 2537.7507029152794,
+      "routeMeters": 2649.5893879646237,
+      "elapsed": 887.8999999997402,
+      "deaths": 0,
+      "kills": 140,
+      "checkpoint": {
+        "index": 31,
+        "x": 0,
+        "z": -2532,
+        "level": 5,
+        "modules": 16
+      },
+      "levelTimes": [
+        {
+          "level": 2,
+          "time": 76.99999999999777,
+          "distance": 208.9980894978878
+        },
+        {
+          "level": 3,
+          "time": 294.2000000000326,
+          "distance": 819.6972787965556
+        },
+        {
+          "level": 4,
+          "time": 500.4500000000795,
+          "distance": 1436.1338617069719
+        },
+        {
+          "level": 5,
+          "time": 752.0999999998637,
+          "distance": 2156.289912144436
+        }
+      ],
+      "claimed": 16,
+      "stats": {
+        "shots": 502,
+        "chargedShots": 52,
+        "ammoSpent": 3215,
+        "reloads": 40,
+        "hits": 301,
+        "weakHits": 188,
+        "damageTaken": 11,
+        "receivedHits": 1,
+        "coverPlayer": 1,
+        "coverEnemy": 0,
+        "modules": 16,
+        "enemyTTK": [
+          {
+            "type": "drone",
+            "seconds": 0.3999999999999986
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.4000000000000057
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.4000000000000057
+          },
+          {
+            "type": "drone",
+            "seconds": 3.5500000000000504
+          },
+          {
+            "type": "drone",
+            "seconds": 0.4000000000000057
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.39999999999997726
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.39999999999997726
+          },
+          {
+            "type": "drone",
+            "seconds": 2.3499999999998664
+          },
+          {
+            "type": "drone",
+            "seconds": 0.39999999999997726
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.39999999999997726
+          },
+          {
+            "type": "soldier",
+            "seconds": 1.549999999999912
+          },
+          {
+            "type": "drone",
+            "seconds": 0.39999999999997726
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.4499999999999744
+          },
+          {
+            "type": "assassin",
+            "seconds": 0.4499999999999744
+          },
+          {
+            "type": "drone",
+            "seconds": 0.5999999999999659
+          },
+          {
+            "type": "soldier",
+            "seconds": 2.9999999999998295
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.4499999999999744
+          },
+          {
+            "type": "assassin",
+            "seconds": 0.4499999999999744
+          },
+          {
+            "type": "drone",
+            "seconds": 0.5999999999999659
+          },
+          {
+            "type": "soldier",
+            "seconds": 3.850000000000705
+          },
+          {
+            "type": "drone",
+            "seconds": 0.3000000000000682
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.4500000000001023
+          },
+          {
+            "type": "assassin",
+            "seconds": 0.6000000000001364
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.4500000000001023
+          },
+          {
+            "type": "assassin",
+            "seconds": 0.4500000000001023
+          },
+          {
+            "type": "drone",
+            "seconds": 0.6000000000001364
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.4500000000001023
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.4500000000001023
+          },
+          {
+            "type": "drone",
+            "seconds": 0.3000000000000682
+          },
+          {
+            "type": "sniper",
+            "seconds": 1.2000000000002728
+          },
+          {
+            "type": "turret",
+            "seconds": 3.9000000000008868
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.4500000000001023
+          },
+          {
+            "type": "drone",
+            "seconds": 0.3000000000000682
+          },
+          {
+            "type": "sniper",
+            "seconds": 1.0500000000002387
+          },
+          {
+            "type": "turret",
+            "seconds": 3.9000000000008868
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.4500000000001023
+          },
+          {
+            "type": "drone",
+            "seconds": 0.3000000000000682
+          },
+          {
+            "type": "turret",
+            "seconds": 2.55000000000058
+          },
+          {
+            "type": "sniper",
+            "seconds": 9.450000000002149
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.4500000000001023
+          },
+          {
+            "type": "drone",
+            "seconds": 1.9500000000004434
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.25000000000005684
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.25000000000005684
+          },
+          {
+            "type": "sniper",
+            "seconds": 3.100000000000705
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.25000000000005684
+          },
+          {
+            "type": "sniper",
+            "seconds": 1.0000000000002274
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.7500000000001705
+          },
+          {
+            "type": "sniper",
+            "seconds": 4.900000000001114
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.5000000000001137
+          },
+          {
+            "type": "sniper",
+            "seconds": 2.0000000000004547
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.25000000000005684
+          },
+          {
+            "type": "sniper",
+            "seconds": 2.600000000000591
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "heavy",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 1.3499999999987722
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 0.7999999999992724
+          },
+          {
+            "type": "heavy",
+            "seconds": 1.3499999999987722
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 1.3499999999987722
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 1.3499999999987722
+          },
+          {
+            "type": "heavy",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 3.3999999999969077
+          },
+          {
+            "type": "heavy",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 2.5999999999976353
+          },
+          {
+            "type": "heavy",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 3.149999999997135
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "heavy",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 2.749999999997499
+          },
+          {
+            "type": "sniper",
+            "seconds": 3.249999999997044
+          },
+          {
+            "type": "heavy",
+            "seconds": 1.3499999999987722
+          },
+          {
+            "type": "guardian",
+            "seconds": 15.949999999985494
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 1.3999999999987267
+          },
+          {
+            "type": "heavy",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 2.6999999999975444
+          },
+          {
+            "type": "heavy",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "heavy",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 1.2499999999988631
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 0.6999999999993634
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "heavy",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 1.2499999999988631
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 0.5999999999994543
+          }
+        ],
+        "deathLog": []
+      },
+      "encounters": [
+        "enc-0",
+        "enc-1",
+        "enc-2",
+        "enc-3",
+        "enc-4",
+        "enc-5",
+        "enc-6",
+        "enc-7",
+        "enc-8",
+        "enc-9",
+        "enc-10",
+        "enc-11",
+        "enc-12",
+        "enc-13",
+        "enc-14",
+        "enc-15",
+        "enc-16",
+        "enc-17",
+        "enc-18",
+        "enc-19",
+        "enc-20",
+        "enc-21",
+        "enc-22",
+        "enc-23",
+        "enc-24",
+        "enc-25",
+        "enc-26",
+        "enc-27",
+        "enc-28",
+        "enc-29",
+        "enc-30"
+      ]
+    },
+    "deaths": [],
+    "segments": [
+      {
+        "segment": 0,
+        "time": 2.6999999999999984,
+        "hp": 100,
+        "level": 1
+      },
+      {
+        "segment": 1,
+        "time": 30.300000000000296,
+        "hp": 100,
+        "level": 1
+      },
+      {
+        "segment": 2,
+        "time": 57.79999999999885,
+        "hp": 100,
+        "level": 1
+      },
+      {
+        "segment": 3,
+        "time": 85.2999999999973,
+        "hp": 100,
+        "level": 2
+      },
+      {
+        "segment": 4,
+        "time": 112.99999999999572,
+        "hp": 100,
+        "level": 2
+      },
+      {
+        "segment": 5,
+        "time": 140.59999999999772,
+        "hp": 100,
+        "level": 2
+      },
+      {
+        "segment": 6,
+        "time": 168.00000000000395,
+        "hp": 100,
+        "level": 2
+      },
+      {
+        "segment": 7,
+        "time": 195.30000000001016,
+        "hp": 100,
+        "level": 2
+      },
+      {
+        "segment": 8,
+        "time": 224.5000000000168,
+        "hp": 100,
+        "level": 2
+      },
+      {
+        "segment": 9,
+        "time": 252.40000000002314,
+        "hp": 100,
+        "level": 2
+      },
+      {
+        "segment": 10,
+        "time": 280.20000000002943,
+        "hp": 100,
+        "level": 2
+      },
+      {
+        "segment": 11,
+        "time": 308.40000000003585,
+        "hp": 100,
+        "level": 3
+      },
+      {
+        "segment": 12,
+        "time": 337.2000000000424,
+        "hp": 100,
+        "level": 3
+      },
+      {
+        "segment": 13,
+        "time": 364.70000000004865,
+        "hp": 100,
+        "level": 3
+      },
+      {
+        "segment": 14,
+        "time": 392.3000000000549,
+        "hp": 100,
+        "level": 3
+      },
+      {
+        "segment": 15,
+        "time": 419.9000000000612,
+        "hp": 100,
+        "level": 3
+      },
+      {
+        "segment": 16,
+        "time": 448.9000000000678,
+        "hp": 100,
+        "level": 3
+      },
+      {
+        "segment": 17,
+        "time": 476.50000000007407,
+        "hp": 100,
+        "level": 3
+      },
+      {
+        "segment": 18,
+        "time": 503.8000000000803,
+        "hp": 100,
+        "level": 4
+      },
+      {
+        "segment": 19,
+        "time": 531.4000000000644,
+        "hp": 100,
+        "level": 4
+      },
+      {
+        "segment": 20,
+        "time": 561.4000000000372,
+        "hp": 100,
+        "level": 4
+      },
+      {
+        "segment": 21,
+        "time": 589.4000000000117,
+        "hp": 100,
+        "level": 4
+      },
+      {
+        "segment": 22,
+        "time": 616.9999999999866,
+        "hp": 100,
+        "level": 4
+      },
+      {
+        "segment": 23,
+        "time": 644.9999999999611,
+        "hp": 100,
+        "level": 4
+      },
+      {
+        "segment": 24,
+        "time": 672.2999999999363,
+        "hp": 100,
+        "level": 4
+      },
+      {
+        "segment": 25,
+        "time": 700.1999999999109,
+        "hp": 100,
+        "level": 4
+      },
+      {
+        "segment": 26,
+        "time": 727.4999999998861,
+        "hp": 100,
+        "level": 4
+      },
+      {
+        "segment": 27,
+        "time": 755.3999999998607,
+        "hp": 100,
+        "level": 5
+      },
+      {
+        "segment": 28,
+        "time": 783.4999999998352,
+        "hp": 100,
+        "level": 5
+      },
+      {
+        "segment": 29,
+        "time": 811.09999999981,
+        "hp": 100,
+        "level": 5
+      },
+      {
+        "segment": 30,
+        "time": 839.9999999997838,
+        "hp": 100,
+        "level": 5
+      },
+      {
+        "segment": 31,
+        "time": 867.6999999997586,
+        "hp": 100,
+        "level": 5
+      }
+    ],
+    "player": {
+      "x": 0.00001731657991586111,
+      "y": 1.7,
+      "z": -2530.025702915279,
+      "vy": 0,
+      "hp": 100,
+      "shield": 75,
+      "energy": 48,
+      "capacity": 120,
+      "reloadSeconds": 2,
+      "charge": 0,
+      "reload": 0,
+      "cooldown": 0,
+      "hurtTime": 0,
+      "kills": 140,
+      "grounded": true,
+      "lastSource": "SHIELD GUARDIAN",
+      "lastDamage": 11
+    }
+  },
+  "flight": {
+    "phase": "complete",
+    "elapsed": 180,
+    "distance": 9633.233498506326,
+    "hp": 100,
+    "shield": 75,
+    "kills": 21,
+    "shots": 859,
+    "hits": 0,
+    "enemies": 0,
+    "spawned": 65,
+    "level": 5,
+    "x": 0.3284142537665886,
+    "y": -5.888242399111624,
+    "bank": -6.154861245471969e-25,
+    "speed": 391.32251954027623,
+    "duration": 180,
+    "resourceCounts": {
+      "geometries": 24,
+      "materials": 13,
+      "instanced": 9,
+      "enemyCapacity": 14,
+      "starSegments": 700
+    },
+    "hitFlash": 0
+  },
+  "totalTime": 1067.7499999995766,
+  "mode": "won"
+}
