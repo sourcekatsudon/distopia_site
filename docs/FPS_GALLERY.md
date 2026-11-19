@@ -1,5 +1,7 @@
 # 施設・玉座・遭遇の再設計（最新）
 
+[新版プレビュー](https://chicken-house-j3qktoa8q-photors-projects.vercel.app/?protocol=1)（Vercel認証保護あり）。
+
 [改修方針・変更ファイル・検証](FPS_FACILITY_V3.md)。今回は照明と構図、蛇行ルート、貨物越しの遭遇、通過済み側からの増援を変更。
 
 ## 機械王の玉座
