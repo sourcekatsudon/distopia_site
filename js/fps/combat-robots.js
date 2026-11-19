@@ -16,8 +16,9 @@ export function createCombatRobot(type,{seed=1,quality='high'}={}){
  // Existing roles use the established model with no duplicate embellishment.
  const extra=new THREE.Group();extra.name=type+' role equipment';root.add(extra);
  const armor=surface?clone('anodized'):M(new THREE.MeshStandardMaterial({color:0x26333e,metalness:.72,roughness:.64})),steel=surface?clone('titanium'):M(new THREE.MeshStandardMaterial({color:0x697a87,metalness:.86,roughness:.43})),dark=surface?clone('skeleton'):M(new THREE.MeshStandardMaterial({color:0x0b131d,metalness:.65,roughness:.68}));
- for(const m of[armor,steel,dark]){m.normalMap=null;m.roughnessMap=null;m.metalnessMap=null;m.clearcoat=0;}
- const red=M(new THREE.MeshStandardMaterial({color:0x370308,emissive:0xff112b,emissiveIntensity:2.4,roughness:.3,metalness:.2}));
+ // Match the main shells without changing geometry, hit regions or animation.
+ for(const[m,color,metalness,roughness,emissive,power,env]of[[armor,0x6e818e,.60,.48,0x4b6475,.22,1.1],[steel,0xaebfca,.80,.34,0x5e7686,.16,1.25],[dark,0x1b2833,.45,.68,0x263440,.12,.75]]){m.color.setHex(color);m.metalness=metalness;m.roughness=roughness;m.emissive.setHex(emissive);m.emissiveIntensity=power;m.envMapIntensity=env;m.normalMap=null;m.roughnessMap=null;m.metalnessMap=null;m.clearcoat=0;}
+ const red=M(new THREE.MeshStandardMaterial({color:0x370308,emissive:0xff112b,emissiveIntensity:2.8,roughness:.3,metalness:.2}));
  const cube=G(new THREE.BoxGeometry(1,1,1)),cyl=G(new THREE.CylinderGeometry(1,1,1,high?14:8)),ball=G(new THREE.IcosahedronGeometry(1,1));
  const group=(name,parent=extra,x=0,y=0,z=0)=>{const g=new THREE.Group();g.name=name;g.position.set(x,y,z);parent.add(g);return g;};
  function mesh(g,m,p,x=0,y=0,z=0,part='',rx=0,ry=0,rz=0){const o=new THREE.Mesh(g,m);o.position.set(x,y,z);o.rotation.set(rx,ry,rz);p.add(o);if(part){o.userData={part,multiplier:MULTIPLIER[part]};hitMeshes.push(o);}return o;}
@@ -72,7 +73,7 @@ export function createCombatRobot(type,{seed=1,quality='high'}={}){
  const forwarded={state:'IDLE',moving:false,stagger:0};let aim=0,lastShieldHP=90;
  function setShield(on){if(!shield||on===shieldActive)return;shieldActive=on;shield.visible=on;for(const m of shieldMeshes){m.visible=on;const i=hitMeshes.indexOf(m);if(on&&i<0)hitMeshes.push(m);if(!on&&i>=0)hitMeshes.splice(i,1);}}
  function update(dt,time,state={}){if(disposed)return;state=state||{};dt=Number.isFinite(dt)?Math.max(0,dt):0;time=Number.isFinite(time)?time:0;const warn=state.state==='TELEGRAPH'||state.state==='ATTACK'||(state.telegraph||0)>0;aim+=(Number(warn)-aim)*Math.min(1,dt*9);forwarded.state=state.state==='STAGGER'?'STAGGER':warn?'ATTACK':state.state||'IDLE';forwarded.moving=!!state.moving;forwarded.stagger=state.stagger||0;base?.update(dt,time,forwarded);
-  red.emissiveIntensity=2.1+aim*2.2+Math.sin(time*(warn?18:3)+seed)*.18;
+  red.emissiveIntensity=2.7+aim*1.8+Math.sin(time*(warn?18:3)+seed)*.18;
   for(const b of blades){b.g.rotation.x=-.15-aim*.85;b.g.rotation.z=b.sign*(.08+Math.sin(time*8)*.025*(state.moving?1:0));}
   if(rifle)rifle.rotation.x=-.04-aim*.09;if(headPivot)headPivot.rotation.x=-aim*.10;for(let i=0;i<spinners.length;i++)spinners[i].rotation.z+=dt*(1.4+aim*22)*(i%2?-1:1);
   if(shield){lastShieldHP=Number.isFinite(state.shieldHP)?Math.max(0,state.shieldHP):90;setShield(lastShieldHP>0);shieldMaterial.uniforms.time.value=time;shieldMaterial.uniforms.strength.value=Math.min(1,lastShieldHP/90);}

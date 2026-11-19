@@ -11,10 +11,15 @@ export function createRobot(type,{seed=1,quality='high'}={}){
   const rnd=()=>(state=(state*1664525+1013904223)>>>0)/4294967296;
   const offset=rnd()*Math.PI*2; phase=offset;
   function surface(key,color,roughness){const a=surfaces[key].clone();a.color.setHex(color);a.roughness=roughness;a.normalMap=null;mats.push(a);return a;}
-  const armor=surface('anodized',0x35414d,.58),dark=surface('anodized',0x0b1119,.66),steel=surface('titanium',0x657580,.42),frame=surface('skeleton',0x242e38,.65),rubber=surface('rubber',0x0a1015,.95);
-  armor.color.setHex(0x27333f);armor.roughnessMap=null;armor.roughness=.76;armor.metalness=.70;armor.clearcoat=0;armor.envMapIntensity=.75;armor.color.offsetHSL(0,0,(rnd()-.5)*.025);
+  const armor=surface('anodized',0x748692,.46),dark=surface('anodized',0x1c2832,.66),steel=surface('titanium',0xb4c4cf,.34),frame=surface('skeleton',0x50616e,.55),rubber=surface('rubber',0x0a1015,.95);
+  // Local visibility floor: neutral steel shells, dark recesses, no extra lights.
+  for(const m of [armor,dark,steel,frame]){m.roughnessMap=null;m.metalnessMap=null;m.clearcoat=0;}
+  armor.metalness=.58;armor.envMapIntensity=1.1;armor.emissive.setHex(0x546b7a);armor.emissiveIntensity=.22;armor.color.offsetHSL(0,0,(rnd()-.5)*.025);
+  dark.metalness=.45;dark.envMapIntensity=.75;dark.emissive.setHex(0x263440);dark.emissiveIntensity=.12;
+  steel.metalness=.82;steel.envMapIntensity=1.25;steel.emissive.setHex(0x5f7787);steel.emissiveIntensity=.16;
+  frame.metalness=.55;frame.envMapIntensity=1.0;frame.emissive.setHex(0x3c5262);frame.emissiveIntensity=.18;
   function emission(color,power){const a=new THREE.MeshStandardMaterial({color:0x310208,emissive:color,emissiveIntensity:power,roughness:.3,metalness:.2});mats.push(a);sensors.push({m:a,power});return a;}
-  const red=emission(0xff0015,3.3),hot=emission(0xff1530,2.2);
+  const red=emission(0xff0015,4.0),hot=emission(0xff1530,2.8);
   const geometry=(key,make)=>{if(!geos.has(key))geos.set(key,make());return geos.get(key);};
   const box=(w,h,d)=>geometry('b'+[w,h,d],()=>new THREE.BoxGeometry(w,h,d));
   const cyl=(r,r2,h,n=8)=>geometry('c'+[r,r2,h,n],()=>new THREE.CylinderGeometry(r,r2,h,n));

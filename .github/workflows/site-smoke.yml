@@ -39,3 +39,6 @@ jobs:
           node tests/projectiles.cjs
           node tests/armory.cjs
           node tests/space-flight.cjs
+          node tests/four-sectors.cjs
+          node tests/cursor-input.cjs
+          node tests/flight-aim.cjs

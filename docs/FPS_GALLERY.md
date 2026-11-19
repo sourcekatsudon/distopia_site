@@ -1,4 +1,10 @@
-# ASCENSION v8：全導入の復元・時間差3連射（最新）
+# ASCENSION v9：A–Dの4区画・カーソル照準・30秒でワープ（最新）
+
+[4区画・敵視認性・飛行と帰還の実画面／録画](fps-captures/ascension-v9/index.html)。[実装と検証報告](FPS_ASCENSION_V9.md)。
+
+---
+
+# ASCENSION v8：全導入の復元・時間差3連射（前版記録）
 
 [導入・敵射撃の実画面と録画](fps-captures/ascension-v8/index.html)。[変更と検証結果](FPS_ASCENSION_V8.md)。
 
