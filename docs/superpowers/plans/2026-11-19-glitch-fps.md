@@ -9,7 +9,7 @@ Spec: user attachment GLITCH PROTOCOL / FPS ESCAPE (2026-11-19); creative decisi
 - [x] 3. Complete five-area waves, raycast damage, normal/charged fire, destructible robot parts, particles, HUD, pause/retry/win and cleanup.
 - [x] 4. Add site trigger: 60–120 active seconds, per-session once, persistent opt-out, debug query, safe overlays, procedural throne and terminal pullback, explicit pointer-lock start; mobile/WebGL fallbacks.
 - [x] 5. Browser playthrough, screenshots of all phases, performance/cleanup tests, existing regression, independent review, fixes.
-- [ ] 6. Commit, push new branch, create PR to existing menu branch, Vercel Preview, verify live source and access.
+- [x] 6. Commit, push new branch, create PR to existing menu branch, Vercel Preview, verify live source and access.
 
 Owners: Codex integration/gameplay/QA and final decisions; Antigravity Sonnet world/materials and weapon/actors independently, proposal-only no filesystem/production access. No secrets or customer data provided. Two worker processes maximum initially.
 Review focus: exit always reachable; no input/audio leaks; visibility/pointer-lock transitions; WebGL failure; restart memory growth; slow/failed module loading; off-by-one wave gate locks.
