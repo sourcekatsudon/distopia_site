@@ -1,0 +1,33 @@
+{
+  "commit": "65f5c0d238c2f93ba5ec64a59decfa5986b9cc09",
+  "preview": "https://chicken-house-c1i7i2jlm-photors-projects.vercel.app",
+  "desktop": {
+    "passed": 57,
+    "errors": [],
+    "httpFailures": []
+  },
+  "mobile": {
+    "passed": 58,
+    "errors": [],
+    "httpFailures": [],
+    "realPhone": false
+  },
+  "gallery": {
+    "galleryImages": 28,
+    "allImagesOK": true,
+    "videoStatus": 206,
+    "title": "ASCENSION — 実画面レビュー",
+    "brokenLinks": 0
+  },
+  "ci": [
+    {
+      "run": 44457011505,
+      "status": "success"
+    },
+    {
+      "run": 44457020549,
+      "status": "success"
+    }
+  ],
+  "productionMerged": false
+}

@@ -31,4 +31,4 @@ Growth is committed to the checkpoint ledger immediately on module collection wh
 - [x] Hangarboarding,180sflightsteer/shoot/damage/shipupgrade+warp+site return.
 - [x] Headlessstate/regression and realbrowserA/B/C/D combat balance, replayprogression/checkpoints/destruction/fullflight.
 - [x] Actual LV1..5/enemy7/breakable/flight screenshots, source-freecritic, performance1080p/low/resourcecycles.
-- [ ] Report measuredtimes/risks, PRpreviewCI andremoteverification; no productionmerge.
+- [x] Report measuredtimes/risks, PRpreviewCI andremoteverification; no productionmerge.

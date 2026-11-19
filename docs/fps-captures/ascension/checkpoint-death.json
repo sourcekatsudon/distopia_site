@@ -1,0 +1,30 @@
+{
+  "passed": 8,
+  "checks": [
+    "actual hostile melee kills the player",
+    "death reports the attacking enemy",
+    "death retains earned weapon growth",
+    "retry goes directly to checkpoint briefing",
+    "retry restores saved checkpoint location",
+    "checkpoint retry equips the retained laser level",
+    "checkpoint retry resets health shield and correct magazine",
+    "claimed reward stays deduplicated after actual death"
+  ],
+  "seconds": 21.199999999999957,
+  "death": [
+    {
+      "time": 21.150000000000166,
+      "distance": 162,
+      "source": "RUSH ASSASSIN",
+      "reloading": false,
+      "level": 2
+    }
+  ],
+  "checkpoint": {
+    "index": 2,
+    "x": 0,
+    "z": -150,
+    "level": 2,
+    "modules": 4
+  }
+}
