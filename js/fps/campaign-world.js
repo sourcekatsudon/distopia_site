@@ -1,7 +1,7 @@
 import * as THREE from '../../vendor/three.module.js';
 import {createMaterials} from './materials.js';
 import {circleBlocked} from './simulation.js';
-import {SEGMENTS,SPAWN,HANGAR_Z,segmentAt,segmentLayout} from './campaign-layout.js';
+import {SEGMENTS,SPAWN,HANGAR_Z,SEGMENT_COUNT,segmentAt,segmentLayout} from './campaign-layout.js';
 
 // Bounded, deterministic near-field stream. The far facility is never resident.
 export function createCampaignWorld({scene,quality='high',seed=731}={}){
@@ -77,7 +77,7 @@ export function createCampaignWorld({scene,quality='high',seed=731}={}){
    for(let z=s.startZ-5;z>s.endZ;z-=10){add(box,M.edge,0,H-.6,z,38,.50,.70);add(box,M.cyan,0,H-.9,z,7,.035,.12);}
   }
   // One legible distance/sector plate per segment; disposed with its stream chunk.
-  const c=document.createElement('canvas');c.width=low?256:512;c.height=128;const ctx=c.getContext('2d');ctx.fillStyle='#09131c';ctx.fillRect(0,0,c.width,128);ctx.fillStyle=s.kind==='hangar'?'#71d5ed':'#c24d5b';ctx.fillRect(0,0,c.width,6);ctx.font='bold '+(low?21:32)+'px monospace';ctx.fillStyle='#b5d0db';ctx.fillText(String(index+1).padStart(2,'0')+' / '+s.name,12,47);ctx.font=(low?15:22)+'px monospace';ctx.fillStyle='#7797a9';ctx.fillText(String(Math.max(0,Math.round(8-s.startZ))).padStart(4,'0')+' m  >  ASCENSION / 2560 m',12,86);ctx.fillStyle='#567785';ctx.fillRect(12,104,c.width-24,2);
+  const c=document.createElement('canvas');c.width=low?256:512;c.height=128;const ctx=c.getContext('2d');ctx.fillStyle='#09131c';ctx.fillRect(0,0,c.width,128);ctx.fillStyle=s.kind==='hangar'?'#71d5ed':'#c24d5b';ctx.fillRect(0,0,c.width,6);ctx.font='bold '+(low?21:32)+'px monospace';ctx.fillStyle='#b5d0db';ctx.fillText(String(index+1).padStart(2,'0')+' / '+s.name,12,47);ctx.font=(low?15:22)+'px monospace';ctx.fillStyle='#7797a9';ctx.fillText(String(Math.max(0,Math.round(8-s.startZ))).padStart(4,'0')+' m  >  ASCENSION / '+(SEGMENT_COUNT*80)+' m',12,86);ctx.fillStyle='#567785';ctx.fillRect(12,104,c.width-24,2);
   const signTexture=new THREE.CanvasTexture(c);signTexture.colorSpace=THREE.SRGBColorSpace;localTextures.push(signTexture);const signMaterial=new THREE.MeshStandardMaterial({map:signTexture,emissiveMap:signTexture,emissive:0xffffff,emissiveIntensity:.32,roughness:.65});localMats.push(signMaterial);addMesh(group,windowGeo,signMaterial,0,Math.min(H-1,4.1),s.startZ-1.3,4.8,1.2,1);
   // Only the chunk's local dust/steam buffers are resident. No light per device.
   let rand=(seed+index*2917)>>>0;const random=()=>((rand=Math.imul(rand,1664525)+1013904223>>>0)/4294967296),dust=[];

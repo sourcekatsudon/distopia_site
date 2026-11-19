@@ -1,16 +1,17 @@
 export const SEGMENT_LENGTH=80;
-export const SEGMENT_COUNT=32;
+export const SEGMENT_COUNT=16;
 export const SPAWN={x:0,y:1.7,z:8};
-export const HANGAR_Z=-2538;
+export const HANGAR_Z=SPAWN.z-SEGMENT_COUNT*SEGMENT_LENGTH+14;
 const THEMES=[['terminal','CITIZEN TERMINAL',7,6],['corridor','TRANSFER CONDUIT',7,6],['warehouse','FREIGHT PROCESSING',12,10],['machine','THERMAL EXCHANGE',10,8],['security','SECURITY NEXUS',8,7],['reactor','REACTOR SPINE',14,13]];
-export const SEGMENTS=Array.from({length:SEGMENT_COUNT},(_,index)=>{const t=index===31?['hangar','ASCENSION HANGAR',20,16]:THEMES[index%THEMES.length];return{id:'sector-'+String(index+1).padStart(2,'0'),index,startZ:SPAWN.z-index*SEGMENT_LENGTH,endZ:SPAWN.z-(index+1)*SEGMENT_LENGTH,name:t[1],halfWidth:t[2],height:t[3],kind:t[0]};});
+export const SEGMENTS=Array.from({length:SEGMENT_COUNT},(_,index)=>{const t=index===SEGMENT_COUNT-1?['hangar','ASCENSION HANGAR',20,16]:THEMES[index%THEMES.length];return{id:'sector-'+String(index+1).padStart(2,'0'),index,startZ:SPAWN.z-index*SEGMENT_LENGTH,endZ:SPAWN.z-(index+1)*SEGMENT_LENGTH,name:t[1],halfWidth:t[2],height:t[3],kind:t[0]};});
 export const segmentAt=z=>Math.min(SEGMENT_COUNT-1,Math.max(0,Math.floor((SPAWN.z-z)/SEGMENT_LENGTH)));
 export const ROUTE=[[SPAWN.x,SPAWN.z]];
 for(const s of SEGMENTS){if(s.kind==='hangar'){ROUTE.push([0,s.endZ+14]);continue;}ROUTE.push([4.5,s.startZ-20],[4.5,s.startZ-32],[-4.5,s.startZ-46],[-4.5,s.startZ-58],[0,s.endZ]);}
 const routeLengths=[0];for(let i=1;i<ROUTE.length;i++)routeLengths.push(routeLengths[i-1]+Math.hypot(ROUTE[i][0]-ROUTE[i-1][0],ROUTE[i][1]-ROUTE[i-1][1]));
+export const ROUTE_LENGTH=routeLengths.at(-1);
 export function routeDistanceAt(z){for(let i=1;i<ROUTE.length;i++)if(z>=ROUTE[i][1]){const a=ROUTE[i-1],b=ROUTE[i],t=Math.max(0,Math.min(1,(a[1]-z)/(a[1]-b[1])));return routeLengths[i-1]+(routeLengths[i]-routeLengths[i-1])*t;}return routeLengths.at(-1);}
 export function segmentLayout(index){
- const s=SEGMENTS[Math.min(31,Math.max(0,index|0))],hw=s.halfWidth,H=s.height,staticBoxes=[],destructibles=[],entries=[];
+ const s=SEGMENTS[Math.min(SEGMENT_COUNT-1,Math.max(0,index|0))],hw=s.halfWidth,H=s.height,staticBoxes=[],destructibles=[],entries=[];
  const box=(id,x,z,w,d,h=H,minY=0)=>{const b={id:s.id+'-'+id,tag:id,segment:s.index,minX:x-w/2,maxX:x+w/2,minZ:z-d/2,maxZ:z+d/2,minY,maxY:minY+h,height:h,enabled:true,protected:true};staticBoxes.push(b);return b;};
  const prop=(type,k,x,z,w,d,h)=>{const id='env-'+s.index+'-'+type+'-'+k,c={id,tag:type,segment:s.index,destructibleId:id,minX:x-w/2,maxX:x+w/2,minZ:z-d/2,maxZ:z+d/2,minY:0,maxY:h,height:h,enabled:true};destructibles.push({id,type,segment:s.index,position:{x,y:h/2,z},size:{x:w,y:h,z:d},collider:c});};
  box('outer-left',-hw-.35,(s.startZ+s.endZ)/2,.7,80,H);box('outer-right',hw+.35,(s.startZ+s.endZ)/2,.7,80,H);

@@ -31,6 +31,9 @@ jobs:
           node tests/touch.cjs
           node tests/targeting.cjs
           node tests/ascension.cjs
+          node tests/pacing-v7.cjs
+          node tests/pickup-feedback.cjs
+          node tests/facility-alarm.cjs
           node tests/combat.cjs
           node tests/armory.cjs
           node tests/space-flight.cjs

@@ -1,0 +1,548 @@
+{
+  "nodeSuites": 16,
+  "desktop": {
+    "passed": 57,
+    "checks": [
+      "ordinary restaurant remains visible",
+      "ordinary restaurant never imports FPS",
+      "campaign starts with LV1 twelve-round service pistol",
+      "initial HP100 shield75",
+      "LV1 normal shot costs one round",
+      "ammunition does not regenerate while idle",
+      "cell remains unfilled during exchange",
+      "no shot can be reserved during reload",
+      "LV1 cell locks at 1.5seconds",
+      "empty pistol requires automatic reload",
+      "automatic reload restores magazine only after lock",
+      "retuned collected-module threshold unlocks LV2",
+      "LV2 equips separate twenty-four-round laser magazine",
+      "duplicate reward ID does not increase modules at LV2",
+      "forward progress records a real checkpoint",
+      "retry preserves acquired weapon growth",
+      "retry resumes at checkpoint rather than terminal",
+      "retry resets health shield and correct magazine capacity",
+      "reward ledger survives checkpoint retry",
+      "retuned collected-module threshold unlocks LV3",
+      "LV3 equips existing hundred-unit railgun",
+      "duplicate reward ID does not increase modules at LV3",
+      "retuned collected-module threshold unlocks LV4",
+      "duplicate reward ID does not increase modules at LV4",
+      "retuned collected-module threshold unlocks LV5",
+      "duplicate reward ID does not increase modules at LV5",
+      "enemy-count-based module thresholds reach the final weapon",
+      "actual model lab selects LV1",
+      "actual model lab selects LV2",
+      "actual model lab selects LV3",
+      "actual model lab selects LV4",
+      "actual model lab selects LV5",
+      "all seven combat roles instantiate in the actual runtime",
+      "cargo has a persistent damaged stage",
+      "cargo has a critical stage before destruction",
+      "cargo transitions to destroyed",
+      "intact wall blocks actual player traversal",
+      "destroyed wall disables its shared collider",
+      "destroyed wall opens a real player path",
+      "destroyed cover refreshes enemy navigation",
+      "opened shortcut is represented in enemy navigation",
+      "authored running route is halved to about1.32km",
+      "long traversal never retains the whole facility",
+      "forward traversal reaches the distant hangar without kill-count gate",
+      "actual hangar boarding starts rail flight",
+      "normal boarding uses the three-minute flight duration",
+      "actual keyboard steers the flight craft",
+      "actual mouse fire reaches spacecraft cannons",
+      "ship steering and bank respond to controls",
+      "flight pause freezes simulation",
+      "pursuit transitions into FTL warp without a boss",
+      "flight cannons shoot and destroy actual enemies",
+      "warp reaches escape completion",
+      "ending removes game renderer and input overlay",
+      "ending restores ordinary site input and scroll",
+      "no uncaught JavaScript errors",
+      "no application HTTP failures"
+    ],
+    "errors": [],
+    "failures": [],
+    "growth": [
+      {
+        "level": 2,
+        "modules": 12,
+        "capacity": 24
+      },
+      {
+        "level": 3,
+        "modules": 48,
+        "capacity": 100
+      },
+      {
+        "level": 4,
+        "modules": 100,
+        "capacity": 100
+      },
+      {
+        "level": 5,
+        "modules": 160,
+        "capacity": 120
+      }
+    ],
+    "traversal": {
+      "meters": 1319.982428249683,
+      "points": 77,
+      "maxResident": 4,
+      "checkpoint": {
+        "index": 14,
+        "x": 0,
+        "z": -1110,
+        "level": 5,
+        "modules": 160
+      },
+      "end": {
+        "x": -7.190459447369745e-31,
+        "y": 1.7,
+        "z": -1257.9999999999843,
+        "vy": 0,
+        "hp": 100,
+        "shield": 75,
+        "energy": 120,
+        "capacity": 120,
+        "reloadSeconds": 2,
+        "charge": 0,
+        "reload": 0,
+        "cooldown": 0.25,
+        "hurtTime": 0,
+        "kills": 0,
+        "grounded": true,
+        "lastSource": "",
+        "lastDamage": 0
+      }
+    },
+    "flight": {
+      "sawWarp": true,
+      "last": {
+        "phase": "warp",
+        "elapsed": 179.88370000000666,
+        "distance": 9588.707057407079,
+        "hp": 100,
+        "shield": 75,
+        "kills": 23,
+        "shots": 860,
+        "hits": 0,
+        "enemies": 0,
+        "spawned": 65,
+        "level": 5,
+        "x": 0.6813764237787404,
+        "y": -6.4778726546059655,
+        "bank": -1.797836104582511e-24,
+        "speed": 380.85007189444786,
+        "duration": 180,
+        "resourceCounts": {
+          "geometries": 24,
+          "materials": 13,
+          "instanced": 9,
+          "enemyCapacity": 14,
+          "starSegments": 700
+        },
+        "hitFlash": 0
+      }
+    },
+    "limitations": [
+      "General regression uses fixed-step debug preparation and paused route traversal.",
+      "Root owns difficulty A/B/C/D and manual play review.",
+      "No physical-phone timing claim."
+    ]
+  },
+  "mobile": {
+    "passed": 58,
+    "checks": [
+      "ordinary mobile restaurant is visible",
+      "ordinary mobile page does not import FPS or Three.js",
+      "ordinary mobile page has no game overlays or canvas",
+      "mobile defaults to low quality and direct rendering",
+      "fresh mobile campaign starts at LV1 with twelve rounds",
+      "fresh mobile campaign has HP100 and shield75",
+      "LV1 shows BREAK instead of unavailable charge",
+      "mobile starts without pointer lock",
+      "both movement and aiming sticks are visible",
+      "mobile omits obsolete manual-fire and jump controls",
+      "portrait touch targets fit the viewport",
+      "real two-finger touch moves forward and turns the view together",
+      "releasing both touch owners stops movement",
+      "CDP touch cancellation clears both stick axes and knobs",
+      "LV1 crosshair on a real soldier automatically shoots",
+      "automatic shots resolve actual enemy damage",
+      "moving aim away stops automatic fire",
+      "authored wall prevents automatic fire at an occluded enemy",
+      "occluded enemy does not leave a target-lock highlight",
+      "LV1 BREAK never accumulates railgun charge",
+      "LV1 BREAK damages real environmental cover",
+      "held LV1 BREAK starts automatic reload at an empty magazine",
+      "automatic exchange does not refill ammunition early",
+      "automatic LV1 exchange restores twelve rounds after locking",
+      "released BREAK does not continue ordinary firing",
+      "explicit R reload remains available on mobile",
+      "R reload finishes with the LV1 magazine capacity",
+      "touch reload button enters the same exchange state",
+      "LV2 retains the environmental BREAK control",
+      "LV2 BREAK fires its laser at cargo without charge",
+      "LV3 auto fire reserves one ordinary-shot cost during windup",
+      "lost auto target cancels windup and refunds reserved energy",
+      "automatic test reacquires a fresh pending shot",
+      "touch charge preempts a pending automatic shot without phantom damage",
+      "automatic test reacquires a fresh pending shot",
+      "touch reload cancels the pending automatic shot before exchange",
+      "LV3 enables the dedicated charge control",
+      "LV3 touch hold builds charge",
+      "charge cancellation does not fire or consume ammunition",
+      "a second finger cannot release the charge owner",
+      "releasing the owning finger fires the actual charged shot",
+      "mobile does not jump",
+      "mobile does not sprint",
+      "rotation cancels held charge and axes without firing",
+      "landscape touch targets fit the viewport",
+      "mobile pause button pauses play",
+      "pause freezes position and ammunition",
+      "resuming leaves charge input released",
+      "mobile boarding uses the full three-minute flight",
+      "both real mobile sticks steer the spacecraft",
+      "mobile flight automatically fires cannons without a fire button",
+      "flight hides ground-only charge and reload buttons",
+      "mobile flight pause freezes the pursuit",
+      "mobile resume preserves flight instead of returning to ground play",
+      "leaving flight removes both mobile controls and renderer",
+      "leaving restores normal website input and scrolling",
+      "no uncaught mobile JavaScript errors",
+      "no local application HTTP failures"
+    ],
+    "errors": [],
+    "failures": [],
+    "flight": {
+      "before": {
+        "phase": "flight",
+        "elapsed": 0.016700000000000728,
+        "distance": 0.7348000000000321,
+        "hp": 100,
+        "shield": 75,
+        "kills": 0,
+        "shots": 1,
+        "hits": 0,
+        "enemies": 0,
+        "spawned": 0,
+        "level": 3,
+        "x": 0,
+        "y": 0,
+        "bank": 0,
+        "speed": 44,
+        "duration": 180,
+        "resourceCounts": {
+          "geometries": 24,
+          "materials": 13,
+          "instanced": 9,
+          "enemyCapacity": 8,
+          "starSegments": 250
+        },
+        "hitFlash": 0
+      },
+      "after": {
+        "phase": "flight",
+        "elapsed": 0.5167000000000007,
+        "distance": 23.87044346559548,
+        "hp": 100,
+        "shield": 75,
+        "kills": 0,
+        "shots": 3,
+        "hits": 0,
+        "enemies": 0,
+        "spawned": 0,
+        "level": 3,
+        "x": 4.166624488225486,
+        "y": 2.810509832676025,
+        "bank": -0.37336093748321986,
+        "speed": 48.455900889415325,
+        "duration": 180,
+        "resourceCounts": {
+          "geometries": 24,
+          "materials": 13,
+          "instanced": 9,
+          "enemyCapacity": 8,
+          "starSegments": 250
+        },
+        "hitFlash": 0
+      }
+    },
+    "limitations": [
+      "Chromium coarse-pointer/CDP emulation; physical-phone FPS and memory are unmeasured.",
+      "Debug labs prepare combat and flight; this is not an unassisted full campaign or difficulty test.",
+      "Fixed-step combat advances real gameplay and AI; no health or damage results are forged."
+    ]
+  },
+  "desktopPacing": {
+    "passed": 20,
+    "checks": [
+      "opening deploys a dense forward force within six seconds",
+      "every authored spawn is ahead and outside passed sectors",
+      "opening combat activates a bounded sector alarm",
+      "sector announcement is visible",
+      "entering B records a monotonic sector frontier",
+      "backtracking does not release new enemies in a passed sector",
+      "checkpoint retry does not repopulate passed sectors",
+      "real shot kills the test drone",
+      "LV5 enemy death still creates a guaranteed drop",
+      "actual pickup after LV5 increments the collected count",
+      "actual pickup triggers the half-second body pulse",
+      "pickup adds a brief peripheral blue glow",
+      "pickup pulse expires without permanent screen glare",
+      "enemy drop reaches the retuned twelve-core laser unlock",
+      "actual weapon evolution amplifies the pickup pulse",
+      "fixed turret never walks or chases",
+      "B-sector warning follows forward progression",
+      "exit restores the restaurant",
+      "exit removes new visual overlays and renderer",
+      "no runtime or WebGL shader errors"
+    ],
+    "errors": [],
+    "opening": {
+      "enemies": 9,
+      "spawns": [
+        {
+          "id": "enc-0-0",
+          "sector": 0,
+          "x": -5.6,
+          "z": -11.5,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-1",
+          "sector": 0,
+          "x": -4.199999999999999,
+          "z": -11.5,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-2",
+          "sector": 0,
+          "x": -5.199999999999999,
+          "z": -13,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-3",
+          "sector": 0,
+          "x": 5.8,
+          "z": -13,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-4",
+          "sector": 0,
+          "x": -4.699999999999999,
+          "z": -11.5,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-5",
+          "sector": 0,
+          "x": -4.699999999999999,
+          "z": -13,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-6",
+          "sector": 0,
+          "x": -4.699999999999999,
+          "z": -11.5,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-7",
+          "sector": 0,
+          "x": -4.199999999999999,
+          "z": -13,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-8",
+          "sector": 0,
+          "x": -4.199999999999999,
+          "z": -11.5,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        }
+      ]
+    },
+    "rear": {
+      "entered": 12,
+      "back": 12,
+      "afterRetry": 12,
+      "frontier": 1
+    },
+    "pickup": {
+      "modules": 161,
+      "feedback": {
+        "active": true,
+        "age": 0.05,
+        "duration": 0.5,
+        "triggered": 1,
+        "upgrades": 0,
+        "upgrade": false,
+        "reducedMotion": false,
+        "hexCount": 18,
+        "particleCount": 40,
+        "drawCalls": 5
+      }
+    },
+    "upgrade": {
+      "level": 2,
+      "feedback": {
+        "active": true,
+        "age": 0.05,
+        "duration": 0.5,
+        "triggered": 1,
+        "upgrades": 1,
+        "upgrade": true,
+        "reducedMotion": false,
+        "hexCount": 18,
+        "particleCount": 40,
+        "drawCalls": 5
+      }
+    }
+  },
+  "mobilePacing": {
+    "passed": 20,
+    "checks": [
+      "opening deploys a dense forward force within six seconds",
+      "every authored spawn is ahead and outside passed sectors",
+      "opening combat activates a bounded sector alarm",
+      "sector announcement is visible",
+      "entering B records a monotonic sector frontier",
+      "backtracking does not release new enemies in a passed sector",
+      "checkpoint retry does not repopulate passed sectors",
+      "real shot kills the test drone",
+      "LV5 enemy death still creates a guaranteed drop",
+      "actual pickup after LV5 increments the collected count",
+      "actual pickup triggers the half-second body pulse",
+      "pickup adds a brief peripheral blue glow",
+      "pickup pulse expires without permanent screen glare",
+      "enemy drop reaches the retuned twelve-core laser unlock",
+      "actual weapon evolution amplifies the pickup pulse",
+      "fixed turret never walks or chases",
+      "B-sector warning follows forward progression",
+      "exit restores the restaurant",
+      "exit removes new visual overlays and renderer",
+      "no runtime or WebGL shader errors"
+    ],
+    "errors": [],
+    "opening": {
+      "enemies": 8,
+      "spawns": [
+        {
+          "id": "enc-0-0",
+          "sector": 0,
+          "x": -5.6,
+          "z": -11.5,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-1",
+          "sector": 0,
+          "x": -4.199999999999999,
+          "z": -11.5,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-2",
+          "sector": 0,
+          "x": -5.199999999999999,
+          "z": -13,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-3",
+          "sector": 0,
+          "x": 5.8,
+          "z": -13,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-4",
+          "sector": 0,
+          "x": -4.699999999999999,
+          "z": -11.5,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-5",
+          "sector": 0,
+          "x": -4.699999999999999,
+          "z": -13,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-6",
+          "sector": 0,
+          "x": -4.699999999999999,
+          "z": -11.5,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        },
+        {
+          "id": "enc-0-7",
+          "sector": 0,
+          "x": -4.699999999999999,
+          "z": -13,
+          "playerZ": -6.000000000000004,
+          "frontier": 0
+        }
+      ]
+    },
+    "rear": {
+      "entered": 11,
+      "back": 11,
+      "afterRetry": 11,
+      "frontier": 1
+    },
+    "pickup": {
+      "modules": 161,
+      "feedback": {
+        "active": true,
+        "age": 0.05,
+        "duration": 0.5,
+        "triggered": 1,
+        "upgrades": 0,
+        "upgrade": false,
+        "reducedMotion": false,
+        "hexCount": 10,
+        "particleCount": 16,
+        "drawCalls": 5
+      }
+    },
+    "upgrade": {
+      "level": 2,
+      "feedback": {
+        "active": true,
+        "age": 0.05,
+        "duration": 0.5,
+        "triggered": 1,
+        "upgrades": 1,
+        "upgrade": true,
+        "reducedMotion": false,
+        "hexCount": 10,
+        "particleCount": 16,
+        "drawCalls": 5
+      }
+    }
+  }
+}

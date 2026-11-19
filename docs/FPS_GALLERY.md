@@ -1,4 +1,10 @@
-# ESCAPE PROTOCOL: ASCENSION（最新）
+# ASCENSION v7：短縮コース・密集戦闘・確定ドロップ（最新）
+
+[新しい戦闘・取得発光・警報の画像と録画](fps-captures/ascension-v7/index.html)。[変更と実測結果](FPS_ASCENSION_V7.md)。
+
+---
+
+# ESCAPE PROTOCOL: ASCENSION（前版記録）
 
 [5段階の武器・7種の敵・4段階の破壊・宇宙戦の実画面と録画](fps-captures/ascension/index.html)。[実装・難易度・性能の測定報告](FPS_ASCENSION.md)。
 

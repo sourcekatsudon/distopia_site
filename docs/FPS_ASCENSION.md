@@ -1,4 +1,6 @@
-# Chicken House — ESCAPE PROTOCOL: ASCENSION
+# Chicken House — ESCAPE PROTOCOL: ASCENSION（前版記録）
+
+最新の短縮コース・密集戦闘は [ASCENSION v7](FPS_ASCENSION_V7.md) を参照。以下は前版の測定記録。
 
 通常サイトからの侵食演出を保ち、地上の成長・遮蔽戦闘から宇宙艇による脱出までを実装した。通常のレストラン閲覧ではFPS／Three.jsを読み込まない。
 

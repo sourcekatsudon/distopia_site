@@ -8,20 +8,23 @@ export class SynthAudio {
   }
   if(this.ctx.state==='suspended')await this.ctx.resume();
  }
- setVolume(v){this.volume=Math.max(0,Math.min(1,Number(v)||0));this.sync();}
- setMuted(on){this.muted=on;this.sync();}
+ setVolume(v){this.volume=Math.max(0,Math.min(1,Number(v)||0));if(!this.volume)this.stopAnnouncement();this.sync();}
+ setMuted(on){this.muted=on;if(on)this.stopAnnouncement();this.sync();}
  sync(){if(this.ctx)this.master.gain.setTargetAtTime(this.muted?0:this.volume*.28,this.ctx.currentTime,.03);}
  tone(freq,duration=.15,level=.3,type='sine',end=0){if(!this.ctx||this.ctx.state!=='running'||this.voices.size>=20)return;const now=this.ctx.currentTime,o=this.ctx.createOscillator(),g=this.ctx.createGain();o.type=type;o.frequency.setValueAtTime(freq,now);if(end)o.frequency.exponentialRampToValueAtTime(Math.max(10,end),now+duration);g.gain.setValueAtTime(.001,now);g.gain.exponentialRampToValueAtTime(Math.max(.002,level),now+.008);g.gain.exponentialRampToValueAtTime(.001,now+duration);o.connect(g).connect(this.master);this.voices.add(o);o.onended=()=>{o.disconnect();g.disconnect();this.voices.delete(o);};o.start(now);o.stop(now+duration+.02);}
  noise(duration=.18,level=.2,freq=1300){if(!this.ctx||this.ctx.state!=='running'||this.voices.size>=20)return;const now=this.ctx.currentTime,o=this.ctx.createBufferSource(),f=this.ctx.createBiquadFilter(),g=this.ctx.createGain();o.buffer=this.noiseBuffer;f.type='bandpass';f.frequency.value=freq;f.Q.value=.8;g.gain.setValueAtTime(level,now);g.gain.exponentialRampToValueAtTime(.001,now+duration);o.connect(f).connect(g).connect(this.master);this.voices.add(o);o.onended=()=>{o.disconnect();f.disconnect();g.disconnect();this.voices.delete(o);};o.start(now);o.stop(now+duration);}
  shoot(power=1){this.tone(95,.3,.6,'sine',25);this.tone(1650,.18,.14*power,'sawtooth',130);this.noise(.13,.4,5000);this.tone(4200,.08,.1,'triangle',600);}
  charge(v){if(this.ctx){this.chargeOsc.frequency.setTargetAtTime(110+v*650,this.ctx.currentTime,.03);this.chargeGain.gain.setTargetAtTime(v*.08,this.ctx.currentTime,.025);}}
+ announcement(text){const engine=window.speechSynthesis;if(!engine||this.muted||this.volume<=0||this.ctx?.state!=='running'||engine.speaking||engine.pending)return false;const voice=engine.getVoices().find(v=>v.localService&&/^ja/i.test(v.lang));if(!voice||!window.SpeechSynthesisUtterance)return false;const u=new window.SpeechSynthesisUtterance(text);u.voice=voice;u.lang='ja-JP';u.rate=.95;u.pitch=.65;u.volume=this.volume*.65;this.spoken=u;u.onend=u.onerror=()=>{if(this.spoken===u)this.spoken=null;};engine.speak(u);return true;}
+ stopAnnouncement(){if(this.spoken){window.speechSynthesis?.cancel();this.spoken=null;}}
+ siren(){this.tone(410,.65,.10,'triangle',790);this.tone(780,.95,.045,'sine',320);this.noise(.10,.025,1800);}
  alarm(){this.tone(240,.7,.12,'triangle',180);this.tone(480,.55,.035,'sine',360);}
  hit(){this.tone(1700,.045,.1,'square',850);}
  destroy(heavy=false){this.noise(heavy?.7:.35,heavy?.45:.25,500);this.tone(heavy?65:125,.4,.45,'sine',20);this.tone(800,.18,.08,'triangle',80);}
  step(){this.noise(.07,.09,230);this.tone(100,.05,.09,'triangle',60);}
  door(){this.noise(.7,.12,600);this.tone(160,.5,.07,'sawtooth',65);}
  hurt(){this.noise(.18,.17,2000);this.tone(70,.2,.16,'square',40);}
- pause(){this.charge(0);if(this.ctx?.state==='running')this.ctx.suspend().catch(()=>{});}
+ pause(){this.stopAnnouncement();this.charge(0);if(this.ctx?.state==='running')this.ctx.suspend().catch(()=>{});}
  async resume(){await this.start();}
- dispose(){if(!this.ctx)return;for(const v of this.voices)try{v.stop();v.disconnect();}catch{}this.voices.clear();for(const n of this.ambient)try{n.stop?.();n.disconnect();}catch{}this.master.disconnect();this.ctx.close().catch(()=>{});this.ctx=null;this.ambient=[];}
+ dispose(){this.stopAnnouncement();if(!this.ctx)return;for(const v of this.voices)try{v.stop();v.disconnect();}catch{}this.voices.clear();for(const n of this.ambient)try{n.stop?.();n.disconnect();}catch{}this.master.disconnect();this.ctx.close().catch(()=>{});this.ctx=null;this.ambient=[];}
 }
