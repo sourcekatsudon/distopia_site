@@ -1,0 +1,18 @@
+export class TouchController {
+ constructor(host,input,{active,onLook,onRelease,onCancel=()=>{},onPause}){
+  this.input=input;this.active=active;this.listeners=[];this.pointers=new Map();input.touchMove={x:0,y:0};
+  const root=document.createElement('div');root.className='gp-touch';root.innerHTML='<div class="gp-touch-look" aria-label="ドラッグで視点"></div><div class="gp-stick" role="button" aria-label="移動スティック"><i></i></div><button class="gp-touch-fire" aria-label="射撃">FIRE</button><button class="gp-touch-charge" aria-label="チャージ射撃">CHARGE</button><button class="gp-touch-jump" aria-label="ジャンプ">↑</button><button class="gp-touch-use" aria-label="操作">E</button><button class="gp-touch-reload" aria-label="セル交換">↻</button><button class="gp-touch-pause" aria-label="ポーズ">Ⅱ</button><span class="gp-touch-tip">左で移動 · 右をドラッグして照準</span>';host.append(root);this.root=root;
+  const listen=(el,event,fn)=>{el.addEventListener(event,fn,{passive:false});this.listeners.push(()=>el.removeEventListener(event,fn));},capture=(el,e)=>{try{el.setPointerCapture(e.pointerId);}catch{}};
+  const stick=root.querySelector('.gp-stick'),knob=stick.querySelector('i');this.knob=knob;
+  listen(stick,'pointerdown',e=>{if(!active()||[...this.pointers.values()].some(p=>p.kind==='move'))return;e.preventDefault();capture(stick,e);const r=stick.getBoundingClientRect();this.pointers.set(e.pointerId,{kind:'move',x:r.x+r.width/2,y:r.y+r.height/2});});
+  const look=root.querySelector('.gp-touch-look');listen(look,'pointerdown',e=>{if(!active())return;e.preventDefault();capture(look,e);this.pointers.set(e.pointerId,{kind:'look',x:e.clientX,y:e.clientY});});
+  const move=e=>{const p=this.pointers.get(e.pointerId);if(!p||!active())return;e.preventDefault();if(p.kind==='move'){let x=(e.clientX-p.x)/42,y=(e.clientY-p.y)/42,len=Math.max(1,Math.hypot(x,y));x/=len;y/=len;input.touchMove.x=x;input.touchMove.y=y;knob.style.transform='translate('+x*36+'px,'+y*36+'px)';}else if(p.kind==='look'){onLook((e.clientX-p.x)*1.6,(e.clientY-p.y)*1.6);p.x=e.clientX;p.y=e.clientY;}};
+  listen(root,'pointermove',move);const up=e=>{const p=this.pointers.get(e.pointerId);if(!p)return;e.preventDefault();this.pointers.delete(e.pointerId);if(p.kind==='move'){input.touchMove.x=input.touchMove.y=0;knob.style.transform='';}if(p.kind==='fire')input.left=false;if(p.kind==='charge'){const release=input.right;input.right=false;if(release&&active())onRelease();}};listen(root,'pointerup',up);listen(root,'pointercancel',e=>{const p=this.pointers.get(e.pointerId);if(p?.kind==='charge'){input.right=false;onCancel();}up(e);});
+  for(const [selector,kind]of [['.gp-touch-fire','fire'],['.gp-touch-charge','charge']]){const el=root.querySelector(selector);listen(el,'pointerdown',e=>{if(!active()||[...this.pointers.values()].some(p=>p.kind===kind))return;e.preventDefault();capture(el,e);this.pointers.set(e.pointerId,{kind});if(kind==='fire')input.left=true;else input.right=true;});}
+  for(const [selector,key]of [['.gp-touch-jump','Space'],['.gp-touch-use','KeyE'],['.gp-touch-reload','KeyR']])listen(root.querySelector(selector),'pointerdown',e=>{if(active()){e.preventDefault();input.pressed.add(key);}});
+  listen(root.querySelector('.gp-touch-pause'),'pointerdown',e=>{e.preventDefault();if(active())onPause();});
+  this.originalClear=input.clear;input.clear=()=>{this.originalClear.call(input);this.reset();};
+ }
+ reset(){this.pointers.clear();this.input.touchMove.x=this.input.touchMove.y=0;this.knob.style.transform='';}
+ dispose(){this.reset();this.input.clear=this.originalClear;delete this.input.touchMove;this.listeners.forEach(fn=>fn());this.root.remove();}
+}

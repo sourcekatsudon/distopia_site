@@ -1,4 +1,10 @@
-# 施設・玉座・遭遇の再設計（最新）
+# Cinematic v4（最新）
+
+[比較画像・連番・18.8秒の実プレイ録画](fps-captures/cinematic-v4/index.html)。[改修内容と検証報告](FPS_CINEMATIC_V4.md)。PC高品質・スマホ向け軽量FPS、5倍の呼吸、敵弾と六角シールドを追加。
+
+---
+
+# 施設・玉座・遭遇の再設計（v3記録）
 
 [新版プレビュー](https://chicken-house-j3qktoa8q-photors-projects.vercel.app/?protocol=1)（Vercel認証保護あり）。
 

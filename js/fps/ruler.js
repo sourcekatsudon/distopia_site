@@ -1,13 +1,15 @@
 import * as THREE from '../../vendor/three.module.js';
+import {createSurfaceKit} from './material-kit.js';
 
 // A seated industrial sovereign, framed by a deep power cathedral rather than neon rings.
 export function createRuler({quality='high'}={}){
- const high=quality==='high',root=new THREE.Group();root.name='SOVEREIGN / execution cathedral';
+ const surfaces=createSurfaceKit({quality});const high=quality==='high',root=new THREE.Group();root.name='SOVEREIGN / execution cathedral';
  const geos=new Set(),mats=new Set(),textures=new Set(),fingers=[];let disposed=false,seed=913;
  const random=()=>((seed=Math.imul(seed,1664525)+1013904223>>>0)/4294967296);
  const G=g=>(geos.add(g),g),M=p=>{const m=new THREE.MeshStandardMaterial(p);mats.add(m);return m;};
  const roughCanvas=document.createElement('canvas');roughCanvas.width=roughCanvas.height=256;const rc=roughCanvas.getContext('2d');rc.fillStyle='#9b9b9b';rc.fillRect(0,0,256,256);for(let i=0;i<2500;i++){const v=90+Math.floor(random()*90);rc.fillStyle=`rgb(${v},${v},${v})`;rc.fillRect(random()*256,random()*256,1+random()*12,.6);}const rough=new THREE.CanvasTexture(roughCanvas);textures.add(rough);
  const steel=M({color:0x48515b,metalness:.88,roughness:.42,roughnessMap:rough,bumpMap:rough,bumpScale:.002}),edge=M({color:0x84919b,metalness:.88,roughness:.3,roughnessMap:rough}),black=M({color:0x10151b,metalness:.72,roughness:.48,roughnessMap:rough}),rubber=M({color:0x070a0e,roughness:.85,metalness:.05}),red=M({color:0x3c0711,emissive:0xff102e,emissiveIntensity:2.2,metalness:.25,roughness:.35}),eye=M({color:0x710414,emissive:0xff1538,emissiveIntensity:4.5,roughness:.2}),bronze=M({color:0x51473c,metalness:.85,roughness:.5});
+ steel.roughnessMap=surfaces.gunmetal.roughnessMap;black.roughnessMap=surfaces.anodized.roughnessMap;edge.roughnessMap=surfaces.titanium.roughnessMap;
  const group=(name,p=root)=>{const g=new THREE.Group();g.name=name;p.add(g);return g;};
  const mesh=(g,m,p,x=0,y=0,z=0,rx=0,ry=0,rz=0)=>{const o=new THREE.Mesh(g,m);o.position.set(x,y,z);o.rotation.set(rx,ry,rz);p.add(o);return o;};
  const cube=G(new THREE.BoxGeometry(1,1,1)),cyl=G(new THREE.CylinderGeometry(1,1,1,high?16:8)),joint=G(new THREE.IcosahedronGeometry(1,1));
@@ -36,7 +38,7 @@ export function createRuler({quality='high'}={}){
  armor(king,black,0,4.03,.0,2.35,1.68,1.0);
  for(const s of [-1,1]){
   rod(king,[s*.13,4.85,.12],[s*1.22,4.43,.12],.105,edge);
-  for(let i=0;i<4;i++){const x=s*(1.20+i*.22),y=4.72-i*.22,z=.10+i*.035;armor(king,i%2?steel:black,x,y,z,1.45,.33,.94,-.08,s*.08,-s*(.17+i*.02));box(king,rubber,x,y-.06,z+.50,.74,.04,.025,0,0,-s*.16);}
+  for(let i=0;i<4;i++){const x=s*(1.20+i*.22),y=4.72-i*.22,z=.10+i*.035;armor(king,i%2?steel:black,x,y,z,1.40-i*.12,.43+i*.03,1.05-i*.07,-.08,s*.08,-s*(.17+i*.02));box(king,rubber,x,y-.06,z+.50,.74,.04,.025,0,0,-s*.16);}
   for(let i=0;i<5;i++)armor(king,black,s*(1.6+i*.13),4.97+i*.05,-.16,.13,.9+i*.11,.36,0,0,-s*.43);
   // Broad split breastplate with a physically recessed vertical reactor stack.
   armor(king,steel,s*.54,4.00,.53,.88,1.10,.23,.08,s*-.13,s*-.09);
@@ -60,6 +62,9 @@ export function createRuler({quality='high'}={}){
   armor(king,black,s*.63,2.03,.50,.80,1.37,.77,-.40);sphere(king,steel,s*.72,1.50,.99,.29);armor(king,steel,s*.77,.98,1.05,.65,1.0,.72,.12);armor(king,black,s*.78,.48,1.37,.72,.26,1.06);
   for(let i=0;i<6;i++)cable(king,[[s*(.25+i*.12),4.83,-.41],[s*(1+i*.25),4.1,-.93],[s*(2.8+i*.13),1.20,-.8],[s*(3.2+i*.2),.15,1.45]],.025+(i%3)*.015);
  }
+ // Heavy pleated insulating mantle: a draped surface, cut below the long machine arms.
+ const mantle=surfaces.carbon.clone();mantle.color.setHex(0x28232b);mantle.side=THREE.DoubleSide;mantle.clearcoat=0;mantle.roughness=.91;mats.add(mantle);
+ for(const side of [-1,1]){const positions=[],uvs=[],indices=[],cols=high?20:10,rows=high?28:14;for(let j=0;j<=rows;j++){const t=j/rows;for(let i=0;i<=cols;i++){const u=i/cols,x=side*(.90+u*(1.25+t*.75)+t*.18),fold=Math.cos(u*Math.PI*6+Math.sin(t*3)*.25);positions.push(x,4.73-t*4.38+(t>.88?Math.sin(i*2.7)*.09*(t-.88)/.12:0),-.13+t*.63+fold*(.13+t*.20));uvs.push(u,t*2);}}for(let j=0;j<rows;j++)for(let i=0;i<cols;i++){const a=j*(cols+1)+i,b=a+cols+1;indices.push(a,b,a+1,b,b+1,a+1);}const g=G(new THREE.BufferGeometry());g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));g.setAttribute('uv',new THREE.Float32BufferAttribute(uvs,2));g.setIndex(indices);g.computeVertexNormals();mesh(g,mantle,king);}
  // An enormous forked power throne. Recesses and asymmetry provide scale without luminous outlines.
  armor(root,black,0,.20,.10,6.8,.45,5.2);armor(root,steel,0,.44,.5,4.5,.12,3.9);
  armor(root,black,0,4.3,-1.05,3.6,7.7,.60);armor(root,steel,0,4.5,-.68,2.9,6.8,.14);
@@ -87,6 +92,6 @@ export function createRuler({quality='high'}={}){
  function batch(parent){for(const child of [...parent.children])if(child.isGroup)batch(child);const bins=new Map();for(const o of parent.children)if(o.isMesh){const a=bins.get(o.material)||[];a.push(o);bins.set(o.material,a);}for(const [material,list]of bins){if(list.length<2)continue;const arrays={position:[],normal:[],uv:[]};for(const o of list){o.updateMatrix();const g=o.geometry.index?o.geometry.toNonIndexed():o.geometry.clone();g.applyMatrix4(o.matrix);for(const key in arrays){const attribute=g.getAttribute(key);if(attribute)for(const v of attribute.array)arrays[key].push(v);}g.dispose();parent.remove(o);}const g=G(new THREE.BufferGeometry());for(const key in arrays)if(arrays[key].length)g.setAttribute(key,new THREE.Float32BufferAttribute(arrays[key],key==='uv'?2:3));mesh(g,material,parent);}}
  batch(root);
  function update(dt,time){head.rotation.y=Math.sin(time*.23)*.025;head.rotation.z=Math.sin(time*.15)*.009;head.position.y=5.53+Math.sin(time*.7)*.008;fingers.forEach((f,i)=>f.rotation.x=Math.sin(time*.65+i*.8)*.025);red.emissiveIntensity=1.65+Math.sin(time*.8)*.12;eye.emissiveIntensity=3.8+Math.sin(time*1.3)*.25;}
- function dispose(){if(disposed)return;disposed=true;root.removeFromParent();geos.forEach(g=>g.dispose());mats.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());root.clear();}
+ function dispose(){if(disposed)return;disposed=true;root.removeFromParent();geos.forEach(g=>g.dispose());mats.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());surfaces.dispose();root.clear();}
  return {root,update,dispose};
 }

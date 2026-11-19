@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-19",
+  "nodeSuites": [
+    "smoke",
+    "fps",
+    "fps-lifecycle",
+    "weapon-state",
+    "facility",
+    "glitch-sequence",
+    "device-profile",
+    "touch"
+  ],
+  "browser": {
+    "ordinarySite": 166,
+    "fps": 25,
+    "weapon": 15,
+    "edgeLifecycle": 16,
+    "mobileEmulation": 23
+  },
+  "campaign": {
+    "zones": 5,
+    "kills": 96,
+    "mode": "accelerated automated progression with actual collision/gates; selected real raycast kills"
+  },
+  "captures": {
+    "fixedPC": 15,
+    "mobileEmulated": 2,
+    "sequenceFrames": 62,
+    "videoSeconds": 18.8
+  },
+  "qualityRestart": {
+    "low": {
+      "geometries": 70,
+      "textures": 19
+    },
+    "high": {
+      "geometries": 71,
+      "textures": 24
+    }
+  },
+  "restarts": [
+    {
+      "geometries": 134,
+      "textures": 24
+    },
+    {
+      "geometries": 134,
+      "textures": 24
+    },
+    {
+      "geometries": 134,
+      "textures": 24
+    }
+  ],
+  "limitations": [
+    "No physical iPhone/Android performance measurement",
+    "GPU benchmark max5 enemies, not full12 worst case",
+    "Video muted, automated aim/fire/recovery",
+    "Geometry/Texture counts are not actual VRAM bytes"
+  ]
+}

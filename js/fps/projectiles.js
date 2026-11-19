@@ -1,0 +1,7 @@
+import * as THREE from '../../vendor/three.module.js';
+export function createEnemyProjectiles(scene,quality='high'){
+ const root=new THREE.Group();root.name='enemy plasma tracers';scene.add(root);const sphere=new THREE.SphereGeometry(1,8,6),tail=new THREE.ConeGeometry(1,1,6),core=new THREE.MeshBasicMaterial({color:0xffe8bb,toneMapped:false}),corona=new THREE.MeshBasicMaterial({color:0xff182b,transparent:true,opacity:.38,blending:THREE.AdditiveBlending,depthWrite:false,toneMapped:false}),streak=new THREE.MeshBasicMaterial({color:0xff4b20,transparent:true,opacity:.7,blending:THREE.AdditiveBlending,depthWrite:false,toneMapped:false});
+ const pool=Array.from({length:quality==='low'?32:64},()=>{const mesh=new THREE.Group();mesh.visible=false;const c=new THREE.Mesh(sphere,core);c.scale.set(.048,.12,.048);const glow=new THREE.Mesh(sphere,corona);glow.scale.set(.13,.30,.13);const trail=new THREE.Mesh(tail,streak);trail.scale.set(.055,.95,.055);trail.position.y=-.52;mesh.add(c,glow,trail);root.add(mesh);return {mesh,life:0,velocity:new THREE.Vector3(),damage:7,shieldVisual:false};});
+ const up=new THREE.Vector3(0,1,0),unit=new THREE.Vector3();let disposed=false;
+ return {pool,orient(b){unit.copy(b.velocity).normalize();b.mesh.quaternion.setFromUnitVectors(up,unit);b.shieldVisual=false;},dispose(){if(disposed)return;disposed=true;root.removeFromParent();sphere.dispose();tail.dispose();core.dispose();corona.dispose();streak.dispose();root.clear();}};
+}
