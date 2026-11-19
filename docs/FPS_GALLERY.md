@@ -1,5 +1,7 @@
 # Chicken House — Visual overhaul / 2026-11-19
 
+[プレビューで武器を確認](https://chicken-house-kprljksh7-photors-projects.vercel.app/?protocol=play)（Vercelの認証保護あり）。
+
 最新の実ゲーム画面です。最初のレビュー対象を武器にし、静止・チャージ・発砲・セル交換を比較できます。設計、変更ファイル、検証と制約は [改修レポート](FPS_ART_REPORT.md) を参照。
 
 ## ARC-RG7 — 静止 / 両手の構え / 発光グリフ

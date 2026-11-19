@@ -96,3 +96,7 @@ Windows / Chrome 157 / ANGLE NVIDIA GeForce GTX 1080 Ti D3D11 / 1440×1000 / DPR
 Antigravity 1.5.11、実機のモデル一覧で確認したClaude Sonnet 5.5 Mediumを、武器の造形レビューとrobots.jsの提案コードに使用。提案専用で元リポジトリへの書込みや外部公開を許可していない。成功ステータスと実出力を確認し、Codexが造形、ダメージ倍率、ドローン高度、バッチ化などを修正して採用。独立したコードレビューで見つかったHDRフォールバック、描画先リサイズ、エネルギー面、HDR形式別MSAAの問題も修正した。
 
 既知の制約：プロシージャルなスタイルで、映画用アセットや実写品質を再現するものではない。手は簡易な手続き形状と追従で、フルスケルトンIKではない。破壊は軽量な部品物理で、剛体ラグドールではない。Firefox/Safari、実機モバイル、HDR非対応GPUの実ハードウェアは未検証（フォールバックの分岐テストは通過）。FPSは従来どおりPC向けでモバイルは案内画面。通常サイトの32品メニュー、削除済み商品、2秒写真スライドショーと遅延読込みは維持。
+
+## プレビューでの再確認
+
+コードコミット `80927e7d48c51f5ce58e08c0bae9bd6724030639` のVercelプレビューがREADY。[https://chicken-house-kprljksh7-photors-projects.vercel.app](https://chicken-house-kprljksh7-photors-projects.vercel.app/?protocol=play) で武器15項目、本編25項目を再実行し、すべて通過。通常サイトへの復帰・自動/R交換・実射撃・5区画96体の加速QA脱出を確認し、JavaScript/シェーダーのコンソールエラーは0。GitHub Actionsのpush/PRチェックも成功。認証保護の設定は維持し、mainへのマージはしていない。
