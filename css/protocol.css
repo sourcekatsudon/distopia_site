@@ -67,3 +67,4 @@
 .gp-alert[hidden],.gp-pickup-aura[hidden]{display:none!important}
 
 .gp-content[data-phase="flight"] .gp-stage canvas{cursor:crosshair}
+.gp-content:not([data-phase="play"]):not([data-phase="flight"]) .gp-touch{display:none}
