@@ -1,3 +1,31 @@
+# 施設・玉座・遭遇の再設計（最新）
+
+[改修方針・変更ファイル・検証](FPS_FACILITY_V3.md)。今回は照明と構図、蛇行ルート、貨物越しの遭遇、通過済み側からの増援を変更。
+
+## 機械王の玉座
+
+![新しい玉座と支配者](fps-captures/facility-v3/01-ruler.webp)
+
+## 折れ曲がる保安通路
+
+![直線の射線を切る通路](fps-captures/facility-v3/02-corridor.webp)
+
+## 通過済み側からの増援
+
+![搬入口の増援予告](fps-captures/facility-v3/03-rear-entry.webp)
+
+## 原子炉の貨物と赤い導体
+
+![中央の遮蔽物と原子炉](fps-captures/facility-v3/04-reactor-freight.webp)
+
+## 最終貨物区画
+
+![左右へ迂回するコンテナ区画](fps-captures/facility-v3/05-freight-chicane.webp)
+
+---
+
+以下は前回の武器改修と、その前の比較用記録です。
+
 # Chicken House — Visual overhaul / 2026-11-19
 
 [プレビューで武器を確認](https://chicken-house-kprljksh7-photors-projects.vercel.app/?protocol=play)（Vercelの認証保護あり）。

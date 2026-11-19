@@ -1,18 +1,20 @@
 import * as THREE from '../../vendor/three.module.js';
+import {FREIGHT,ENTRIES} from './layout.js';
+import {circleBlocked,groundHeight,hasSight} from './simulation.js';
 import { createMaterials } from './materials.js';
 export function createWorld({scene,seed=731,quality='high'}={}){
 const hi=quality==='high',root=new THREE.Group(),materials=createMaterials(seed,quality),M=materials,PI=Math.PI;root.name='ChickenHouseWorld';
 let st=seed>>>0;const rnd=()=>{st=(st+0x6D2B79F5)>>>0;let t=st;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296};
-const geos=[],ims=[],colliders=[],doors=[],navNodes=[],I={},gy=[],steam=[],V=(x,y,z)=>new THREE.Vector3(x,y,z),G=g=>(geos.push(g),g);
+const geos=[],ims=[],colliders=[],doors=[],navNodes=[],I={},gy=[],steam=[],entryUnits=[],V=(x,y,z)=>new THREE.Vector3(x,y,z),G=g=>(geos.push(g),g);
 const bx=G(new THREE.BoxGeometry(1,1,1)),cyl=G(new THREE.CylinderGeometry(1,1,1,hi?14:8)),tr=G(new THREE.TorusGeometry(1,.05,6,hi?36:20)),sp=G(new THREE.SphereGeometry(1,hi?10:6,hi?8:5)),tr2=G(new THREE.TorusGeometry(1,.1,8,hi?40:24)),exG=G(new THREE.TorusGeometry(1.9,.16,10,hi?56:32));
 const mk=(k,g,m)=>{const a=[];I[k]={a,g,m,add:(...v)=>a.push(v)}};
-[['m',bx,M.metal],['dk',bx,M.dark],['ed',bx,M.edge],['cy',bx,M.cyan],['rd',bx,M.red],['hz',bx,M.hazard],['cn',bx,M.concrete],['sc',bx,M.screen],['ctl',bx,M.control],['sign',bx,M.sign],['cm',cyl,M.metal],['cd',cyl,M.dark],['cr',cyl,M.red],['tm',tr,M.edge],['tc',tr,M.cyan],['sd',sp,M.dark]].forEach(a=>mk(...a));
+[['m',bx,M.metal],['dk',bx,M.dark],['ed',bx,M.edge],['cy',bx,M.cyan],['rd',bx,M.red],['hz',bx,M.hazard],['cn',bx,M.concrete],['sc',bx,M.screen],['ctl',bx,M.control],['sign',bx,M.sign],['cm',cyl,M.metal],['cd',cyl,M.dark],['cr',cyl,M.reactor],['tm',tr,M.edge],['tc',tr,M.cyan],['sd',sp,M.dark]].forEach(a=>mk(...a));
 const col=(x0,x1,z0,z1,tag,h=4)=>{const c={minX:x0,maxX:x1,minZ:z0,maxZ:z1,minY:0,maxY:h,height:h,enabled:true,tag};colliders.push(c);return c};
 const part=(g,m,x,y,z,sx,sy,sz,p)=>{const o=new THREE.Mesh(g,m);o.position.set(x,y,z);o.scale.set(sx,sy,sz);p.add(o);return o};
 const wall=(x0,x1,z0,z1,H,tag='wall',k='rd')=>{const w=x1-x0,d=z1-z0,cx=(x0+x1)/2,cz=(z0+z1)/2,ax=w>d,t=Math.min(w,d),L=Math.max(w,d);
 I.m.add(cx,H/2,cz,w,H,d);col(x0,x1,z0,z1,tag);
 for(let u=4;u<L-1;u+=4)for(const s of[-1,1]){const o=t/2+.12,c=(ax?x0:z0)+u;ax?I.dk.add(c,H/2,cz+s*o,.5,H,.24):I.dk.add(cx+s*o,H/2,c,.24,H,.5)}
-for(const s of[-1,1]){const o=t/2+.03;if(ax){I[k].add(cx,1.1,cz+s*o,L-1,.08,.06);I.ed.add(cx,H-.4,cz+s*o,L,.5,.1)}else{I[k].add(cx+s*o,1.1,cz,.06,.08,L-1);I.ed.add(cx+s*o,H-.4,cz,.1,.5,L)}}};
+for(const s of[-1,1]){const o=t/2+.03;if(ax){for(let u=2;u<L-1;u+=5)I[k].add(x0+u,1.1,cz+s*o,1,.04,.06);I.ed.add(cx,H-.4,cz+s*o,L,.5,.1)}else{for(let u=2;u<L-1;u+=5)I[k].add(cx+s*o,1.1,z0+u,.06,.04,1);I.ed.add(cx+s*o,H-.4,cz,.1,.5,L)}}};
 const cross=(z,hw,H,gap)=>{if(!gap){wall(-hw,hw,z-.5,z+.5,H);return}
 wall(-hw,-gap,z-.5,z+.5,H);wall(gap,hw,z-.5,z+.5,H);I.dk.add(0,(4.7+H)/2,z,gap*2,H-4.7,1);
 for(const s of[-1,1]){I.ed.add(s*(gap+.15),2.35,z,.3,4.7,1.2);I.hz.add(0,.05,z+s*1.3,gap*2,.04,.5);I.cy.add(0,4.6,z+s*.52,gap*2,.08,.05)}};
@@ -23,7 +25,7 @@ R.forEach(([id,hw,a,b,H])=>{const len=b-a,cz=(a+b)/2,nx=Math.round(hw/2),nz=Math
 I.dk.add(0,-.1,cz,hw*2,.2,len);I.dk.add(0,H+.1,cz,hw*2+2,.3,len);
 for(let i=0;i<nx;i++)for(let j=0;j<nz;j++)I.m.add(-hw+cw*(i+.5),.03,a+cd*(j+.5),cw-.3,.06,cd-.3);
 for(let z=a+3;z<b;z+=6)I.m.add(0,H-.3,z,hw*2,.5,.6);
-for(const s of[-1,1]){I.rd.add(s*3,H-.6,cz,.12,.05,len-2);I.cy.add(s*3.6,.08,cz,.1,.03,len-2);
+for(const s of[-1,1]){for(let z=a+3;z<b;z+=7){I.rd.add(s*3,H-.6,z,.12,.05,1.1);I.ed.add(s*3.6,.08,z,.08,.025,.6);}
 const xd=s*(hw-1.6),xp=s*(hw-.55);
 I.cm.add(xd,H-1.4,cz,.5,len-1,.5,PI/2);I.sd.add(xd,H-1.4,a+.55,.55,.55,.55);I.sd.add(xd,H-1.4,b-.55,.55,.55,.55);
 for(let z=a+3;z<b-1;z+=5)I.cm.add(xd,H-1.4,z,.6,.3,.6,PI/2);
@@ -37,7 +39,7 @@ for(let z=-14;z>-32;z-=4){for(const s of[-1,1])I.ed.add(s*4.85,2.4,z,.3,4.8,.5);
 const tz=-48.5;
 [-1,1].forEach(s=>{const x=s*7.5;
 [[1.2,2.4,3],[4.6,1.6,2.6],[8,2.2,2.6],[10.7,.8,2.4]].forEach(([y,h,r])=>I.cd.add(x,y,tz,r,h,r));
-I.cr.add(x,5.8,tz,1.8,11.6,1.8);I.ed.add(x,11.2,tz,3.2,.3,3.2);I.tc.add(x,.07,tz,3.6,3.6,3.6,PI/2);
+I.cr.add(x,5.8,tz,1.8,11.6,1.8);I.ed.add(x,11.2,tz,3.2,.3,3.2);I.tm.add(x,.07,tz,3.6,3.6,3.6,PI/2);
 col(x-3,x+3,tz-3,tz+3,'reactor-core');
 [3,6.4,9.2].forEach((y,i)=>{const g=new THREE.Group();g.position.set(x,y,tz);part(tr2,M.edge,0,0,0,3.8,3.8,3.8,g).rotation.x=1.1;root.add(g);gy.push([g,(i%2?-1:1)*(.6+i*.3)])});
 I.m.add(x,10.9,tz,.5,.4,34);
@@ -45,7 +47,7 @@ for(const z of[-41,-56]){I.cn.add(x,.55,z,3,1.1,.8);I.hz.add(x,1.12,z,3.02,.08,.
 const rx=s*10.8;for(let z=-41;z>=-56;z-=2.5)I.ed.add(rx,.55,z,.1,1.1,.1);I.ed.add(rx,1.05,-48.5,.08,.08,15);I.ed.add(rx,.6,-48.5,.08,.08,15);col(rx-.1,rx+.1,-56,-41,'railing',1.1);
 for(const z of[-43,-48.5,-54]){const hx=s*15.7;I.cd.add(hx,1.2,z,1.1,2.4,1.1);I.tm.add(hx,1.9,z,1.3,1.3,1.3,PI/2);I.ed.add(hx,2.5,z,1.5,.2,1.5);I.rd.add(hx,.5,z,1.15,.1,1.15);col(hx-1.1,hx+1.1,z-1.1,z+1.1,'turbine')}
 for(const z of[-39,-58]){const px=s*3.4;I.cn.add(px,6,z,1.2,12,1.2);I.ed.add(px,.5,z,1.4,1,1.4);I.cy.add(px,2,z,1.25,.1,1.25);col(px-.7,px+.7,z-.7,z+.7,'pillar')}});
-I.tc.add(0,7.2,tz,4,4,4);I.m.add(0,11.4,tz,36,.5,.9);
+I.tm.add(0,7.2,tz,4,4,4);I.m.add(0,11.4,tz,36,.5,.9);
 wall(-11,2,-72.5,-71.5,7,'baffle','rd');wall(-2,11,-80.5,-79.5,7,'baffle','rd');I.hz.add(1.7,3.5,-72,.4,7,1.1);I.hz.add(-1.7,3.5,-80,.4,7,1.1);
 for(const z of[-68,-76,-84,-90])I.rd.add(0,6.6,z,10,.1,.2);
 for(const s of[-1,1])for(const z of[-97,-105,-113]){const px=s*9;I.cn.add(px,5,z,1.4,10,1.4);I.ed.add(px,.5,z,1.6,1,1.6);I.cy.add(px,2.2,z,1.45,.1,1.45);col(px-.8,px+.8,z-.8,z+.8,'pillar')}
@@ -75,16 +77,20 @@ R.forEach(([id,hw,a,b,H])=>{for(let z=a+2;z<b-1;z+=4){for(const s of [-1,1]){
  I.sign.add(0,H-.95,a+1,2.2,.72,.035);});
 const dustGeometry=G(new THREE.BufferGeometry()),dustPositions=[];for(let i=0;i<(hi?200:60);i++)dustPositions.push((rnd()-.5)*24,.3+rnd()*7,-130+rnd()*142);dustGeometry.setAttribute('position',new THREE.Float32BufferAttribute(dustPositions,3));
 const dustMaterial=new THREE.ShaderMaterial({transparent:true,depthWrite:false,uniforms:{time:{value:0}},vertexShader:'uniform float time;varying float fade;void main(){vec3 p=position;p.x+=sin(time*.12+position.z)*.15;p.y+=sin(time*.18+position.x)*.2;vec4 v=modelViewMatrix*vec4(p,1.);fade=clamp(1.-length(v.xyz)/45.,0.,1.)*.23;gl_Position=projectionMatrix*v;gl_PointSize=2.;}',fragmentShader:'varying float fade;void main(){float d=length(gl_PointCoord-.5);gl_FragColor=vec4(.4,.56,.65,fade*(1.-smoothstep(.1,.5,d)));}'});root.add(new THREE.Points(dustGeometry,dustMaterial));
+// Freight is architecture: blocked sightlines and walkable side lanes, not decorative boxes.
+FREIGHT.forEach(([x,z,w,d,h,label])=>{I.dk.add(x,h/2,z,w,h,d);I.m.add(x,h/2,z,w-.08,h-.12,d-.08);col(x-w/2,x+w/2,z-d/2,z+d/2,label,h);for(const sign of [-1,1]){I.ed.add(x,h-.16,z+sign*(d/2+.03),w,.10,.08);I.hz.add(x,.45,z+sign*(d/2+.05),Math.min(w,2.2),.18,.04);for(let u=-w/2+.22;u<w/2;u+=.55)I.dk.add(x+u,h/2,z+sign*(d/2+.06),.055,h-.3,.05);I.rd.add(x-w/2+.15,h-.4,z+sign*(d/2+.09),.08,.08,.04);}});
+ENTRIES.flat().forEach(([x,z],i)=>{const sx=x<0?-1:1;I.dk.add(x,2,z-1,2.8,4,.20);I.ed.add(x,4.08,z-.5,3,.14,.45);I.rd.add(x-sx*1.3,2,z-.35,.045,3.8,.04);const unit=new THREE.Group();unit.position.set(x,0,z-.65);const leaves=[-1,1].map(sign=>{const door=part(bx,M.metal,sign*.57,1.95,0,1.10,3.8,.16,unit);return door;});root.add(unit);entryUnits.push({x,z,leaves,life:0,open:0});I.sign.add(x,4.4,z-.5,1.5,.35,.04);});
 const dm=new THREE.Object3D();
-Object.values(I).forEach(o=>{if(!o.a.length)return;const im=new THREE.InstancedMesh(o.g,o.m,o.a.length);o.a.forEach((v,i)=>{dm.position.set(v[0],v[1],v[2]);dm.scale.set(v[3],v[4],v[5]);dm.rotation.set(v[6]||0,v[7]||0,v[8]||0);dm.updateMatrix();im.setMatrixAt(i,dm.matrix)});im.instanceMatrix.needsUpdate=true;im.frustumCulled=false;root.add(im);ims.push(im)});
-const nav=(x,z)=>navNodes.push({x,z,links:[]})-1,lk=(a,b)=>{navNodes[a].links.push(b);navNodes[b].links.push(a)};
-const main=[[0,8],[3.5,4],[3.5,-1],[0,-8],[0,-11],[0,-22],[0,-33],[0,-35],[0,-48.5],[0,-62],[0,-64],[0,-67],[6.5,-68],[6.5,-72],[6.5,-76],[-6.5,-77],[-6.5,-80],[-6.5,-84],[0,-88],[0,-92],[0,-98],[0,-110],[0,-118],[0,-122]].map(([x,z])=>nav(x,z));
-for(let i=1;i<main.length;i++)lk(main[i-1],main[i]);
-[-1,1].forEach(s=>{const a=nav(s*12.5,-36),b=nav(s*13,-48.5),c=nav(s*12.5,-62);lk(main[7],a);lk(a,b);lk(b,c);lk(c,main[9])});
+Object.values(I).forEach(o=>{if(!o.a.length)return;const im=new THREE.InstancedMesh(o.g,o.m,o.a.length);o.a.forEach((v,i)=>{dm.position.set(v[0],v[1],v[2]);dm.scale.set(v[3],v[4],v[5]);dm.rotation.set(v[6]||0,v[7]||0,v[8]||0);dm.updateMatrix();im.setMatrixAt(i,dm.matrix)});im.instanceMatrix.needsUpdate=true;im.frustumCulled=false;im.castShadow=o.m!==M.red&&o.m!==M.cyan&&o.m!==M.screen;im.receiveShadow=true;root.add(im);ims.push(im)});
+// Visibility-tested grid routes around every new freight wall; doors may open later.
+const navBoxes=colliders.filter(b=>b.tag!=='door');const grid=new Map();
+for(let z=10;z>=-128;z-=2)for(let x=-16;x<=16;x+=2){if(circleBlocked(x,z,groundHeight(x,z)+1.7,navBoxes,.9))continue;grid.set(x+','+z,navNodes.length);navNodes.push({x,z,links:[]});}
+for(const n of navNodes)for(const [dx,dz]of [[2,0],[-2,0],[0,2],[0,-2],[2,2],[-2,2],[2,-2],[-2,-2]]){const j=grid.get((n.x+dx)+','+(n.z+dz));if(j===undefined)continue;const t=navNodes[j];let clear=true;for(let k=1;k<=6;k++){const f=k/6,x=n.x+(t.x-n.x)*f,z=n.z+(t.z-n.z)*f;if(circleBlocked(x,z,groundHeight(x,z)+1.7,navBoxes,.86)){clear=false;break;}}if(clear)n.links.push(j);}
 const spawn=V(0,1.7,8),exit=V(0,1.7,-122);
 return{root:(scene&&scene.add(root),root),materials,colliders,doors,zones,navNodes,spawn,exit,terminal:T,
+signalEntry(x,z){const e=entryUnits.find(e=>Math.abs(e.x-x)<.1&&Math.abs(e.z-z)<.1);if(e)e.life=3.2;},
 setDoorOpen(id,open){const d=doors.find(q=>q.id===id);if(!d)return;d.open=!!open;d.collider.enabled=!d.open},
-update(dt,time){dustMaterial.uniforms.time.value=time;for(const d of doors){const g=d.open?1:0;d.t+=(g-d.t)*Math.min(1,dt*5);if(Math.abs(g-d.t)<.005)d.t=g;d.leaves[0].position.x=-(1.5+3*d.t);d.leaves[1].position.x=1.5+3*d.t}
+update(dt,time){materials.update?.(time);for(const e of entryUnits){e.life=Math.max(0,e.life-dt);e.open+=((e.life>0?1:0)-e.open)*Math.min(1,dt*6);e.leaves.forEach((m,i)=>m.position.x=(i?1:-1)*(.57+e.open*1.25));}dustMaterial.uniforms.time.value=time;for(const d of doors){const g=d.open?1:0;d.t+=(g-d.t)*Math.min(1,dt*5);if(Math.abs(g-d.t)<.005)d.t=g;d.leaves[0].position.x=-(1.5+3*d.t);d.leaves[1].position.x=1.5+3*d.t}
 for(const[g,v]of gy)g.rotation.y=time*v;for(const s of steam){s.position.y+=dt*.5;if(s.position.y>7)s.position.y=0;s.scale.setScalar(2+s.position.y*.6)}
 exitRing.rotation.z=time*.5;inner.rotation.z=-time*.9},
 dispose(){scene&&scene.remove(root);ims.forEach(i=>i.dispose());geos.forEach(g=>g.dispose());smat.dispose();tex.dispose();dustMaterial.dispose();materials.dispose&&materials.dispose()}};
