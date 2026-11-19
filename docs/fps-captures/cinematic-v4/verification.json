@@ -15,7 +15,7 @@
     "fps": 25,
     "weapon": 15,
     "edgeLifecycle": 16,
-    "mobileEmulation": 23
+    "mobileEmulation": 24
   },
   "campaign": {
     "zones": 5,
