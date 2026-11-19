@@ -1,0 +1,597 @@
+{
+  "quality": "high",
+  "viewport": [
+    1920,
+    1080
+  ],
+  "duration": 30.025600000023843,
+  "frames": 1775,
+  "fps": 59.134432275899556,
+  "frameMedian": 16.600000023841858,
+  "frameP95": 29.699999928474426,
+  "frameP99": 38,
+  "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1080 Ti (0x00001B06) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "performance": {
+    "cpuRenderP95": 18.600000023841858,
+    "gpuMedian": 3.885056,
+    "gpuP95": 6.377472,
+    "gpuSamples": 118,
+    "gpuSupported": true
+  },
+  "mode": "play",
+  "stats": {
+    "phase": "play",
+    "player": {
+      "x": 7.491780917929618,
+      "y": 1.7,
+      "z": -818.9369663132258,
+      "vy": 0,
+      "hp": 100,
+      "shield": 45,
+      "energy": 36,
+      "capacity": 120,
+      "reloadSeconds": 2,
+      "charge": 0,
+      "reload": 0.6166999999999977,
+      "cooldown": 0,
+      "hurtTime": 4.566799999999992,
+      "kills": 2,
+      "grounded": true,
+      "lastSource": "SNIPER UNIT",
+      "lastDamage": 30
+    },
+    "progress": {
+      "level": 5,
+      "modules": 16,
+      "distance": 827.0607251566274,
+      "elapsed": 29.900799999999755,
+      "deaths": 0,
+      "kills": 2,
+      "checkpoint": {
+        "index": 0,
+        "x": 0,
+        "z": 8,
+        "level": 5,
+        "modules": 16
+      },
+      "levelTimes": [],
+      "claimed": 0,
+      "stats": {
+        "shots": 16,
+        "chargedShots": 16,
+        "ammoSpent": 672,
+        "reloads": 8,
+        "hits": 2,
+        "weakHits": 0,
+        "damageTaken": 37,
+        "receivedHits": 2,
+        "coverPlayer": 1,
+        "coverEnemy": 0,
+        "modules": 0,
+        "enemyTTK": [
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 0
+          }
+        ],
+        "deathLog": []
+      },
+      "encounters": [
+        "enc-10"
+      ]
+    },
+    "world": {
+      "current": 10,
+      "loadedSegments": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "segmentCount": 4,
+      "builds": 7,
+      "unloads": 3,
+      "navVersion": 4,
+      "nodes": 755,
+      "colliders": 60,
+      "destructibles": 20,
+      "instancedMeshes": 48,
+      "quality": "high"
+    },
+    "enemies": 2,
+    "beams": 0,
+    "particles": 0,
+    "debris": 0,
+    "shieldVfx": {
+      "hits": 3,
+      "active": 1,
+      "reflections": 0
+    },
+    "enemyShots": 7,
+    "mode": "play",
+    "paused": false,
+    "touchMode": false,
+    "quality": "high",
+    "assetQuality": "high",
+    "position": {
+      "x": 7.491780917929618,
+      "y": 1.7,
+      "z": -818.9369663132258
+    },
+    "presentation": "hdr-bloom",
+    "rendering": {
+      "mode": "hdr-bloom",
+      "ao": true,
+      "width": 1920,
+      "height": 1080,
+      "samples": 2,
+      "msaaSupported": 2,
+      "bloomWidth": 480,
+      "bloomHeight": 270
+    },
+    "fps": 60,
+    "drawCalls": 413,
+    "triangles": 129288,
+    "memory": {
+      "geometries": 240,
+      "textures": 28
+    },
+    "performance": {
+      "cpuRenderP95": 18.600000023841858,
+      "gpuMedian": 3.885056,
+      "gpuP95": 6.377472,
+      "gpuSamples": 118,
+      "gpuSupported": true
+    },
+    "audio": {
+      "state": "running",
+      "muted": true,
+      "gain": 0,
+      "voices": 0
+    }
+  },
+  "peakEnemies": 4,
+  "peakCalls": 507,
+  "peakTriangles": 130916,
+  "samples": [
+    {
+      "mode": "play",
+      "entities": 1,
+      "drawCalls": 364,
+      "fps": 60,
+      "triangles": 119584,
+      "memory": {
+        "geometries": 90,
+        "textures": 25
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 1,
+      "drawCalls": 362,
+      "fps": 55,
+      "triangles": 116072,
+      "memory": {
+        "geometries": 144,
+        "textures": 26
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 2,
+      "drawCalls": 363,
+      "fps": 57,
+      "triangles": 113454,
+      "memory": {
+        "geometries": 147,
+        "textures": 28
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 3,
+      "drawCalls": 475,
+      "fps": 60,
+      "triangles": 117774,
+      "memory": {
+        "geometries": 163,
+        "textures": 28
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 4,
+      "drawCalls": 440,
+      "fps": 60,
+      "triangles": 116460,
+      "memory": {
+        "geometries": 163,
+        "textures": 28
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 2,
+      "drawCalls": 465,
+      "fps": 59,
+      "triangles": 127808,
+      "memory": {
+        "geometries": 237,
+        "textures": 28
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 2,
+      "drawCalls": 459,
+      "fps": 58,
+      "triangles": 127604,
+      "memory": {
+        "geometries": 237,
+        "textures": 28
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 2,
+      "drawCalls": 462,
+      "fps": 59,
+      "triangles": 127772,
+      "memory": {
+        "geometries": 239,
+        "textures": 28
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 2,
+      "drawCalls": 451,
+      "fps": 60,
+      "triangles": 127784,
+      "memory": {
+        "geometries": 239,
+        "textures": 28
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 2,
+      "drawCalls": 439,
+      "fps": 60,
+      "triangles": 126636,
+      "memory": {
+        "geometries": 240,
+        "textures": 28
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 4,
+        "nodes": 755,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 2,
+      "drawCalls": 431,
+      "fps": 60,
+      "triangles": 127312,
+      "memory": {
+        "geometries": 240,
+        "textures": 28
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 4,
+        "nodes": 755,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 2,
+      "drawCalls": 421,
+      "fps": 60,
+      "triangles": 126276,
+      "memory": {
+        "geometries": 240,
+        "textures": 28
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 4,
+        "nodes": 755,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 2,
+      "drawCalls": 426,
+      "fps": 59,
+      "triangles": 126876,
+      "memory": {
+        "geometries": 240,
+        "textures": 28
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 4,
+        "nodes": 755,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 2,
+      "drawCalls": 413,
+      "fps": 59,
+      "triangles": 124536,
+      "memory": {
+        "geometries": 240,
+        "textures": 28
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 4,
+        "nodes": 755,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 2,
+      "drawCalls": 427,
+      "fps": 60,
+      "triangles": 127156,
+      "memory": {
+        "geometries": 240,
+        "textures": 28
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 4,
+        "nodes": 755,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high"
+      }
+    }
+  ]
+}

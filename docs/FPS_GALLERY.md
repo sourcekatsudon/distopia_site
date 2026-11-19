@@ -1,0 +1,159 @@
+# ASCENSION v9：A–Dの4区画・カーソル照準・30秒でワープ（最新）
+
+[4区画・敵視認性・飛行と帰還の実画面／録画](fps-captures/ascension-v9/index.html)。[実装と検証報告](FPS_ASCENSION_V9.md)。
+
+---
+
+# ASCENSION v8：全導入の復元・時間差3連射（前版記録）
+
+[導入・敵射撃の実画面と録画](fps-captures/ascension-v8/index.html)。[変更と検証結果](FPS_ASCENSION_V8.md)。
+
+---
+
+# ASCENSION v7：短縮コース・密集戦闘・確定ドロップ（前版記録）
+
+[新しい戦闘・取得発光・警報の画像と録画](fps-captures/ascension-v7/index.html)。[変更と実測結果](FPS_ASCENSION_V7.md)。
+
+---
+
+# ESCAPE PROTOCOL: ASCENSION（前版記録）
+
+[5段階の武器・7種の敵・4段階の破壊・宇宙戦の実画面と録画](fps-captures/ascension/index.html)。[実装・難易度・性能の測定報告](FPS_ASCENSION.md)。
+
+---
+
+# ZIP追加・左右スティック v5（前版記録）
+
+[新しいリアクター・左右スティック・自動射撃の実画面と録画](fps-captures/energy-v5/index.html)。[実装と検証報告](FPS_ENERGY_DUAL_STICK.md)。既存の機構は保持し、ZIPの不足分だけ追加しました。
+
+---
+
+# Cinematic v4（前版記録）
+
+[比較画像・連番・18.8秒の実プレイ録画](fps-captures/cinematic-v4/index.html)。[改修内容と検証報告](FPS_CINEMATIC_V4.md)。PC高品質・スマホ向け軽量FPS、5倍の呼吸、敵弾と六角シールドを追加。
+
+---
+
+# 施設・玉座・遭遇の再設計（v3記録）
+
+[新版プレビュー](https://chicken-house-j3qktoa8q-photors-projects.vercel.app/?protocol=1)（Vercel認証保護あり）。
+
+[改修方針・変更ファイル・検証](FPS_FACILITY_V3.md)。今回は照明と構図、蛇行ルート、貨物越しの遭遇、通過済み側からの増援を変更。
+
+## 機械王の玉座
+
+![新しい玉座と支配者](fps-captures/facility-v3/01-ruler.webp)
+
+## 折れ曲がる保安通路
+
+![直線の射線を切る通路](fps-captures/facility-v3/02-corridor.webp)
+
+## 通過済み側からの増援
+
+![搬入口の増援予告](fps-captures/facility-v3/03-rear-entry.webp)
+
+## 原子炉の貨物と赤い導体
+
+![中央の遮蔽物と原子炉](fps-captures/facility-v3/04-reactor-freight.webp)
+
+## 最終貨物区画
+
+![左右へ迂回するコンテナ区画](fps-captures/facility-v3/05-freight-chicane.webp)
+
+---
+
+以下は前回の武器改修と、その前の比較用記録です。
+
+# Chicken House — Visual overhaul / 2026-11-19
+
+[プレビューで武器を確認](https://chicken-house-kprljksh7-photors-projects.vercel.app/?protocol=play)（Vercelの認証保護あり）。
+
+最新の実ゲーム画面です。最初のレビュー対象を武器にし、静止・チャージ・発砲・セル交換を比較できます。設計、変更ファイル、検証と制約は [改修レポート](FPS_ART_REPORT.md) を参照。
+
+## ARC-RG7 — 静止 / 両手の構え / 発光グリフ
+
+![新しいレールガンの静止画](fps-captures/art-v2/10-weapon-idle.webp)
+
+## チャージ
+
+![加速器とセルの発光が増すチャージ状態](fps-captures/art-v2/11-weapon-charge.webp)
+
+## 発砲
+
+![青白いマズルフラッシュとビーム](fps-captures/art-v2/12-weapon-fire.webp)
+
+## 自動 / R セル交換
+
+8個の独自グリフが実エネルギー残量に合わせて消灯します。空セルは自動交換、Rで先行交換。左手がセルに追従し、1.8秒後に再装填されます。
+
+![セル交換の連番GIF](fps-captures/art-v2/14-reload-sequence.gif)
+
+GIFは実ゲームを約0.15秒ずつ進め、撮影中のみ一時停止した12枚の連番から構成しています。連続録画ではありません。
+
+![セルを引き抜く途中](fps-captures/art-v2/16-cell-extraction.webp)
+
+## Execution Soldier — 接近
+
+![分割胸部装甲と赤眼を持つ処刑兵](fps-captures/art-v2/15-execution-close.webp)
+
+## 原子炉 / 敵12体の場面
+
+![赤い施設照明と青い主役武器](fps-captures/art-v2/13-reactor-density.webp)
+
+## チャージ命中 / Heavy Enforcer の破壊
+
+![青い放電と金属破片](fps-captures/art-v2/08-heavy-destruction.webp)
+
+## 支配者 / 玉座
+
+![巨大な機械玉座と赤いコード](fps-captures/art-v2/03-ruler.webp)
+
+---
+
+## 改修前の記録
+
+以下は比較用の旧実装です。
+
+# 実プレイ画面
+
+実際のブラウザーから取得した画面。キャンペーンの進行には加速QAを利用している。静止画をゲーム画面として表示する実装ではない。
+
+## 通常サイト
+
+![通常サイト](fps-captures/01-normal-site.webp)
+
+## 危険色ポップアップの増殖
+
+![危険色ポップアップの増殖](fps-captures/02-warning.webp)
+
+## 500msの赤コード上書き
+
+![500msの赤コード上書き](fps-captures/02b-code-overwrite.webp)
+
+## 支配者の処刑メッセージ
+
+![支配者の処刑メッセージ](fps-captures/03-ruler.webp)
+
+## 端末から引くカメラ
+
+![端末から引くカメラ](fps-captures/04-terminal-pullback.webp)
+
+## FPSとレールガン
+
+![FPSとレールガン](fps-captures/05-fps-railgun.webp)
+
+## チャージ射撃
+
+![チャージ射撃](fps-captures/06-railgun-shot.webp)
+
+## 原子炉ホールの戦闘
+
+![原子炉ホールの戦闘](fps-captures/07-reactor-combat.webp)
+
+## 大型敵の破壊
+
+![大型敵の破壊](fps-captures/08-heavy-destruction.webp)
+
+## 脱出成功
+
+![脱出成功](fps-captures/09-escape.webp)

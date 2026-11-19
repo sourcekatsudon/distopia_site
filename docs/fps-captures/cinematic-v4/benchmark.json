@@ -1,0 +1,7096 @@
+{
+  "readyMS": 2435,
+  "elapsedMS": 60014.10000002384,
+  "frames": 3591,
+  "averageFPS": 59.83593855441593,
+  "frameMedianMS": 16.69999999999709,
+  "frameP95MS": 16.89999999999418,
+  "frameP99MS": 17,
+  "maxFrameMS": 83.30000000000018,
+  "samples": [
+    {
+      "performance": {
+        "cpuRenderP95": 12.299999952316284,
+        "gpuMedian": 4.335616,
+        "gpuP95": 4.87424,
+        "gpuSamples": 4,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 59,
+      "drawCalls": 216,
+      "triangles": 136234,
+      "memory": {
+        "geometries": 159,
+        "textures": 25
+      },
+      "enemies": 1,
+      "debris": 36,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 92,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 2
+      },
+      "player": {
+        "x": 11.323053223834386,
+        "y": 1.7,
+        "z": -55.01880291768724,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 100,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.5835000000000002,
+        "cooldown": 0.20349999999999985,
+        "hurtTime": 0,
+        "kills": 21,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 53.63349999999919,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 2,
+            "kills": 1,
+            "timer": 1.4832999999999956,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 11.323053223834386,
+        "y": 1.7,
+        "z": -55.01880291768724
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 9.399999976158142,
+        "gpuMedian": 4.657152,
+        "gpuP95": 11.55072,
+        "gpuSamples": 8,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 59,
+      "drawCalls": 203,
+      "triangles": 135694,
+      "memory": {
+        "geometries": 161,
+        "textures": 25
+      },
+      "enemies": 1,
+      "debris": 12,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 16,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 3
+      },
+      "player": {
+        "x": 8.377742806904896,
+        "y": 1.7,
+        "z": -58.43807712905597,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.9003000000000011,
+        "cooldown": 0.030300000000001104,
+        "hurtTime": 0,
+        "kills": 21,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 54.63359999999914,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 2,
+            "kills": 1,
+            "timer": 0.4831999999999953,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 8.377742806904896,
+        "y": 1.7,
+        "z": -58.43807712905597
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 7.399999976158142,
+        "gpuMedian": 4.657152,
+        "gpuP95": 11.55072,
+        "gpuSamples": 12,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 59,
+      "drawCalls": 203,
+      "triangles": 135916,
+      "memory": {
+        "geometries": 147,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 12,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 35,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 6.513938569421065,
+        "y": 1.7,
+        "z": -59.68273074186306,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 64,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.8001000000000001,
+        "cooldown": 0.4201000000000003,
+        "hurtTime": 0,
+        "kills": 21,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 55.63359999999907,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 4,
+            "kills": 1,
+            "timer": 5.483399999999998,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 6.513938569421065,
+        "y": 1.7,
+        "z": -59.68273074186306
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 6.399999976158142,
+        "gpuMedian": 4.657152,
+        "gpuP95": 11.55072,
+        "gpuSamples": 16,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 59,
+      "drawCalls": 353,
+      "triangles": 148484,
+      "memory": {
+        "geometries": 211,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 12,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 7,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 3
+      },
+      "player": {
+        "x": 11.708833096481959,
+        "y": 1.7,
+        "z": -57.89018040732538,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.7,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 21,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 56.633599999999035,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 4,
+            "kills": 1,
+            "timer": 4.483399999999991,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 11.708833096481959,
+        "y": 1.7,
+        "z": -57.89018040732538
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 6.200000047683716,
+        "gpuMedian": 4.69504,
+        "gpuP95": 11.55072,
+        "gpuSamples": 20,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 350,
+      "triangles": 148308,
+      "memory": {
+        "geometries": 212,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 13,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 8,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 16.526563197602474,
+        "y": 1.7,
+        "z": -57.45660413432235,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 64,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 1.05,
+        "cooldown": 0.6699999999999999,
+        "hurtTime": 0,
+        "kills": 21,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 57.63369999999897,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 4,
+            "kills": 1,
+            "timer": 3.483299999999986,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 16.526563197602474,
+        "y": 1.7,
+        "z": -57.45660413432235
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 6.900000095367432,
+        "gpuMedian": 4.775936,
+        "gpuP95": 7.518208,
+        "gpuSamples": 24,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 359,
+      "triangles": 149318,
+      "memory": {
+        "geometries": 212,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 13,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 11,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 5
+      },
+      "player": {
+        "x": 13.421373806862153,
+        "y": 1.7,
+        "z": -57.85872787926667,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.9665999999999985,
+        "cooldown": 0.09659999999999852,
+        "hurtTime": 0,
+        "kills": 21,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 58.633899999998924,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 4,
+            "kills": 1,
+            "timer": 2.483099999999985,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 13.421373806862153,
+        "y": 1.7,
+        "z": -57.85872787926667
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 6.800000071525574,
+        "gpuMedian": 4.69504,
+        "gpuP95": 7.518208,
+        "gpuSamples": 28,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 269,
+      "triangles": 138968,
+      "memory": {
+        "geometries": 165,
+        "textures": 25
+      },
+      "enemies": 2,
+      "debris": 13,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 39,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 4
+      },
+      "player": {
+        "x": 7.952720359680642,
+        "y": 1.7,
+        "z": -58.22865355157306,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.8498999999999994,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 22,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 59.633699999998846,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 4,
+            "kills": 2,
+            "timer": 1.4832999999999843,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 7.952720359680642,
+        "y": 1.7,
+        "z": -58.22865355157306
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 7.700000047683716,
+        "gpuMedian": 4.69504,
+        "gpuP95": 11.55072,
+        "gpuSamples": 32,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 255,
+      "triangles": 136492,
+      "memory": {
+        "geometries": 165,
+        "textures": 25
+      },
+      "enemies": 2,
+      "debris": 13,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 6,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 0
+      },
+      "player": {
+        "x": 6.429777371747296,
+        "y": 1.7,
+        "z": -58.52777513370339,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 100,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.299800000000001,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 22,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 60.633999999998764,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 4,
+            "kills": 2,
+            "timer": 0.4829999999999847,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 6.429777371747296,
+        "y": 1.7,
+        "z": -58.52777513370339
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 8.200000047683716,
+        "gpuMedian": 4.774912,
+        "gpuP95": 11.55072,
+        "gpuSamples": 36,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 222,
+      "triangles": 135248,
+      "memory": {
+        "geometries": 165,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 25,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 67,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 3
+      },
+      "player": {
+        "x": 11.8344968760653,
+        "y": 1.7,
+        "z": -59.49268767279804,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 1.1,
+        "cooldown": 0.23,
+        "hurtTime": 0,
+        "kills": 23,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 61.63369999999872,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 6,
+            "kills": 3,
+            "timer": 5.483499999999998,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 11.8344968760653,
+        "y": 1.7,
+        "z": -59.49268767279804
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 8.200000047683716,
+        "gpuMedian": 4.714496,
+        "gpuP95": 11.55072,
+        "gpuSamples": 40,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 276,
+      "triangles": 142008,
+      "memory": {
+        "geometries": 214,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 24,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 14,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 0
+      },
+      "player": {
+        "x": 16.556275238917706,
+        "y": 1.7,
+        "z": -56.67600428891114,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 100,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.5496999999999979,
+        "cooldown": 0.16969999999999708,
+        "hurtTime": 0,
+        "kills": 23,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 62.634099999998696,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 6,
+            "kills": 3,
+            "timer": 4.483099999999995,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 16.556275238917706,
+        "y": 1.7,
+        "z": -56.67600428891114
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 7.600000023841858,
+        "gpuMedian": 4.754432,
+        "gpuP95": 11.420672,
+        "gpuSamples": 44,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 280,
+      "triangles": 142448,
+      "memory": {
+        "geometries": 214,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 24,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 15,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 3
+      },
+      "player": {
+        "x": 13.578940664781198,
+        "y": 1.7,
+        "z": -57.53419066707267,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.8998999999999977,
+        "cooldown": 0.029899999999997845,
+        "hurtTime": 0,
+        "kills": 23,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 63.63389999999867,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 6,
+            "kills": 3,
+            "timer": 3.483299999999994,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 13.578940664781198,
+        "y": 1.7,
+        "z": -57.53419066707267
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 7.700000047683716,
+        "gpuMedian": 4.69504,
+        "gpuP95": 11.420672,
+        "gpuSamples": 48,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 231,
+      "triangles": 140912,
+      "memory": {
+        "geometries": 263,
+        "textures": 25
+      },
+      "enemies": 2,
+      "debris": 24,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 139,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 3
+      },
+      "player": {
+        "x": 12.141331044225756,
+        "y": 1.7,
+        "z": -62.37209107091784,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 68,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.8001999999999972,
+        "cooldown": 0.42019999999999735,
+        "hurtTime": 0,
+        "kills": 24,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 64.65059999999863,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 6,
+            "kills": 4,
+            "timer": 2.466599999999992,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 12.141331044225756,
+        "y": 1.7,
+        "z": -62.37209107091784
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 10.699999928474426,
+        "gpuMedian": 4.6848,
+        "gpuP95": 11.55072,
+        "gpuSamples": 52,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 262,
+      "triangles": 141316,
+      "memory": {
+        "geometries": 214,
+        "textures": 25
+      },
+      "enemies": 2,
+      "debris": 24,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 10,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 11.896632704154165,
+        "y": 1.7,
+        "z": -62.96557884205948,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.7000999999999988,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 24,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 65.63389999999856,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 6,
+            "kills": 4,
+            "timer": 1.483299999999991,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 11.896632704154165,
+        "y": 1.7,
+        "z": -62.96557884205948
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 10.699999928474426,
+        "gpuMedian": 4.670464,
+        "gpuP95": 11.55072,
+        "gpuSamples": 56,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 260,
+      "triangles": 141244,
+      "memory": {
+        "geometries": 214,
+        "textures": 25
+      },
+      "enemies": 2,
+      "debris": 24,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 8,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 3
+      },
+      "player": {
+        "x": 16.59542750279934,
+        "y": 1.7,
+        "z": -62.03082044900754,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 64,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 1.0500999999999985,
+        "cooldown": 0.6700999999999986,
+        "hurtTime": 0,
+        "kills": 24,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 66.6338999999985,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 6,
+            "kills": 4,
+            "timer": 0.4832999999999907,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 16.59542750279934,
+        "y": 1.7,
+        "z": -62.03082044900754
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 12.200000047683716,
+        "gpuMedian": 4.670464,
+        "gpuP95": 11.55072,
+        "gpuSamples": 60,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 287,
+      "triangles": 142864,
+      "memory": {
+        "geometries": 200,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 12,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 11,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 5
+      },
+      "player": {
+        "x": 16.59542750279934,
+        "y": 1.7,
+        "z": -60.70804084366713,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.9500999999999986,
+        "cooldown": 0.08009999999999849,
+        "hurtTime": 0,
+        "kills": 24,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 67.63389999999842,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 8,
+            "kills": 4,
+            "timer": 5.4832999999999945,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 16.59542750279934,
+        "y": 1.7,
+        "z": -60.70804084366713
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 8.899999976158142,
+        "gpuMedian": 4.670464,
+        "gpuP95": 11.420672,
+        "gpuSamples": 64,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 431,
+      "triangles": 159146,
+      "memory": {
+        "geometries": 299,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 24,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 97,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 5
+      },
+      "player": {
+        "x": 12.829490502186864,
+        "y": 1.7,
+        "z": -61.1014069087302,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 99,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.8499000000000017,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 25,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 68.63399999999838,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 8,
+            "kills": 5,
+            "timer": 4.48319999999999,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 12.829490502186864,
+        "y": 1.7,
+        "z": -61.1014069087302
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 7.700000047683716,
+        "gpuMedian": 4.680704,
+        "gpuP95": 11.420672,
+        "gpuSamples": 68,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 307,
+      "triangles": 146416,
+      "memory": {
+        "geometries": 299,
+        "textures": 25
+      },
+      "enemies": 2,
+      "debris": 36,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 42,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 2
+      },
+      "player": {
+        "x": 7.469957609621994,
+        "y": 1.7,
+        "z": -61.79614306850686,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 100,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.3000000000000006,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 26,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 69.6339999999983,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 8,
+            "kills": 6,
+            "timer": 3.4831999999999845,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 7.469957609621994,
+        "y": 1.7,
+        "z": -61.79614306850686
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 7.399999976158142,
+        "gpuMedian": 4.680704,
+        "gpuP95": 11.55072,
+        "gpuSamples": 72,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 305,
+      "triangles": 146412,
+      "memory": {
+        "geometries": 250,
+        "textures": 25
+      },
+      "enemies": 2,
+      "debris": 24,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 11,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 6.836981380831537,
+        "y": 1.7,
+        "z": -62.347659628242205,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 1.1,
+        "cooldown": 0.23,
+        "hurtTime": 0,
+        "kills": 26,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 70.63399999999824,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 8,
+            "kills": 6,
+            "timer": 2.4831999999999845,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 6.836981380831537,
+        "y": 1.7,
+        "z": -62.347659628242205
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 7.5,
+        "gpuMedian": 4.6848,
+        "gpuP95": 11.55072,
+        "gpuSamples": 76,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 305,
+      "triangles": 146412,
+      "memory": {
+        "geometries": 250,
+        "textures": 25
+      },
+      "enemies": 2,
+      "debris": 24,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 20,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 0
+      },
+      "player": {
+        "x": 12.199369989044673,
+        "y": 1.7,
+        "z": -61.143116388479534,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 100,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.5500000000000009,
+        "cooldown": 0.17000000000000032,
+        "hurtTime": 0,
+        "kills": 26,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 71.63399999999812,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 8,
+            "kills": 6,
+            "timer": 1.4831999999999834,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 12.199369989044673,
+        "y": 1.7,
+        "z": -61.143116388479534
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 7.600000023841858,
+        "gpuMedian": 4.69504,
+        "gpuP95": 11.55072,
+        "gpuSamples": 80,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 311,
+      "triangles": 146856,
+      "memory": {
+        "geometries": 250,
+        "textures": 25
+      },
+      "enemies": 2,
+      "debris": 24,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 15,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 5
+      },
+      "player": {
+        "x": 16.523973919024822,
+        "y": 1.7,
+        "z": -59.25282164066518,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.900200000000001,
+        "cooldown": 0.030200000000000726,
+        "hurtTime": 0,
+        "kills": 26,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 72.63399999999803,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 8,
+            "kills": 6,
+            "timer": 0.4831999999999835,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 16.523973919024822,
+        "y": 1.7,
+        "z": -59.25282164066518
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 10.100000023841858,
+        "gpuMedian": 4.697088,
+        "gpuP95": 11.420672,
+        "gpuSamples": 84,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 308,
+      "triangles": 146782,
+      "memory": {
+        "geometries": 250,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 24,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 34,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 12.577457138783014,
+        "y": 1.7,
+        "z": -60.14876366224865,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 64,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.7998999999999981,
+        "cooldown": 0.41989999999999805,
+        "hurtTime": 0,
+        "kills": 26,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 73.65089999999799,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 10,
+            "kills": 6,
+            "timer": 5.466499999999999,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 12.577457138783014,
+        "y": 1.7,
+        "z": -60.14876366224865
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 14.399999976158142,
+        "gpuMedian": 4.697088,
+        "gpuP95": 11.420672,
+        "gpuSamples": 88,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 59,
+      "drawCalls": 341,
+      "triangles": 147796,
+      "memory": {
+        "geometries": 299,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 0,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 10,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 7.227314855367551,
+        "y": 1.7,
+        "z": -60.789469586884096,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.7000999999999984,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 26,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 74.63409999999796,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 10,
+            "kills": 6,
+            "timer": 4.483299999999994,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 7.227314855367551,
+        "y": 1.7,
+        "z": -60.789469586884096
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 14.399999976158142,
+        "gpuMedian": 4.714496,
+        "gpuP95": 11.420672,
+        "gpuSamples": 92,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 59,
+      "drawCalls": 291,
+      "triangles": 142224,
+      "memory": {
+        "geometries": 249,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 0,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 7,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 7.082764243371758,
+        "y": 1.7,
+        "z": -61.20355552872318,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 64,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 1.0499000000000016,
+        "cooldown": 0.6699000000000015,
+        "hurtTime": 0,
+        "kills": 26,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 75.63429999999789,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 10,
+            "kills": 6,
+            "timer": 3.483099999999996,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 7.082764243371758,
+        "y": 1.7,
+        "z": -61.20355552872318
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 14.399999976158142,
+        "gpuMedian": 4.714496,
+        "gpuP95": 11.420672,
+        "gpuSamples": 96,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 59,
+      "drawCalls": 358,
+      "triangles": 152220,
+      "memory": {
+        "geometries": 249,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 13,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 22,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 6
+      },
+      "player": {
+        "x": 12.454290481407531,
+        "y": 1.7,
+        "z": -62.1451500346244,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.9500000000000001,
+        "cooldown": 0.08,
+        "hurtTime": 0,
+        "kills": 27,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 76.63409999999783,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 10,
+            "kills": 7,
+            "timer": 2.4832999999999923,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 12.454290481407531,
+        "y": 1.7,
+        "z": -62.1451500346244
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 14.399999976158142,
+        "gpuMedian": 4.716544,
+        "gpuP95": 11.55072,
+        "gpuSamples": 100,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 59,
+      "drawCalls": 359,
+      "triangles": 151824,
+      "memory": {
+        "geometries": 249,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 13,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 14,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 2
+      },
+      "player": {
+        "x": 16.5630824012831,
+        "y": 1.7,
+        "z": -61.53808301603473,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.8499000000000014,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 27,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 77.63429999999778,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 10,
+            "kills": 7,
+            "timer": 1.483099999999994,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 16.5630824012831,
+        "y": 1.7,
+        "z": -61.53808301603473
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 14.399999976158142,
+        "gpuMedian": 4.72576,
+        "gpuP95": 11.420672,
+        "gpuSamples": 104,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 353,
+      "triangles": 151380,
+      "memory": {
+        "geometries": 249,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 13,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 4,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 0
+      },
+      "player": {
+        "x": 12.244136374155696,
+        "y": 1.7,
+        "z": -62.08366685097149,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 100,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.30019999999999747,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 27,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 78.63409999999773,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 10,
+            "kills": 7,
+            "timer": 0.4832999999999903,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 12.244136374155696,
+        "y": 1.7,
+        "z": -62.08366685097149
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 14.600000023841858,
+        "gpuMedian": 4.72576,
+        "gpuP95": 11.420672,
+        "gpuSamples": 108,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 330,
+      "triangles": 148682,
+      "memory": {
+        "geometries": 249,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 25,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 12,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 3
+      },
+      "player": {
+        "x": 8.491390447910701,
+        "y": 1.7,
+        "z": -63.06544301105582,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 1.1,
+        "cooldown": 0.23,
+        "hurtTime": 0,
+        "kills": 28,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 79.63409999999769,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 12,
+            "kills": 8,
+            "timer": 5.483699999999995,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 8.491390447910701,
+        "y": 1.7,
+        "z": -63.06544301105582
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 13.800000071525574,
+        "gpuMedian": 4.734976,
+        "gpuP95": 11.420672,
+        "gpuSamples": 112,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 299,
+      "triangles": 144572,
+      "memory": {
+        "geometries": 347,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 38,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 78,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 0
+      },
+      "player": {
+        "x": 7.389700994486261,
+        "y": 1.7,
+        "z": -63.091174421263204,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 100,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.5500000000000007,
+        "cooldown": 0.17,
+        "hurtTime": 0,
+        "kills": 29,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 80.63419999999763,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 12,
+            "kills": 9,
+            "timer": 4.483599999999991,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 7.389700994486261,
+        "y": 1.7,
+        "z": -63.091174421263204
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 13,
+        "gpuMedian": 4.739072,
+        "gpuP95": 11.55072,
+        "gpuSamples": 116,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 358,
+      "triangles": 151932,
+      "memory": {
+        "geometries": 347,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 27,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 23,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 3
+      },
+      "player": {
+        "x": 12.775362598410492,
+        "y": 1.7,
+        "z": -63.09908144140594,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.8999000000000016,
+        "cooldown": 0.029900000000001457,
+        "hurtTime": 0,
+        "kills": 29,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 81.6343999999976,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 12,
+            "kills": 9,
+            "timer": 3.483399999999991,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 12.775362598410492,
+        "y": 1.7,
+        "z": -63.09908144140594
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 13.600000023841858,
+        "gpuMedian": 4.739072,
+        "gpuP95": 11.55072,
+        "gpuSamples": 120,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 356,
+      "triangles": 151758,
+      "memory": {
+        "geometries": 333,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 26,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 35,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 3
+      },
+      "player": {
+        "x": 16.521050041582296,
+        "y": 1.7,
+        "z": -62.43447781977105,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 64,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.8001000000000065,
+        "cooldown": 0.420100000000006,
+        "hurtTime": 0,
+        "kills": 29,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 82.63439999999753,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 12,
+            "kills": 9,
+            "timer": 2.4833999999999907,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 16.521050041582296,
+        "y": 1.7,
+        "z": -62.43447781977105
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 12.900000095367432,
+        "gpuMedian": 4.743168,
+        "gpuP95": 11.55072,
+        "gpuSamples": 124,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 248,
+      "triangles": 141932,
+      "memory": {
+        "geometries": 333,
+        "textures": 25
+      },
+      "enemies": 2,
+      "debris": 38,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 77,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 3
+      },
+      "player": {
+        "x": 11.963359437223467,
+        "y": 1.7,
+        "z": -63.09528779663291,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 99,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.7000000000000004,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 30,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 83.63429999999744,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 12,
+            "kills": 10,
+            "timer": 1.4834999999999883,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 11.963359437223467,
+        "y": 1.7,
+        "z": -63.09528779663291
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 8.100000023841858,
+        "gpuMedian": 4.743168,
+        "gpuP95": 11.55072,
+        "gpuSamples": 128,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 270,
+      "triangles": 141564,
+      "memory": {
+        "geometries": 333,
+        "textures": 25
+      },
+      "enemies": 1,
+      "debris": 39,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 74,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 2
+      },
+      "player": {
+        "x": 9.37254815766704,
+        "y": 1.7,
+        "z": -63.09528779663291,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 64,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 1.0500999999999987,
+        "cooldown": 0.6700999999999986,
+        "hurtTime": 0,
+        "kills": 31,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 84.63429999999734,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 12,
+            "kills": 11,
+            "timer": 0.4834999999999894,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 9.37254815766704,
+        "y": 1.7,
+        "z": -63.09528779663291
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 7.699999928474426,
+        "gpuMedian": 4.743168,
+        "gpuP95": 11.55072,
+        "gpuSamples": 132,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 267,
+      "triangles": 142030,
+      "memory": {
+        "geometries": 284,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 38,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 11,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 5
+      },
+      "player": {
+        "x": 6.094701634233396,
+        "y": 1.7,
+        "z": -62.766898215947805,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.9500000000000004,
+        "cooldown": 0.08000000000000003,
+        "hurtTime": 0,
+        "kills": 31,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 85.63429999999728,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 14,
+            "kills": 11,
+            "timer": 5.500399999999999,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 6.094701634233396,
+        "y": 1.7,
+        "z": -62.766898215947805
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 7.799999952316284,
+        "gpuMedian": 4.754432,
+        "gpuP95": 11.55072,
+        "gpuSamples": 136,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 348,
+      "triangles": 148502,
+      "memory": {
+        "geometries": 299,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 25,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 17,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 2
+      },
+      "player": {
+        "x": 10.865439692976086,
+        "y": 1.7,
+        "z": -60.063716683720976,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.8500999999999989,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 31,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 86.63429999999722,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 14,
+            "kills": 11,
+            "timer": 4.500399999999996,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 10.865439692976086,
+        "y": 1.7,
+        "z": -60.063716683720976
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 9.100000023841858,
+        "gpuMedian": 4.762624,
+        "gpuP95": 11.55072,
+        "gpuSamples": 140,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 326,
+      "triangles": 147474,
+      "memory": {
+        "geometries": 299,
+        "textures": 25
+      },
+      "enemies": 2,
+      "debris": 37,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 20,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 0
+      },
+      "player": {
+        "x": 15.671038701961772,
+        "y": 1.7,
+        "z": -58.2621072188028,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 100,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.30030000000000345,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 32,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 87.63439999999716,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 14,
+            "kills": 12,
+            "timer": 3.5002999999999953,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 15.671038701961772,
+        "y": 1.7,
+        "z": -58.2621072188028
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 8.299999952316284,
+        "gpuMedian": 4.763648,
+        "gpuP95": 11.420672,
+        "gpuSamples": 144,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 329,
+      "triangles": 147500,
+      "memory": {
+        "geometries": 299,
+        "textures": 25
+      },
+      "enemies": 2,
+      "debris": 37,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 3,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 12.378532806354032,
+        "y": 1.7,
+        "z": -61.16989870254004,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 1.1,
+        "cooldown": 0.23,
+        "hurtTime": 0,
+        "kills": 32,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 88.63449999999713,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 14,
+            "kills": 12,
+            "timer": 2.500199999999992,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 12.378532806354032,
+        "y": 1.7,
+        "z": -61.16989870254004
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 10,
+        "gpuMedian": 4.763648,
+        "gpuP95": 11.420672,
+        "gpuSamples": 148,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 311,
+      "triangles": 146732,
+      "memory": {
+        "geometries": 250,
+        "textures": 25
+      },
+      "enemies": 2,
+      "debris": 24,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 17,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 0
+      },
+      "player": {
+        "x": 7.512526198607607,
+        "y": 1.7,
+        "z": -63.09023838246517,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 100,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.5501000000000065,
+        "cooldown": 0.17010000000000583,
+        "hurtTime": 0,
+        "kills": 32,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 89.63439999999704,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 14,
+            "kills": 12,
+            "timer": 1.5002999999999989,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 7.512526198607607,
+        "y": 1.7,
+        "z": -63.09023838246517
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 10,
+        "gpuMedian": 4.774912,
+        "gpuP95": 11.420672,
+        "gpuSamples": 152,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 304,
+      "triangles": 146506,
+      "memory": {
+        "geometries": 201,
+        "textures": 25
+      },
+      "enemies": 2,
+      "debris": 12,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 18,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 3
+      },
+      "player": {
+        "x": 4.385282508818095,
+        "y": 1.7,
+        "z": -62.96542271596953,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.9000000000000002,
+        "cooldown": 0.030000000000000054,
+        "hurtTime": 0,
+        "kills": 32,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 90.63449999999698,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 14,
+            "kills": 12,
+            "timer": 0.5001999999999935,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 4.385282508818095,
+        "y": 1.7,
+        "z": -62.96542271596953
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 13.600000023841858,
+        "gpuMedian": 4.774912,
+        "gpuP95": 11.420672,
+        "gpuSamples": 156,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 299,
+      "triangles": 146398,
+      "memory": {
+        "geometries": 201,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 12,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 31,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 9.799824734159678,
+        "y": 1.7,
+        "z": -62.01805953474421,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 64,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.7995999999999991,
+        "cooldown": 0.4195999999999987,
+        "hurtTime": 0,
+        "kills": 32,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 91.63479999999694,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 16,
+            "kills": 12,
+            "timer": 5.499899999999999,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 9.799824734159678,
+        "y": 1.7,
+        "z": -62.01805953474421
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 10.700000047683716,
+        "gpuMedian": 4.774912,
+        "gpuP95": 11.420672,
+        "gpuSamples": 160,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 436,
+      "triangles": 158284,
+      "memory": {
+        "geometries": 264,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 0,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 10,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 3
+      },
+      "player": {
+        "x": 15.048447229991172,
+        "y": 1.7,
+        "z": -60.39521484698156,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.7000999999999991,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 32,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 92.63449999999692,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 16,
+            "kills": 12,
+            "timer": 4.50019999999999,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 15.048447229991172,
+        "y": 1.7,
+        "z": -60.39521484698156
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 9.299999952316284,
+        "gpuMedian": 4.780032,
+        "gpuP95": 11.12576,
+        "gpuSamples": 164,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 427,
+      "triangles": 156182,
+      "memory": {
+        "geometries": 250,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 1,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 14,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 10.122079489661104,
+        "y": 1.7,
+        "z": -60.742802982759905,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 64,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 1.0500999999999987,
+        "cooldown": 0.6700999999999986,
+        "hurtTime": 0,
+        "kills": 32,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 93.63449999999683,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 16,
+            "kills": 12,
+            "timer": 3.5001999999999893,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 10.122079489661104,
+        "y": 1.7,
+        "z": -60.742802982759905
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 11.399999976158142,
+        "gpuMedian": 4.780032,
+        "gpuP95": 11.12576,
+        "gpuSamples": 168,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 388,
+      "triangles": 154484,
+      "memory": {
+        "geometries": 250,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 1,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 11,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 5
+      },
+      "player": {
+        "x": 4.813651489699066,
+        "y": 1.7,
+        "z": -59.43417121589419,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.9498000000000031,
+        "cooldown": 0.07980000000000294,
+        "hurtTime": 0,
+        "kills": 32,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 94.6347999999968,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 16,
+            "kills": 12,
+            "timer": 2.4998999999999953,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 4.813651489699066,
+        "y": 1.7,
+        "z": -59.43417121589419
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 13.600000023841858,
+        "gpuMedian": 4.780032,
+        "gpuP95": 11.12576,
+        "gpuSamples": 172,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 396,
+      "triangles": 154932,
+      "memory": {
+        "geometries": 250,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 1,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 14,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 4
+      },
+      "player": {
+        "x": 2.2762125998137543,
+        "y": 1.7,
+        "z": -59.193574489076795,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.8500000000000005,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 32,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 95.63469999999677,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 16,
+            "kills": 12,
+            "timer": 1.4999999999999953,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 2.2762125998137543,
+        "y": 1.7,
+        "z": -59.193574489076795
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 13.699999928474426,
+        "gpuMedian": 4.780032,
+        "gpuP95": 11.12576,
+        "gpuSamples": 176,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 347,
+      "triangles": 150076,
+      "memory": {
+        "geometries": 250,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 1,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 8,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 0
+      },
+      "player": {
+        "x": 6.670215593362725,
+        "y": 1.7,
+        "z": -62.45041518641134,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 100,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.2999000000000021,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 32,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 96.63469999999667,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 16,
+            "kills": 12,
+            "timer": 0.4999999999999964,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 6.670215593362725,
+        "y": 1.7,
+        "z": -62.45041518641134
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 13.699999928474426,
+        "gpuMedian": 4.775936,
+        "gpuP95": 11.12576,
+        "gpuSamples": 180,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 306,
+      "triangles": 147948,
+      "memory": {
+        "geometries": 250,
+        "textures": 25
+      },
+      "enemies": 5,
+      "debris": 14,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 23,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 11.953822164195168,
+        "y": 1.7,
+        "z": -63.096082183908656,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 1.1,
+        "cooldown": 0.23,
+        "hurtTime": 0,
+        "kills": 33,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 97.63469999999661,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 18,
+            "kills": 13,
+            "timer": 5.500099999999998,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 11.953822164195168,
+        "y": 1.7,
+        "z": -63.096082183908656
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 14.5,
+        "gpuMedian": 4.775936,
+        "gpuP95": 7.988224,
+        "gpuSamples": 184,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 334,
+      "triangles": 149204,
+      "memory": {
+        "geometries": 348,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 26,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 16,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 0
+      },
+      "player": {
+        "x": 7.4006988227224575,
+        "y": 1.7,
+        "z": -62.97200905293721,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 100,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.5500000000000006,
+        "cooldown": 0.17,
+        "hurtTime": 0,
+        "kills": 34,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 98.6346999999966,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 18,
+            "kills": 14,
+            "timer": 4.50009999999999,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 7.4006988227224575,
+        "y": 1.7,
+        "z": -62.97200905293721
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 15.5,
+        "gpuMedian": 4.774912,
+        "gpuP95": 7.988224,
+        "gpuSamples": 188,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 354,
+      "triangles": 146674,
+      "memory": {
+        "geometries": 348,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 25,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 14,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 3
+      },
+      "player": {
+        "x": 2.528997409009638,
+        "y": 1.7,
+        "z": -62.51577607502135,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.899900000000002,
+        "cooldown": 0.029900000000001425,
+        "hurtTime": 0,
+        "kills": 34,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 99.63479999999655,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 18,
+            "kills": 14,
+            "timer": 3.499999999999987,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 2.528997409009638,
+        "y": 1.7,
+        "z": -62.51577607502135
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 15.800000071525574,
+        "gpuMedian": 4.775936,
+        "gpuP95": 7.988224,
+        "gpuSamples": 192,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 366,
+      "triangles": 148100,
+      "memory": {
+        "geometries": 348,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 25,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 34,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 1.153434456374538,
+        "y": 1.7,
+        "z": -61.991929156336354,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 64,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.8000999999999989,
+        "cooldown": 0.4200999999999987,
+        "hurtTime": 0,
+        "kills": 34,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 100.63479999999652,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 18,
+            "kills": 14,
+            "timer": 2.4999999999999867,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 1.153434456374538,
+        "y": 1.7,
+        "z": -61.991929156336354
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 14.5,
+        "gpuMedian": 4.781056,
+        "gpuP95": 7.988224,
+        "gpuSamples": 196,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 299,
+      "triangles": 144580,
+      "memory": {
+        "geometries": 348,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 25,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 9,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 4.8629521300459615,
+        "y": 1.7,
+        "z": -60.729118654286346,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.7000999999999992,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 34,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 101.63469999999643,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 18,
+            "kills": 14,
+            "timer": 1.5000999999999856,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 4.8629521300459615,
+        "y": 1.7,
+        "z": -60.729118654286346
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 15.800000071525574,
+        "gpuMedian": 4.781056,
+        "gpuP95": 7.988224,
+        "gpuSamples": 200,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 289,
+      "triangles": 145640,
+      "memory": {
+        "geometries": 348,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 14,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 6,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 9.81692806140821,
+        "y": 1.7,
+        "z": -63.03191047329458,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 64,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 1.0500000000000003,
+        "cooldown": 0.67,
+        "hurtTime": 0,
+        "kills": 34,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 102.63479999999635,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 18,
+            "kills": 14,
+            "timer": 0.49999999999998773,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 9.81692806140821,
+        "y": 1.7,
+        "z": -63.03191047329458
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 15.800000071525574,
+        "gpuMedian": 4.775936,
+        "gpuP95": 7.865344,
+        "gpuSamples": 204,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 184,
+      "triangles": 136088,
+      "memory": {
+        "geometries": 299,
+        "textures": 25
+      },
+      "enemies": 5,
+      "debris": 13,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 93,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 10
+      },
+      "player": {
+        "x": 8.703707720159917,
+        "y": 1.7,
+        "z": -62.95229597932704,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 99,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.9500000000000003,
+        "cooldown": 0.08,
+        "hurtTime": 0,
+        "kills": 35,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 103.63479999999626,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 20,
+            "kills": 15,
+            "timer": 5.500099999999998,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 8.703707720159917,
+        "y": 1.7,
+        "z": -62.95229597932704
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 14.900000095367432,
+        "gpuMedian": 4.774912,
+        "gpuP95": 7.865344,
+        "gpuSamples": 208,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 346,
+      "triangles": 148082,
+      "memory": {
+        "geometries": 264,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 25,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 34,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 2
+      },
+      "player": {
+        "x": 5.4254945942593595,
+        "y": 1.7,
+        "z": -63.0982507824583,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.849900000000002,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 36,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 104.63489999999618,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 20,
+            "kills": 16,
+            "timer": 4.499999999999995,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 5.4254945942593595,
+        "y": 1.7,
+        "z": -63.0982507824583
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 12.300000071525574,
+        "gpuMedian": 4.774912,
+        "gpuP95": 7.865344,
+        "gpuSamples": 212,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 460,
+      "triangles": 159342,
+      "memory": {
+        "geometries": 313,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 25,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 7,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 2
+      },
+      "player": {
+        "x": 3.720182419631128,
+        "y": 1.7,
+        "z": -60.74362103344353,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 100,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.3000000000000007,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 36,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 105.63489999999615,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 20,
+            "kills": 16,
+            "timer": 3.499999999999991,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 3.720182419631128,
+        "y": 1.7,
+        "z": -60.74362103344353
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 15.300000071525574,
+        "gpuMedian": 4.775936,
+        "gpuP95": 7.988224,
+        "gpuSamples": 216,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 286,
+      "triangles": 143788,
+      "memory": {
+        "geometries": 313,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 26,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 16,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 8.681062825417879,
+        "y": 1.7,
+        "z": -62.40050119212292,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 1.1,
+        "cooldown": 0.23,
+        "hurtTime": 0,
+        "kills": 36,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 106.65179999999606,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 20,
+            "kills": 16,
+            "timer": 2.483099999999988,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 8.681062825417879,
+        "y": 1.7,
+        "z": -62.40050119212292
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 14.600000023841858,
+        "gpuMedian": 4.775936,
+        "gpuP95": 7.988224,
+        "gpuSamples": 220,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 322,
+      "triangles": 146996,
+      "memory": {
+        "geometries": 313,
+        "textures": 25
+      },
+      "enemies": 4,
+      "debris": 25,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 20,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 0
+      },
+      "player": {
+        "x": 14.03094596808441,
+        "y": 1.7,
+        "z": -62.96980910358849,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 100,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.5500000000000005,
+        "cooldown": 0.17,
+        "hurtTime": 0,
+        "kills": 36,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 107.63489999999601,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 20,
+            "kills": 16,
+            "timer": 1.4999999999999907,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 14.03094596808441,
+        "y": 1.7,
+        "z": -62.96980910358849
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 13.700000047683716,
+        "gpuMedian": 4.774912,
+        "gpuP95": 7.865344,
+        "gpuSamples": 224,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 224,
+      "triangles": 137586,
+      "memory": {
+        "geometries": 313,
+        "textures": 25
+      },
+      "enemies": 3,
+      "debris": 37,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 97,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 8
+      },
+      "player": {
+        "x": 12.459888483791609,
+        "y": 1.7,
+        "z": -63.09928567956422,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 99,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.9001000000000059,
+        "cooldown": 0.03010000000000576,
+        "hurtTime": 0,
+        "kills": 37,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 108.63489999999592,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 20,
+            "kills": 17,
+            "timer": 0.4999999999999913,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 12.459888483791609,
+        "y": 1.7,
+        "z": -63.09928567956422
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 13.5,
+        "gpuMedian": 4.775936,
+        "gpuP95": 7.988224,
+        "gpuSamples": 228,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 310,
+      "triangles": 147032,
+      "memory": {
+        "geometries": 264,
+        "textures": 25
+      },
+      "enemies": 5,
+      "debris": 13,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 36,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 9.550736002030042,
+        "y": 1.7,
+        "z": -63.09928567956422,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 64,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.8005000000000005,
+        "cooldown": 0.42050000000000015,
+        "hurtTime": 0,
+        "kills": 37,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 109.6349999999959,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 22,
+            "kills": 17,
+            "timer": 5.499899999999993,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 9.550736002030042,
+        "y": 1.7,
+        "z": -63.09928567956422
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 12.799999952316284,
+        "gpuMedian": 4.780032,
+        "gpuP95": 7.988224,
+        "gpuSamples": 232,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 493,
+      "triangles": 164438,
+      "memory": {
+        "geometries": 300,
+        "textures": 25
+      },
+      "enemies": 5,
+      "debris": 13,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 9,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 9.125906699002478,
+        "y": 1.7,
+        "z": -61.03927401067989,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.7000000000000005,
+        "cooldown": 0,
+        "hurtTime": 0,
+        "kills": 37,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 110.63499999999586,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 22,
+            "kills": 17,
+            "timer": 4.499899999999986,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 9.125906699002478,
+        "y": 1.7,
+        "z": -61.03927401067989
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 13.5,
+        "gpuMedian": 4.780032,
+        "gpuP95": 7.988224,
+        "gpuSamples": 236,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 293,
+      "triangles": 143058,
+      "memory": {
+        "geometries": 314,
+        "textures": 25
+      },
+      "enemies": 5,
+      "debris": 13,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 14,
+      "beams": 0,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 1
+      },
+      "player": {
+        "x": 14.397432348004116,
+        "y": 1.7,
+        "z": -61.35020633018556,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 64,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 1.049900000000009,
+        "cooldown": 0.6699000000000087,
+        "hurtTime": 0,
+        "kills": 37,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 111.63509999999587,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 22,
+            "kills": 17,
+            "timer": 3.499799999999996,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 14.397432348004116,
+        "y": 1.7,
+        "z": -61.35020633018556
+      }
+    },
+    {
+      "performance": {
+        "cpuRenderP95": 12.799999952316284,
+        "gpuMedian": 4.781056,
+        "gpuP95": 7.988224,
+        "gpuSamples": 240,
+        "gpuSupported": true
+      },
+      "mode": "play",
+      "paused": false,
+      "touchMode": false,
+      "quality": "high",
+      "assetQuality": "high",
+      "presentation": "hdr-bloom",
+      "rendering": {
+        "mode": "hdr-bloom",
+        "ao": true,
+        "width": 1440,
+        "height": 1000,
+        "samples": 2,
+        "msaaSupported": 2,
+        "bloomWidth": 360,
+        "bloomHeight": 250
+      },
+      "fps": 60,
+      "drawCalls": 302,
+      "triangles": 143872,
+      "memory": {
+        "geometries": 314,
+        "textures": 25
+      },
+      "enemies": 5,
+      "debris": 12,
+      "shieldVfx": {
+        "hits": 6,
+        "active": 0,
+        "reflections": 0
+      },
+      "particles": 11,
+      "beams": 1,
+      "audio": {
+        "state": "running",
+        "muted": true,
+        "gain": 0,
+        "voices": 5
+      },
+      "player": {
+        "x": 16.586338810205273,
+        "y": 1.7,
+        "z": -60.19261545874087,
+        "vy": 0,
+        "hp": 100,
+        "shield": 150,
+        "energy": 95,
+        "charge": 0,
+        "reload": 0,
+        "energyDelay": 0.9500999999999915,
+        "cooldown": 0.0800999999999913,
+        "hurtTime": 0,
+        "kills": 37,
+        "grounded": true
+      },
+      "progress": {
+        "stage": 2,
+        "escaped": false,
+        "gatePowered": false,
+        "elapsed": 112.63499999999601,
+        "stages": [
+          {
+            "total": 6,
+            "spawned": 6,
+            "kills": 6,
+            "timer": 5.700000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 14,
+            "spawned": 14,
+            "kills": 14,
+            "timer": 5.650000000000001,
+            "started": true,
+            "cleared": true
+          },
+          {
+            "total": 22,
+            "spawned": 22,
+            "kills": 17,
+            "timer": 2.4998999999999887,
+            "started": true,
+            "cleared": false
+          },
+          {
+            "total": 26,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          },
+          {
+            "total": 28,
+            "spawned": 0,
+            "kills": 0,
+            "timer": 0,
+            "started": false,
+            "cleared": false
+          }
+        ]
+      },
+      "position": {
+        "x": 16.586338810205273,
+        "y": 1.7,
+        "z": -60.19261545874087
+      }
+    }
+  ],
+  "end": {
+    "performance": {
+      "cpuRenderP95": 12.799999952316284,
+      "gpuMedian": 4.781056,
+      "gpuP95": 7.988224,
+      "gpuSamples": 240,
+      "gpuSupported": true
+    },
+    "mode": "play",
+    "paused": false,
+    "touchMode": false,
+    "quality": "high",
+    "assetQuality": "high",
+    "presentation": "hdr-bloom",
+    "rendering": {
+      "mode": "hdr-bloom",
+      "ao": true,
+      "width": 1440,
+      "height": 1000,
+      "samples": 2,
+      "msaaSupported": 2,
+      "bloomWidth": 360,
+      "bloomHeight": 250
+    },
+    "fps": 60,
+    "drawCalls": 302,
+    "triangles": 143872,
+    "memory": {
+      "geometries": 314,
+      "textures": 25
+    },
+    "enemies": 5,
+    "debris": 12,
+    "shieldVfx": {
+      "hits": 6,
+      "active": 0,
+      "reflections": 0
+    },
+    "particles": 11,
+    "beams": 1,
+    "audio": {
+      "state": "running",
+      "muted": true,
+      "gain": 0,
+      "voices": 5
+    },
+    "player": {
+      "x": 16.586338810205273,
+      "y": 1.7,
+      "z": -60.163729157341535,
+      "vy": 0,
+      "hp": 100,
+      "shield": 150,
+      "energy": 95,
+      "charge": 0,
+      "reload": 0,
+      "energyDelay": 0.9333999999999945,
+      "cooldown": 0.06339999999999421,
+      "hurtTime": 0,
+      "kills": 37,
+      "grounded": true
+    },
+    "progress": {
+      "stage": 2,
+      "escaped": false,
+      "gatePowered": false,
+      "elapsed": 112.65169999999601,
+      "stages": [
+        {
+          "total": 6,
+          "spawned": 6,
+          "kills": 6,
+          "timer": 5.700000000000001,
+          "started": true,
+          "cleared": true
+        },
+        {
+          "total": 14,
+          "spawned": 14,
+          "kills": 14,
+          "timer": 5.650000000000001,
+          "started": true,
+          "cleared": true
+        },
+        {
+          "total": 22,
+          "spawned": 22,
+          "kills": 17,
+          "timer": 2.4831999999999916,
+          "started": true,
+          "cleared": false
+        },
+        {
+          "total": 26,
+          "spawned": 0,
+          "kills": 0,
+          "timer": 0,
+          "started": false,
+          "cleared": false
+        },
+        {
+          "total": 28,
+          "spawned": 0,
+          "kills": 0,
+          "timer": 0,
+          "started": false,
+          "cleared": false
+        }
+      ]
+    },
+    "position": {
+      "x": 16.586338810205273,
+      "y": 1.7,
+      "z": -60.163729157341535
+    }
+  },
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+  "conditions": "1440x1000 DPR1 PC high; 3.5s warmup; reactor setup accelerated; measured battle realtime; automatic aim/fire/strafe; periodic HP/shield/energy restore. Includes enemy AI, projectiles, shield hits, debris and bloom/AO/shadows.",
+  "hardware": {
+    "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1080 Ti (0x00001B06) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "cores": 16,
+    "memoryGB": 32,
+    "dpr": 1
+  }
+}

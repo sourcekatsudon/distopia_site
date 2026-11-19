@@ -1,268 +1,225 @@
-// ナビゲーションのモバイルトグル機能
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const mainNav = document.querySelector('.main-nav');
-    
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            mainNav.classList.toggle('active');
-        });
-    }
-    
-    // ナビゲーションリンクをクリックしたときのスムーズスクロール
-    const navLinks = document.querySelectorAll('header a, footer a');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            // アンカーリンクかどうかを確認
-            const href = this.getAttribute('href');
-            
-            if (href.startsWith('#') && href.length > 1) {
-                e.preventDefault();
-                
-                const targetId = href.substring(1);
-                const targetElement = document.getElementById(targetId);
-                
-                if (targetElement) {
-                    // モバイルメニューが開いていれば閉じる
-                    if (mainNav.classList.contains('active')) {
-                        mainNav.classList.remove('active');
-                    }
-                    
-                    // スムーズスクロール
-                    const headerHeight = document.querySelector('header').offsetHeight;
-                    const targetPosition = targetElement.offsetTop - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
-    
-    // スクロール時のヘッダー背景変更
-    const header = document.querySelector('header');
-    
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-        } else {
-            header.style.backgroundColor = '#fff';
-            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-        }
-    });
-    
-    // フォーム送信イベント
-    const reservationForm = document.querySelector('.reservation-form');
-    
-    if (reservationForm) {
-        reservationForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // フォームデータ取得
-            const formData = new FormData(this);
-            const formDataObj = {};
-            
-            for (let [key, value] of formData.entries()) {
-                formDataObj[key] = value;
-            }
-            
-            // ここでフォームデータを送信する処理を実装
-            // 実際にはバックエンドAPIなどにデータを送信
-            console.log('予約データ:', formDataObj);
-            
-            // 送信成功時の処理
-            alert('ご予約ありがとうございます。確認メールをお送りしました。');
-            this.reset();
-        });
-    }
-    
-    // 画像の遅延読み込み
-    const lazyImages = document.querySelectorAll('img');
-    
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const image = entry.target;
-                    image.src = image.dataset.src;
-                    imageObserver.unobserve(image);
-                }
-            });
-        });
-        
-        lazyImages.forEach(img => {
-            if (img.dataset.src) {
-                imageObserver.observe(img);
-            }
-        });
-    } else {
-        // Intersection Observerがサポートされていない場合のフォールバック
-        lazyImages.forEach(img => {
-            if (img.dataset.src) {
-                img.src = img.dataset.src;
-            }
-        });
-    }
-    
-    // ヒーローセクションのスライドショー機能
-    const heroSlideshow = {
-        // スライド用画像配列（後で簡単に変更できるようにここに定義）
-        slides: [
-            'images/hero-slides/slide-1.jpg',
-            'images/hero-slides/slide-2.jpg',
-            'images/hero-slides/slide-3.jpg',
-            'images/hero-slides/slide-4.jpg',
-            'images/hero-slides/slide-5.jpg'
-        ],
-        // スライドの切り替え間隔（ミリ秒）
-        interval: 5000,
-        // 現在のスライド番号
-        currentSlideIndex: 0,
-        // タイマーID
-        timer: null,        // スライドショーを初期化する関数
-        init: function() {
-            const slideshowContainer = document.querySelector('.hero-slideshow');
-            
-            // コンテナが存在しない場合は何もしない
-            if (!slideshowContainer) return;
-            
-            // 画像が存在するかどうかを確認し、ない場合はダミー画像を生成する機能を追加
-            const checkImageExists = (url) => {
-                return new Promise((resolve) => {
-                    const img = new Image();
-                    img.onload = () => resolve(true);
-                    img.onerror = () => resolve(false);
-                    img.src = url;
-                });
-            };
+'use strict';
+(function(){
+  const W=typeof window!=='undefined'?window:globalThis;
+  const menu=W.CHICKEN_MENU||[];
+  const PAGE=12;
+  const CATEGORIES=['all','recommended','grill','pasta','rice','side','japanese','dessert','takeout'];
+  const LABELS={all:'すべて',recommended:'おすすめ',grill:'グリル',pasta:'パスタ',rice:'ごはん',side:'サイド',japanese:'和食',dessert:'デザート',takeout:'お持ち帰り',main:'お食事'};
+  const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  const yen=n=>'¥'+(Number(n)||0).toLocaleString('ja-JP');
+  const norm=s=>String(s==null?'':s).normalize('NFKC').toLowerCase().trim();
+  const cat=c=>(CATEGORIES.indexOf(c)>-1||c==='main')?c:'all';
 
-            // スライド要素を作成し、コンテナに追加
-            const promises = this.slides.map(async (slide, index) => {
-                // 画像の存在確認
-                const imageExists = await checkImageExists(slide);
-                const slideElement = document.createElement('div');
-                slideElement.className = 'hero-slide';
-                
-                if (imageExists) {
-                    // 実際の画像を使用
-                    slideElement.style.backgroundImage = `url('${slide}')`;
-                } else {
-                    // ダミーの背景色を生成（スライドごとに色を変える）
-                    const colors = ['#f5762e', '#75a928', '#3498db', '#9b59b6', '#e74c3c'];
-                    const bgColor = colors[index % colors.length];
-                    slideElement.style.backgroundColor = bgColor;
-                    
-                    // ダミーのテキストを追加
-                    const textElement = document.createElement('div');
-                    textElement.style.position = 'absolute';
-                    textElement.style.top = '50%';
-                    textElement.style.left = '50%';
-                    textElement.style.transform = 'translate(-50%, -50%)';
-                    textElement.style.color = 'white';
-                    textElement.style.fontSize = '24px';
-                    textElement.style.fontWeight = 'bold';
-                    textElement.style.textAlign = 'center';
-                    textElement.innerHTML = `季節の特選メニュー<br>スライド ${index + 1}`;
-                    slideElement.appendChild(textElement);
-                }
-                
-                // 最初のスライドだけアクティブにする
-                if (index === 0) {
-                    slideElement.classList.add('active');
-                }
-                
-                slideshowContainer.appendChild(slideElement);
-                return slideElement;
-            });
-            
-            // すべてのスライドの初期化が完了したら、スライドショーを開始
-            Promise.all(promises).then(() => {
-                // スライド要素を取得
-                this.slideElements = document.querySelectorAll('.hero-slide');
-                
-                // スライドインジケーターを追加
-                this.createIndicators();
-                
-                // スライドが1枚以上あればスライドショーを開始
-                if (this.slideElements.length > 1) {
-                    this.startSlideshow();
-                }
-            });
-        },
-        
-        // スライドインジケーターを作成する関数
-        createIndicators: function() {
-            const hero = document.querySelector('.hero');
-            const indicatorsContainer = document.createElement('div');
-            indicatorsContainer.className = 'slide-indicators';
-            
-            for (let i = 0; i < this.slides.length; i++) {
-                const indicator = document.createElement('div');
-                indicator.className = 'slide-indicator';
-                
-                // 最初のインジケーターだけアクティブにする
-                if (i === 0) {
-                    indicator.classList.add('active');
-                }
-                
-                // クリックしたときに対応するスライドに移動
-                indicator.addEventListener('click', () => {
-                    // 自動スライドショーを一時停止
-                    clearInterval(this.timer);
-                    
-                    // 現在のスライドを非アクティブにする
-                    this.slideElements[this.currentSlideIndex].classList.remove('active');
-                    document.querySelectorAll('.slide-indicator')[this.currentSlideIndex].classList.remove('active');
-                    
-                    // クリックされたインジケーターに対応するスライドに移動
-                    this.currentSlideIndex = i;
-                    
-                    // 新しいスライドをアクティブにする
-                    this.slideElements[this.currentSlideIndex].classList.add('active');
-                    indicator.classList.add('active');
-                    
-                    // 自動スライドショーを再開
-                    this.startSlideshow();
-                });
-                
-                indicatorsContainer.appendChild(indicator);
-            }
-            
-            hero.appendChild(indicatorsContainer);
-        },
-        
-        // スライドショーを開始する関数
-        startSlideshow: function() {
-            this.timer = setInterval(() => {
-                this.nextSlide();
-            }, this.interval);
-        },
-          // 次のスライドに切り替える関数
-        nextSlide: function() {
-            // 現在のスライドとインジケーターを非アクティブにする
-            this.slideElements[this.currentSlideIndex].classList.remove('active');
-            
-            const indicators = document.querySelectorAll('.slide-indicator');
-            if (indicators.length > 0) {
-                indicators[this.currentSlideIndex].classList.remove('active');
-            }
-            
-            // インデックスを更新
-            this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slideElements.length;
-            
-            // 新しいスライドとインジケーターをアクティブにする
-            this.slideElements[this.currentSlideIndex].classList.add('active');
-            
-            if (indicators.length > 0) {
-                indicators[this.currentSlideIndex].classList.add('active');
-            }
-        }
+  function inCategory(item,c){
+    switch(c){
+      case 'recommended':return !!item.recommended;
+      case 'takeout':return !!item.takeout;
+      case 'grill':case 'pasta':case 'rice':return item.subcategory===c;
+      case 'side':case 'japanese':case 'dessert':return item.subcategory===c||item.category===c;
+      case 'main':return item.category==='main';
+      default:return true;
+    }
+  }
+  function matches(item,category,query){
+    if(!item||typeof item!=='object')return false;
+    if(!inCategory(item,cat(category)))return false;
+    const q=norm(query);
+    if(!q)return true;
+    const hay=norm([item.name,item.short,item.description].filter(v=>v!=null).join(' '));
+    return q.split(/\s+/).every(t=>hay.indexOf(t)>-1);
+  }
+  function select(list,category,query){
+    return (Array.isArray(list)?list:[]).filter(m=>matches(m,category,query));
+  }
+  W.CHICKEN_CATALOG={matches:matches,select:select};
+
+  function card(item,root){
+    root=root||'';
+    return '<article class="menu-card"><a href="'+root+'menu.html?id='+encodeURIComponent(item.id)+'" aria-label="'+esc(item.name)+'の詳細"><div class="menu-card-image"><img loading="lazy" src="'+root+esc(item.image)+'" alt="'+esc(item.imageAlt)+'">'+(item.badge?'<span class="menu-badge">'+esc(item.badge)+'</span>':'')+'</div><div class="menu-card-content"><h3>'+esc(item.name)+'</h3><p>'+esc(item.short)+'</p><div class="card-bottom"><span class="card-price">'+yen(item.price)+' <small>税込</small></span><span class="card-arrow" aria-hidden="true">→</span></div></div></a></article>';
+  }
+
+  function setupNavigation(){
+    const toggle=document.querySelector('.menu-toggle'),nav=document.getElementById('site-nav');
+    if(!toggle||!nav)return;
+    const close=()=>{nav.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','メニューを開く');};
+    toggle.addEventListener('click',()=>{const open=!nav.classList.contains('is-open');nav.classList.toggle('is-open',open);toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'メニューを閉じる':'メニューを開く');});
+    nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('is-open')){const restore=nav.contains(document.activeElement);close();if(restore)toggle.focus();}});
+  }
+
+  function renderFeature(sec,m){
+    const q=a=>sec.querySelector('['+a+']');
+    const img=sec.querySelector('[data-feature-image].is-active')||q('data-feature-image'),name=q('data-feature-name'),price=q('data-feature-price'),short=q('data-feature-short'),link=q('data-feature-link');
+    if(img){img.setAttribute('src',m.image);img.setAttribute('alt',m.imageAlt);img.hidden=false;}
+    if(name){name.textContent=m.name;name.hidden=false;}
+    if(price){price.innerHTML=yen(m.price)+' <small>税込</small>';price.hidden=false;}
+    if(short){short.textContent=m.short;short.hidden=false;}
+    if(link){link.setAttribute('href','menu.html?id='+encodeURIComponent(m.id));link.hidden=false;}
+    sec.classList.add('is-feature-ready');
+  }
+  function setupFeatures(){
+    document.querySelectorAll('[data-feature-id]').forEach(sec=>{
+      const m=menu.find(i=>i.id===sec.dataset.featureId);
+      if(m)renderFeature(sec,m);
+    });
+  }
+  function setupHeroCarousel(){
+    const hero=document.querySelector('[data-carousel-ids]');if(!hero)return;
+    const dishes=hero.dataset.carouselIds.split(',').map(id=>menu.find(m=>m.id===id.trim())).filter(Boolean);
+    const photos=[...hero.querySelectorAll('[data-feature-image]')],controls=hero.querySelector('.hero-controls');
+    if(dishes.length<2||photos.length<2||!controls)return;
+    const toggle=hero.querySelector('[data-carousel-toggle]'),position=hero.querySelector('.hero-position');
+    if(!toggle||!position||!hero.querySelector('[data-carousel-prev]')||!hero.querySelector('[data-carousel-next]'))return;
+    const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+    let index=Math.max(0,dishes.findIndex(m=>m.id===hero.dataset.featureId)),active=0,timer=0,revision=0,userPaused=motion.matches,hovered=false,resumeOverride=false;
+    let wanted=index;
+    position.textContent=(index+1)+' / '+dishes.length;
+    controls.hidden=false;
+    const preloads=dishes.map(m=>{const image=new Image();image.src=m.image;return image;});
+    const canPlay=()=>!userPaused&&!document.hidden&&(resumeOverride||(!hovered&&!hero.contains(document.activeElement)));
+    const refresh=()=>{
+      clearInterval(timer);
+      toggle.textContent=userPaused?'自動切替を再開':'自動切替を停止';toggle.setAttribute('aria-pressed',String(userPaused));
+      if(canPlay())timer=setInterval(()=>show(wanted+1,true),2000);
     };
-    
-    // スライドショーの初期化
-    heroSlideshow.init();
-});
+    async function show(next,automatic=false){
+      const target=(next+dishes.length)%dishes.length,token=++revision;wanted=target;
+      try{await preloads[target].decode();}catch{return;}
+      if(token!==revision)return;
+      if(automatic&&!canPlay()){wanted=index;return;}
+      const previous=photos[active];active=(active+1)%photos.length;
+      const current=photos[active];current.src=dishes[target].image;current.alt=dishes[target].imageAlt;
+      previous.classList.remove('is-active');previous.setAttribute('aria-hidden','true');
+      current.classList.add('is-active');current.removeAttribute('aria-hidden');
+      index=target;hero.dataset.featureId=dishes[index].id;renderFeature(hero,dishes[index]);position.textContent=(index+1)+' / '+dishes.length;
+    }
+    hero.querySelector('[data-carousel-prev]').addEventListener('click',()=>{userPaused=true;refresh();show(wanted-1);});
+    hero.querySelector('[data-carousel-next]').addEventListener('click',()=>{userPaused=true;refresh();show(wanted+1);});
+    toggle.addEventListener('click',()=>{userPaused=!userPaused;resumeOverride=!userPaused;refresh();});
+    hero.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse'){hovered=true;resumeOverride=false;refresh();}});
+    hero.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'){hovered=false;refresh();}});
+    hero.addEventListener('focusin',()=>{resumeOverride=false;refresh();});hero.addEventListener('focusout',()=>setTimeout(refresh,0));
+    document.addEventListener('visibilitychange',refresh);
+    motion.addEventListener('change',e=>{userPaused=e.matches;resumeOverride=false;refresh();});
+    refresh();
+  }
+
+  function readState(){
+    const p=new URLSearchParams(location.search);
+    return {category:cat(p.get('category')),q:p.get('q')||''};
+  }
+  function writeState(s){
+    try{
+      const p=new URLSearchParams(location.search);
+      if(s.category==='all')p.delete('category');else p.set('category',s.category);
+      const q=s.q.trim();
+      if(q)p.set('q',q);else p.delete('q');
+      const qs=p.toString();
+      history.replaceState(null,'',location.pathname+(qs?'?'+qs:'')+location.hash);
+    }catch(e){}
+  }
+
+  function setupCatalog(){
+    const grid=document.getElementById('menu-grid');
+    if(!grid)return;
+    const controls=document.getElementById('menu-controls'),form=document.getElementById('menu-search-form'),input=document.getElementById('menu-search'),status=document.getElementById('menu-count'),reset=document.getElementById('menu-reset'),more=document.getElementById('menu-more');
+    const buttons=[...document.querySelectorAll('button[data-category]')];
+    let state=readState(),visible=PAGE,list=[],timer=0;
+    if(controls)controls.hidden=false;
+    const syncControls=()=>{
+      buttons.forEach(b=>{const on=b.dataset.category===state.category;b.classList.toggle('is-active',on);b.setAttribute('aria-pressed',String(on));});
+      if(input&&input.value!==state.q)input.value=state.q;
+      if(reset)reset.hidden=!state.q.trim();
+    };
+    const updateStatus=()=>{
+      const total=list.length,shown=Math.min(visible,total),q=state.q.trim();
+      if(status)status.textContent=(LABELS[state.category]||'すべて')+(q?'「'+q+'」':'')+'：'+(total?total+'件中 '+shown+'件を表示しています。':'該当するメニューはありません。');
+      if(more){
+        more.hidden=shown>=total;
+        if(!more.hidden)more.textContent='さらに表示する（残り'+(total-shown)+'件）';
+      }
+    };
+    const render=()=>{
+      visible=PAGE;
+      list=select(menu,state.category,state.q);
+      grid.innerHTML=list.length?list.slice(0,visible).map(m=>card(m)).join(''):'<p class="menu-empty">条件に一致するメニューがありません。カテゴリやキーワードを変えてお試しください。</p>';
+      syncControls();
+      updateStatus();
+    };
+    const commit=()=>{render();writeState(state);};
+    const loadMore=()=>{
+      const prev=visible;
+      visible=Math.min(list.length,prev+PAGE);
+      grid.insertAdjacentHTML('beforeend',list.slice(prev,visible).map(m=>card(m)).join(''));
+      updateStatus();
+      const first=grid.children[prev],link=first&&first.querySelector('a');
+      if(link)link.focus();
+    };
+    const applyQuery=()=>{clearTimeout(timer);const q=input?input.value:'';if(q===state.q)return;state.q=q;commit();};
+    buttons.forEach(b=>b.addEventListener('click',()=>{clearTimeout(timer);state.q=input?input.value:state.q;state.category=cat(b.dataset.category);commit();}));
+    document.querySelectorAll('[data-filter-link]').forEach(a=>a.addEventListener('click',()=>{clearTimeout(timer);state={category:cat(a.dataset.filterLink),q:''};commit();}));
+    if(input){
+      input.addEventListener('input',e=>{if(e.isComposing)return;clearTimeout(timer);timer=setTimeout(applyQuery,180);});
+      input.addEventListener('compositionend',()=>{clearTimeout(timer);timer=setTimeout(applyQuery,180);});
+    }
+    if(form)form.addEventListener('submit',e=>{e.preventDefault();applyQuery();});
+    if(reset)reset.addEventListener('click',()=>{clearTimeout(timer);state.q='';if(input)input.value='';commit();if(input)input.focus();});
+    if(more)more.addEventListener('click',loadMore);
+    window.addEventListener('popstate',()=>{clearTimeout(timer);const next=readState();if(next.category===state.category&&next.q===state.q)return;state=next;render();});
+    render();
+    writeState(state);
+  }
+
+  function galleryOf(m){
+    const out=[{image:m.image,imageAlt:m.imageAlt||''}];
+    (Array.isArray(m.gallery)?m.gallery:[]).forEach(g=>{
+      if(g&&g.image&&!out.some(o=>o.image===g.image))out.push({image:g.image,imageAlt:g.imageAlt||m.imageAlt||''});
+    });
+    return out;
+  }
+  function relatedOf(m){
+    const others=menu.filter(i=>i.id!==m.id);
+    const sub=others.filter(i=>m.subcategory&&i.subcategory===m.subcategory);
+    const same=others.filter(i=>sub.indexOf(i)<0&&i.category===m.category);
+    return sub.concat(same).slice(0,3);
+  }
+
+  function setupDetail(){
+    const mount=document.getElementById('dish-detail');
+    if(!mount)return;
+    const id=new URLSearchParams(location.search).get('id'),m=menu.find(i=>i.id===id);
+    if(!m){
+      document.title='メニューが見つかりません｜チキンハウス';
+      const related=document.querySelector('.related-section');if(related)related.hidden=true;
+      const crumb=document.getElementById('detail-breadcrumb-name');if(crumb)crumb.textContent='商品が見つかりません';
+      mount.innerHTML='<div class="wrap" style="padding:80px 0"><h1>商品が見つかりません</h1><p>指定された商品は現在掲載されていません。</p><a class="back-link" href="index.html#menu">← メニュー一覧へ戻る</a></div>';
+      return;
+    }
+    document.title=m.name+'｜メニュー｜チキンハウス';
+    const back=document.getElementById('detail-breadcrumb-name');
+    if(back)back.textContent=m.name;
+    const images=galleryOf(m);
+    const thumbs=images.length>1?'<ul class="gallery-thumbs" aria-label="写真の切り替え">'+images.map((g,i)=>'<li><button type="button" class="gallery-thumb" data-index="'+i+'" aria-pressed="'+String(i===0)+'" aria-label="写真'+(i+1)+'を表示：'+esc(g.imageAlt)+'"><img src="'+esc(g.image)+'" alt="" loading="lazy"></button></li>').join('')+'</ul>':'';
+    const dessert=m.category==='dessert'||m.subcategory==='dessert';
+    mount.innerHTML='<div class="wrap detail-layout"><div class="detail-gallery"><div class="detail-image"><img id="detail-main-image" src="'+esc(m.image)+'" alt="'+esc(m.imageAlt)+'"></div>'+thumbs+'</div><div class="detail-copy"><p class="eyebrow">'+(dessert?'DESSERT':'FOOD MENU')+'</p>'+(m.badge?'<span class="menu-badge" style="position:static;display:inline-block;background:#f7e8e7">'+esc(m.badge)+'</span>':'')+'<h1 style="margin-top:16px">'+esc(m.name)+'</h1><p class="detail-description">'+esc(m.description)+'</p><div class="detail-meta"><div class="card-price">'+yen(m.price)+' <small>税込</small></div><span class="small-note">'+esc(m.note)+'</span></div><div class="detail-ingredients"><h2>メニュー構成</h2><p>'+esc(m.detail)+'</p></div><p class="small-note">※ 写真はイメージです。商品は架空の食品です。アレルゲン・栄養成分等の数値は設定されていません。</p><a class="back-link" href="index.html#menu">← メニュー一覧へ戻る</a></div></div>';
+    const strip=mount.querySelector('.gallery-thumbs'),main=document.getElementById('detail-main-image');
+    if(strip&&main)strip.addEventListener('click',e=>{
+      const b=e.target.closest('button[data-index]');
+      if(!b||!strip.contains(b))return;
+      const g=images[Number(b.dataset.index)];
+      if(!g)return;
+      main.setAttribute('src',g.image);
+      main.setAttribute('alt',g.imageAlt);
+      strip.querySelectorAll('button[data-index]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+    });
+    const relatedGrid=document.getElementById('related-grid');
+    if(relatedGrid){
+      const rel=relatedOf(m);
+      relatedGrid.innerHTML=rel.map(i=>card(i)).join('');
+      const sec=relatedGrid.closest('.related-section');
+      if(sec)sec.hidden=!rel.length;
+    }
+  }
+
+  if(typeof document!=='undefined')document.addEventListener('DOMContentLoaded',()=>{setupNavigation();setupFeatures();setupHeroCarousel();setupCatalog();setupDetail();});
+})();

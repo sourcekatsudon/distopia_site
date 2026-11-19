@@ -1,0 +1,23 @@
+{
+  "checks": [
+    "actual LV1 projectiles damage environmental cargo",
+    "eight normal pistol hits destroy cargo",
+    "stream unload and reload preserves HP ledger and disabled collider",
+    "actual hostile turret bolts destroy a repeatedly used cargo cover",
+    "hostile destruction records enemy source",
+    "the intact cover protects player health until the last shot",
+    "destroyed generator applies a real nearby-enemy blast",
+    "generator blast tracks player-caused destruction"
+  ],
+  "passed": 8,
+  "enemyCover": {
+    "seconds": 30.25,
+    "shots": 27,
+    "hp": 100,
+    "damage": 0
+  },
+  "blast": {
+    "before": 80,
+    "after": 0
+  }
+}

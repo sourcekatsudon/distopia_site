@@ -1,0 +1,10 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
+const root=path.resolve(__dirname,'..'),ctx={window:{}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'js/menu-data.js'),'utf8'),ctx);
+assert.ok(!ctx.window.CHICKEN_MENU.some(m=>m.id==='seasonal-hamburg'),'Withdrawn hamburg must be removed');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+assert.doesNotMatch(html,/seasonal-hamburg|季節の贅沢合成ハンバーグ|hero-slides\/slide-2/);
+const ids=html.match(/data-carousel-ids="([^"]+)"/);
+assert.ok(ids,'Hero slideshow needs verified menu IDs');
+for(const id of ids[1].split(','))assert.ok(ctx.window.CHICKEN_MENU.some(m=>m.id===id));
+console.log('Withdrawn dish and hero menu references verified');

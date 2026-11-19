@@ -1,678 +1,165 @@
-// 3D太陽系のアクセスマップ用スクリプト
-// Three.jsを利用したWebGL実装
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 
-let scene, camera, renderer;
-let planets = {};
-let orbitControls;
-let raycaster;
-let mouse;
-let hoveredPlanet = null;
-let branchInfo = {
-    "sun": {
-        name: "チキンハウス 太陽本店",
-        address: "東京都千代田区千代田1-1",
-        access: "東京駅から徒歩5分",
-        tel: "03-1234-5678",
-        hours: "ランチ 11:00-15:00 / ディナー 17:00-22:00"
-    },
-    "earth": {
-        name: "チキンハウス 地球支店",
-        address: "埼玉県新座市東北2-30-10",
-        access: "新座駅から徒歩10分",
-        tel: "048-1234-5678",
-        hours: "ランチ 11:00-15:00 / ディナー 17:00-22:00"
-    },
-    "mars": {
-        name: "チキンハウス 火星支店",
-        address: "大阪府大阪市北区梅田3-1-3",
-        access: "大阪駅から徒歩7分",
-        tel: "06-1234-5678",
-        hours: "ランチ 11:00-15:00 / ディナー 17:00-22:00"
-    },
-    "callisto": {
-        name: "チキンハウス カリスト支店",
-        address: "福岡県福岡市博多区博多駅前2-1-1",
-        access: "博多駅から徒歩3分",
-        tel: "092-1234-5678",
-        hours: "ランチ 11:00-15:00 / ディナー 17:00-22:00"
-    },
-    "neptune": {
-        name: "チキンハウス 海王星支店",
-        address: "北海道札幌市中央区北1条西2丁目",
-        access: "札幌駅から徒歩8分",
-        tel: "011-1234-5678",
-        hours: "ランチ 11:00-15:00 / ディナー 17:00-22:00"
-    }
+// All locations are fictional. Centralized data keeps map, buttons and detail panel in sync.
+const branches = {
+ sun:{name:"チキンハウス 太陽圏本部店",address:"太陽–地球系 L1・中央供給ステーション SUN-L1 / B区画 02階",access:"地球軌道港より定期シャトル SUN-L1 線",hours:"06:00–24:00",tel:"SUN-L1-CH-001"},
+ earth:{name:"チキンハウス 地球・第1居住区店",address:"地球・旧日本列島 関東居住ブロック E-JP-07 / 4層北街区",access:"地球環状輸送線 E7、中央交通ターミナルから徒歩6分",hours:"07:00–23:00",tel:"EAR-EJP-CH-007"},
+ mars:{name:"チキンハウス 火星・オリンポス店",address:"火星・オリンポス山麓 第3居住ドーム M-OLY-03 / 西区画",access:"火星赤道リニア M3、オリンポス山麓ドーム駅直結",hours:"06:00–22:00",tel:"MAR-OLY-CH-003"},
+ callisto:{name:"チキンハウス カリスト・ヴァルハラ店",address:"木星第4衛星カリスト・ヴァルハラ居住区 C-VLH-12 / 地下2層",access:"木星圏周回シャトル C12、ヴァルハラ港より連絡トラム",hours:"08:00–22:00",tel:"JOV-CAL-CH-012"},
+ saturn:{name:"チキンハウス 土星・タイタン港店",address:"土星第6衛星タイタン・クラーケン海航路港 T-KRK-04 / 第2気密棟",access:"土星圏連絡船、タイタン・クラーケン港着",hours:"07:00–21:00",tel:"SAT-TIT-CH-004"},
+ neptune:{name:"チキンハウス 海王星・トリトン店",address:"海王星第1衛星トリトン・南極熱源基地 N-TRI-06 / 供給棟",access:"外惑星輸送航路 N6、トリトン極域港より加圧車両",hours:"09:00–20:00",tel:"NEP-TRI-CH-006"}
 };
-
-function initSolarSystem() {
-    console.log('ソーラーシステム初期化開始...');
-    
-    // シーンの初期化
-    scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xf9f5f0);    // カメラの設定
-    const container = document.getElementById('solar-system');
-    const width = container.clientWidth;
-    const height = container.clientHeight;
-    camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-    camera.position.set(0, 50, 115); // 視点を少し遠ざけて全体を見やすく調整
-    camera.lookAt(0, 0, 0);
-
-    // レンダラーの設定
-    renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(width, height);
-    renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    container.appendChild(renderer.domElement);
-      // OrbitControls の追加
-    try {
-        const OrbitControls = THREE.OrbitControls || (window.OrbitControls);
-        if (OrbitControls) {
-            orbitControls = new OrbitControls(camera, renderer.domElement);
-            orbitControls.enableDamping = true;
-            orbitControls.dampingFactor = 0.05;
-            orbitControls.screenSpacePanning = false;
-            orbitControls.minDistance = 20;
-            orbitControls.maxDistance = 200;
-            orbitControls.maxPolarAngle = Math.PI / 2;
-            console.log('OrbitControls 初期化成功');
-        } else {
-            console.log('OrbitControls が利用できません');
-        }
-    } catch (e) {
-        console.error('OrbitControls 初期化エラー:', e);
-    }
-
-    // 光源の追加
-    // 環境光（全体を明るく）
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
-    scene.add(ambientLight);
-
-    // 太陽からの光（ポイントライト）
-    const sunLight = new THREE.PointLight(0xffffff, 2, 300);
-    sunLight.position.set(0, 0, 0);
-    sunLight.castShadow = true;
-    scene.add(sunLight);
-    
-    // 太陽の周りに明るさを演出するための光源
-    const sunGlow = new THREE.PointLight(0xffff99, 1, 20);
-    sunGlow.position.set(0, 0, 0);
-    scene.add(sunGlow);
-
-    // 全体を照らす方向光源（ディレクショナルライト）
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.3);
-    directionalLight.position.set(100, 100, 100);
-    directionalLight.castShadow = true;
-    scene.add(directionalLight);
-
-    // 惑星の作成
-    createPlanets();
-
-    // 軌道の作成
-    createOrbits();
-    
-    // 背景の星を追加
-    createStars();
-
-    // レイキャスターの初期化（マウスオーバー検出用）
-    raycaster = new THREE.Raycaster();
-    mouse = new THREE.Vector2();
-
-    // イベントリスナーの設定
-    container.addEventListener('mousemove', onMouseMove, false);
-    window.addEventListener('resize', onWindowResize, false);
-
-    // アニメーションの開始
-    animate();
+const selectButtons=[...document.querySelectorAll("[data-planet]")];
+function selectBranch(id){
+ const data=branches[id];if(!data)return;
+ for(const [suffix,key] of [["name","name"],["address","address"],["access","access"],["hours","hours"],["tel","tel"]]){
+   const el=document.getElementById("branch-"+suffix);if(el)el.textContent=data[key];
+ }
+ selectButtons.forEach(el=>el.setAttribute("aria-pressed",String(el.dataset.planet===id)));
 }
+selectButtons.forEach(el=>el.addEventListener("click",()=>selectBranch(el.dataset.planet)));
 
-// 背景に星を追加する関数
-function createStars() {
-    // 星の数
-    const starsCount = 1000;
-    
-    // 星のジオメトリとマテリアル
-    const starGeometry = new THREE.BufferGeometry();
-    const starMaterial = new THREE.PointsMaterial({
-        color: 0xffffff,
-        size: 0.5,
-        transparent: true,
-        opacity: 0.8
-    });
-    
-    // 星の位置をランダムに設定
-    const positions = new Float32Array(starsCount * 3);
-    
-    for (let i = 0; i < starsCount * 3; i += 3) {
-        // 球面上にランダムに配置
-        const radius = 250 + Math.random() * 50; // 背景の球の半径
-        const theta = Math.random() * Math.PI * 2; // 経度
-        const phi = Math.acos(2 * Math.random() - 1); // 緯度
-        
-        positions[i] = radius * Math.sin(phi) * Math.cos(theta);
-        positions[i + 1] = radius * Math.sin(phi) * Math.sin(theta);
-        positions[i + 2] = radius * Math.cos(phi);
-    }
-    
-    starGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-    
-    // 星のパーティクルシステムを作成
-    const stars = new THREE.Points(starGeometry, starMaterial);
-    scene.add(stars);
+const target=document.getElementById("solar-system");
+if(target){
+ try{initialize(target);}catch(error){console.error("Solar map could not be initialized:",error);displayFallback(target);}
 }
-
-function createPlanets() {    
-    // テクスチャローダーの作成
-    const textureLoader = new THREE.TextureLoader();
-      // SVGをテクスチャとして使用するためのヘルパー関数
-    const loadSVGTexture = (path) => {
-        return new Promise((resolve) => {
-            // SVG画像を読み込む
-            const img = new Image();
-            img.onload = function() {
-                // キャンバスを作成
-                const canvas = document.createElement('canvas');
-                canvas.width = 1024;
-                canvas.height = 1024;
-                const ctx = canvas.getContext('2d');
-                
-                // キャンバスを一度クリア
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                // SVG画像をキャンバスに描画
-                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                
-                // キャンバスからテクスチャを作成
-                const texture = new THREE.CanvasTexture(canvas);
-                // テクスチャマッピングの設定を追加
-                texture.wrapS = THREE.RepeatWrapping;
-                texture.wrapT = THREE.RepeatWrapping;
-                texture.repeat.set(1, 1);
-                texture.needsUpdate = true;
-                
-                console.log(`SVGテクスチャ読み込み成功: ${path}`);
-                resolve(texture);
-            };
-            
-            img.onerror = function(error) {
-                console.error(`SVGテクスチャ読み込みエラー: ${path}`, error);
-                // エラー時はダミーテクスチャを返す
-                const canvas = document.createElement('canvas');
-                canvas.width = 1024;
-                canvas.height = 1024;
-                const ctx = canvas.getContext('2d');
-                ctx.fillStyle = 'magenta'; // エラー時は目立つ色
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-                
-                // テキストでエラーを表示
-                ctx.fillStyle = 'white';
-                ctx.font = '24px Arial';
-                ctx.fillText(`Error loading: ${path}`, 100, 512);
-                
-                const fallbackTexture = new THREE.CanvasTexture(canvas);
-                resolve(fallbackTexture);
-            };
-            
-            // クロスオリジン問題を回避
-            img.crossOrigin = "Anonymous";
-            img.src = path;
-        });
-    };
-      // 通常のテクスチャローダー（フォールバック用）
-    const loadTexture = (path) => {
-        return new Promise((resolve) => {
-            textureLoader.load(
-                path,
-                (texture) => {
-                    console.log(`テクスチャ読み込み成功: ${path}`);
-                    // テクスチャマッピングの設定を追加
-                    texture.wrapS = THREE.RepeatWrapping;
-                    texture.wrapT = THREE.RepeatWrapping;
-                    texture.repeat.set(1, 1);
-                    texture.needsUpdate = true;
-                    resolve(texture);
-                },
-                (xhr) => {
-                    console.log(`${path}: ${(xhr.loaded / xhr.total * 100)}% 読み込み完了`);
-                },
-                (error) => {
-                    console.error(`テクスチャ読み込みエラー: ${path}`, error);
-                    // SVGの読み込みを試みる
-                    loadSVGTexture(path)
-                        .then(texture => resolve(texture))
-                        .catch(() => {
-                            // エラー時はダミーテクスチャを返す
-                            const canvas = document.createElement('canvas');
-                            canvas.width = 512; // 解像度を上げる
-                            canvas.height = 512;
-                            const context = canvas.getContext('2d');
-                            context.fillStyle = 'magenta'; // エラー時は目立つ色
-                            context.fillRect(0, 0, 512, 512);
-                            // エラーテキストを表示
-                            context.fillStyle = 'white';
-                            context.font = '24px Arial';
-                            context.fillText(`Error loading: ${path}`, 50, 256);
-                            const fallbackTexture = new THREE.CanvasTexture(canvas);
-                            resolve(fallbackTexture);
-                        });
-                }
-            );
-        });
-    };// 太陽
-    const sunGeometry = new THREE.SphereGeometry(7.5, 32, 32); // 5 * 1.5 = 7.5
-    const sunMaterial = new THREE.MeshBasicMaterial({
-        color: 0xffffff, // 白でテクスチャの色を維持
-        emissive: 0xffff00,
-        emissiveIntensity: 0.5
-    });
-    planets.sun = new THREE.Mesh(sunGeometry, sunMaterial);
-    planets.sun.name = "sun";
-    
-    // 非同期でテクスチャを読み込み
-    loadSVGTexture('images/sun_texture.svg')
-        .then(texture => {
-            sunMaterial.map = texture;
-            sunMaterial.needsUpdate = true;
-        });
-        
-    // 太陽の当たり判定用の透明な球体（大きめ）
-    const sunHitGeometry = new THREE.SphereGeometry(12, 16, 16); // 8 * 1.5 = 12
-    const invisibleMaterial = new THREE.MeshBasicMaterial({
-        transparent: true,
-        opacity: 0,
-        depthWrite: false
-    });
-    const sunHitArea = new THREE.Mesh(sunHitGeometry, invisibleMaterial);
-    sunHitArea.name = "sun";
-    planets.sun.add(sunHitArea);
-    
-    scene.add(planets.sun);    // 地球
-    const earthGeometry = new THREE.SphereGeometry(3, 32, 32); // 2 * 1.5 = 3
-    const earthMaterial = new THREE.MeshLambertMaterial({
-        color: 0xffffff, // 白でテクスチャの色を維持
-        side: THREE.FrontSide
-    });
-    planets.earth = new THREE.Mesh(earthGeometry, earthMaterial);
-    planets.earth.position.set(20, 0, 0);
-    planets.earth.name = "earth";
-    
-    // 非同期でテクスチャを読み込み
-    loadSVGTexture('images/earth_texture.svg')
-        .then(texture => {
-            earthMaterial.map = texture;
-            // テクスチャが適用された後にマテリアルを更新
-            earthMaterial.needsUpdate = true;
-        });
-    
-    // 地球の当たり判定用の透明な球体
-    const earthHitGeometry = new THREE.SphereGeometry(6, 16, 16); // 4 * 1.5 = 6
-    const earthHitArea = new THREE.Mesh(earthHitGeometry, invisibleMaterial);
-    earthHitArea.name = "earth";
-    planets.earth.add(earthHitArea);
-    
-    scene.add(planets.earth);    // 火星
-    const marsGeometry = new THREE.SphereGeometry(2.7, 32, 32); // 1.8 * 1.5 = 2.7
-    const marsMaterial = new THREE.MeshLambertMaterial({
-        color: 0xffffff, // 白でテクスチャの色を維持
-        side: THREE.FrontSide
-    });
-    planets.mars = new THREE.Mesh(marsGeometry, marsMaterial);
-    planets.mars.position.set(30, 0, 0);
-    planets.mars.name = "mars";
-    
-    // 非同期でテクスチャを読み込み
-    loadSVGTexture('images/mars_texture.svg')
-        .then(texture => {
-            marsMaterial.map = texture;
-            // テクスチャが適用された後にマテリアルを更新
-            marsMaterial.needsUpdate = true;
-        });
-    
-    // 火星の当たり判定用の透明な球体
-    const marsHitGeometry = new THREE.SphereGeometry(5.4, 16, 16); // 3.6 * 1.5 = 5.4
-    const marsHitArea = new THREE.Mesh(marsHitGeometry, invisibleMaterial);
-    marsHitArea.name = "mars";
-    planets.mars.add(marsHitArea);
-    
-    scene.add(planets.mars);    // カリスト（木星の衛星として表現）
-    const callistoGeometry = new THREE.SphereGeometry(2.25, 32, 32); // 1.5 * 1.5 = 2.25
-    const callistoMaterial = new THREE.MeshLambertMaterial({
-        color: 0xffffff, // 白でテクスチャの色を維持
-        side: THREE.FrontSide
-    });
-    planets.callisto = new THREE.Mesh(callistoGeometry, callistoMaterial);
-    planets.callisto.position.set(45, 0, 0);
-    planets.callisto.name = "callisto";
-    
-    // 非同期でテクスチャを読み込み
-    loadSVGTexture('images/callisto_texture.svg')
-        .then(texture => {
-            callistoMaterial.map = texture;
-            // テクスチャが適用された後にマテリアルを更新
-            callistoMaterial.needsUpdate = true;
-        });
-    
-    // カリストの当たり判定用の透明な球体
-    const callistoHitGeometry = new THREE.SphereGeometry(4.5, 16, 16); // 3 * 1.5 = 4.5
-    const callistoHitArea = new THREE.Mesh(callistoHitGeometry, invisibleMaterial);
-    callistoHitArea.name = "callisto";
-    planets.callisto.add(callistoHitArea);
-    
-    scene.add(planets.callisto);    // 海王星
-    const neptuneGeometry = new THREE.SphereGeometry(3.3, 32, 32); // 2.2 * 1.5 = 3.3
-    const neptuneMaterial = new THREE.MeshLambertMaterial({
-        color: 0xffffff, // 白でテクスチャの色を維持
-        side: THREE.FrontSide
-    });
-    planets.neptune = new THREE.Mesh(neptuneGeometry, neptuneMaterial);
-    planets.neptune.position.set(60, 0, 0);
-    planets.neptune.name = "neptune";
-    
-    // 非同期でテクスチャを読み込み
-    loadSVGTexture('images/neptune_texture.svg')
-        .then(texture => {
-            neptuneMaterial.map = texture;
-            // テクスチャが適用された後にマテリアルを更新
-            neptuneMaterial.needsUpdate = true;
-        });
-    
-    // 海王星の当たり判定用の透明な球体
-    const neptuneHitGeometry = new THREE.SphereGeometry(6.6, 16, 16); // 4.4 * 1.5 = 6.6
-    const neptuneHitArea = new THREE.Mesh(neptuneHitGeometry, invisibleMaterial);
-    neptuneHitArea.name = "neptune";
-    planets.neptune.add(neptuneHitArea);
-    
-    scene.add(planets.neptune);    // その他の小さな惑星（水星、金星）
-    const smallPlanetGeometry = new THREE.SphereGeometry(1.2, 32, 32); // 0.8 * 1.5 = 1.2
-    
-    // 水星
-    const mercuryMaterial = new THREE.MeshLambertMaterial({
-        color: 0xffffff, // 白でテクスチャの色を維持
-        side: THREE.FrontSide
-    });
-    const mercury = new THREE.Mesh(smallPlanetGeometry, mercuryMaterial);
-    mercury.position.set(10, 0, 0);
-    scene.add(mercury);
-    
-    // 非同期でテクスチャを読み込み
-    loadSVGTexture('images/mercury_texture.svg')
-        .then(texture => {
-            mercuryMaterial.map = texture;
-            mercuryMaterial.needsUpdate = true;
-        });
-
-    // 金星
-    const venusMaterial = new THREE.MeshLambertMaterial({
-        color: 0xffffff, // 白でテクスチャの色を維持
-        side: THREE.FrontSide
-    });
-    const venus = new THREE.Mesh(smallPlanetGeometry, venusMaterial);
-    venus.position.set(15, 0, 0);
-    scene.add(venus);
-    
-    // 非同期でテクスチャを読み込み
-    loadSVGTexture('images/venus_texture.svg')
-        .then(texture => {
-            venusMaterial.map = texture;
-            venusMaterial.needsUpdate = true;
-        });    // 木星
-    const jupiterGeometry = new THREE.SphereGeometry(1.8, 32, 32); // 1.2 * 1.5 = 1.8
-    const jupiterMaterial = new THREE.MeshLambertMaterial({
-        color: 0xffffff, // 白でテクスチャの色を維持
-        side: THREE.FrontSide
-    });
-    const jupiter = new THREE.Mesh(jupiterGeometry, jupiterMaterial);
-    jupiter.position.set(38, 0, 0);
-    scene.add(jupiter);
-    
-    // 非同期でテクスチャを読み込み
-    loadSVGTexture('images/jupiter_texture.svg')
-        .then(texture => {
-            jupiterMaterial.map = texture;
-            jupiterMaterial.needsUpdate = true;
-        });    // 土星
-    const saturnGeometry = new THREE.SphereGeometry(1.65, 32, 32); // 1.1 * 1.5 = 1.65
-    const saturnMaterial = new THREE.MeshLambertMaterial({
-        color: 0xffffff, // 白でテクスチャの色を維持
-        side: THREE.FrontSide
-    });
-    const saturn = new THREE.Mesh(saturnGeometry, saturnMaterial);
-    saturn.position.set(52, 0, 0);
-    scene.add(saturn);
-    
-    // 非同期でテクスチャを読み込み
-    loadSVGTexture('images/saturn_texture.svg')
-        .then(texture => {
-            saturnMaterial.map = texture;
-            saturnMaterial.needsUpdate = true;
-        });    // 天王星
-    const uranusGeometry = new THREE.SphereGeometry(1.5, 32, 32); // 1.0 * 1.5 = 1.5
-    const uranusMaterial = new THREE.MeshLambertMaterial({
-        color: 0xffffff, // 白でテクスチャの色を維持
-        side: THREE.FrontSide
-    });
-    const uranus = new THREE.Mesh(uranusGeometry, uranusMaterial);
-    uranus.position.set(55, 0, 0);
-    scene.add(uranus);
-    
-    // 非同期でテクスチャを読み込み
-    loadSVGTexture('images/uranus_texture.svg')
-        .then(texture => {
-            uranusMaterial.map = texture;
-            uranusMaterial.needsUpdate = true;
-        });
+function displayFallback(root){
+ const message=root.querySelector(".solar-fallback");if(message)message.textContent="3Dマップを表示できません。上の天体ボタンから店舗情報をご覧ください。";
 }
-
-function createOrbits() {
-    // 軌道の作成
-    const orbitRadii = [10, 15, 20, 30, 38, 45, 52, 55, 60];
-    const orbitColors = [
-        0xcccccc, // 水星
-        0xdda0dd, // 金星
-        0x6495ed, // 地球
-        0xff6347, // 火星
-        0xffa500, // 木星
-        0xf5deb3, // 土星
-        0x00bfff, // 天王星
-        0x4169e1, // 海王星
-        0x9370db  // その他
-    ];
-    
-    orbitRadii.forEach((radius, index) => {
-        // 中心に近いほど明るく、遠いほど暗くなるように
-        const opacityFactor = 0.5 - (index * 0.03);
-        const orbitGeometry = new THREE.RingGeometry(radius - 0.1, radius + 0.1, 64);
-        const orbitMaterial = new THREE.MeshBasicMaterial({
-            color: orbitColors[index],
-            side: THREE.DoubleSide,
-            transparent: true,
-            opacity: 0.3 + opacityFactor
-        });
-        const orbit = new THREE.Mesh(orbitGeometry, orbitMaterial);
-        orbit.rotation.x = Math.PI / 2;
-        scene.add(orbit);
-    });
-      // 太陽の周りに光の輪を追加
-    const sunGlowGeometry = new THREE.RingGeometry(8.25, 10.5, 64); // 5.5*1.5=8.25, 7*1.5=10.5
-    const sunGlowMaterial = new THREE.MeshBasicMaterial({
-        color: 0xffff00,
-        side: THREE.DoubleSide,
-        transparent: true,
-        opacity: 0.3
-    });
-    const sunGlow = new THREE.Mesh(sunGlowGeometry, sunGlowMaterial);
-    sunGlow.rotation.x = Math.PI / 2;
-    scene.add(sunGlow);
+function initialize(root){
+ const width=Math.max(root.clientWidth,300),height=Math.max(root.clientHeight,300);
+ const scene=new THREE.Scene();scene.background=new THREE.Color("#0b1222");
+ // Wider view keeps the outer planets visible on phones.
+ const camera=new THREE.PerspectiveCamera(50,width/height,.1,1000);
+ camera.position.set(0,115,165);
+ const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:"low-power"});
+ renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));renderer.setSize(width,height);
+ renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;
+ renderer.toneMappingExposure=1.28;
+ root.querySelector(".solar-fallback")?.remove();
+ root.insertBefore(renderer.domElement,root.firstChild);
+ const controls=new OrbitControls(camera,renderer.domElement);
+ controls.enableDamping=true;controls.dampingFactor=.06;controls.minDistance=45;controls.maxDistance=270;
+ controls.maxPolarAngle=Math.PI*.87;controls.target.set(0,0,0);
+ scene.add(new THREE.AmbientLight(0xb3c7e8,1.1));
+ const sunlight=new THREE.PointLight(0xfff1d4,1650,250,1.4);sunlight.position.set(0,0,0);scene.add(sunlight);
+ const geometry=new THREE.SphereGeometry(1,48,32);
+ const bodies=[];
+ const byId=new Map(), motions=[];
+ // Artistic radians per second: deliberately faster than true orbital periods.
+ const planetData=[
+  {id:"sun",size:5.1,orbit:0,angle:0,orbitSpeed:0,spinSpeed:.12,type:"sun",rotation:0},
+  {id:"mercury",size:.75,orbit:11,angle:2.55,orbitSpeed:.38,spinSpeed:.35,type:"rock",rotation:.1},
+  {id:"venus",size:1.3,orbit:17,angle:-2.1,orbitSpeed:.30,spinSpeed:.24,type:"venus",rotation:.1},
+  {id:"earth",size:1.8,orbit:24,angle:.9,orbitSpeed:.22,spinSpeed:1.20,type:"earth",rotation:.35},
+  {id:"mars",size:1.45,orbit:31,angle:-.55,orbitSpeed:.19,spinSpeed:.95,type:"mars",rotation:.15},
+  {id:"jupiter",size:4.15,orbit:42,angle:2.5,orbitSpeed:.14,spinSpeed:1.35,type:"jupiter",rotation:.2},
+  {id:"callisto",size:.9,orbit:7.8,angle:1.7,orbitSpeed:.85,spinSpeed:.48,parent:"jupiter",type:"rock",rotation:.12},
+  {id:"saturn",size:3.45,orbit:56,angle:-2.3,orbitSpeed:.11,spinSpeed:1.05,type:"saturn",rotation:0},
+  {id:"uranus",size:2.3,orbit:67,angle:.65,orbitSpeed:.09,spinSpeed:.65,type:"uranus",rotation:0},
+  {id:"neptune",size:2.25,orbit:78,angle:-.9,orbitSpeed:.075,spinSpeed:.78,type:"neptune",rotation:0}
+ ];
+ const source=new THREE.Vector3(0,0,0);
+ for(const p of planetData){
+  const texture=createTexture(p.type);
+  const mat=p.id==="sun"?new THREE.MeshBasicMaterial({map:texture,color:0xffffff}):new THREE.MeshStandardMaterial({map:texture,roughness:1,metalness:0});
+  const mesh=new THREE.Mesh(geometry,mat);
+  const origin=p.parent?byId.get(p.parent).position:source;
+  mesh.scale.setScalar(p.size);
+  mesh.position.set(origin.x+Math.cos(p.angle)*p.orbit,0,origin.z+Math.sin(p.angle)*p.orbit);
+  mesh.rotation.y=p.rotation;mesh.userData.planet=p.id;
+  scene.add(mesh);bodies.push(mesh);byId.set(p.id,mesh);
+  if(p.id==="saturn"||p.id==="uranus"){
+   const ring=new THREE.Mesh(new THREE.RingGeometry(p.size*1.35,p.size*(p.id==="saturn"?2.14:1.63),128),new THREE.MeshBasicMaterial({color:p.id==="saturn"?0xbba27b:0xb3d6d7,side:THREE.DoubleSide,transparent:true,opacity:.74,depthWrite:false}));
+   ring.rotation.x=-Math.PI/2.4;ring.rotation.y=.16;mesh.add(ring);ring.scale.setScalar(1/p.size);
+  }
+  let orbitLine=null;
+  if(p.orbit){
+   const pts=[];for(let i=0;i<=192;i++){const a=i/192*Math.PI*2;pts.push(new THREE.Vector3(Math.cos(a)*p.orbit,0,Math.sin(a)*p.orbit));}
+   orbitLine=new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:p.parent?0x8e9ec0:0x53617a,transparent:true,opacity:p.parent?.65:.4}));
+   if(p.parent)orbitLine.position.copy(origin);
+   scene.add(orbitLine);
+  }
+  motions.push({mesh,data:p,angle:p.angle,orbitLine});
+ }
+ const glow=new THREE.Sprite(new THREE.SpriteMaterial({map:makeGlow(),color:0xffa44b,transparent:true,opacity:.42,depthWrite:false,blending:THREE.AdditiveBlending}));
+ glow.scale.set(23,23,1);scene.add(glow);
+ const points=new Float32Array(1700*3);for(let i=0;i<1700;i++){const a=Math.random()*Math.PI*2,z=Math.random()*2-1,r=Math.sqrt(1-z*z),d=180+Math.random()*140;points[i*3]=r*Math.cos(a)*d;points[i*3+1]=z*d;points[i*3+2]=r*Math.sin(a)*d;}
+ const stars=new THREE.BufferGeometry();stars.setAttribute("position",new THREE.BufferAttribute(points,3));
+ scene.add(new THREE.Points(stars,new THREE.PointsMaterial({color:0xcbdcfb,size:.7,sizeAttenuation:false,transparent:true,opacity:.9})));
+ const raycaster=new THREE.Raycaster();const mouse=new THREE.Vector2();
+ function pick(ev){const rect=renderer.domElement.getBoundingClientRect();mouse.set(((ev.clientX-rect.left)/rect.width)*2-1,-((ev.clientY-rect.top)/rect.height)*2+1);raycaster.setFromCamera(mouse,camera);const hits=raycaster.intersectObjects(bodies);return hits.length?hits[0].object.userData.planet:null;}
+ renderer.domElement.addEventListener("click",ev=>{const id=pick(ev);if(branches[id])selectBranch(id);});
+ renderer.domElement.addEventListener("pointermove",ev=>{const id=pick(ev);renderer.domElement.style.cursor=branches[id]?"pointer":"grab";});
+ const obs=new ResizeObserver(entries=>{const rect=entries[0].contentRect;if(rect.width<1||rect.height<1)return;camera.aspect=rect.width/rect.height;camera.updateProjectionMatrix();renderer.setSize(rect.width,rect.height);});obs.observe(root);
+ let visible=true;
+ const viewObserver=new IntersectionObserver(entries=>{visible=entries[0]?.isIntersecting??true;});viewObserver.observe(root);
+ const button=document.getElementById("motion-toggle");
+ // Honor the operating system preference but offer an explicit override.
+ let playing=!window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+ function updateButton(){
+  if(!button)return;
+  button.textContent=playing?"⏸ 動きを止める":"▶ 動きを再開";
+  button.setAttribute("aria-pressed",String(!playing));
+ }
+ button?.addEventListener("click",()=>{playing=!playing;updateButton();});
+ updateButton();
+ let last=0;
+ function render(now){
+  requestAnimationFrame(render);
+  if(!visible||document.hidden){last=now;return;}
+  const dt=last?Math.min((now-last)/1000,.05):0;
+  last=now;
+  if(playing){
+   // Jupiter is updated before Callisto, keeping its orbit around its parent.
+   for(const body of motions){
+    const {mesh,data}=body;
+    body.angle+=dt*data.orbitSpeed;
+    const origin=data.parent?byId.get(data.parent).position:source;
+    mesh.position.set(origin.x+Math.cos(body.angle)*data.orbit,0,origin.z+Math.sin(body.angle)*data.orbit);
+    mesh.rotation.y+=dt*data.spinSpeed;
+    if(data.parent&&body.orbitLine)body.orbitLine.position.copy(origin);
+   }
+  }
+  controls.update();
+  renderer.render(scene,camera);
+ }
+ requestAnimationFrame(render);
 }
-
-function onMouseMove(event) {
-    // マウス位置の正規化
-    const container = document.getElementById('solar-system');
-    const rect = container.getBoundingClientRect();
-    mouse.x = ((event.clientX - rect.left) / container.clientWidth) * 2 - 1;
-    mouse.y = -((event.clientY - rect.top) / container.clientHeight) * 2 + 1;
-
-    // レイキャスト
-    raycaster.setFromCamera(mouse, camera);
-    
-    // シーン内のすべてのオブジェクトに対してレイキャスト
-    const intersects = raycaster.intersectObjects(scene.children, true);
-    
-    // ポップアップの表示制御
-    const popup = document.getElementById('planet-popup');
-    
-    if (intersects.length > 0) {
-        // 交差したオブジェクトを検索
-        let planetName = null;
-        
-        for (let i = 0; i < intersects.length; i++) {
-            const object = intersects[i].object;
-            
-            // オブジェクト自体の名前をチェック
-            if (object.name in branchInfo) {
-                planetName = object.name;
-                break;
-            }
-            
-            // 親オブジェクトの名前をチェック (当たり判定用の透明オブジェクトの場合)
-            if (object.parent && object.parent.name in branchInfo) {
-                planetName = object.parent.name;
-                break;
-            }
-        }
-        
-        if (planetName && planetName !== hoveredPlanet) {
-            hoveredPlanet = planetName;
-            
-            // ポップアップの内容を更新
-            const info = branchInfo[hoveredPlanet];
-            document.getElementById('branch-name').textContent = info.name;
-            document.getElementById('branch-address').textContent = info.address;
-            document.getElementById('branch-access').textContent = info.access;
-            document.getElementById('branch-tel').textContent = info.tel;
-            document.getElementById('branch-hours').textContent = info.hours;
-            
-            // ポップアップの位置調整とアニメーション
-            popup.style.display = 'block';
-            popup.style.opacity = '0';
-            setTimeout(() => {
-                popup.style.opacity = '1';
-            }, 10);
-            
-            // 惑星オブジェクトを取得
-            const planet = planets[hoveredPlanet];
-              // カメラを惑星に向ける（緩やかに）
-            new TWEEN.Tween(camera.position)
-                .to({
-                    x: planet.position.x * 0.8,
-                    y: 25, // 20 * 1.25
-                    z: 75  // 60 * 1.25
-                }, 1000)
-                .easing(TWEEN.Easing.Quadratic.Out)
-                .start();
-                
-            // 惑星を一時的に大きくする
-            new TWEEN.Tween(planet.scale)
-                .to({ x: 1.3, y: 1.3, z: 1.3 }, 300)
-                .easing(TWEEN.Easing.Quadratic.Out)
-                .start();
-        }
-    } else {
-        if (hoveredPlanet !== null) {
-            // ホバーが外れたら元の大きさに戻す
-            const planet = planets[hoveredPlanet];
-            if (planet) {
-                new TWEEN.Tween(planet.scale)
-                    .to({ x: 1, y: 1, z: 1 }, 300)
-                    .easing(TWEEN.Easing.Quadratic.Out)
-                    .start();
-            }
-              // カメラを元の位置に戻す
-            new TWEEN.Tween(camera.position)
-                .to({ x: 0, y: 50, z: 115 }, 1000) // 調整したカメラの初期位置に合わせる
-                .easing(TWEEN.Easing.Quadratic.Out)
-                .start();
-                
-            // ポップアップを非表示
-            popup.style.opacity = '0';
-            setTimeout(() => {
-                popup.style.display = 'none';
-            }, 300);
-            
-            hoveredPlanet = null;
-        }
-    }
+function makeGlow(){const c=document.createElement("canvas");c.width=c.height=128;const x=c.getContext("2d"),g=x.createRadialGradient(64,64,4,64,64,64);g.addColorStop(0,"rgba(255,210,110,.95)");g.addColorStop(.3,"rgba(255,150,55,.44)");g.addColorStop(1,"rgba(255,120,20,0)");x.fillStyle=g;x.fillRect(0,0,128,128);return new THREE.CanvasTexture(c);}
+function createTexture(type){
+ const canvas=document.createElement("canvas");const w=768,h=384;canvas.width=w;canvas.height=h;const ctx=canvas.getContext("2d");
+ const palettes={
+ sun:["#f08b18","#ffcc4f","#d74c0a","#ffd771"],
+ rock:["#6c675e","#a29b8d","#55524c","#858077"],
+ venus:["#ddc39b","#b3916b","#e6d0a9","#ad946f"],
+ earth:["#143f7c","#175b9b","#205b88","#2574aa"],
+ mars:["#b75e36","#d17a46","#8b422e","#dca06d"],
+ jupiter:["#d3ba96","#987558","#e8d2b0","#b18b6c"],
+ saturn:["#d5bb8e","#c7ad82","#f0d8ad","#aa9675"],
+ uranus:["#a8d8da","#84bfc8","#c1e9e8","#79b5bc"],
+ neptune:["#2456a1","#3068b4","#183a82","#447ccc"]
+ };
+ const colors=palettes[type]||palettes.rock;
+ ctx.fillStyle=colors[0];ctx.fillRect(0,0,w,h);
+ let seed=type.split("").reduce((a,c)=>a*31+c.charCodeAt(0),17)>>>0;
+ function rand(){seed=(1664525*seed+1013904223)>>>0;return seed/4294967296;}
+ if(["jupiter","saturn","uranus","neptune","venus","sun"].includes(type)){
+  for(let y=0;y<h;){const band=3+rand()*29;ctx.fillStyle=colors[Math.floor(rand()*colors.length)];ctx.globalAlpha=type==="sun"?.5:.22+rand()*.28;ctx.fillRect(0,y,w,band);y+=band;}
+  ctx.globalAlpha=1;
+  for(let i=0;i<(type==="sun"?130:75);i++){const x=rand()*w,y=rand()*h;ctx.fillStyle=colors[Math.floor(rand()*colors.length)];ctx.globalAlpha=.15+rand()*.35;ctx.beginPath();ctx.ellipse(x,y,5+rand()*46,1+rand()*8,0,0,Math.PI*2);ctx.fill();}
+  if(type==="jupiter"){ctx.globalAlpha=.75;ctx.fillStyle="#a55235";ctx.beginPath();ctx.ellipse(w*.64,h*.69,55,20,-.1,0,Math.PI*2);ctx.fill();}
+  if(type==="neptune"){ctx.globalAlpha=.38;ctx.fillStyle="#95b9f1";ctx.fillRect(0,h*.38,w,8);}
+ }else if(type==="earth"){
+  // Ocean base with irregular continental landmasses and cloudy ice caps.
+  for(let i=0;i<28;i++){const cx=rand()*w,cy=70+rand()*240,rx=20+rand()*65,ry=10+rand()*45;ctx.fillStyle=["#52754b","#668452","#887a4b","#426947"][Math.floor(rand()*4)];ctx.beginPath();ctx.ellipse(cx,cy,rx,ry,rand()*.7,0,Math.PI*2);ctx.fill();}
+  for(let i=0;i<140;i++){ctx.strokeStyle="rgba(239,246,247,.2)";ctx.lineWidth=1+rand()*5;ctx.beginPath();let x=rand()*w,y=rand()*h;ctx.ellipse(x,y,10+rand()*42,2+rand()*9,rand(),0,Math.PI*2);ctx.stroke();}
+  ctx.fillStyle="#ddeaf2";ctx.fillRect(0,0,w,21);ctx.fillRect(0,h-24,w,24);
+ }else{
+  for(let i=0;i<500;i++){const x=rand()*w,y=rand()*h,r=1+rand()*20;ctx.fillStyle=colors[Math.floor(rand()*colors.length)];ctx.globalAlpha=.12+rand()*.22;ctx.beginPath();ctx.arc(x,y,r,0,2*Math.PI);ctx.fill();}
+  for(let i=0;i<48;i++){const x=rand()*w,y=rand()*h,r=3+rand()*14;ctx.strokeStyle=type==="mars"?"rgba(75,29,21,.3)":"rgba(38,36,35,.28)";ctx.lineWidth=1+rand()*2;ctx.beginPath();ctx.ellipse(x,y,r,r*.65,0,0,Math.PI*2);ctx.stroke();}
+ }
+ ctx.globalAlpha=1;
+ const tex=new THREE.CanvasTexture(canvas);tex.colorSpace=THREE.SRGBColorSpace;tex.wrapS=THREE.RepeatWrapping;tex.anisotropy=4;return tex;
 }
-
-function onWindowResize() {
-    const container = document.getElementById('solar-system');
-    const width = container.clientWidth;
-    const height = container.clientHeight;
-    
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-    renderer.setSize(width, height);
-}
-
-function animate() {
-    requestAnimationFrame(animate);
-    
-    // 惑星の回転
-    planets.sun.rotation.y += 0.002;
-    planets.earth.rotation.y += 0.01;
-    planets.mars.rotation.y += 0.008;
-    planets.callisto.rotation.y += 0.006;
-    planets.neptune.rotation.y += 0.004;
-    
-    // 軌道上の動き（非常にゆっくりと）
-    const time = Date.now() * 0.0001;
-    
-    // 地球の公転
-    planets.earth.position.x = Math.cos(time * 0.5) * 20;
-    planets.earth.position.z = Math.sin(time * 0.5) * 20;
-    
-    // 火星の公転
-    planets.mars.position.x = Math.cos(time * 0.4 + Math.PI * 0.5) * 30;
-    planets.mars.position.z = Math.sin(time * 0.4 + Math.PI * 0.5) * 30;
-    
-    // カリストの公転
-    planets.callisto.position.x = Math.cos(time * 0.3 + Math.PI) * 45;
-    planets.callisto.position.z = Math.sin(time * 0.3 + Math.PI) * 45;
-    
-    // 海王星の公転
-    planets.neptune.position.x = Math.cos(time * 0.2 + Math.PI * 1.5) * 60;
-    planets.neptune.position.z = Math.sin(time * 0.2 + Math.PI * 1.5) * 60;
-    
-    // 惑星が傾きながら公転するように
-    planets.earth.rotation.x = Math.sin(time * 0.2) * 0.1;
-    planets.mars.rotation.x = Math.sin(time * 0.15) * 0.15;
-    planets.callisto.rotation.x = Math.sin(time * 0.1) * 0.2;
-    planets.neptune.rotation.x = Math.sin(time * 0.05) * 0.1;
-    
-    // OrbitControlsの更新（存在する場合）
-    if (orbitControls) {
-        orbitControls.update();
-    }
-    
-    // Tweenのアップデート
-    TWEEN.update();
-    
-    renderer.render(scene, camera);
-}
-
-// ページ読み込み完了時に初期化
-window.addEventListener('DOMContentLoaded', () => {
-    // Three.jsとTweenがロードされているか確認
-    if (typeof THREE === 'undefined') {
-        console.error('THREE.js is not loaded');
-        return;
-    }
-    
-    if (typeof TWEEN === 'undefined') {
-        console.error('TWEEN.js is not loaded');
-        return;
-    }
-    
-    // ソーラーシステムの初期化
-    initSolarSystem();
-});

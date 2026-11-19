@@ -1,0 +1,131 @@
+{
+  "passed": 20,
+  "checks": [
+    "opening deploys a dense forward force within six seconds",
+    "every authored spawn is ahead and outside passed sectors",
+    "opening combat activates a bounded sector alarm",
+    "sector announcement is visible",
+    "entering B records a monotonic sector frontier",
+    "backtracking does not release new enemies in a passed sector",
+    "checkpoint retry does not repopulate passed sectors",
+    "real shot kills the test drone",
+    "LV5 enemy death still creates a guaranteed drop",
+    "actual pickup after LV5 increments the collected count",
+    "actual pickup triggers the half-second body pulse",
+    "pickup adds a brief peripheral blue glow",
+    "pickup pulse expires without permanent screen glare",
+    "enemy drop reaches the four-core laser unlock",
+    "actual weapon evolution amplifies the pickup pulse",
+    "fixed turret never walks or chases",
+    "B-sector warning follows forward progression",
+    "exit restores the restaurant",
+    "exit removes new visual overlays and renderer",
+    "no runtime or WebGL shader errors"
+  ],
+  "errors": [],
+  "opening": {
+    "enemies": 8,
+    "spawns": [
+      {
+        "id": "enc-0-0",
+        "sector": 0,
+        "x": 3.4101987864172703,
+        "z": -13.5,
+        "playerZ": -6.000000000000004,
+        "frontier": 0
+      },
+      {
+        "id": "enc-0-1",
+        "sector": 0,
+        "x": 2.0101987864172703,
+        "z": -13.5,
+        "playerZ": -6.000000000000004,
+        "frontier": 0
+      },
+      {
+        "id": "enc-0-2",
+        "sector": 0,
+        "x": 3.4101987864172703,
+        "z": -13.5,
+        "playerZ": -6.000000000000004,
+        "frontier": 0
+      },
+      {
+        "id": "enc-0-3",
+        "sector": 0,
+        "x": -0.7229113560602056,
+        "z": -27,
+        "playerZ": -6.000000000000004,
+        "frontier": 0
+      },
+      {
+        "id": "enc-0-4",
+        "sector": 0,
+        "x": 2.0101987864172703,
+        "z": -13.5,
+        "playerZ": -6.000000000000004,
+        "frontier": 0
+      },
+      {
+        "id": "enc-0-5",
+        "sector": 0,
+        "x": 3.4101987864172703,
+        "z": -13.5,
+        "playerZ": -6.000000000000004,
+        "frontier": 0
+      },
+      {
+        "id": "enc-0-6",
+        "sector": 0,
+        "x": 2.0101987864172703,
+        "z": -13.5,
+        "playerZ": -6.000000000000004,
+        "frontier": 0
+      },
+      {
+        "id": "enc-0-7",
+        "sector": 0,
+        "x": 3.4101987864172703,
+        "z": -13.5,
+        "playerZ": -6.000000000000004,
+        "frontier": 0
+      }
+    ]
+  },
+  "rear": {
+    "entered": 11,
+    "back": 11,
+    "afterRetry": 11,
+    "frontier": 1
+  },
+  "pickup": {
+    "modules": 41,
+    "feedback": {
+      "active": true,
+      "age": 0.1,
+      "duration": 0.5,
+      "triggered": 1,
+      "upgrades": 0,
+      "upgrade": false,
+      "reducedMotion": false,
+      "hexCount": 18,
+      "particleCount": 40,
+      "drawCalls": 5
+    }
+  },
+  "upgrade": {
+    "level": 2,
+    "feedback": {
+      "active": true,
+      "age": 0.05,
+      "duration": 0.5,
+      "triggered": 1,
+      "upgrades": 1,
+      "upgrade": true,
+      "reducedMotion": false,
+      "hexCount": 18,
+      "particleCount": 40,
+      "drawCalls": 5
+    }
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "nodeSuites": 22,
+  "desktop": {
+    "passed": 11,
+    "checks": [
+      "default auto introduction is enabled with a twenty-second threshold",
+      "restaurant is ordinary before the deadline",
+      "normal browsing does not import the game early",
+      "short page visits accumulate without a per-page reset",
+      "real visible browsing starts the warning at twenty seconds",
+      "automatic entry keeps the full hacking introduction",
+      "automatic hacking still leads to the ruler",
+      "the ready screen says バレた。逃げろ。",
+      "return and navigation do not trigger another automatic run in the same tab",
+      "loading replaces NEURAL LINK CONNECTING with the escape warning",
+      "no uncaught browser errors"
+    ],
+    "errors": [],
+    "first": {
+      "active": false,
+      "enabled": true,
+      "elapsed": 0,
+      "threshold": 20,
+      "fired": false
+    },
+    "browsing": {
+      "active": false,
+      "enabled": true,
+      "elapsed": 2.974600000023842,
+      "threshold": 20,
+      "fired": false
+    },
+    "fired": {
+      "active": true,
+      "enabled": true,
+      "elapsed": 20.977500000000003,
+      "threshold": 20,
+      "fired": true
+    }
+  },
+  "mobile": {
+    "passed": 12,
+    "checks": [
+      "default auto introduction is enabled with a twenty-second threshold",
+      "restaurant is ordinary before the deadline",
+      "normal browsing does not import the game early",
+      "short page visits accumulate without a per-page reset",
+      "real visible browsing starts the warning at twenty seconds",
+      "automatic entry keeps the full hacking introduction",
+      "automatic hacking still leads to the ruler",
+      "mobile controls stay hidden during the cinematic and cannot block skip",
+      "the ready screen says バレた。逃げろ。",
+      "return and navigation do not trigger another automatic run in the same tab",
+      "loading replaces NEURAL LINK CONNECTING with the escape warning",
+      "no uncaught browser errors"
+    ],
+    "errors": [],
+    "first": {
+      "active": false,
+      "enabled": true,
+      "elapsed": 0,
+      "threshold": 20,
+      "fired": false
+    },
+    "browsing": {
+      "active": false,
+      "enabled": true,
+      "elapsed": 2.841600000023842,
+      "threshold": 20,
+      "fired": false
+    },
+    "fired": {
+      "active": true,
+      "enabled": true,
+      "elapsed": 20.79639999997616,
+      "threshold": 20,
+      "fired": true
+    }
+  },
+  "mobileControls": {
+    "passed": 58,
+    "checks": [
+      "ordinary mobile restaurant is visible",
+      "ordinary mobile page does not import FPS or Three.js",
+      "ordinary mobile page has no game overlays or canvas",
+      "mobile defaults to low quality and direct rendering",
+      "fresh mobile campaign starts at LV1 with twelve rounds",
+      "fresh mobile campaign has HP100 and shield75",
+      "LV1 shows BREAK instead of unavailable charge",
+      "mobile starts without pointer lock",
+      "both movement and aiming sticks are visible",
+      "mobile omits obsolete manual-fire and jump controls",
+      "portrait touch targets fit the viewport",
+      "real two-finger touch moves forward and turns the view together",
+      "releasing both touch owners stops movement",
+      "CDP touch cancellation clears both stick axes and knobs",
+      "LV1 crosshair on a real soldier automatically shoots",
+      "automatic shots resolve actual enemy damage",
+      "moving aim away stops automatic fire",
+      "authored wall prevents automatic fire at an occluded enemy",
+      "occluded enemy does not leave a target-lock highlight",
+      "LV1 BREAK never accumulates railgun charge",
+      "LV1 BREAK damages real environmental cover",
+      "held LV1 BREAK starts automatic reload at an empty magazine",
+      "automatic exchange does not refill ammunition early",
+      "automatic LV1 exchange restores twelve rounds after locking",
+      "released BREAK does not continue ordinary firing",
+      "explicit R reload remains available on mobile",
+      "R reload finishes with the LV1 magazine capacity",
+      "touch reload button enters the same exchange state",
+      "LV2 retains the environmental BREAK control",
+      "LV2 BREAK fires its laser at cargo without charge",
+      "LV3 auto fire reserves one ordinary-shot cost during windup",
+      "lost auto target cancels windup and refunds reserved energy",
+      "automatic test reacquires a fresh pending shot",
+      "touch charge preempts a pending automatic shot without phantom damage",
+      "automatic test reacquires a fresh pending shot",
+      "touch reload cancels the pending automatic shot before exchange",
+      "LV3 enables the dedicated charge control",
+      "LV3 touch hold builds charge",
+      "charge cancellation does not fire or consume ammunition",
+      "a second finger cannot release the charge owner",
+      "releasing the owning finger fires the actual charged shot",
+      "mobile does not jump",
+      "mobile does not sprint",
+      "rotation cancels held charge and axes without firing",
+      "landscape touch targets fit the viewport",
+      "mobile pause button pauses play",
+      "pause freezes position and ammunition",
+      "resuming leaves charge input released",
+      "mobile boarding uses thirty-second pursuit",
+      "both real mobile sticks steer the spacecraft",
+      "mobile flight automatically fires cannons without a fire button",
+      "flight hides ground-only charge and reload buttons",
+      "mobile flight pause freezes the pursuit",
+      "mobile resume preserves flight instead of returning to ground play",
+      "leaving flight removes both mobile controls and renderer",
+      "leaving restores normal website input and scrolling",
+      "no uncaught mobile JavaScript errors",
+      "no local application HTTP failures"
+    ],
+    "errors": [],
+    "failures": [],
+    "flight": {
+      "before": {
+        "phase": "flight",
+        "elapsed": 0,
+        "distance": 0,
+        "hp": 100,
+        "shield": 75,
+        "kills": 0,
+        "shots": 0,
+        "hits": 0,
+        "enemies": 0,
+        "spawned": 0,
+        "level": 3,
+        "x": 0,
+        "y": 0,
+        "bank": 0,
+        "speed": 44,
+        "duration": 30,
+        "warpSeconds": 4,
+        "totalDuration": 34,
+        "aim": {
+          "x": 0,
+          "y": 0,
+          "cursor": false,
+          "target": {
+            "x": 0,
+            "y": 0,
+            "z": -60
+          }
+        },
+        "resourceCounts": {
+          "geometries": 24,
+          "materials": 15,
+          "instanced": 9,
+          "enemyCapacity": 8,
+          "starSegments": 250
+        },
+        "hitFlash": 0
+      },
+      "after": {
+        "phase": "flight",
+        "elapsed": 0.49999999999999994,
+        "distance": 23.135643465595436,
+        "hp": 100,
+        "shield": 75,
+        "kills": 0,
+        "shots": 3,
+        "hits": 0,
+        "enemies": 0,
+        "spawned": 0,
+        "level": 3,
+        "x": 4.166624488225476,
+        "y": 2.8105098326760185,
+        "bank": -0.3733609374832195,
+        "speed": 48.455900889415325,
+        "duration": 30,
+        "warpSeconds": 4,
+        "totalDuration": 34,
+        "aim": {
+          "x": 0,
+          "y": 0,
+          "cursor": false,
+          "target": {
+            "x": 4.166624488225476,
+            "y": 2.8105098326760185,
+            "z": -60
+          }
+        },
+        "resourceCounts": {
+          "geometries": 24,
+          "materials": 15,
+          "instanced": 9,
+          "enemyCapacity": 8,
+          "starSegments": 250
+        },
+        "hitFlash": 0
+      }
+    },
+    "limitations": [
+      "Chromium coarse-pointer/CDP emulation; physical-phone FPS and memory are unmeasured.",
+      "Debug labs prepare combat and flight; this is not an unassisted full campaign or difficulty test.",
+      "Fixed-step combat advances real gameplay and AI; no health or damage results are forged."
+    ]
+  }
+}

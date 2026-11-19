@@ -1,0 +1,708 @@
+{
+  "quality": "high",
+  "viewport": [
+    1920,
+    1080
+  ],
+  "duration": 20.004700000047684,
+  "frames": 1175,
+  "fps": 58.74408165936469,
+  "frameMedian": 16.399999976158142,
+  "frameP95": 33,
+  "frameP99": 38,
+  "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1080 Ti (0x00001B06) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "performance": {
+    "cpuRenderP95": 16.5,
+    "gpuMedian": 9.013248,
+    "gpuP95": 17.847296,
+    "gpuSamples": 78,
+    "gpuSupported": true
+  },
+  "mode": "play",
+  "stats": {
+    "phase": "play",
+    "player": {
+      "x": 6.750539214594208,
+      "y": 1.7,
+      "z": -815.0983047207418,
+      "vy": 0,
+      "hp": 100,
+      "shield": 19.39999999999997,
+      "energy": 36,
+      "capacity": 120,
+      "reloadSeconds": 2,
+      "charge": 0,
+      "reload": 0,
+      "cooldown": 0.5365999999999987,
+      "hurtTime": 4.983299999999999,
+      "kills": 8,
+      "grounded": true,
+      "lastSource": "SCOUT DRONE",
+      "lastDamage": 1.2
+    },
+    "progress": {
+      "level": 5,
+      "modules": 164,
+      "distance": 823.439226055199,
+      "routeMeters": 859.5865902205304,
+      "elapsed": 19.850599999999947,
+      "deaths": 0,
+      "kills": 8,
+      "checkpoint": {
+        "index": 0,
+        "x": 0,
+        "z": 8,
+        "level": 5,
+        "modules": 164
+      },
+      "levelTimes": [],
+      "claimed": 4,
+      "frontier": 10,
+      "defeated": 8,
+      "pickups": {
+        "active": 4,
+        "ids": [
+          "drop-enc-10-6",
+          "drop-enc-10-5",
+          "drop-enc-10-9",
+          "drop-enc-10-14"
+        ],
+        "drawCalls": 16
+      },
+      "stats": {
+        "shots": 12,
+        "chargedShots": 12,
+        "ammoSpent": 504,
+        "reloads": 5,
+        "hits": 9,
+        "weakHits": 0,
+        "damageTaken": 55.6000000000001,
+        "receivedHits": 32,
+        "coverPlayer": 0,
+        "coverEnemy": 0,
+        "modules": 4,
+        "enemySpawns": [
+          {
+            "id": "enc-10-0",
+            "sector": 10,
+            "x": 6.6,
+            "z": -855.5,
+            "playerZ": -808,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-1",
+            "sector": 10,
+            "x": 5.199999999999999,
+            "z": -855.5,
+            "playerZ": -808.0084719409557,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-2",
+            "sector": 10,
+            "x": 6.199999999999999,
+            "z": -857,
+            "playerZ": -808.2754739117338,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-3",
+            "sector": 10,
+            "x": 6.8,
+            "z": -813,
+            "playerZ": -807.8835527320543,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-4",
+            "sector": 10,
+            "x": -6.8,
+            "z": -827,
+            "playerZ": -808.0181706890207,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-5",
+            "sector": 10,
+            "x": -6.6,
+            "z": -811.5,
+            "playerZ": -806.1969279220551,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-6",
+            "sector": 10,
+            "x": -5.199999999999999,
+            "z": -811.5,
+            "playerZ": -807.3692645797595,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-7",
+            "sector": 10,
+            "x": -6.199999999999999,
+            "z": -813,
+            "playerZ": -805.4988456883509,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-8",
+            "sector": 10,
+            "x": -6.199999999999999,
+            "z": -814.5,
+            "playerZ": -806.1275965939485,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-9",
+            "sector": 10,
+            "x": -6.199999999999999,
+            "z": -814.5,
+            "playerZ": -804.587906584081,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-10",
+            "sector": 10,
+            "x": 6.8,
+            "z": -856,
+            "playerZ": -806.0235158063632,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-11",
+            "sector": 10,
+            "x": 5.199999999999999,
+            "z": -855.5,
+            "playerZ": -808.9064849285713,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-12",
+            "sector": 10,
+            "x": 5.199999999999999,
+            "z": -855.5,
+            "playerZ": -808.5963635945483,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-13",
+            "sector": 10,
+            "x": 6.8,
+            "z": -813,
+            "playerZ": -806.4653029795494,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-14",
+            "sector": 10,
+            "x": 5.199999999999999,
+            "z": -855.5,
+            "playerZ": -808.7390670449042,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-15",
+            "sector": 10,
+            "x": 5.699999999999999,
+            "z": -857,
+            "playerZ": -811.6655057962029,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-16",
+            "sector": 10,
+            "x": -6.8,
+            "z": -865,
+            "playerZ": -812.9991707103832,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-17",
+            "sector": 10,
+            "x": 5.199999999999999,
+            "z": -855.5,
+            "playerZ": -810.8837304881165,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-18",
+            "sector": 10,
+            "x": 5.699999999999999,
+            "z": -857,
+            "playerZ": -814.348153562498,
+            "frontier": 10
+          },
+          {
+            "id": "enc-10-19",
+            "sector": 10,
+            "x": 6.199999999999999,
+            "z": -858.5,
+            "playerZ": -815.2427508748757,
+            "frontier": 10
+          }
+        ],
+        "enemyTTK": [
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 0
+          },
+          {
+            "type": "heavy",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          }
+        ],
+        "deathLog": []
+      },
+      "encounters": [
+        "enc-10"
+      ]
+    },
+    "world": {
+      "current": 10,
+      "loadedSegments": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "segmentCount": 4,
+      "builds": 7,
+      "unloads": 3,
+      "navVersion": 3,
+      "nodes": 753,
+      "colliders": 60,
+      "destructibles": 20,
+      "instancedMeshes": 48,
+      "quality": "high",
+      "terminal": false
+    },
+    "enemies": 12,
+    "beams": 1,
+    "particles": 40,
+    "debris": 25,
+    "shieldVfx": {
+      "hits": 60,
+      "active": 3,
+      "reflections": 2
+    },
+    "enemyShots": 137,
+    "enemyShotDrops": 0,
+    "enemyProjectiles": {
+      "capacity": 128,
+      "active": 6,
+      "invalid": 0,
+      "updates": 1176,
+      "drawCalls": 3,
+      "instanced": true
+    },
+    "pickupFeedback": {
+      "active": false,
+      "age": 0.5,
+      "duration": 0.5,
+      "triggered": 4,
+      "upgrades": 0,
+      "upgrade": false,
+      "reducedMotion": false,
+      "hexCount": 18,
+      "particleCount": 40,
+      "drawCalls": 5
+    },
+    "alarm": {
+      "active": false,
+      "sector": "K",
+      "sectorIndex": 10,
+      "strength": 0.08500000000000005,
+      "remaining": 0,
+      "anchored": true,
+      "rotation": 4.869020078461251,
+      "lights": 2,
+      "resourceCounts": {
+        "geometries": 4,
+        "materials": 5
+      }
+    },
+    "mode": "play",
+    "paused": false,
+    "touchMode": false,
+    "intro": {
+      "skipped": true,
+      "phaseTime": 19.850599999999947,
+      "weaponVisible": true,
+      "camera": {
+        "x": 6.750539214594208,
+        "y": 1.6961993706554221,
+        "z": -815.0983047207418,
+        "fov": 78
+      }
+    },
+    "quality": "high",
+    "assetQuality": "high",
+    "position": {
+      "x": 6.750539214594208,
+      "y": 1.7,
+      "z": -815.0983047207418
+    },
+    "presentation": "hdr-bloom",
+    "rendering": {
+      "mode": "hdr-bloom",
+      "ao": true,
+      "width": 1920,
+      "height": 1080,
+      "samples": 2,
+      "msaaSupported": 2,
+      "bloomWidth": 480,
+      "bloomHeight": 270
+    },
+    "fps": 60,
+    "drawCalls": 443,
+    "triangles": 133984,
+    "memory": {
+      "geometries": 689,
+      "textures": 27
+    },
+    "performance": {
+      "cpuRenderP95": 16.5,
+      "gpuMedian": 9.013248,
+      "gpuP95": 17.847296,
+      "gpuSamples": 78,
+      "gpuSupported": true
+    },
+    "audio": {
+      "state": "running",
+      "muted": true,
+      "gain": 0,
+      "voices": 9
+    }
+  },
+  "peakEnemies": 12,
+  "peakCalls": 1318,
+  "peakTriangles": 218680,
+  "samples": [
+    {
+      "mode": "play",
+      "entities": 1,
+      "drawCalls": 377,
+      "fps": 50,
+      "triangles": 119936,
+      "memory": {
+        "geometries": 94,
+        "textures": 25
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high",
+        "terminal": false
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 4,
+      "drawCalls": 575,
+      "fps": 52,
+      "triangles": 138350,
+      "memory": {
+        "geometries": 259,
+        "textures": 26
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high",
+        "terminal": false
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 7,
+      "drawCalls": 621,
+      "fps": 55,
+      "triangles": 142102,
+      "memory": {
+        "geometries": 281,
+        "textures": 26
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high",
+        "terminal": false
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 9,
+      "drawCalls": 634,
+      "fps": 59,
+      "triangles": 144786,
+      "memory": {
+        "geometries": 288,
+        "textures": 26
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high",
+        "terminal": false
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 12,
+      "drawCalls": 961,
+      "fps": 60,
+      "triangles": 198626,
+      "memory": {
+        "geometries": 525,
+        "textures": 26
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high",
+        "terminal": false
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 12,
+      "drawCalls": 1208,
+      "fps": 59,
+      "triangles": 203578,
+      "memory": {
+        "geometries": 610,
+        "textures": 26
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high",
+        "terminal": false
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 12,
+      "drawCalls": 993,
+      "fps": 59,
+      "triangles": 179048,
+      "memory": {
+        "geometries": 620,
+        "textures": 26
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high",
+        "terminal": false
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 12,
+      "drawCalls": 989,
+      "fps": 60,
+      "triangles": 199842,
+      "memory": {
+        "geometries": 620,
+        "textures": 26
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high",
+        "terminal": false
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 12,
+      "drawCalls": 761,
+      "fps": 60,
+      "triangles": 164102,
+      "memory": {
+        "geometries": 620,
+        "textures": 26
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high",
+        "terminal": false
+      }
+    },
+    {
+      "mode": "play",
+      "entities": 12,
+      "drawCalls": 436,
+      "fps": 60,
+      "triangles": 136530,
+      "memory": {
+        "geometries": 620,
+        "textures": 27
+      },
+      "stream": {
+        "current": 10,
+        "loadedSegments": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "segmentCount": 4,
+        "builds": 7,
+        "unloads": 3,
+        "navVersion": 3,
+        "nodes": 753,
+        "colliders": 60,
+        "destructibles": 20,
+        "instancedMeshes": 48,
+        "quality": "high",
+        "terminal": false
+      }
+    }
+  ]
+}

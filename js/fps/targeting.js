@@ -1,0 +1,2 @@
+// Ray intersections are supplied by the real scene raycaster. Never auto-aim or shoot through cover.
+export function selectAimTarget(hits,wallDistance=90){let target=null,nearest=wallDistance-.002;for(const hit of hits){const enemy=hit.object?.userData?.enemy,d=hit.distance;if(!enemy||!(enemy.hp>0)||!((enemy.arrival??0)<=0)||enemy.model?.root?.visible===false||hit.object.visible===false||!Number.isFinite(d)||d<0||d>=nearest)continue;nearest=d;target=enemy;}return target;}

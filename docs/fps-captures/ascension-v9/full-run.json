@@ -1,0 +1,1206 @@
+{
+  "ground": {
+    "groundComplete": true,
+    "recoveries": 0,
+    "groundTime": 113.3999999999957,
+    "progress": {
+      "level": 5,
+      "modules": 75,
+      "distance": 298.1586601579893,
+      "routeMeters": 309.8070444758819,
+      "elapsed": 113.3999999999957,
+      "deaths": 0,
+      "kills": 76,
+      "checkpoint": {
+        "index": 3,
+        "x": 0,
+        "z": -234,
+        "level": 5,
+        "modules": 75
+      },
+      "levelTimes": [
+        {
+          "level": 2,
+          "time": 18.65000000000013,
+          "distance": 18.02928412436549
+        },
+        {
+          "level": 3,
+          "time": 25.75000000000023,
+          "distance": 54.137122337756274
+        },
+        {
+          "level": 4,
+          "time": 47.34999999999945,
+          "distance": 98.5090446237144
+        },
+        {
+          "level": 5,
+          "time": 76.3999999999978,
+          "distance": 178.52547901333853
+        }
+      ],
+      "claimed": 75,
+      "frontier": 3,
+      "defeated": 76,
+      "stats": {
+        "shots": 139,
+        "chargedShots": 20,
+        "ammoSpent": 1121,
+        "reloads": 11,
+        "hits": 147,
+        "weakHits": 75,
+        "damageTaken": 140.30000000000007,
+        "receivedHits": 60,
+        "coverPlayer": 0,
+        "coverEnemy": 0,
+        "modules": 75,
+        "enemySpawns": [
+          {
+            "id": "enc-0-0",
+            "sector": 0,
+            "x": 3.4101987864172703,
+            "z": -13.5,
+            "playerZ": -6.243381410094423,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-1",
+            "sector": 0,
+            "x": 2.0101987864172703,
+            "z": -13.5,
+            "playerZ": -6.243381410094423,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-2",
+            "sector": 0,
+            "x": 3.4101987864172703,
+            "z": -13.5,
+            "playerZ": -6.243381410094423,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-3",
+            "sector": 0,
+            "x": -0.7229113560602056,
+            "z": -27,
+            "playerZ": -6.243381410094423,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-4",
+            "sector": 0,
+            "x": 3.4101987864172703,
+            "z": -13.5,
+            "playerZ": -6.243381410094423,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-5",
+            "sector": 0,
+            "x": 2.0101987864172703,
+            "z": -13.5,
+            "playerZ": -6.243381410094423,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-6",
+            "sector": 0,
+            "x": 3.4101987864172703,
+            "z": -13.5,
+            "playerZ": -6.243381410094423,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-7",
+            "sector": 0,
+            "x": 3.0101987864172703,
+            "z": -16.5,
+            "playerZ": -4.111341715304822,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-8",
+            "sector": 0,
+            "x": 2.0101987864172703,
+            "z": -13.5,
+            "playerZ": -0.8354040707205441,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-9",
+            "sector": 0,
+            "x": 2.5101987864172703,
+            "z": -15,
+            "playerZ": -0.33795857440646687,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-10",
+            "sector": 0,
+            "x": 3.0101987864172703,
+            "z": -16.5,
+            "playerZ": -0.33795857440646687,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-11",
+            "sector": 0,
+            "x": 2.5101987864172703,
+            "z": -13.5,
+            "playerZ": -0.33795857440646687,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-12",
+            "sector": 0,
+            "x": 4.668648784422064,
+            "z": -13,
+            "playerZ": -0.33795857440646687,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-13",
+            "sector": 0,
+            "x": 2.5101987864172703,
+            "z": -13.5,
+            "playerZ": -0.33795857440646687,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-14",
+            "sector": 0,
+            "x": 3.0101987864172703,
+            "z": -15,
+            "playerZ": 1.4788449675370454,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-15",
+            "sector": 0,
+            "x": 3.0101987864172703,
+            "z": -16.5,
+            "playerZ": 1.9122602468438623,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-16",
+            "sector": 0,
+            "x": 3.0101987864172703,
+            "z": -15,
+            "playerZ": 2.3076095061414423,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-17",
+            "sector": 0,
+            "x": 3.0101987864172703,
+            "z": -13.5,
+            "playerZ": 2.3076095061414423,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-18",
+            "sector": 0,
+            "x": 3.0101987864172703,
+            "z": -15,
+            "playerZ": 0.4952816807507845,
+            "frontier": 0
+          },
+          {
+            "id": "enc-0-19",
+            "sector": 0,
+            "x": 3.0101987864172703,
+            "z": -13.5,
+            "playerZ": 0.4952816807507845,
+            "frontier": 0
+          },
+          {
+            "id": "enc-1-0",
+            "sector": 1,
+            "x": -4.1653987368708485,
+            "z": -93.5,
+            "playerZ": -86.00313531584477,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-1",
+            "sector": 1,
+            "x": -2.7653987368708486,
+            "z": -93.5,
+            "playerZ": -86.00313531584477,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-2",
+            "sector": 1,
+            "x": -4.1653987368708485,
+            "z": -93.5,
+            "playerZ": -86.00313531584477,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-3",
+            "sector": 1,
+            "x": -2.7653987368708486,
+            "z": -93,
+            "playerZ": -86.00313531584477,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-4",
+            "sector": 1,
+            "x": -4.1653987368708485,
+            "z": -93.5,
+            "playerZ": -86.00313531584477,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-5",
+            "sector": 1,
+            "x": -3.7653987368708486,
+            "z": -95,
+            "playerZ": -86.00313531584477,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-6",
+            "sector": 1,
+            "x": -3.7653987368708486,
+            "z": -93.5,
+            "playerZ": -86.00313531584477,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-7",
+            "sector": 1,
+            "x": -3.7653987368708486,
+            "z": -95,
+            "playerZ": -86.00313531584477,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-8",
+            "sector": 1,
+            "x": -4.1653987368708485,
+            "z": -93.5,
+            "playerZ": -86.00313531584477,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-9",
+            "sector": 1,
+            "x": -2.7653987368708486,
+            "z": -93.5,
+            "playerZ": -86.00313531584477,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-10",
+            "sector": 1,
+            "x": -3.2653987368708486,
+            "z": -95,
+            "playerZ": -83.91084792902338,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-11",
+            "sector": 1,
+            "x": -4.1653987368708485,
+            "z": -93.5,
+            "playerZ": -82.65415500172351,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-12",
+            "sector": 1,
+            "x": -2.7653987368708486,
+            "z": -93.5,
+            "playerZ": -80.50514266514958,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-13",
+            "sector": 1,
+            "x": -4.1653987368708485,
+            "z": -93.5,
+            "playerZ": -80.50514266514958,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-14",
+            "sector": 1,
+            "x": -2.7653987368708486,
+            "z": -93,
+            "playerZ": -80.50514266514958,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-15",
+            "sector": 1,
+            "x": -4.1653987368708485,
+            "z": -93.5,
+            "playerZ": -80.50514266514958,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-16",
+            "sector": 1,
+            "x": -3.7653987368708486,
+            "z": -95,
+            "playerZ": -80.50514266514958,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-17",
+            "sector": 1,
+            "x": -3.7653987368708486,
+            "z": -96.5,
+            "playerZ": -80.50514266514958,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-18",
+            "sector": 1,
+            "x": -4.1653987368708485,
+            "z": -93.5,
+            "playerZ": -83.10633514764206,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-19",
+            "sector": 1,
+            "x": -2.7653987368708486,
+            "z": -93.5,
+            "playerZ": -86.8153046919937,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-20",
+            "sector": 1,
+            "x": -0.3574817602298621,
+            "z": -113.5,
+            "playerZ": -90.5090446237144,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-21",
+            "sector": 1,
+            "x": 1.0425182397701378,
+            "z": -113.5,
+            "playerZ": -94.19603441937713,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-22",
+            "sector": 1,
+            "x": 0.04251823977013791,
+            "z": -115,
+            "playerZ": -97.88155111492316,
+            "frontier": 1
+          },
+          {
+            "id": "enc-1-23",
+            "sector": 1,
+            "x": 0.04251823977013791,
+            "z": -113.5,
+            "playerZ": -101.46775237074931,
+            "frontier": 1
+          },
+          {
+            "id": "enc-2-0",
+            "sector": 2,
+            "x": -0.8761680161871479,
+            "z": -173.5,
+            "playerZ": -166.25210667138268,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-1",
+            "sector": 2,
+            "x": 0.523831983812852,
+            "z": -173.5,
+            "playerZ": -166.25210667138268,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-2",
+            "sector": 2,
+            "x": 0.02383198381285212,
+            "z": -175,
+            "playerZ": -166.25210667138268,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-3",
+            "sector": 2,
+            "x": 1.5710437344834371,
+            "z": -173,
+            "playerZ": -166.25210667138268,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-4",
+            "sector": 2,
+            "x": -0.8761680161871479,
+            "z": -173.5,
+            "playerZ": -166.25210667138268,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-5",
+            "sector": 2,
+            "x": 0.523831983812852,
+            "z": -173.5,
+            "playerZ": -166.25210667138268,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-6",
+            "sector": 2,
+            "x": -0.8761680161871479,
+            "z": -173.5,
+            "playerZ": -166.25210667138268,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-7",
+            "sector": 2,
+            "x": -0.4761680161871479,
+            "z": -175,
+            "playerZ": -166.25210667138268,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-8",
+            "sector": 2,
+            "x": -0.4761680161871479,
+            "z": -176.5,
+            "playerZ": -163.10117087160543,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-9",
+            "sector": 2,
+            "x": -0.8761680161871479,
+            "z": -173.5,
+            "playerZ": -160.77183127254048,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-10",
+            "sector": 2,
+            "x": 0.523831983812852,
+            "z": -173.5,
+            "playerZ": -160.40689743638794,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-11",
+            "sector": 2,
+            "x": -0.8761680161871479,
+            "z": -173.5,
+            "playerZ": -160.40689743638794,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-12",
+            "sector": 2,
+            "x": -0.8761680161871479,
+            "z": -173.5,
+            "playerZ": -160.40689743638794,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-13",
+            "sector": 2,
+            "x": -0.4761680161871479,
+            "z": -176.5,
+            "playerZ": -160.40689743638794,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-14",
+            "sector": 2,
+            "x": -0.8761680161871479,
+            "z": -173.5,
+            "playerZ": -160.40689743638794,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-15",
+            "sector": 2,
+            "x": 0.523831983812852,
+            "z": -173.5,
+            "playerZ": -160.40689743638794,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-16",
+            "sector": 2,
+            "x": -10.176135770003066,
+            "z": -187,
+            "playerZ": -160.40689743638794,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-17",
+            "sector": 2,
+            "x": -7.923780158542327,
+            "z": -193.5,
+            "playerZ": -170.79934880534122,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-18",
+            "sector": 2,
+            "x": -6.523780158542326,
+            "z": -193.5,
+            "playerZ": -174.43274063101663,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-19",
+            "sector": 2,
+            "x": -7.023780158542326,
+            "z": -195,
+            "playerZ": -178.09365170315576,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-20",
+            "sector": 2,
+            "x": -7.523780158542326,
+            "z": -196.5,
+            "playerZ": -181.84300324873917,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-21",
+            "sector": 2,
+            "x": -0.92781186976269,
+            "z": -213.5,
+            "playerZ": -189.8275202411385,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-22",
+            "sector": 2,
+            "x": 0.4721881302373099,
+            "z": -213.5,
+            "playerZ": -193.41164704396297,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-23",
+            "sector": 2,
+            "x": -0.52781186976269,
+            "z": -215,
+            "playerZ": -197.1388156515865,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-24",
+            "sector": 2,
+            "x": -0.52781186976269,
+            "z": -216.5,
+            "playerZ": -200.7828872439674,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-25",
+            "sector": 2,
+            "x": -0.92781186976269,
+            "z": -213.5,
+            "playerZ": -204.45460226203593,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-26",
+            "sector": 2,
+            "x": -3.190021079381208,
+            "z": -225.5,
+            "playerZ": -210.07384536334146,
+            "frontier": 2
+          },
+          {
+            "id": "enc-2-27",
+            "sector": 2,
+            "x": -1.7900210793812081,
+            "z": -225.5,
+            "playerZ": -213.62678341264692,
+            "frontier": 2
+          },
+          {
+            "id": "enc-3-0",
+            "sector": 3,
+            "x": 0.758556191693669,
+            "z": -253.5,
+            "playerZ": -246.26982030675518,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-1",
+            "sector": 3,
+            "x": -0.641443808306331,
+            "z": -253.5,
+            "playerZ": -246.54104656202608,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-2",
+            "sector": 3,
+            "x": 0.3585561916936689,
+            "z": -255,
+            "playerZ": -246.54104656202608,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-3",
+            "sector": 3,
+            "x": -2.114878033934718,
+            "z": -267,
+            "playerZ": -246.54104656202608,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-4",
+            "sector": 3,
+            "x": 0.3585561916936689,
+            "z": -253.5,
+            "playerZ": -246.54104656202608,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-5",
+            "sector": 3,
+            "x": 0.3585561916936689,
+            "z": -255,
+            "playerZ": -246.54104656202608,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-6",
+            "sector": 3,
+            "x": 0.758556191693669,
+            "z": -253.5,
+            "playerZ": -245.01311225056529,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-7",
+            "sector": 3,
+            "x": -0.641443808306331,
+            "z": -253.5,
+            "playerZ": -241.8103613247981,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-8",
+            "sector": 3,
+            "x": 0.758556191693669,
+            "z": -253.5,
+            "playerZ": -240.41688309445038,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-9",
+            "sector": 3,
+            "x": -0.641443808306331,
+            "z": -253.5,
+            "playerZ": -240.41688309445038,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-10",
+            "sector": 3,
+            "x": 0.758556191693669,
+            "z": -253.5,
+            "playerZ": -240.41688309445038,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-11",
+            "sector": 3,
+            "x": -0.641443808306331,
+            "z": -253.5,
+            "playerZ": -240.41688309445038,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-12",
+            "sector": 3,
+            "x": 2.5997955656021223,
+            "z": -253,
+            "playerZ": -240.41688309445038,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-13",
+            "sector": 3,
+            "x": -0.14144380830633108,
+            "z": -253.5,
+            "playerZ": -240.41688309445038,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-14",
+            "sector": 3,
+            "x": 0.3585561916936689,
+            "z": -255,
+            "playerZ": -240.41688309445038,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-15",
+            "sector": 3,
+            "x": 0.3585561916936689,
+            "z": -256.5,
+            "playerZ": -240.41688309445038,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-16",
+            "sector": 3,
+            "x": -0.14144380830633108,
+            "z": -253.5,
+            "playerZ": -243.27542367978043,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-17",
+            "sector": 3,
+            "x": 0.3585561916936689,
+            "z": -255,
+            "playerZ": -246.58515032490976,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-18",
+            "sector": 3,
+            "x": -1.490267851708245,
+            "z": -273.5,
+            "playerZ": -250.1701338417081,
+            "frontier": 3
+          },
+          {
+            "id": "enc-3-19",
+            "sector": 3,
+            "x": -0.09026785170824514,
+            "z": -273.5,
+            "playerZ": -253.28221759687665,
+            "frontier": 3
+          }
+        ],
+        "enemyTTK": [
+          {
+            "type": "drone",
+            "seconds": 0.3999999999999986
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.3999999999999986
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.3999999999999986
+          },
+          {
+            "type": "drone",
+            "seconds": 0.3999999999999986
+          },
+          {
+            "type": "drone",
+            "seconds": 0.8000000000000114
+          },
+          {
+            "type": "soldier",
+            "seconds": 1.6000000000000227
+          },
+          {
+            "type": "soldier",
+            "seconds": 3.9500000000000366
+          },
+          {
+            "type": "drone",
+            "seconds": 0.4000000000000057
+          },
+          {
+            "type": "drone",
+            "seconds": 0.4000000000000057
+          },
+          {
+            "type": "drone",
+            "seconds": 0.6000000000000085
+          },
+          {
+            "type": "turret",
+            "seconds": 2.900000000000041
+          },
+          {
+            "type": "soldier",
+            "seconds": 1.050000000000015
+          },
+          {
+            "type": "drone",
+            "seconds": 0.7500000000000107
+          },
+          {
+            "type": "drone",
+            "seconds": 0.25000000000000355
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.25000000000000355
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.2499999999999858
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0.2499999999999858
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.7499999999999574
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 2.3499999999998664
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.2499999999999858
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 0.2499999999999858
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0.4999999999999716
+          },
+          {
+            "type": "soldier",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 1.7999999999999048
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "heavy",
+            "seconds": 6.899999999999615
+          },
+          {
+            "type": "soldier",
+            "seconds": 0
+          },
+          {
+            "type": "heavy",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 1.9999999999998863
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "heavy",
+            "seconds": 7.099999999999596
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 0
+          },
+          {
+            "type": "sniper",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "heavy",
+            "seconds": 1.7999999999998977
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "heavy",
+            "seconds": 3.2999999999998124
+          },
+          {
+            "type": "soldier",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0.6999999999999602
+          },
+          {
+            "type": "guardian",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 0
+          },
+          {
+            "type": "assassin",
+            "seconds": 0
+          },
+          {
+            "type": "heavy",
+            "seconds": 0
+          },
+          {
+            "type": "heavy",
+            "seconds": 5.699999999999676
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "soldier",
+            "seconds": 0
+          },
+          {
+            "type": "drone",
+            "seconds": 0
+          },
+          {
+            "type": "turret",
+            "seconds": 1.4499999999999176
+          }
+        ],
+        "deathLog": []
+      },
+      "encounters": [
+        "enc-0",
+        "enc-1",
+        "enc-2",
+        "enc-3"
+      ]
+    },
+    "deaths": [],
+    "segments": [
+      {
+        "segment": 0,
+        "time": 2.5999999999999988,
+        "hp": 100,
+        "level": 1,
+        "modules": 0
+      },
+      {
+        "segment": 1,
+        "time": 33.300000000000246,
+        "hp": 100,
+        "level": 3,
+        "modules": 15
+      },
+      {
+        "segment": 2,
+        "time": 62.09999999999861,
+        "hp": 100,
+        "level": 4,
+        "modules": 38
+      },
+      {
+        "segment": 3,
+        "time": 90.99999999999697,
+        "hp": 100,
+        "level": 5,
+        "modules": 57
+      }
+    ],
+    "player": {
+      "x": -0.09425790398604322,
+      "y": 1.7,
+      "z": -290.43264140671954,
+      "vy": 0,
+      "hp": 100,
+      "shield": 63.599999999999866,
+      "energy": 42,
+      "capacity": 120,
+      "reloadSeconds": 2,
+      "charge": 0,
+      "reload": 0,
+      "cooldown": 0.36999999999999983,
+      "hurtTime": 3.2000000000000064,
+      "kills": 76,
+      "grounded": true,
+      "lastSource": "SHIELD GUARDIAN",
+      "lastDamage": 2
+    }
+  },
+  "ending": {
+    "sawWarp": true,
+    "mode": "won",
+    "flight": {
+      "phase": "complete",
+      "elapsed": 34,
+      "distance": 2037.2575728350557,
+      "hp": 100,
+      "shield": 75,
+      "kills": 1,
+      "shots": 150,
+      "hits": 0,
+      "enemies": 0,
+      "spawned": 11,
+      "level": 5,
+      "x": -5.402369252568263,
+      "y": -3.207040802738256,
+      "bank": 4.613796754238206e-13,
+      "speed": 361.4921094557051,
+      "duration": 30,
+      "warpSeconds": 4,
+      "totalDuration": 34,
+      "aim": {
+        "x": 0,
+        "y": 0,
+        "cursor": false,
+        "target": {
+          "x": -5.40236925256809,
+          "y": -3.2070408027384687,
+          "z": -60
+        }
+      },
+      "resourceCounts": {
+        "geometries": 24,
+        "materials": 15,
+        "instanced": 9,
+        "enemyCapacity": 14,
+        "starSegments": 700
+      },
+      "hitFlash": 0
+    },
+    "totalElapsed": 147.34999999999926,
+    "restaurantRestored": true
+  }
+}
