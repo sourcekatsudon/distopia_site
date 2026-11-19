@@ -1,7 +1,7 @@
 name: Site smoke tests
 on:
   push:
-    branches: [main, feature/chickenhouse-site-rebuild-20261119]
+    branches: [main, feature/chickenhouse-site-rebuild-20261119, feature/glitch-protocol-fps-20261119]
   pull_request:
 jobs:
   smoke:
@@ -15,6 +15,13 @@ jobs:
         run: |
           node --check js/script.js
           node --check js/menu-data.js
+          node --check js/site-protocol.js
+          node --input-type=module --check < js/glitch-sequence.js
+          for file in js/fps/*.js; do node --input-type=module --check < "$file"; done
           node --input-type=module --check < js/solar-system.js
       - name: Verify images, links and menu catalog
-        run: node tests/smoke.cjs
+        run: |
+          node tests/smoke.cjs
+          node tests/fps.cjs
+          node tests/fps-lifecycle.cjs
+          node tests/glitch-sequence.cjs

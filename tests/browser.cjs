@@ -2,6 +2,11 @@
 // The exported function also runs against a Playwright MCP page without a local dependency.
 async function run(page) {
  const base=process.env.BASE_URL||'http://127.0.0.1:8765';
+ // Compare decoded pixels, permitting GPU antialiasing's single-channel rounding.
+ const pngNear=async(a,b)=>page.evaluate(async encoded=>{
+  const decode=async text=>{const image=new Image();image.src='data:image/png;base64,'+text;await image.decode();const canvas=document.createElement('canvas');canvas.width=image.width;canvas.height=image.height;const c=canvas.getContext('2d');c.drawImage(image,0,0);return {width:image.width,height:image.height,pixels:c.getImageData(0,0,image.width,image.height).data};};
+  const [x,y]=await Promise.all(encoded.map(decode));if(x.width!==y.width||x.height!==y.height)return false;for(let i=0;i<x.pixels.length;i++)if(Math.abs(x.pixels[i]-y.pixels[i])>2)return false;return true;
+ },[a.toString('base64'),b.toString('base64')]);
  const checks=[],errors=[],failed=[];
  page.on('pageerror',e=>errors.push(e.message));
  page.on('response',r=>{if(r.url().startsWith(base)&&r.status()>=400)failed.push(r.status()+' '+r.url());});
@@ -43,8 +48,8 @@ async function run(page) {
   if(width===390){await page.locator('.menu-toggle').click();check(await page.locator('#site-nav').isVisible(),'mobile nav opens');await page.locator('#site-nav a').first().focus();await page.keyboard.press('Escape');check(!await page.locator('#site-nav').isVisible(),'mobile nav Escape');check(await page.locator('.menu-toggle').evaluate(e=>e===document.activeElement),'Escape returns keyboard focus');}
  }
  await page.goto(base+'/company.html#stores');const canvas=page.locator('.solar-frame canvas');await canvas.waitFor();await canvas.scrollIntoViewIfNeeded();
- const a=await canvas.screenshot();await page.waitForTimeout(250);const b=await canvas.screenshot();check(!a.equals(b),'solar animates');
- await page.locator('#motion-toggle').click();await page.waitForTimeout(1000);const c=await canvas.screenshot();await page.waitForTimeout(250);const d=await canvas.screenshot();check(c.equals(d),'solar pause stable');await page.locator('#motion-toggle').click();check((await page.locator('#motion-toggle').innerText()).includes('止める'),'solar resume');
+ const a=await canvas.screenshot();await page.waitForTimeout(250);const b=await canvas.screenshot();check(!await pngNear(a,b),'solar animates');
+ await page.locator('#motion-toggle').click();await page.waitForTimeout(1000);const c=await canvas.screenshot();await page.waitForTimeout(250);const d=await canvas.screenshot();check(await pngNear(c,d),'solar pause stable');await page.locator('#motion-toggle').click();check((await page.locator('#motion-toggle').innerText()).includes('止める'),'solar resume');
  await page.locator('#planet-selector button').filter({hasText:'カリスト'}).click();check((await page.locator('.store-panel').innerText()).includes('ヴァルハラ'),'Callisto store information');
  check(!errors.length,'no JavaScript errors');check(!failed.length,'no HTTP errors');
  return {passed:checks.length,products:menu.length,errors,failed};

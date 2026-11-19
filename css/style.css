@@ -73,3 +73,5 @@
 
 .hero-carousel h1{font-size:clamp(30px,3vw,43px);min-height:4.05em}.hero-carousel .hero-panel>[data-feature-short]{min-height:3.6em}
 @media(max-width:720px){.hero-carousel h1{font-size:32px;min-height:2.7em}}
+
+.protocol-preferences{background:transparent;border:0;border-bottom:1px solid #ffffff55;color:#c2bebb;padding:2px 0;font:inherit;cursor:pointer}
