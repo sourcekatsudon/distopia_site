@@ -1,4 +1,10 @@
-# ZIP追加・左右スティック v5（最新）
+# ESCAPE PROTOCOL: ASCENSION（最新）
+
+[5段階の武器・7種の敵・4段階の破壊・宇宙戦の実画面と録画](fps-captures/ascension/index.html)。[実装・難易度・性能の測定報告](FPS_ASCENSION.md)。
+
+---
+
+# ZIP追加・左右スティック v5（前版記録）
 
 [新しいリアクター・左右スティック・自動射撃の実画面と録画](fps-captures/energy-v5/index.html)。[実装と検証報告](FPS_ENERGY_DUAL_STICK.md)。既存の機構は保持し、ZIPの不足分だけ追加しました。
 

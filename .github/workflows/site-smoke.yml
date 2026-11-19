@@ -30,3 +30,7 @@ jobs:
           node tests/device-profile.cjs
           node tests/touch.cjs
           node tests/targeting.cjs
+          node tests/ascension.cjs
+          node tests/combat.cjs
+          node tests/armory.cjs
+          node tests/space-flight.cjs
